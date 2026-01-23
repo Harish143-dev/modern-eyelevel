@@ -204,7 +204,7 @@
 }
 
 .animate-marquee-reverse {
-  animation: marquee-reverse 20s linear infinite;
+  animation: marquee-reverse 10s linear infinite;
 }
 
 /* Floating animation */
