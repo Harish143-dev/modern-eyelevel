@@ -635,13 +635,13 @@ const EnhancedFooter = ({
             </p>
             <div className="flex gap-6">
               <Link
-                to="/terms"
+                to="/terms-conditions"
                 className="text-white/40 hover:text-lime transition-colors text-sm font-bricolage"
               >
                 Terms & Conditions
               </Link>
               <Link
-                to="/privacy"
+                to="/privacy-policy"
                 className="text-white/40 hover:text-lime transition-colors text-sm font-bricolage"
               >
                 Privacy Policy

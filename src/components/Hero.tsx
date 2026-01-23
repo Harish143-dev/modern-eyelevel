@@ -50,7 +50,7 @@ const Hero = () => {
 
   const playAnimation = () => {
     if (!lottieRef.current) return;
-    lottieRef.current.setSpeed(1.8);
+    lottieRef.current.setSpeed(1.5);
     lottieRef.current.goToAndPlay(0, true);
   };
   useEffect(() => {

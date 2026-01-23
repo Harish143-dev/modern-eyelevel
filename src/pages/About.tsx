@@ -15,6 +15,7 @@ import teamImage6 from "@/assets/sports-gallery-2.jpg";
 import mascotWave from "@/assets/mascot-wave.png";
 import GreenButton from "@/components/GreenButton";
 import video from "@/assets/videogallery.mp4";
+import video1 from "@/assets/videogallery2.mp4";
 
 const values = [
   {
@@ -50,12 +51,12 @@ const values = [
 ];
 
 const galleryImages = [
-  { src: video, alt: "Team collaboration" },
+  { src: teamImage1, alt: "Team collaboration" },
   { src: teamImage2, alt: "Office environment" },
   { src: teamImage3, alt: "Strategy session" },
-  { src: teamImage4, alt: "Team meeting" },
-  { src: teamImage5, alt: "Creative work" },
-  { src: teamImage6, alt: "Team building" },
+  { src: teamImage2, alt: "Team meeting" },
+  { src: teamImage3, alt: "Creative work" },
+  { src: teamImage4, alt: "Team building" },
 ];
 
 // 14-pointed star SVG component
@@ -82,7 +83,10 @@ const Star18 = ({ className }: { className?: string }) => {
     </svg>
   );
 };
-
+const videoMap: Record<number, string> = {
+  1: video1, // 2nd item
+  2: video, // 3rd item
+};
 const About = () => {
   return (
     <div
@@ -568,55 +572,59 @@ const About = () => {
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {galleryImages.map((image, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className={`relative overflow-hidden rounded-2xl group ${
-                  index === 0 ? "md:col-span-2 md:row-span-2" : ""
-                }`}
-              >
-                {/* 🔥 FIRST ITEM → VIDEO */}
-                {index === 0 ? (
-                  <video
-                    src={video}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover aspect-square transition-transform duration-700 group-hover:scale-110"
-                  />
-                ) : (
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover aspect-square transition-transform duration-700 group-hover:scale-110"
-                  />
-                )}
+            {galleryImages.map((image, index) => {
+              const videoSrc = videoMap[index];
 
-                {/* Overlay */}
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{
-                    background:
-                      "linear-gradient(to top, rgba(23, 50, 41, 0.8), transparent)",
-                  }}
-                />
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className={`relative overflow-hidden rounded-2xl group ${
+                    index === 0 ? "md:col-span-2 md:row-span-2" : ""
+                  }`}
+                >
+                  {/* 🎥 VIDEO OR IMAGE */}
+                  {videoSrc ? (
+                    <video
+                      src={videoSrc}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-cover aspect-square transition-transform duration-700 group-hover:scale-110"
+                    />
+                  ) : (
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover aspect-square transition-transform duration-700 group-hover:scale-110"
+                    />
+                  )}
 
-                {/* Caption */}
-                <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <p
-                    className="text-sm font-medium font-bricolage"
-                    style={{ color: "#F8FFE8" }}
-                  >
-                    {index === 0 ? "Celebrations" : image.alt}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+                  {/* Overlay */}
+                  <div
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{
+                      background:
+                        "linear-gradient(to top, rgba(23, 50, 41, 0.8), transparent)",
+                    }}
+                  />
+
+                  {/* Caption */}
+                  <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <p
+                      className="text-sm font-medium font-bricolage"
+                      style={{ color: "#F8FFE8" }}
+                    >
+                      {videoSrc ? "Celebrations" : image.alt}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
