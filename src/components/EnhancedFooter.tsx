@@ -53,10 +53,22 @@ const footerLinks = [
 ];
 
 const socialLinks = [
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/theeyelevelstudio/",
+  },
+  {
+    icon: Instagram,
+    label: "Instagram",
+    href: "https://www.instagram.com/theeyelevelstudio/",
+  },
   { icon: Twitter, label: "Twitter", href: "https://x.com/Eye_Levelstudio" },
-  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/theeyelevelstudio/" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/theeyelevelstudio/posts/?feedView=all" },
-  { icon: Mail, label: "Email", href: "https://mail.google.com/mail/?view=cm&to=hello@eyelevelstudio.in" },
+  {
+    icon: Mail,
+    label: "Email",
+    href: "https://mail.google.com/mail/?view=cm&to=hello@eyelevelstudio.in",
+  },
 ];
 
 const trustElements = [

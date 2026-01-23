@@ -14,6 +14,7 @@ import teamImage5 from "@/assets/edu-gallery-2.jpg";
 import teamImage6 from "@/assets/sports-gallery-2.jpg";
 import mascotWave from "@/assets/mascot-wave.png";
 import GreenButton from "@/components/GreenButton";
+import video from "@/assets/videogallery.mp4";
 
 const values = [
   {
@@ -49,7 +50,7 @@ const values = [
 ];
 
 const galleryImages = [
-  { src: teamImage1, alt: "Team collaboration" },
+  { src: video, alt: "Team collaboration" },
   { src: teamImage2, alt: "Office environment" },
   { src: teamImage3, alt: "Strategy session" },
   { src: teamImage4, alt: "Team meeting" },
@@ -578,11 +579,25 @@ const About = () => {
                   index === 0 ? "md:col-span-2 md:row-span-2" : ""
                 }`}
               >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover aspect-square transition-transform duration-700 group-hover:scale-110"
-                />
+                {/* 🔥 FIRST ITEM → VIDEO */}
+                {index === 0 ? (
+                  <video
+                    src={video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover aspect-square transition-transform duration-700 group-hover:scale-110"
+                  />
+                ) : (
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover aspect-square transition-transform duration-700 group-hover:scale-110"
+                  />
+                )}
+
+                {/* Overlay */}
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   style={{
@@ -590,12 +605,14 @@ const About = () => {
                       "linear-gradient(to top, rgba(23, 50, 41, 0.8), transparent)",
                   }}
                 />
+
+                {/* Caption */}
                 <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <p
                     className="text-sm font-medium font-bricolage"
                     style={{ color: "#F8FFE8" }}
                   >
-                    {image.alt}
+                    {index === 0 ? "Celebrations" : image.alt}
                   </p>
                 </div>
               </motion.div>

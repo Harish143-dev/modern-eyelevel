@@ -210,7 +210,7 @@ const Header = ({ compact = false }: HeaderProps) => {
                   <SocialIcons.YouTube />
                 </a>
                 <a
-                  href="https://www.linkedin.com/company/theeyelevelstudio/posts/?feedView=all"
+                  href="https://www.linkedin.com/company/theeyelevelstudio/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#1a1a1a]/10 transition-colors"
