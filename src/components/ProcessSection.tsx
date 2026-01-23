@@ -25,14 +25,14 @@ const processSteps = [
       "You don't need options; you need a decision. We chart the straightest route to profit.",
   },
   {
-    image: enforcement,
+    image: mascotPistol,
     number: "3",
     title: "We Build.",
     description:
       "Strategy without tactics is just an illusion. We build the systems that print results.",
   },
   {
-    image: mascotPistol,
+    image: enforcement,
     number: "4",
     title: "We Enforce.",
     description:
