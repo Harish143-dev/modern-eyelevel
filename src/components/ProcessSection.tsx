@@ -62,7 +62,7 @@ const ProcessSection = () => {
       }}
     >
       {/* Sticky container */}
-      <div className="sticky top-0 min-h-screen flex items-center overflow-hidden pt-10 pb-0">
+      <div className="sticky top-0 min-h-[130vh] flex items-center overflow-hidden pt-10 pb-0">
         <div className="max-w-7xl mx-auto w-full px-4 md:px-8 -mt-16 md:-mt-24">
           {/* Header */}
           <motion.div

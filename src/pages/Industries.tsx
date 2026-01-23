@@ -391,11 +391,11 @@ const IndustryShowcase = ({ industry, index }: IndustryShowcaseProps) => {
                 whileHover={{ opacity: 1 }}
                 className="absolute inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 transition-opacity duration-300"
               >
-                <div className="grid grid-cols-3 gap-8 p-8">
+                <div className="grid grid-cols-3 gap-4 p-8">
                   {industry.stats.map((stat, i) => (
                     <div key={i} className="text-center">
                       <span
-                        className="font-dela text-3xl md:text-4xl block mb-2"
+                        className="font-dela text-2xl md:text-3xl block mb-2"
                         style={{ color: industry.accentColor }}
                       >
                         {stat.value}

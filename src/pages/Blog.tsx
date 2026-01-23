@@ -130,7 +130,7 @@ const blogPosts = [
 
 const authors = [
   {
-    name: "Jamil",
+    name: "Mohammad Jameel",
     role: "Founder",
     image: jameel,
   },
