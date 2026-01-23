@@ -1,0 +1,329 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Background - Dark Forest Green #2D5C4F */
+    --background: 161 35% 27%;
+    /* Body Text on Dark - Off-White #F5F5F0 */
+    --foreground: 60 20% 96%;
+
+    /* Card/Light Sections - Cream #F5F5F0 */
+    --card: 60 20% 96%;
+    /* Card Text - Dark Gray #1A1A1A */
+    --card-foreground: 0 0% 10%;
+
+    --popover: 60 20% 96%;
+    --popover-foreground: 0 0% 10%;
+
+    /* Primary - Bright Lime Yellow #D4E86F */
+    --primary: 68 75% 67%;
+    /* Primary Text - Dark Green #2D5C4F */
+    --primary-foreground: 161 35% 27%;
+
+    /* Secondary - Darker Forest #1F4038 */
+    --secondary: 161 35% 18%;
+    --secondary-foreground: 60 20% 96%;
+
+    /* Muted */
+    --muted: 161 25% 35%;
+    --muted-foreground: 60 10% 75%;
+
+    /* Accent - Lime Green */
+    --accent: 68 75% 67%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 161 30% 40%;
+    --input: 161 30% 35%;
+    --ring: 68 75% 67%;
+
+    --radius: 1rem;
+
+    /* Custom tokens - Exact hex matches */
+    --lime: 68 75% 67%; /* #D4E86F */
+    --cream: 60 20% 96%; /* #F5F5F0 */
+    --forest: 161 35% 27%; /* #2D5C4F */
+    --forest-light: 161 35% 22%;
+    --forest-dark: 161 40% 15%;
+    --orange: 12 75% 67%; /* #E8866F - Burnt orange */
+    --purple: 280 70% 65%;
+    --pink: 350 80% 72%;
+    --teal: 172 35% 37%;
+    --black: 0 0% 0%;
+  }
+
+  .dark {
+    --background: 163 34% 27%;
+    --foreground: 0 0% 94%;
+    --card: 60 25% 95%;
+    --card-foreground: 0 0% 10%;
+    --popover: 60 25% 95%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 66 85% 70%;
+    --primary-foreground: 163 34% 27%;
+    --secondary: 163 35% 18%;
+    --secondary-foreground: 0 0% 94%;
+    --muted: 163 25% 35%;
+    --muted-foreground: 0 0% 85%;
+    --accent: 75 55% 50%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 163 30% 35%;
+    --input: 163 30% 35%;
+    --ring: 66 85% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Bricolage Grotesque", sans-serif;
+    /* cursor:
+      url("/icons8-growth-48.png") 16 16,
+      auto; */
+  }
+
+  /* Noise/Grain overlay - More prominent */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.08;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Dela Gothic One", cursive;
+    font-weight: 400;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(60 50% 80%) 100%
+    );
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.3);
+  }
+
+  .card-cream {
+    @apply bg-card text-card-foreground relative;
+  }
+
+  .card-cream::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.04;
+    border-radius: inherit;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+
+  .noise-overlay {
+    @apply relative;
+  }
+
+  .noise-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.04;
+    border-radius: inherit;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+
+  .rounded-4xl {
+    border-radius: 2.5rem;
+  }
+
+  .rounded-arch {
+    border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+  }
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 20s linear infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Pulse glow */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.5);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Sparkle animation */
+@keyframes sparkle {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0.8;
+  }
+}
+
+.animate-sparkle {
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+/* Bounce subtle */
+@keyframes bounce-subtle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s ease-in-out infinite;
+}
+
+/* Booking Calendar Dark Theme */
+.booking-calendar {
+  background-color: #253e35;
+  color: white;
+}
+
+.booking-calendar .rdp-months {
+  justify-content: center;
+}
+
+.booking-calendar .rdp-caption_label {
+  color: white;
+  font-weight: 600;
+}
+
+.booking-calendar .rdp-nav_button {
+  color: white;
+  background-color: #2d4a3d;
+  border: 1px solid #3d5a4d;
+}
+
+.booking-calendar .rdp-nav_button:hover {
+  background-color: #3d5a4d;
+}
+
+.booking-calendar .rdp-head_cell {
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.booking-calendar .rdp-day {
+  color: white;
+  background-color: #2d4a3d;
+  border-radius: 6px;
+}
+
+.booking-calendar .rdp-day:hover:not(.rdp-day_selected):not(.rdp-day_disabled) {
+  background-color: #3d5a4d;
+}
+
+.booking-calendar .rdp-day_selected {
+  background-color: #22c55e !important;
+  color: white !important;
+}
+
+.booking-calendar .rdp-day_disabled {
+  color: #4b5563;
+  background-color: transparent;
+}
+
+.booking-calendar .rdp-day_outside {
+  color: #4b5563;
+  background-color: transparent;
+}
+
+.booking-calendar .rdp-day_today:not(.rdp-day_selected) {
+  border: 2px solid #22c55e;
+}
