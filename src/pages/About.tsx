@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import WavyUnderline from "@/components/WavyUnderline";
 // Team gallery images - placeholder for now
-import teamImage1 from "@/assets/edu-gallery-1.jpg";
-import teamImage2 from "@/assets/sports-gallery-1.jpg";
-import teamImage3 from "@/assets/b2b-gallery-1.jpg";
+import teamImage1 from "@/assets/aboutImage1.jpeg";
+import teamImage2 from "@/assets/aboutImg2.jpg";
+import teamImage3 from "@/assets/aboutImg3.jpeg";
 import teamImage4 from "@/assets/realestate-gallery-1.jpg";
 import teamImage5 from "@/assets/edu-gallery-2.jpg";
 import teamImage6 from "@/assets/sports-gallery-2.jpg";
@@ -630,8 +630,8 @@ const About = () => {
               style={{ color: "rgba(248, 255, 232, 0.7)" }}
             >
               We're always looking for talented individuals who are passionate
-              about growth, collaborative and creative problem-solvers. Ready to make an
-              impact?
+              about growth, collaborative and creative problem-solvers. Ready to
+              make an impact?
             </p>
 
             <Link to="/careers">

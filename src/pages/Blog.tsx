@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import GreenButton from "@/components/GreenButton";
 import akmal from "@/assets/akmal.jpeg";
 import jameel from "@/assets/jameel.jpeg";
+import WavyUnderline from "@/components/WavyUnderline";
 
 // Decorative star
 const Star4 = ({ className }: { className?: string }) => (
@@ -387,8 +388,8 @@ const Blog = () => {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-dela uppercase">
-              <span style={{ color: "#F8FFE8" }}>Voices Behind</span>{" "}
-              <span style={{ color: "#E2FEA5" }}>The Words</span>
+              <span style={{ color: "#E2FEA5" }}>Voices Behind</span>{" "}
+              <WavyUnderline>The Words</WavyUnderline>
             </h2>
           </motion.div>
 
