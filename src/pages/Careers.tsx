@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import WavyUnderline from "@/components/WavyUnderline";
 import mascotWave from "@/assets/mascot-wave.png";
 import GreenButton from "@/components/GreenButton";
+import career_mascot from "@/assets/career_mascot.png";
 const benefits = [
   {
     icon: TrendingUp,
@@ -370,7 +371,7 @@ const Careers = () => {
       >
         {/* Mascot */}
         <motion.img
-          src={mascotWave}
+          src={career_mascot}
           alt="EyeLevel Mascot"
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}

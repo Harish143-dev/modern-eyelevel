@@ -234,7 +234,7 @@ const SportsMarketing = () => {
           >
             FANS ARE METRICS.
             <br />
-            <WavyUnderline>WINNING</WavyUnderline> IS MATH.a
+            <WavyUnderline>WINNING</WavyUnderline> IS MATH
           </motion.h1>
 
           <motion.p

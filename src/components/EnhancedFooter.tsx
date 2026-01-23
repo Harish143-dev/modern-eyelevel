@@ -53,9 +53,9 @@ const footerLinks = [
 ];
 
 const socialLinks = [
-  { icon: Twitter, label: "Twitter", href: "#" },
-  { icon: Instagram, label: "Instagram", href: "#" },
-  { icon: Linkedin, label: "LinkedIn", href: "#" },
+  { icon: Twitter, label: "Twitter", href: "https://x.com/Eye_Levelstudio" },
+  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/theeyelevelstudio/" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/theeyelevelstudio/posts/?feedView=all" },
   { icon: Mail, label: "Email", href: "mailto:hello@eyelevelstudio.in" },
 ];
 
@@ -188,11 +188,11 @@ const EnhancedFooter = ({
 
     try {
       const validated = formSchema.parse(formData);
-      console.log(validated);
+
       // Here you would typically send the data to your backend
 
       const response = await fetch(
-        "https://automate.eyelevelstudio.in/webhook/99729aac-2987-4906-85ff-691df5a11d35",
+        "https://automate.eyelevelstudio.in/webhook/fa30713f-f07b-4f1a-a560-d9409df62413",
         {
           method: "POST",
           headers: {
@@ -318,8 +318,8 @@ const EnhancedFooter = ({
                         hello@eyelevelstudio.in
                       </span>
                     </a>
-                    <a
-                      href="/booking"
+                    <Link
+                      to="/booking"
                       className="flex items-center gap-3 hover:opacity-80 transition-colors group"
                       style={{ color: "#d0e999" }}
                     >
@@ -333,7 +333,7 @@ const EnhancedFooter = ({
                         Book a Call Directly
                       </span>
                       <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                    </a>
+                    </Link>
                   </div>
                 </motion.div>
               </motion.div>
@@ -598,6 +598,7 @@ const EnhancedFooter = ({
                   <a
                     key={index}
                     href={social.href}
+                    target="_blank"
                     aria-label={social.label}
                     className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-white/60 hover:bg-lime hover:text-[#173229] transition-all duration-300"
                   >

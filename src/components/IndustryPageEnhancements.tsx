@@ -195,8 +195,6 @@ export const ImageGallerySection = ({
                   background: `linear-gradient(to top, ${accentColor}40, transparent 50%)`,
                 }}
               />
-              {/* Decorative border on hover */}
-              <div className="absolute inset-4 rounded-2xl border-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
           </motion.div>
 

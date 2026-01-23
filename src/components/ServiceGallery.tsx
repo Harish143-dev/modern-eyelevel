@@ -1,10 +1,17 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Play,
+  Pause,
+  Volume2,
+  VolumeX,
+} from "lucide-react";
 
 interface MediaItem {
   src: string;
-  type: 'image' | 'video';
+  type: "image" | "video";
 }
 
 interface ServiceGalleryProps {
@@ -13,7 +20,11 @@ interface ServiceGalleryProps {
   autoScrollInterval?: number;
 }
 
-const ServiceGallery = ({ media, title, autoScrollInterval = 4000 }: ServiceGalleryProps) => {
+const ServiceGallery = ({
+  media,
+  title,
+  autoScrollInterval = 4000,
+}: ServiceGalleryProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -23,7 +34,7 @@ const ServiceGallery = ({ media, title, autoScrollInterval = 4000 }: ServiceGall
   const containerRef = useRef<HTMLDivElement>(null);
 
   const currentItem = media[currentIndex];
-  const isCurrentVideo = currentItem?.type === 'video';
+  const isCurrentVideo = currentItem?.type === "video";
 
   const nextSlide = useCallback(() => {
     if (isVideoPlaying) return;
@@ -46,7 +57,7 @@ const ServiceGallery = ({ media, title, autoScrollInterval = 4000 }: ServiceGall
       ([entry]) => {
         setIsInView(entry.isIntersecting);
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     if (containerRef.current) {
@@ -71,29 +82,44 @@ const ServiceGallery = ({ media, title, autoScrollInterval = 4000 }: ServiceGall
 
   // Auto-scroll functionality (only for images)
   useEffect(() => {
-    if (media.length <= 1 || isPaused || isVideoPlaying || isCurrentVideo) return;
+    if (media.length <= 1 || isPaused || isVideoPlaying || isCurrentVideo)
+      return;
 
     const interval = setInterval(nextSlide, autoScrollInterval);
     return () => clearInterval(interval);
-  }, [media.length, isPaused, autoScrollInterval, nextSlide, isVideoPlaying, isCurrentVideo]);
+  }, [
+    media.length,
+    isPaused,
+    autoScrollInterval,
+    nextSlide,
+    isVideoPlaying,
+    isCurrentVideo,
+  ]);
 
   // Handle video play/pause
-  const toggleVideoPlay = () => {
-    if (videoRef.current) {
-      if (isVideoPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
+  const toggleVideoPlay = async () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (video.paused) {
+      try {
+        await video.play();
+        setIsVideoPlaying(true);
+      } catch {
+        setIsVideoPlaying(false);
       }
-      setIsVideoPlaying(!isVideoPlaying);
+    } else {
+      video.pause();
+      setIsVideoPlaying(false);
     }
   };
 
   // Handle mute toggle
   const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
+    if (isMuted) {
+      setIsMuted(false);
+    } else {
+      setIsMuted(true);
     }
   };
 
@@ -116,12 +142,12 @@ const ServiceGallery = ({ media, title, autoScrollInterval = 4000 }: ServiceGall
   if (media.length === 0) return null;
 
   return (
-    <div 
+    <div
       ref={containerRef}
       className="relative group rounded-3xl overflow-hidden aspect-[6/4]"
-      style={{ 
-        border: '1px solid rgba(226, 254, 165, 0.15)',
-        boxShadow: '0 25px 80px rgba(0,0,0,0.4)'
+      style={{
+        border: "1px solid rgba(226, 254, 165, 0.15)",
+        boxShadow: "0 25px 80px rgba(0,0,0,0.4)",
       }}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
@@ -147,26 +173,30 @@ const ServiceGallery = ({ media, title, autoScrollInterval = 4000 }: ServiceGall
               onClick={toggleVideoPlay}
             />
             {/* Video Controls Overlay */}
-            <div 
+            <div
               className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
-                isVideoPlaying ? 'opacity-0 hover:opacity-100' : 'opacity-100'
+                isVideoPlaying ? "opacity-0 hover:opacity-100" : "opacity-100"
               }`}
-              style={{ backgroundColor: isVideoPlaying ? 'transparent' : 'rgba(0,0,0,0.2)' }}
+              style={{
+                backgroundColor: isVideoPlaying
+                  ? "transparent"
+                  : "rgba(0,0,0,0.2)",
+              }}
             >
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={toggleVideoPlay}
                 className="w-20 h-20 rounded-full flex items-center justify-center backdrop-blur-md"
-                style={{ 
-                  backgroundColor: 'rgba(226, 254, 165, 0.3)',
-                  border: '2px solid rgba(226, 254, 165, 0.5)'
+                style={{
+                  backgroundColor: "rgba(226, 254, 165, 0.3)",
+                  border: "2px solid rgba(226, 254, 165, 0.5)",
                 }}
               >
                 {isVideoPlaying ? (
-                  <Pause className="w-8 h-8" style={{ color: '#E2FEA5' }} />
+                  <Pause className="w-8 h-8" style={{ color: "#E2FEA5" }} />
                 ) : (
-                  <Play className="w-8 h-8 ml-1" style={{ color: '#E2FEA5' }} />
+                  <Play className="w-8 h-8 ml-1" style={{ color: "#E2FEA5" }} />
                 )}
               </motion.button>
             </div>
@@ -181,15 +211,15 @@ const ServiceGallery = ({ media, title, autoScrollInterval = 4000 }: ServiceGall
                 toggleMute();
               }}
               className="absolute bottom-4 left-4 w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-md z-10"
-              style={{ 
-                backgroundColor: 'rgba(226, 254, 165, 0.2)',
-                border: '1px solid rgba(226, 254, 165, 0.3)'
+              style={{
+                backgroundColor: "rgba(226, 254, 165, 0.2)",
+                border: "1px solid rgba(226, 254, 165, 0.3)",
               }}
             >
               {isMuted ? (
-                <VolumeX className="w-5 h-5" style={{ color: '#E2FEA5' }} />
+                <VolumeX className="w-5 h-5" style={{ color: "#E2FEA5" }} />
               ) : (
-                <Volume2 className="w-5 h-5" style={{ color: '#E2FEA5' }} />
+                <Volume2 className="w-5 h-5" style={{ color: "#E2FEA5" }} />
               )}
             </motion.button>
           </motion.div>
@@ -224,12 +254,12 @@ const ServiceGallery = ({ media, title, autoScrollInterval = 4000 }: ServiceGall
               prevSlide();
             }}
             className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center backdrop-blur-md transition-all duration-300 opacity-0 group-hover:opacity-100 z-10"
-            style={{ 
-              backgroundColor: 'rgba(226, 254, 165, 0.2)',
-              border: '1px solid rgba(226, 254, 165, 0.3)'
+            style={{
+              backgroundColor: "rgba(226, 254, 165, 0.2)",
+              border: "1px solid rgba(226, 254, 165, 0.3)",
             }}
           >
-            <ChevronLeft className="w-6 h-6" style={{ color: '#E2FEA5' }} />
+            <ChevronLeft className="w-6 h-6" style={{ color: "#E2FEA5" }} />
           </motion.button>
 
           {/* Right Arrow */}
@@ -243,12 +273,12 @@ const ServiceGallery = ({ media, title, autoScrollInterval = 4000 }: ServiceGall
               handleNextClick();
             }}
             className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center backdrop-blur-md transition-all duration-300 opacity-0 group-hover:opacity-100 z-10"
-            style={{ 
-              backgroundColor: 'rgba(226, 254, 165, 0.2)',
-              border: '1px solid rgba(226, 254, 165, 0.3)'
+            style={{
+              backgroundColor: "rgba(226, 254, 165, 0.2)",
+              border: "1px solid rgba(226, 254, 165, 0.3)",
             }}
           >
-            <ChevronRight className="w-6 h-6" style={{ color: '#E2FEA5' }} />
+            <ChevronRight className="w-6 h-6" style={{ color: "#E2FEA5" }} />
           </motion.button>
 
           {/* Dot Indicators */}
@@ -266,7 +296,10 @@ const ServiceGallery = ({ media, title, autoScrollInterval = 4000 }: ServiceGall
                 <motion.div
                   animate={{
                     width: index === currentIndex ? 24 : 8,
-                    backgroundColor: index === currentIndex ? '#E2FEA5' : 'rgba(226, 254, 165, 0.4)'
+                    backgroundColor:
+                      index === currentIndex
+                        ? "#E2FEA5"
+                        : "rgba(226, 254, 165, 0.4)",
                   }}
                   className="h-2 rounded-full"
                   transition={{ duration: 0.3 }}
@@ -279,12 +312,12 @@ const ServiceGallery = ({ media, title, autoScrollInterval = 4000 }: ServiceGall
 
       {/* Media Counter & Type Indicator */}
       {media.length > 1 && (
-        <div 
+        <div
           className="absolute top-4 right-4 px-3 py-1.5 rounded-full backdrop-blur-md text-sm font-bricolage font-medium flex items-center gap-2 z-10"
-          style={{ 
-            backgroundColor: 'rgba(13, 31, 26, 0.7)',
-            color: '#E2FEA5',
-            border: '1px solid rgba(226, 254, 165, 0.2)'
+          style={{
+            backgroundColor: "rgba(13, 31, 26, 0.7)",
+            color: "#E2FEA5",
+            border: "1px solid rgba(226, 254, 165, 0.2)",
           }}
         >
           {isCurrentVideo && <Play className="w-3 h-3" />}

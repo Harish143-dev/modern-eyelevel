@@ -201,7 +201,7 @@ const Header = ({ compact = false }: HeaderProps) => {
               {/* Social Icons */}
               <div className="flex items-center gap-1 mr-3">
                 <a
-                  href="https://youtube.com"
+                  href="https://www.youtube.com/@theeyelevelstudio"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#1a1a1a]/10 transition-colors"
@@ -210,7 +210,7 @@ const Header = ({ compact = false }: HeaderProps) => {
                   <SocialIcons.YouTube />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/theeyelevelstudio/posts/?feedView=all"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#1a1a1a]/10 transition-colors"
@@ -219,7 +219,7 @@ const Header = ({ compact = false }: HeaderProps) => {
                   <SocialIcons.LinkedIn />
                 </a>
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/share/1DN368ZHPh/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#1a1a1a]/10 transition-colors"
@@ -228,7 +228,7 @@ const Header = ({ compact = false }: HeaderProps) => {
                   <SocialIcons.Facebook />
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/theeyelevelstudio/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#1a1a1a]/10 transition-colors"
@@ -237,7 +237,7 @@ const Header = ({ compact = false }: HeaderProps) => {
                   <SocialIcons.Instagram />
                 </a>
                 <a
-                  href="https://x.com"
+                  href="https://x.com/Eye_Levelstudio"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#1a1a1a]/10 transition-colors"
@@ -417,7 +417,7 @@ const Header = ({ compact = false }: HeaderProps) => {
               }}
             >
               <Menu className="w-5 h-5 text-black relative z-10" />
-              <motion.div
+              {/* <motion.div
                 className="absolute inset-0 bg-lime"
                 initial={{
                   y: "100%",
@@ -428,7 +428,7 @@ const Header = ({ compact = false }: HeaderProps) => {
                 transition={{
                   duration: 0.2,
                 }}
-              />
+              /> */}
             </motion.button>
 
             {/* Back to Top Button */}
@@ -460,7 +460,7 @@ const Header = ({ compact = false }: HeaderProps) => {
               >
                 <ArrowUp className="w-5 h-5 text-black relative z-10" />
               </motion.div>
-              <motion.div
+              {/* <motion.div
                 className="absolute inset-0"
                 style={{
                   backgroundColor: "#f8ffe8",
@@ -474,7 +474,7 @@ const Header = ({ compact = false }: HeaderProps) => {
                 transition={{
                   duration: 0.2,
                 }}
-              />
+              /> */}
             </motion.button>
           </motion.div>
         )}

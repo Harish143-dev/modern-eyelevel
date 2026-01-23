@@ -7,6 +7,8 @@ import EnhancedFooter from "@/components/EnhancedFooter";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import GreenButton from "@/components/GreenButton";
+import akmal from "@/assets/akmal.jpeg";
+import jameel from "@/assets/jameel.jpeg";
 
 // Decorative star
 const Star4 = ({ className }: { className?: string }) => (
@@ -130,14 +132,12 @@ const authors = [
   {
     name: "Jamil",
     role: "Founder",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    image: jameel,
   },
   {
     name: "Akmal Rahman",
     role: "Co-Founder and Chief Growth Architect",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    image: akmal,
   },
   {
     name: "",
@@ -213,7 +213,6 @@ const Blog = () => {
           <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-2xl" />
           <div className="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-secondary/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
         </div>
-      
 
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <GreenButton>Blog</GreenButton>
@@ -380,17 +379,6 @@ const Blog = () => {
           borderColor: "rgba(248, 255, 232, 0.15)",
         }}
       >
-        <AnimatedStar
-          className="absolute top-20 right-[12%] w-5 h-5 hidden md:block"
-          color="#E2FEA5"
-          delay={0.3}
-        />
-        <AnimatedStar
-          className="absolute bottom-20 left-[10%] w-6 h-6 hidden lg:block"
-          color="#FFB4B4"
-          delay={0.7}
-        />
-
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

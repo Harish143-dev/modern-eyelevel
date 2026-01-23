@@ -8,6 +8,7 @@ import mascotPistol from "@/assets/mascot-pistol.png";
 import stare from "@/assets/stare.png";
 import guide from "@/assets/guide.png";
 import enforcement from "@/assets/enforcement.png";
+import build from "@/assets/build.png";
 
 const processSteps = [
   {
@@ -25,7 +26,7 @@ const processSteps = [
       "You don't need options; you need a decision. We chart the straightest route to profit.",
   },
   {
-    image: mascotPistol,
+    image: build,
     number: "3",
     title: "We Build.",
     description:
@@ -47,7 +48,9 @@ const ProcessSection = () => {
   });
 
   // Transform scroll progress to active step index (0-3)
-  const activeIndex = useTransform(scrollYProgress, [0, 1], [0, 3.99]);
+  // const activeIndex = useTransform(scrollYProgress, [0, 1], [0, 3.99]);
+  const activeIndex = useTransform(scrollYProgress, [0, 1], [0, 3]);
+
   return (
     <section
       ref={containerRef}
@@ -55,7 +58,7 @@ const ProcessSection = () => {
       style={{
         backgroundColor: "#253e35",
         borderColor: "rgba(248, 255, 232, 0.15)",
-        height: "300vh", // Reduced scroll height
+        height: "500vh", // Reduced scroll height
       }}
     >
       {/* Sticky container */}
@@ -124,7 +127,6 @@ const ProcessSection = () => {
                   key={index}
                   index={index}
                   activeIndex={activeIndex}
-                  scrollProgress={scrollYProgress}
                   image={step.image}
                 />
               ))}
@@ -163,52 +165,59 @@ const ProcessSection = () => {
 const MascotImage = ({
   index,
   activeIndex,
-  scrollProgress,
   image,
 }: {
   index: number;
   activeIndex: ReturnType<typeof useTransform<number, number>>;
-  scrollProgress: ReturnType<typeof useTransform<number, number>>;
   image: string;
 }) => {
-  const opacity = useTransform(activeIndex, (latest: number) => {
-    const distance = Math.abs(latest - index);
-    if (distance < 0.5) return 1;
-    if (distance < 1) return 1 - (distance - 0.5) * 2;
+  const opacity = useTransform(activeIndex, (latest) => {
+    const d = Math.abs(latest - index);
+    if (d < 0.3) return 1;
+    if (d < 0.6) return 1 - (d - 0.3) / 0.3;
     return 0;
   });
-  const scale = useTransform(activeIndex, (latest: number) => {
-    const distance = Math.abs(latest - index);
-    if (distance < 0.5) return 1;
-    if (distance < 1) return 0.9 + 0.1 * (1 - (distance - 0.5) * 2);
+
+  const scale = useTransform(activeIndex, (latest) => {
+    const d = Math.abs(latest - index);
+    if (d < 0.3) return 1;
+    if (d < 0.6) return 0.9 + 0.1 * (1 - (d - 0.3) / 0.3);
     return 0.9;
   });
 
-  // Subtle parallax effect - each mascot has slightly different movement
-  const parallaxY = useTransform(
-    scrollProgress,
-    [0, 1],
-    [20 - index * 5, -20 + index * 5],
-  );
-  const parallaxRotate = useTransform(
-    scrollProgress,
-    [0, 1],
-    [-2 + index, 2 - index],
-  );
+  // const y = useTransform(activeIndex, (latest) => {
+  //   if (Math.round(latest) === index) return 0;
+  //   if (latest < index) return 40;
+  //   return -40;
+  // });
+
   return (
     <motion.div
-      style={{
-        opacity,
-        scale,
-        y: parallaxY,
-        rotate: parallaxRotate,
+      style={{ opacity, scale }}
+      transition={{
+        opacity: {
+          duration: 0.35,
+          ease: "easeInOut",
+        },
+        scale: {
+          type: "spring",
+          stiffness: 120,
+          damping: 20,
+          mass: 0.6,
+        },
+        y: {
+          type: "spring",
+          stiffness: 120,
+          damping: 22,
+          mass: 0.7,
+        },
       }}
       className="absolute inset-0 flex items-center justify-center"
     >
       <img
         src={image}
-        alt={`Growth Monster step ${index + 1}`}
         className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 object-contain drop-shadow-2xl"
+        alt=""
       />
     </motion.div>
   );
