@@ -149,29 +149,6 @@ const Contact = () => {
                     </p>
                   </div>
                 </div>
-
-                <div className="flex items-center gap-4">
-                  <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: "rgba(226, 254, 165, 0.1)" }}
-                  >
-                    <MapPin className="w-5 h-5" style={{ color: "#E2FEA5" }} />
-                  </div>
-                  <div>
-                    <p
-                      className="text-sm font-bricolage"
-                      style={{ color: "rgba(248, 255, 232, 0.6)" }}
-                    >
-                      Visit us at
-                    </p>
-                    <p
-                      className="font-medium font-bricolage"
-                      style={{ color: "#F8FFE8" }}
-                    >
-                      Ekkantuthangal, Chennai, India
-                    </p>
-                  </div>
-                </div>
               </div>
             </motion.div>
 

@@ -128,8 +128,6 @@ const blogPosts = [
   },
 ];
 
-
-
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("Latest Blogs");
@@ -198,10 +196,12 @@ const Blog = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-dela mb-6 uppercase"
-            style={{ color: "#F8FFE8" }}
+            style={{ color: "#E2FEA5" }}
           >
             Your Go-To Source:{" "}
-            <span style={{ color: "#E2FEA5" }}>Blog Highlights & More</span>
+            <span>
+              <WavyUnderline>Blog</WavyUnderline> Highlights & More
+            </span>
           </motion.h1>
 
           {/* Search Bar */}
@@ -347,8 +347,6 @@ const Blog = () => {
           )}
         </div>
       </section>
-
-    
 
       {/* Newsletter */}
       <section className="py-20 px-4" style={{ backgroundColor: "#1e3c30" }}>

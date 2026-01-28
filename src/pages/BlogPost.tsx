@@ -31,7 +31,7 @@ const blogPostsData: Record<
     image: string;
     date: string;
     readTime: string;
-    author: { name: string; role: string; image: string };
+    author: { name: string; role: string; image?: string };
     content: string[];
     tags: string[];
   }
@@ -84,10 +84,9 @@ const blogPostsData: Record<
     date: "Jan 3, 2026",
     readTime: "7 min read",
     author: {
-      name: "Sabiha Sultana",
-      role: "Content Writer",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      name: "Akmal Rahman",
+      role: "Co-Founder and Chief Growth Architect",
+      image: akmal,
     },
     content: [
       "Color is one of the most powerful tools in a brand's arsenal. It communicates emotions, builds recognition, and influences purchasing decisions—often before a customer even reads a single word of your message.",
@@ -194,10 +193,8 @@ const blogPostsData: Record<
     date: "Dec 18, 2025",
     readTime: "8 min read",
     author: {
-      name: "Sabiha Sultana",
-      role: "Content Writer",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      name: "Thanujaa G",
+      role: "Brand Marketing Specialist",
     },
     content: [
       "In a world saturated with content, brands that tell compelling stories rise above the noise. Story isn't just a marketing tactic—it's how humans make sense of the world and form emotional connections.",
@@ -480,11 +477,11 @@ const BlogPost = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
-                className="lg:w-64 space-y-8"
+                className="lg:w-68 space-y-8"
               >
                 {/* Share */}
                 <div
-                  className="p-6 rounded-2xl sticky top-32"
+                  className="p-4 rounded-2xl sticky top-32"
                   style={{
                     backgroundColor: "rgba(248, 255, 232, 0.03)",
                     border: "1px solid rgba(226, 254, 165, 0.1)",
@@ -533,12 +530,19 @@ const BlogPost = () => {
                     >
                       Written by
                     </p>
-                    <div className="flex items-center gap-3">
-                      <img
-                        src={post.author.image}
-                        alt={post.author.name}
-                        className="w-12 h-12 rounded-full object-cover"
-                      />
+                    <div className="flex items-center justify-center gap-3">
+                      {post.author.image ? (
+                        <img
+                          src={post.author.image}
+                          alt={post.author.name}
+                          className="size-12 rounded-full object-cover"
+                        />
+                      ) : (
+                        <div className="size-12 bg-[#E2FEA5] text-[#253e35] text-3xl font-bold rounded-full flex items-center justify-center">
+                          <span>{post.author.name.charAt(0)}</span>
+                        </div>
+                      )}
+
                       <div>
                         <p className="font-dela text-[#F8FFE8]">
                           {post.author.name}
