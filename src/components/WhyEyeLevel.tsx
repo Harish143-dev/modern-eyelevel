@@ -99,7 +99,7 @@ const WhyEyeLevel = () => {
             </span>
           </motion.div>
           <h2 className="font-dela text-4xl md:text-5xl lg:text-6xl text-[#E2FEA5] mb-6 uppercase">
-            WHY EYELEVEL IS <WavyUnderline>DIFFERENT</WavyUnderline>
+            WHY We are <WavyUnderline>DIFFERENT</WavyUnderline>
           </h2>
           <p className="text-white/60 font-bricolage text-lg max-w-2xl mx-auto">
             See how we stack up against the competition. Spoiler: we check all
@@ -398,7 +398,7 @@ const WhyEyeLevel = () => {
           <p className="text-white/60 font-bricolage text-lg mb-2">
             Ready to work with the team that checks every box?
           </p>
-          <p className="font-dela text-xl" style={{ color: "#d0e999" }}>
+          <p className="font-dela text-xl uppercase" style={{ color: "#d0e999" }}>
             Let's talk about your growth.
           </p>
         </motion.div>

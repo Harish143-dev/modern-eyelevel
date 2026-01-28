@@ -173,16 +173,12 @@ export const ImageGallerySection = ({
       {/* Creative Image Grid */}
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-12 md:grid-rows-2 gap-4 md:gap-6 items-stretch">
-          {/* Large Featured Image */}
-          <motion.div
-            style={{ y: y1 }}
-            className="col-span-12 md:col-span-7 row-span-2 h-full"
-          >
+          <motion.div className="col-span-12 md:col-span-7 row-span-2 h-full">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="relative aspect-[4/3] md:aspect-[9/14] rounded-3xl overflow-hidden group"
+              className="relative h-full rounded-3xl overflow-hidden group"
             >
               <img
                 src={images[0]?.src}
@@ -198,11 +194,7 @@ export const ImageGallerySection = ({
             </motion.div>
           </motion.div>
 
-          {/* Smaller Images */}
-          <motion.div
-            style={{ y: y2 }}
-            className="col-span-6 md:col-span-5 h-full"
-          >
+          <motion.div className="col-span-6 md:col-span-5 h-full">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -224,7 +216,7 @@ export const ImageGallerySection = ({
             </motion.div>
           </motion.div>
 
-          <motion.div style={{ y: y2 }} className="col-span-6 md:col-span-5">
+          <motion.div className="col-span-6 md:col-span-5">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}

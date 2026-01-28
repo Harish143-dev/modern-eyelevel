@@ -1,34 +1,54 @@
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, Calendar, Clock, User, Share2, Twitter, Linkedin, Facebook, Link as LinkIcon, ArrowRight } from "lucide-react";
+import {
+  ArrowLeft,
+  Calendar,
+  Clock,
+  User,
+  Share2,
+  Twitter,
+  Linkedin,
+  Facebook,
+  Link as LinkIcon,
+  ArrowRight,
+} from "lucide-react";
 import Header from "@/components/Header";
 import EnhancedFooter from "@/components/EnhancedFooter";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import akmal from "@/assets/akmal.jpeg";
+import charles from "@/assets/charles.png";
+import janani from "@/assets/janani.png";
+import mohan from "@/assets/mohan.png";
 
 // Blog posts data - in production, this would come from an API/CMS
-const blogPostsData: Record<string, {
-  title: string;
-  excerpt: string;
-  category: string;
-  image: string;
-  date: string;
-  readTime: string;
-  author: { name: string; role: string; image: string };
-  content: string[];
-  tags: string[];
-}> = {
+const blogPostsData: Record<
+  string,
+  {
+    title: string;
+    excerpt: string;
+    category: string;
+    image: string;
+    date: string;
+    readTime: string;
+    author: { name: string; role: string; image: string };
+    content: string[];
+    tags: string[];
+  }
+> = {
   "how-ai-is-transforming-marketing-in-2026": {
     title: "How AI is Transforming Marketing in 2026",
-    excerpt: "Discover the latest AI tools and strategies that are revolutionizing how brands connect with their audiences.",
+    excerpt:
+      "Discover the latest AI tools and strategies that are revolutionizing how brands connect with their audiences.",
     category: "AI",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop",
     date: "Jan 5, 2026",
     readTime: "5 min read",
     author: {
-      name: "Atiqur Rahaman",
-      role: "CEO & Co-founder",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+      name: "Akmal Rahman",
+      role: "Co-Founder and Chief Growth Architect",
+      image: akmal,
     },
     content: [
       "Artificial Intelligence has moved beyond buzzword status to become the backbone of modern marketing strategies. In 2026, we're witnessing an unprecedented integration of AI tools that are fundamentally changing how brands understand, reach, and engage their audiences.",
@@ -45,21 +65,29 @@ const blogPostsData: Record<string, {
       "The key is collaboration. The most successful teams treat AI as an enhancement to human creativity, not a replacement. This symbiotic relationship is producing content at unprecedented speed and scale while maintaining the emotional intelligence and brand voice that only humans can provide.",
       "## Looking Ahead",
       "As we move through 2026, the integration of AI in marketing will only deepen. The brands that thrive will be those that embrace these tools while maintaining their authentic voice and genuine connection with customers. AI is the enabler; human creativity and strategic thinking remain the differentiators.",
-      "The future of marketing isn't about AI versus humans—it's about AI empowering humans to do what they do best, at scales previously unimaginable."
+      "The future of marketing isn't about AI versus humans—it's about AI empowering humans to do what they do best, at scales previously unimaginable.",
     ],
-    tags: ["Artificial Intelligence", "Marketing Technology", "Digital Strategy", "Automation"]
+    tags: [
+      "Artificial Intelligence",
+      "Marketing Technology",
+      "Digital Strategy",
+      "Automation",
+    ],
   },
   "the-psychology-of-color-in-branding": {
     title: "The Psychology of Color in Branding",
-    excerpt: "Learn how color choices impact consumer perception and brand recognition in the digital age.",
+    excerpt:
+      "Learn how color choices impact consumer perception and brand recognition in the digital age.",
     category: "Branding",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=600&fit=crop",
     date: "Jan 3, 2026",
     readTime: "7 min read",
     author: {
       name: "Sabiha Sultana",
       role: "Content Writer",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      image:
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
     },
     content: [
       "Color is one of the most powerful tools in a brand's arsenal. It communicates emotions, builds recognition, and influences purchasing decisions—often before a customer even reads a single word of your message.",
@@ -76,21 +104,23 @@ const blogPostsData: Record<string, {
       "When developing a color strategy, start with your brand's core values and personality. What emotions do you want to evoke? What associations do you want to build? Then research your competitive landscape—differentiation matters. If every competitor uses blue, a well-chosen alternative color could help you stand out.",
       "Test your choices across all touchpoints: digital, print, merchandise, and environments. Consistency builds recognition, but ensure your colors work technically across all applications before committing.",
       "## The Bottom Line",
-      "Color is not decoration—it's communication. The most successful brands treat color as a strategic asset, investing time and research into choices that will resonate with their target audience and support their business objectives for years to come."
+      "Color is not decoration—it's communication. The most successful brands treat color as a strategic asset, investing time and research into choices that will resonate with their target audience and support their business objectives for years to come.",
     ],
-    tags: ["Branding", "Design Psychology", "Color Theory", "Brand Strategy"]
+    tags: ["Branding", "Design Psychology", "Color Theory", "Brand Strategy"],
   },
   "building-a-design-system-that-scales": {
     title: "Building a Design System That Scales",
-    excerpt: "A comprehensive guide to creating design systems that grow with your organization.",
+    excerpt:
+      "A comprehensive guide to creating design systems that grow with your organization.",
     category: "Design Process",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&h=600&fit=crop",
     date: "Dec 28, 2025",
     readTime: "10 min read",
     author: {
-      name: "Abdullah Al Noman",
-      role: "COO & Co-founder",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      name: "Janani S",
+      role: "Junior Graphics Designer",
+      image: janani,
     },
     content: [
       "A design system is more than a collection of components—it's a living ecosystem that enables teams to build consistent, high-quality products at scale. But building one that actually works requires careful planning, clear governance, and a commitment to evolution.",
@@ -110,21 +140,23 @@ const blogPostsData: Record<string, {
       "The best design system is useless if no one uses it. Focus on developer experience: excellent documentation, easy installation, and responsive support. Celebrate teams that adopt the system and showcase their successes.",
       "Track adoption metrics and gather feedback continuously. The system should evolve based on real usage patterns and pain points, not abstract ideals.",
       "## The Long Game",
-      "Building a design system is a multi-year investment. Start small, prove value quickly, and expand based on organizational needs. Remember: the goal isn't a perfect system—it's enabling teams to build better products, faster."
+      "Building a design system is a multi-year investment. Start small, prove value quickly, and expand based on organizational needs. Remember: the goal isn't a perfect system—it's enabling teams to build better products, faster.",
     ],
-    tags: ["Design Systems", "UI/UX", "Product Design", "Development"]
+    tags: ["Design Systems", "UI/UX", "Product Design", "Development"],
   },
   "the-future-of-performance-marketing": {
     title: "The Future of Performance Marketing",
-    excerpt: "Explore emerging trends and technologies shaping the future of data-driven marketing.",
+    excerpt:
+      "Explore emerging trends and technologies shaping the future of data-driven marketing.",
     category: "Design Strategies",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop",
     date: "Dec 22, 2025",
     readTime: "6 min read",
     author: {
-      name: "Md. Sajib Ahmed",
-      role: "SEO Specialist",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+      name: "MohanKumar Raja",
+      role: "Digital Marketing Manager",
+      image: mohan,
     },
     content: [
       "Performance marketing stands at an inflection point. Privacy regulations, the death of third-party cookies, and evolving consumer expectations are forcing a fundamental rethinking of data-driven strategies.",
@@ -143,21 +175,29 @@ const blogPostsData: Record<string, {
       "## The Human Element",
       "As automation handles more tactical execution, the human role in performance marketing is shifting toward strategy, creativity, and relationship building. The most successful performance marketers combine analytical rigor with creative intuition and genuine understanding of customer needs.",
       "## Preparing for Tomorrow",
-      "The future belongs to marketers who can navigate complexity while maintaining focus on fundamentals: understanding customers, creating value, and measuring results. The tools will continue to evolve, but these principles remain constant."
+      "The future belongs to marketers who can navigate complexity while maintaining focus on fundamentals: understanding customers, creating value, and measuring results. The tools will continue to evolve, but these principles remain constant.",
     ],
-    tags: ["Performance Marketing", "Digital Advertising", "Privacy", "Analytics"]
+    tags: [
+      "Performance Marketing",
+      "Digital Advertising",
+      "Privacy",
+      "Analytics",
+    ],
   },
   "crafting-compelling-brand-stories": {
     title: "Crafting Compelling Brand Stories",
-    excerpt: "Master the art of storytelling to create emotional connections with your target audience.",
+    excerpt:
+      "Master the art of storytelling to create emotional connections with your target audience.",
     category: "Branding",
-    image: "https://images.unsplash.com/photo-1493612276216-ee3925520721?w=1200&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1493612276216-ee3925520721?w=1200&h=600&fit=crop",
     date: "Dec 18, 2025",
     readTime: "8 min read",
     author: {
       name: "Sabiha Sultana",
       role: "Content Writer",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      image:
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
     },
     content: [
       "In a world saturated with content, brands that tell compelling stories rise above the noise. Story isn't just a marketing tactic—it's how humans make sense of the world and form emotional connections.",
@@ -178,21 +218,23 @@ const blogPostsData: Record<string, {
       "Regular story audits help ensure your narrative remains relevant and authentic. Ask: Does this still reflect who we are and who we serve? Does it differentiate us from competitors? Does it inspire the actions we want?",
       "## The Courage to Be Different",
       "The most memorable brand stories are distinctive. They don't try to appeal to everyone or say what's expected. They take a point of view and commit to it.",
-      "This requires courage, but the alternative—a bland, forgettable story—is far more dangerous in a crowded market. The brands that thrive are those brave enough to stand for something meaningful."
+      "This requires courage, but the alternative—a bland, forgettable story—is far more dangerous in a crowded market. The brands that thrive are those brave enough to stand for something meaningful.",
     ],
-    tags: ["Storytelling", "Branding", "Content Strategy", "Marketing"]
+    tags: ["Storytelling", "Branding", "Content Strategy", "Marketing"],
   },
   "design-principles-for-conversion-optimization": {
     title: "Design Principles for Conversion Optimization",
-    excerpt: "Apply proven design principles to increase your website's conversion rates.",
+    excerpt:
+      "Apply proven design principles to increase your website's conversion rates.",
     category: "Design Principles",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=600&fit=crop",
     date: "Dec 15, 2025",
     readTime: "9 min read",
     author: {
-      name: "Abdullah Al Noman",
-      role: "COO & Co-founder",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      name: "Charles Praveen Kumar",
+      role: "Senior Graphics Designer",
+      image: charles,
     },
     content: [
       "Conversion optimization isn't about tricks or manipulation—it's about removing friction and clearly communicating value. The best-converting designs are often the clearest and most user-focused.",
@@ -215,16 +257,24 @@ const blogPostsData: Record<string, {
       "Design principles provide a starting point, but real optimization requires testing. A/B tests reveal what actually works with your specific audience—sometimes contradicting conventional wisdom.",
       "Test one element at a time when possible, and ensure sufficient sample sizes for statistical significance. Document learnings and build institutional knowledge over time.",
       "## The Holistic View",
-      "Conversion isn't just about the landing page—it's the entire journey from first touch to completed action. Ensure consistency and coherence across every step. A compelling ad that leads to a confusing page wastes budget and frustrates users."
+      "Conversion isn't just about the landing page—it's the entire journey from first touch to completed action. Ensure consistency and coherence across every step. A compelling ad that leads to a confusing page wastes budget and frustrates users.",
     ],
-    tags: ["UX Design", "Conversion Rate Optimization", "Web Design", "User Experience"]
-  }
+    tags: [
+      "UX Design",
+      "Conversion Rate Optimization",
+      "Web Design",
+      "User Experience",
+    ],
+  },
 };
 
 // Related posts helper
 const getRelatedPosts = (currentSlug: string, currentCategory: string) => {
   return Object.entries(blogPostsData)
-    .filter(([slug, post]) => slug !== currentSlug && post.category === currentCategory)
+    .filter(
+      ([slug, post]) =>
+        slug !== currentSlug && post.category === currentCategory,
+    )
     .slice(0, 3)
     .map(([slug, post]) => ({ slug, ...post }));
 };
@@ -238,13 +288,20 @@ const BlogPost = () => {
 
   if (!post) {
     return (
-      <div className="min-h-screen" style={{ backgroundColor: '#253e35' }}>
+      <div className="min-h-screen" style={{ backgroundColor: "#253e35" }}>
         <Header />
         <main className="pt-32 pb-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="font-dela text-4xl text-[#F8FFE8] mb-4">Post Not Found</h1>
-            <p className="text-[rgba(248,255,232,0.7)] mb-8">The blog post you're looking for doesn't exist.</p>
-            <Button onClick={() => navigate("/blog")} className="bg-[#E2FEA5] text-[#253e35]">
+            <h1 className="font-dela text-4xl text-[#F8FFE8] mb-4">
+              Post Not Found
+            </h1>
+            <p className="text-[rgba(248,255,232,0.7)] mb-8">
+              The blog post you're looking for doesn't exist.
+            </p>
+            <Button
+              onClick={() => navigate("/blog")}
+              className="bg-[#E2FEA5] text-[#253e35]"
+            >
               Back to Blog
             </Button>
           </div>
@@ -259,31 +316,34 @@ const BlogPost = () => {
   const handleShare = (platform: string) => {
     const url = window.location.href;
     const text = post.title;
-    
-    let shareUrl = '';
+
+    let shareUrl = "";
     switch (platform) {
-      case 'twitter':
+      case "twitter":
         shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
         break;
-      case 'linkedin':
+      case "linkedin":
         shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
         break;
-      case 'facebook':
+      case "facebook":
         shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
         break;
-      case 'copy':
+      case "copy":
         navigator.clipboard.writeText(url);
-        toast({ title: "Link copied!", description: "The article link has been copied to your clipboard." });
+        toast({
+          title: "Link copied!",
+          description: "The article link has been copied to your clipboard.",
+        });
         return;
     }
-    
+
     if (shareUrl) {
-      window.open(shareUrl, '_blank', 'width=600,height=400');
+      window.open(shareUrl, "_blank", "width=600,height=400");
     }
   };
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#253e35' }}>
+    <div className="min-h-screen" style={{ backgroundColor: "#253e35" }}>
       <Header />
 
       {/* Hero Banner */}
@@ -302,9 +362,9 @@ const BlogPost = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="max-w-4xl"
               >
-                <span 
+                <span
                   className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold font-bricolage mb-4"
-                  style={{ backgroundColor: '#E2FEA5', color: '#0a0a0a' }}
+                  style={{ backgroundColor: "#E2FEA5", color: "#0a0a0a" }}
                 >
                   {post.category}
                 </span>
@@ -336,7 +396,7 @@ const BlogPost = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
               className="flex flex-wrap items-center gap-4 md:gap-6 text-sm font-bricolage"
-              style={{ color: 'rgba(248, 255, 232, 0.6)' }}
+              style={{ color: "rgba(248, 255, 232, 0.6)" }}
             >
               <span className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
@@ -368,21 +428,21 @@ const BlogPost = () => {
                 className="prose-lg"
               >
                 {post.content.map((paragraph, index) => {
-                  if (paragraph.startsWith('## ')) {
+                  if (paragraph.startsWith("## ")) {
                     return (
-                      <h2 
-                        key={index} 
+                      <h2
+                        key={index}
                         className="font-dela text-2xl md:text-3xl text-[#E2FEA5] mt-12 mb-6 uppercase"
                       >
-                        {paragraph.replace('## ', '')}
+                        {paragraph.replace("## ", "")}
                       </h2>
                     );
                   }
                   return (
-                    <p 
-                      key={index} 
+                    <p
+                      key={index}
                       className="text-lg leading-relaxed mb-6 font-bricolage"
-                      style={{ color: 'rgba(248, 255, 232, 0.85)' }}
+                      style={{ color: "rgba(248, 255, 232, 0.85)" }}
                     >
                       {paragraph}
                     </p>
@@ -391,18 +451,21 @@ const BlogPost = () => {
 
                 {/* Tags */}
                 <div className="mt-12 pt-8 border-t border-[rgba(226,254,165,0.1)]">
-                  <p className="text-sm font-medium mb-4" style={{ color: 'rgba(248, 255, 232, 0.5)' }}>
+                  <p
+                    className="text-sm font-medium mb-4"
+                    style={{ color: "rgba(248, 255, 232, 0.5)" }}
+                  >
                     Tags:
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {post.tags.map((tag) => (
-                      <span 
+                      <span
                         key={tag}
                         className="px-4 py-2 rounded-full text-sm font-bricolage"
-                        style={{ 
-                          backgroundColor: 'rgba(226, 254, 165, 0.1)',
-                          color: '#E2FEA5',
-                          border: '1px solid rgba(226, 254, 165, 0.2)'
+                        style={{
+                          backgroundColor: "rgba(226, 254, 165, 0.1)",
+                          color: "#E2FEA5",
+                          border: "1px solid rgba(226, 254, 165, 0.2)",
                         }}
                       >
                         {tag}
@@ -420,11 +483,11 @@ const BlogPost = () => {
                 className="lg:w-64 space-y-8"
               >
                 {/* Share */}
-                <div 
+                <div
                   className="p-6 rounded-2xl sticky top-32"
-                  style={{ 
-                    backgroundColor: 'rgba(248, 255, 232, 0.03)',
-                    border: '1px solid rgba(226, 254, 165, 0.1)'
+                  style={{
+                    backgroundColor: "rgba(248, 255, 232, 0.03)",
+                    border: "1px solid rgba(226, 254, 165, 0.1)",
                   }}
                 >
                   <p className="font-dela text-lg text-[#F8FFE8] mb-4 flex items-center gap-2">
@@ -433,30 +496,30 @@ const BlogPost = () => {
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <button
-                      onClick={() => handleShare('twitter')}
+                      onClick={() => handleShare("twitter")}
                       className="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110"
-                      style={{ backgroundColor: 'rgba(226, 254, 165, 0.1)' }}
+                      style={{ backgroundColor: "rgba(226, 254, 165, 0.1)" }}
                     >
                       <Twitter className="w-5 h-5 text-[#E2FEA5]" />
                     </button>
                     <button
-                      onClick={() => handleShare('linkedin')}
+                      onClick={() => handleShare("linkedin")}
                       className="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110"
-                      style={{ backgroundColor: 'rgba(226, 254, 165, 0.1)' }}
+                      style={{ backgroundColor: "rgba(226, 254, 165, 0.1)" }}
                     >
                       <Linkedin className="w-5 h-5 text-[#E2FEA5]" />
                     </button>
                     <button
-                      onClick={() => handleShare('facebook')}
+                      onClick={() => handleShare("facebook")}
                       className="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110"
-                      style={{ backgroundColor: 'rgba(226, 254, 165, 0.1)' }}
+                      style={{ backgroundColor: "rgba(226, 254, 165, 0.1)" }}
                     >
                       <Facebook className="w-5 h-5 text-[#E2FEA5]" />
                     </button>
                     <button
-                      onClick={() => handleShare('copy')}
+                      onClick={() => handleShare("copy")}
                       className="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110"
-                      style={{ backgroundColor: 'rgba(226, 254, 165, 0.1)' }}
+                      style={{ backgroundColor: "rgba(226, 254, 165, 0.1)" }}
                     >
                       <LinkIcon className="w-5 h-5 text-[#E2FEA5]" />
                     </button>
@@ -464,7 +527,10 @@ const BlogPost = () => {
 
                   {/* Author */}
                   <div className="mt-8 pt-6 border-t border-[rgba(226,254,165,0.1)]">
-                    <p className="text-sm mb-4" style={{ color: 'rgba(248, 255, 232, 0.5)' }}>
+                    <p
+                      className="text-sm mb-4"
+                      style={{ color: "rgba(248, 255, 232, 0.5)" }}
+                    >
                       Written by
                     </p>
                     <div className="flex items-center gap-3">
@@ -474,8 +540,13 @@ const BlogPost = () => {
                         className="w-12 h-12 rounded-full object-cover"
                       />
                       <div>
-                        <p className="font-dela text-[#F8FFE8]">{post.author.name}</p>
-                        <p className="text-sm font-bricolage" style={{ color: 'rgba(248, 255, 232, 0.5)' }}>
+                        <p className="font-dela text-[#F8FFE8]">
+                          {post.author.name}
+                        </p>
+                        <p
+                          className="text-sm font-bricolage"
+                          style={{ color: "rgba(248, 255, 232, 0.5)" }}
+                        >
                           {post.author.role}
                         </p>
                       </div>
@@ -490,7 +561,7 @@ const BlogPost = () => {
 
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
-        <section className="py-20 px-4" style={{ backgroundColor: '#173229' }}>
+        <section className="py-20 px-4" style={{ backgroundColor: "#173229" }}>
           <div className="container mx-auto">
             <div className="max-w-6xl mx-auto">
               <motion.div
@@ -499,7 +570,10 @@ const BlogPost = () => {
                 viewport={{ once: true }}
                 className="text-center mb-12"
               >
-                <p className="uppercase tracking-[0.3em] text-sm mb-4 font-bricolage" style={{ color: '#E2FEA5' }}>
+                <p
+                  className="uppercase tracking-[0.3em] text-sm mb-4 font-bricolage"
+                  style={{ color: "#E2FEA5" }}
+                >
                   Keep Reading
                 </p>
                 <h2 className="text-3xl md:text-4xl font-dela text-[#F8FFE8]">
@@ -518,11 +592,11 @@ const BlogPost = () => {
                     className="group"
                   >
                     <Link to={`/blog/${relatedPost.slug}`}>
-                      <div 
+                      <div
                         className="rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2"
-                        style={{ 
-                          backgroundColor: 'rgba(248, 255, 232, 0.03)',
-                          border: '1px solid rgba(226, 254, 165, 0.1)'
+                        style={{
+                          backgroundColor: "rgba(248, 255, 232, 0.03)",
+                          border: "1px solid rgba(226, 254, 165, 0.1)",
                         }}
                       >
                         <div className="relative aspect-[16/10] overflow-hidden">
@@ -533,7 +607,10 @@ const BlogPost = () => {
                           />
                         </div>
                         <div className="p-6">
-                          <p className="text-sm mb-2 font-bricolage" style={{ color: 'rgba(248, 255, 232, 0.5)' }}>
+                          <p
+                            className="text-sm mb-2 font-bricolage"
+                            style={{ color: "rgba(248, 255, 232, 0.5)" }}
+                          >
                             {relatedPost.date} • {relatedPost.readTime}
                           </p>
                           <h3 className="font-dela text-lg text-[#F8FFE8] group-hover:text-[#E2FEA5] transition-colors">
@@ -551,7 +628,7 @@ const BlogPost = () => {
       )}
 
       {/* CTA Section */}
-      <section className="py-20 px-4" style={{ backgroundColor: '#1e3c30' }}>
+      <section className="py-20 px-4" style={{ backgroundColor: "#1e3c30" }}>
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -562,7 +639,10 @@ const BlogPost = () => {
               <h2 className="font-dela text-3xl md:text-4xl text-[#F8FFE8] uppercase mb-6">
                 Ready to Transform Your Brand?
               </h2>
-              <p className="text-lg font-bricolage mb-8" style={{ color: 'rgba(248, 255, 232, 0.7)' }}>
+              <p
+                className="text-lg font-bricolage mb-8"
+                style={{ color: "rgba(248, 255, 232, 0.7)" }}
+              >
                 Let's discuss how we can help you achieve your marketing goals.
               </p>
               <Button
@@ -570,10 +650,10 @@ const BlogPost = () => {
                 size="lg"
                 className="group rounded-full px-10 py-7 text-base md:text-lg font-semibold font-bricolage hover:translate-y-1 hover:shadow-none transition-all duration-150"
                 style={{
-                  backgroundColor: '#FCFAC2',
-                  color: '#0a0a0a',
-                  border: '3px solid #0a0a0a',
-                  boxShadow: '0 4px 0 #0a0a0a'
+                  backgroundColor: "#FCFAC2",
+                  color: "#0a0a0a",
+                  border: "3px solid #0a0a0a",
+                  boxShadow: "0 4px 0 #0a0a0a",
                 }}
               >
                 Get in Touch

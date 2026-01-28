@@ -9,13 +9,17 @@ import WavyUnderline from "@/components/WavyUnderline";
 import teamImage1 from "@/assets/aboutImage1.jpeg";
 import teamImage2 from "@/assets/aboutImg2.jpg";
 import teamImage3 from "@/assets/aboutImg3.jpeg";
-import teamImage4 from "@/assets/realestate-gallery-1.jpg";
+import teamImage4 from "@/assets/aboutImg4.jpg";
 import teamImage5 from "@/assets/edu-gallery-2.jpg";
 import teamImage6 from "@/assets/sports-gallery-2.jpg";
 import mascotWave from "@/assets/mascot-wave.png";
 import GreenButton from "@/components/GreenButton";
 import video from "@/assets/videogallery.mp4";
 import video1 from "@/assets/videogallery2.mp4";
+import akmal from "@/assets/akmal.jpeg";
+import jameel from "@/assets/jameel.jpeg";
+import Jahangeer from "@/assets/jahangeer.jpeg";
+import { Linkedin } from "lucide-react";
 
 const values = [
   {
@@ -52,7 +56,7 @@ const values = [
 
 const galleryImages = [
   { src: teamImage1, alt: "Team collaboration" },
-  { src: teamImage2, alt: "Office environment" },
+  { src: teamImage2, alt: "Team in action" },
   { src: teamImage3, alt: "Strategy session" },
   { src: teamImage2, alt: "Team meeting" },
   { src: teamImage3, alt: "Creative work" },
@@ -88,6 +92,35 @@ const videoMap: Record<number, string> = {
   2: video, // 3rd item
 };
 const About = () => {
+  const authors = [
+    {
+      name: "Mohammad Jameel",
+      role: "Founder",
+      image: jameel,
+      dec: "A seasoned investment banking professional specializing in wealth management and alternative investment solutions for HNI and celebrity clients.",
+      socials: "https://www.linkedin.com/in/muhammad-jameel-1b340836/",
+    },
+    {
+      name: "Akmal Rahman",
+      role: "Co-Founder and Chief Growth Architect",
+      image: akmal,
+      dec: "A senior marketing leader with 15+ years of experience driving scalable growth, building powerful brands, and executing high-impact go-to-market strategies.",
+      socials: "https://www.linkedin.com/in/akmalbillekar/",
+    },
+    {
+      name: "Jahangeer Ansari",
+      role: "Web3 & Tech Strategy Advisor",
+      image: Jahangeer,
+      dec: "A marketing and technology strategist with 15+ years of experience, specializing in Web3, DeFi, and AI-driven growth initiatives.",
+      socials: "https://www.linkedin.com/in/jahangeeransari/",
+    },
+    // {
+    //   name: "",
+    //   role: "Brand Marketing Manager",
+    //   image:
+    //     "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    // },
+  ];
   return (
     <div
       className="min-h-screen overflow-hidden"
@@ -267,7 +300,7 @@ const About = () => {
                     className="text-5xl font-dela"
                     style={{ color: "#E2FEA5" }}
                   >
-                    5+
+                    15+
                   </span>
                   <p
                     className="text-sm mt-2 font-bricolage"
@@ -367,7 +400,7 @@ const About = () => {
                     01
                   </span>
                   <h3
-                    className="text-2xl md:text-3xl font-dela mt-4 mb-4"
+                    className="text-2xl md:text-3xl font-dela mt-4 mb-4 uppercase"
                     style={{ color: "#253e35" }}
                   >
                     {values[0].title}
@@ -405,7 +438,7 @@ const About = () => {
                     02
                   </span>
                   <h3
-                    className="text-xl md:text-2xl font-dela mt-3 mb-3"
+                    className="text-xl md:text-2xl font-dela mt-3 mb-3 uppercase"
                     style={{ color: "#253e35" }}
                   >
                     {values[1].title}
@@ -443,7 +476,7 @@ const About = () => {
                     03
                   </span>
                   <h3
-                    className="text-xl md:text-2xl font-dela mt-3 mb-3"
+                    className="text-xl md:text-2xl font-dela mt-3 mb-3 uppercase"
                     style={{ color: "#253e35" }}
                   >
                     {values[2].title}
@@ -481,7 +514,7 @@ const About = () => {
                     04
                   </span>
                   <h3
-                    className="text-xl md:text-2xl font-dela mt-3 mb-3"
+                    className="text-xl md:text-2xl font-dela mt-3 mb-3 uppercase"
                     style={{ color: "#253e35" }}
                   >
                     {values[3].title}
@@ -519,7 +552,7 @@ const About = () => {
                     05
                   </span>
                   <h3
-                    className="text-xl md:text-2xl font-dela mt-3 mb-3"
+                    className="text-xl md:text-2xl font-dela mt-3 mb-3 uppercase"
                     style={{ color: "#253e35" }}
                   >
                     {values[4].title}
@@ -533,6 +566,82 @@ const About = () => {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Author Profiles - Light Background */}
+      <section
+        className="py-20 px-4 relative overflow-hidden border-t border-b"
+        style={{
+          backgroundColor: "#253e35",
+          borderColor: "rgba(248, 255, 232, 0.15)",
+        }}
+      >
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-dela uppercase">
+              <span style={{ color: "#E2FEA5" }}>The Leadership</span>{" "}
+              <WavyUnderline>Team</WavyUnderline>
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {authors.map((author, index) => (
+              <motion.div
+                key={author.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -5, scale: 1.05 }}
+                className="text-center group flex flex-col justify-evenly items-center rounded-2xl p-4 md:p-6 cursor-pointer"
+                style={{
+                  backgroundColor: "#F8FFE8",
+                  border: "3px solid #0a0a0a",
+                  boxShadow: "0 6px 0 #0a0a0a",
+                }}
+              >
+                <div
+                  className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 transition-colors"
+                  style={{ borderColor: "rgb(37, 62, 53)" }}
+                >
+                  <img
+                    src={author.image}
+                    alt={author.name}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <h3
+                  className="font-dela text-lg uppercase"
+                  style={{ color: "#253E35" }}
+                >
+                  {author.name}
+                </h3>
+                <p className="text-sm font-bricolage text-[#E2FEA5] mt-1 px-3 py-0.5 rounded-full bg-[#253E35]">
+                  {author.role}
+                </p>
+                <p className="text-sm font-bricolage mt-3 mx-4 text-[#253E35]/70">
+                  {author?.dec}
+                </p>
+                <a
+                  className="text-sm flex justify-center gap-2 font-bricolage mt-2 mx-4 text-[#E2FEA5] bg-[#253E35] px-4 py-2 rounded-full border-2 border-[#E2FEA5] hover:bg-[#253E35]/90 transition-colors"
+                  href={author.socials}
+                  target="_blank"
+                >
+                  <span>
+                    <Linkedin className="size-5 pb-1" />
+                  </span>
+                  Connect
+                </a>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -600,6 +709,7 @@ const About = () => {
                     <img
                       src={image.src}
                       alt={image.alt}
+                      loading="lazy"
                       className="w-full h-full object-cover aspect-square transition-transform duration-700 group-hover:scale-110"
                     />
                   )}
@@ -614,14 +724,14 @@ const About = () => {
                   />
 
                   {/* Caption */}
-                  <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  {/* <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <p
                       className="text-sm font-medium font-bricolage"
                       style={{ color: "#F8FFE8" }}
                     >
-                      {videoSrc ? "Celebrations" : image.alt}
+                      {image.alt}
                     </p>
-                  </div>
+                  </div> */}
                 </motion.div>
               );
             })}

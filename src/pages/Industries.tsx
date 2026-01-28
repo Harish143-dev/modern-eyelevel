@@ -12,11 +12,12 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 // Import industry images
-import industryEducation from "@/assets/industry-education.jpg";
-import industrySports from "@/assets/industry-sports.jpg";
-import industryRealestate from "@/assets/industry-realestate.jpg";
-import industryB2b from "@/assets/industry-b2b.jpg";
+import industryEducation from "@/assets/industries/edu.jpg";
+import industrySports from "@/assets/industries/pickleball.png";
+import industryRealestate from "@/assets/industries/real_estate.png";
+import industryB2b from "@/assets/industries/b2b.png";
 import WavyUnderline from "@/components/WavyUnderline";
+
 
 const industries = [
   {
@@ -29,7 +30,7 @@ const industries = [
       "We help schools, universities, and EdTech companies build powerful brands and create a predictable pipeline of qualified student applications.",
     longDescription:
       "Partner with us to streamline your admissions funnel and attract students who are the perfect fit for your campus. Our data-driven approach ensures every marketing dollar translates into quality enrollments.",
-    href: "/industries/education",
+    href: "#",
     image: industryEducation,
     accentColor: "#B8D4BE",
     stats: [
@@ -54,7 +55,7 @@ const industries = [
       "We help sports teams, leagues, and event organizers translate passion into packed stadiums, engaged communities, and lucrative commercial opportunities.",
     longDescription:
       "Go beyond the game with brand strategies that maximize your reach and monetize your global fanbase. We turn every match into a marketing opportunity.",
-    href: "/industries/sports",
+    href: "#",
     image: industrySports,
     accentColor: "#FFB4B4",
     stats: [
@@ -79,7 +80,7 @@ const industries = [
       "We help developers, brokers, and property management companies build powerful brands and generate a consistent flow of qualified leads.",
     longDescription:
       "Leverage high-performance digital systems built specifically to move real estate inventory in competitive markets. From pre-launch to sold-out.",
-    href: "/industries/real-estate",
+    href: "#",
     image: industryRealestate,
     accentColor: "#E2FEA5",
     stats: [
@@ -104,7 +105,7 @@ const industries = [
       "We help B2B companies build a predictable pipeline of qualified leads and nurture them into long-term, high-value customers.",
     longDescription:
       "Build a sophisticated engine that identifies high-value targets and moves them efficiently through your sales cycle. Strategic marketing meets measurable results.",
-    href: "/industries/b2b",
+    href: "#",
     image: industryB2b,
     accentColor: "#FCFAC2",
     stats: [
@@ -370,7 +371,7 @@ const IndustryShowcase = ({ industry, index }: IndustryShowcaseProps) => {
               />
 
               {/* Number badge */}
-              <div
+              {/* <div
                 className="absolute top-6 left-6 w-16 h-16 rounded-2xl flex items-center justify-center backdrop-blur-sm"
                 style={{
                   backgroundColor: `${industry.accentColor}20`,
@@ -383,10 +384,10 @@ const IndustryShowcase = ({ industry, index }: IndustryShowcaseProps) => {
                 >
                   {industry.number}
                 </span>
-              </div>
+              </div> */}
 
               {/* Stats overlay on hover */}
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
                 className="absolute inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 transition-opacity duration-300"
@@ -406,7 +407,7 @@ const IndustryShowcase = ({ industry, index }: IndustryShowcaseProps) => {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div> */}
             </div>
           </motion.div>
 

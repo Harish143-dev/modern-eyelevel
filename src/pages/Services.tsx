@@ -14,6 +14,17 @@ import photoGallery2 from "@/assets/photo-gallery-2.png";
 import photoGallery3 from "@/assets/photo-gallery-3.png";
 import martechGallery1 from "@/assets/martech-gallery-1.png";
 import martechGallery2 from "@/assets/martech-gallery-2.jpg";
+import production_1 from "@/assets/production_1.jpg";
+import production_2 from "@/assets/production_2.jpg";
+import production_3 from "@/assets/production_3.jpg";
+import poster_1 from "@/assets/poster_1.png";
+import poster_3 from "@/assets/poster_3.png";
+import social_1 from "@/assets/Google.png";
+import social_2 from "@/assets/social media .png";
+import social_3 from "@/assets/linkedin.png";
+import celebrityEvent from "@/assets/celebrity.png";
+import meeting from "@/assets/meeting.jpg";
+import crm from "@/assets/crm.png";
 
 const services = [
   {
@@ -50,7 +61,13 @@ const services = [
       "Contracting and usage rights",
       "360° amplification",
     ],
-    media: [{ src: influencerCelebrityImg, type: "image" as const }],
+    media: [
+      { src: influencerCelebrityImg, type: "image" as const },
+      {
+        src: celebrityEvent,
+        type: "image" as const,
+      },
+    ],
     bgColor: "#253e35",
   },
   {
@@ -66,6 +83,9 @@ const services = [
       "Post-production and finishing",
     ],
     media: [
+      { src: production_1, type: "image" as const },
+      { src: production_2, type: "image" as const },
+      { src: production_3, type: "image" as const },
       { src: photoGallery1, type: "image" as const },
       { src: photoGallery2, type: "image" as const },
       { src: photoGallery3, type: "image" as const },
@@ -88,15 +108,12 @@ const services = [
     ],
     media: [
       {
-        src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
+        src: meeting,
         type: "image" as const,
       },
+
       {
         src: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
-        type: "image" as const,
-      },
-      {
-        src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80",
         type: "image" as const,
       },
     ],
@@ -119,15 +136,15 @@ const services = [
     ],
     media: [
       {
-        src: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80",
-        type: "image" as const,
-      },
-      {
-        src: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80",
+        src: poster_1,
         type: "image" as const,
       },
       {
         src: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=80",
+        type: "image" as const,
+      },
+      {
+        src: poster_3,
         type: "image" as const,
       },
     ],
@@ -178,15 +195,15 @@ const services = [
     ],
     media: [
       {
-        src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+        src: social_1,
         type: "image" as const,
       },
       {
-        src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+        src: social_2,
         type: "image" as const,
       },
       {
-        src: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&q=80",
+        src: social_3,
         type: "image" as const,
       },
     ],
@@ -208,6 +225,7 @@ const services = [
     media: [
       { src: martechGallery1, type: "image" as const },
       { src: martechGallery2, type: "image" as const },
+      { src: crm, type: "image" as const },
     ],
     bgColor: "#253e35",
   },

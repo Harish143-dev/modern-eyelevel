@@ -47,14 +47,14 @@ const App = () => (
             element={<Navigate to="/about" replace />}
           />
           <Route path="/industries" element={<Industries />} />
-          <Route path="/industries/education" element={<EduMarketing />} />
-          <Route path="/industries/sports" element={<SportsMarketing />} />
-          <Route
+          {/* <Route path="/industries/education" element={<EduMarketing />} /> */}
+          {/* <Route path="/industries/sports" element={<SportsMarketing />} /> */}
+          {/* <Route
             path="/industries/real-estate"
             element={<RealEstateMarketing />}
-          />
-          <Route path="/industries/b2b" element={<B2BMarketing />} />
-          <Route path="/industries/:slug" element={<IndustryDetail />} />
+          /> */}
+          {/* <Route path="/industries/b2b" element={<B2BMarketing />} /> */}
+          {/* <Route path="/industries/:slug" element={<IndustryDetail />} /> */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />

@@ -519,7 +519,7 @@ const B2BMarketing = () => {
                 className="group cursor-pointer"
               >
                 <div
-                  className="relative h-full rounded-3xl p-8 transition-all duration-300"
+                  className="relative h-full rounded-3xl p-6 transition-all duration-300"
                   style={{
                     backgroundColor: "#173229",
                     border: "2px solid rgba(252, 250, 194, 0.2)",

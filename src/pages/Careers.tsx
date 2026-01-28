@@ -215,7 +215,7 @@ const Careers = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="text-center"
+                  className="text-center flex flex-col items-center justify-between"
                 >
                   <div
                     className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4 mx-auto"
@@ -230,7 +230,7 @@ const Careers = () => {
                     />
                   </div>
                   <h3
-                    className="text-lg font-dela mb-2"
+                    className="text-lg font-dela mb-2 uppercase"
                     style={{ color: "#0a0a0a" }}
                   >
                     {benefit.title}
@@ -316,7 +316,7 @@ const Careers = () => {
                           </span>
                         </div>
                         <h3
-                          className="text-xl font-dela mb-2 transition-colors"
+                          className="text-xl font-dela mb-2 transition-colors uppercase"
                           style={{ color: "#0a0a0a" }}
                         >
                           {position.title}

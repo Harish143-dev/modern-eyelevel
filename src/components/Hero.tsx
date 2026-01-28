@@ -120,7 +120,7 @@ const Hero = () => {
             style={{ color: "#E2FEA5" }}
           >
             <span className=" relative inline-flex items-center gap-2 md:gap-4">
-              <span className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[12rem]">
+              <span className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem]">
                 FIRE
               </span>
               {animationData && (
@@ -129,7 +129,7 @@ const Hero = () => {
                   animationData={animationData}
                   autoPlay={false}
                   loop={false}
-                  className="absolute left-3/4 top-1/2 -translate-y-1/2 w-[300px] sm:w-[450px] md:w-[520px] lg:w-[830px] pointer-events-none"
+                  className="absolute left-3/4 top-1/2 -translate-y-1/2 w-[300px] sm:w-[450px] md:w-[520px] lg:w-[700px] pointer-events-none"
                 />
               )}
             </span>
@@ -159,7 +159,7 @@ const Hero = () => {
             <Link to="/booking">
               <Button
                 size="lg"
-                className="group rounded-full px-10 py-7 text-base md:text-lg font-semibold font-bricolage hover:translate-y-1 hover:shadow-none transition-all duration-150"
+                className="group rounded-full px-10 py-7 mt-5 text-base md:text-lg font-semibold font-bricolage hover:translate-y-1 hover:shadow-none transition-all duration-150"
                 style={{
                   backgroundColor: "#FCFAC2",
                   color: "#0a0a0a",

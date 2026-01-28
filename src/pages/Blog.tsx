@@ -7,8 +7,7 @@ import EnhancedFooter from "@/components/EnhancedFooter";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import GreenButton from "@/components/GreenButton";
-import akmal from "@/assets/akmal.jpeg";
-import jameel from "@/assets/jameel.jpeg";
+
 import WavyUnderline from "@/components/WavyUnderline";
 
 // Decorative star
@@ -129,30 +128,7 @@ const blogPosts = [
   },
 ];
 
-const authors = [
-  {
-    name: "Mohammad Jameel",
-    role: "Founder",
-    image: jameel,
-  },
-  {
-    name: "Akmal Rahman",
-    role: "Co-Founder and Chief Growth Architect",
-    image: akmal,
-  },
-  {
-    name: "",
-    role: "Head of Creative",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-  },
-  {
-    name: "",
-    role: "Brand Marketing Manager",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-  },
-];
+
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -372,62 +348,7 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Author Profiles - Light Background */}
-      <section
-        className="py-20 px-4 relative overflow-hidden border-t border-b"
-        style={{
-          backgroundColor: "#253e35",
-          borderColor: "rgba(248, 255, 232, 0.15)",
-        }}
-      >
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-dela uppercase">
-              <span style={{ color: "#E2FEA5" }}>Voices Behind</span>{" "}
-              <WavyUnderline>The Words</WavyUnderline>
-            </h2>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {authors.map((author, index) => (
-              <motion.div
-                key={author.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -5, scale: 1.05 }}
-                className="text-center group"
-              >
-                <div
-                  className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 transition-colors"
-                  style={{ borderColor: "rgba(226, 254, 165, 0.2)" }}
-                >
-                  <img
-                    src={author.image}
-                    alt={author.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="font-dela text-lg" style={{ color: "#F8FFE8" }}>
-                  {author.name}
-                </h3>
-                <p
-                  className="text-sm font-bricolage"
-                  style={{ color: "rgba(248, 255, 232, 0.6)" }}
-                >
-                  {author.role}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+    
 
       {/* Newsletter */}
       <section className="py-20 px-4" style={{ backgroundColor: "#1e3c30" }}>
@@ -438,10 +359,12 @@ const Blog = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-dela mb-4 uppercase"
           >
-            <span style={{ color: "#F8FFE8" }}>
+            <span style={{ color: "#E2FEA5" }}>
               Stay In The Loop And Keep Up With
             </span>{" "}
-            <span style={{ color: "#E2FEA5" }}>All Our News And Updates</span>
+            <span style={{ color: "#E2FEA5" }}>
+              All Our News And <WavyUnderline>Updates</WavyUnderline>
+            </span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

@@ -233,6 +233,7 @@ const ServiceGallery = ({
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
             className="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
           />
         )}
       </AnimatePresence>
@@ -311,7 +312,7 @@ const ServiceGallery = ({
       )}
 
       {/* Media Counter & Type Indicator */}
-      {media.length > 1 && (
+      {/* {media.length > 1 && (
         <div
           className="absolute top-4 right-4 px-3 py-1.5 rounded-full backdrop-blur-md text-sm font-bricolage font-medium flex items-center gap-2 z-10"
           style={{
@@ -323,7 +324,7 @@ const ServiceGallery = ({
           {isCurrentVideo && <Play className="w-3 h-3" />}
           {currentIndex + 1} / {media.length}
         </div>
-      )}
+      )} */}
     </div>
   );
 };

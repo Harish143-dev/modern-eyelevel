@@ -1,39 +1,37 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import WavyUnderline from "@/components/WavyUnderline";
-import mascotStare from "@/assets/mascot.png";
-import mascotPointing from "@/assets/mascot-pointing.png";
-import mascotThinking from "@/assets/mascot-thinking.png";
-import mascotPistol from "@/assets/mascot-pistol.png";
-import stare from "@/assets/stare.png";
-import guide from "@/assets/guide.png";
-import enforcement from "@/assets/enforcement.png";
-import build from "@/assets/build.png";
+import Lottie from "lottie-react";
+import stare from "@/assets/stackingCardsAnimation/stare.json";
+import blocks from "@/assets/stackingCardsAnimation/blocks.json";
+import gun from "@/assets/stackingCardsAnimation/gun.json";
+import scatt from "@/assets/stackingCardsAnimation/scatt.json";
+import GreenButton from "./GreenButton";
 
 const processSteps = [
   {
-    image: stare,
+    animationPath: stare,
     number: "1",
     title: "We Stare.",
     description:
       "Most agencies blink; we don't. We find the leaks in your funnel that others miss.",
   },
   {
-    image: guide,
+    animationPath: scatt,
     number: "2",
     title: "We Guide.",
     description:
       "You don't need options; you need a decision. We chart the straightest route to profit.",
   },
   {
-    image: build,
+    animationPath: blocks,
     number: "3",
     title: "We Build.",
     description:
       "Strategy without tactics is just an illusion. We build the systems that print results.",
   },
   {
-    image: enforcement,
+    animationPath: gun,
     number: "4",
     title: "We Enforce.",
     description:
@@ -58,12 +56,12 @@ const ProcessSection = () => {
       style={{
         backgroundColor: "#253e35",
         borderColor: "rgba(248, 255, 232, 0.15)",
-        height: "500vh", // Reduced scroll height
+        height: "400vh", // Reduced scroll height
       }}
     >
       {/* Sticky container */}
-      <div className="sticky top-0 min-h-[130vh] flex items-center overflow-hidden pt-10 pb-0">
-        <div className="max-w-7xl mx-auto w-full px-4 md:px-8 -mt-16 md:-mt-24">
+      <div className="sticky top-0 min-h-[100vh] flex items-center overflow-hidden pb-0">
+        <div className="max-w-7xl mx-auto w-full px-4 md:px-8">
           {/* Header */}
           <motion.div
             initial={{
@@ -77,57 +75,30 @@ const ProcessSection = () => {
             viewport={{
               once: true,
             }}
-            className="text-center mb-6 md:mb-8 py-0"
+            className="text-center py-0"
           >
-            <motion.div
-              initial={{
-                opacity: 0,
-                scale: 0.8,
-              }}
-              whileInView={{
-                opacity: 1,
-                scale: 1,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{
-                duration: 0.6,
-              }}
-              className="inline-flex items-center gap-3 mb-6 px-5 py-2.5 rounded-full border border-[#E2FEA5]/30 bg-[#E2FEA5]/5"
-            >
-              <span
-                className="text-sm font-medium font-bricolage"
-                style={{
-                  color: "#E2FEA5",
-                }}
-              >
-                The EyeLevel Growth System
-              </span>
-            </motion.div>
-            <h2 className="font-dela text-4xl md:text-5xl lg:text-6xl leading-[1.05] uppercase">
-              <span
-                style={{
-                  color: "#E2FEA5",
-                }}
-              >
-                HOW WE
-              </span>
-              <br />
+            <GreenButton>The EyeLevel Growth System</GreenButton>
+            <h2 className="font-dela text-4xl text-[#E2FEA5] md:text-5xl lg:text-6xl leading-[1.05] uppercase">
+              HOW WE <span></span>
               <WavyUnderline>DOMINATE</WavyUnderline>
             </h2>
           </motion.div>
 
           {/* Two-column layout */}
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-5 items-center">
             {/* Left: Mascot */}
             <div className="relative h-[300px] md:h-[400px] flex items-center justify-center">
               {processSteps.map((step, index) => (
-                <MascotImage
-                  key={index}
+                // <MascotImage
+                //   key={index}
+                //   index={index}
+                //   activeIndex={activeIndex}
+                //   image={step.image}
+                // />
+                <MascotLottie
                   index={index}
                   activeIndex={activeIndex}
-                  image={step.image}
+                  animation={step.animationPath}
                 />
               ))}
             </div>
@@ -146,7 +117,7 @@ const ProcessSection = () => {
           </div>
 
           {/* Progress dots */}
-          <div className="flex justify-center gap-3 mt-12">
+          <div className="flex justify-center gap-3">
             {processSteps.map((_, index) => (
               <ProgressDot
                 key={index}
@@ -158,6 +129,44 @@ const ProcessSection = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+type MascotLottieProps = {
+  index: number;
+  activeIndex: MotionValue<number>;
+  animation: any; // Lottie JSON
+};
+
+const MascotLottie = ({ index, activeIndex, animation }: MascotLottieProps) => {
+  const opacity = useTransform(activeIndex, (latest: number) => {
+    const d = Math.abs(latest - index);
+    if (d < 0.3) return 1;
+    if (d < 0.6) return 1 - (d - 0.3) / 0.3;
+    return 0;
+  });
+
+  const scale = useTransform(activeIndex, (latest: number) => {
+    const d = Math.abs(latest - index);
+    if (d < 0.3) return 1;
+    if (d < 0.6) return 0.9 + 0.1 * (1 - (d - 0.3) / 0.3);
+    return 0.9;
+  });
+
+  return (
+    <motion.div
+      style={{ opacity, scale }}
+      className="absolute inset-0 flex items-center justify-center"
+    >
+      <div className="w-56 h-56 md:w-72 md:h-72 lg:w-78 lg:h-78 lg:ml-48">
+        <Lottie
+          animationData={animation}
+          loop
+          autoplay
+          style={{ width: "100%", height: "100%" }}
+        />
+      </div>
+    </motion.div>
   );
 };
 
@@ -212,7 +221,7 @@ const MascotImage = ({
           mass: 0.7,
         },
       }}
-      className="absolute inset-0 flex items-center justify-center"
+      className="absolute inset-0 flex lg:pl-42 items-center justify-center"
     >
       <img
         src={image}
