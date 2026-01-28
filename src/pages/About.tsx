@@ -18,7 +18,7 @@ import video from "@/assets/videogallery.mp4";
 import video1 from "@/assets/videogallery2.mp4";
 import akmal from "@/assets/akmal.jpeg";
 import jameel from "@/assets/jameel.jpeg";
-import Jahangeer from "@/assets/jahangeer.jpeg";
+import jahangeer from "@/assets/Jahangeer.jpeg";
 import { Linkedin } from "lucide-react";
 
 const values = [
@@ -110,7 +110,7 @@ const About = () => {
     {
       name: "Jahangeer Ansari",
       role: "Web3 & Tech Strategy Advisor",
-      image: Jahangeer,
+      image: jahangeer,
       dec: "A marketing and technology strategist with 15+ years of experience, specializing in Web3, DeFi, and AI-driven growth initiatives.",
       socials: "https://www.linkedin.com/in/jahangeeransari/",
     },
