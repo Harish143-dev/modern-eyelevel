@@ -41,44 +41,34 @@ const benefits = [
 
 const openPositions = [
   {
-    title: "Performance Marketing Specialist",
-    department: "Marketing",
-    type: "Full-time",
-    location: "On-site",
+    title: "Real Estate Sales Manager",
+    department: "Sales ",
+    type: "on-site",
+    location: "Chennai, India",
     description:
-      "Drive paid media campaigns and optimize for maximum ROI across multiple platforms.",
+      "Build lasting client relationships and deliver consistent closures.",
   },
   {
-    title: "Content Strategist",
+    title: "Head of Creative & Strategy",
+    department: "Creative & Strategy",
+    type: "On-site",
+    location: "Chennai, India",
+    description: "Lead ideas, shape strategy, and turn creativity into growth.",
+  },
+  {
+    title: "Visualizer / Senior Graphic Designer",
     department: "Creative",
-    type: "Full-time",
-    location: "On-site",
+    type: "On-site",
+    location: "Chennai, India",
     description:
-      "Develop compelling content strategies that engage audiences and drive conversions.",
+      "Turn ideas into visuals that perform across brands and campaigns.",
   },
   {
-    title: "Growth Analyst",
-    department: "Analytics",
-    type: "Full-time",
-    location: "On-site",
-    description:
-      "Analyze data to uncover growth opportunities and optimize marketing performance.",
-  },
-  {
-    title: "UI/UX Designer",
-    department: "Design",
-    type: "Full-time",
-    location: "On-site",
-    description:
-      "Create beautiful, user-centered designs that convert visitors into customers.",
-  },
-  {
-    title: "Business Development Executive",
-    department: "Sales",
-    type: "Full-time",
-    location: "On-site",
-    description:
-      "Build relationships and drive new business opportunities for the agency.",
+    title: "Django + DevOps Engineer",
+    department: "Backend",
+    type: "On-site / Hybrid",
+    location: "Chennai, India",
+    description: "Build backend systems that stay up and scale.",
   },
 ];
 

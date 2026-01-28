@@ -85,9 +85,9 @@ const ProcessSection = () => {
           </motion.div>
 
           {/* Two-column layout */}
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-5 items-center">
+          <div className="grid lg:grid-cols-2 md:gap-5 items-center">
             {/* Left: Mascot */}
-            <div className="relative h-[300px] md:h-[400px] flex items-center justify-center">
+            <div className="relative h-[280px] md:h-[400px] flex items-center justify-center ">
               {processSteps.map((step, index) => (
                 // <MascotImage
                 //   key={index}
@@ -288,7 +288,7 @@ const StepContent = ({
 
       {/* Title */}
       <h3
-        className="font-dela text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-6 uppercase"
+        className="font-dela text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-3 md:mb-6 uppercase"
         style={{
           color: "#E2FEA5",
         }}
