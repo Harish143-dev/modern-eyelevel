@@ -25,6 +25,10 @@ import social_3 from "@/assets/linkedin.png";
 import celebrityEvent from "@/assets/celebrity.png";
 import meeting from "@/assets/meeting.jpg";
 import crm from "@/assets/crm.png";
+import web_1 from "@/assets/mockup/web_1.png";
+import web_2 from "@/assets/mockup/web_2.png";
+import web_3 from "@/assets/mockup/web_3.png";
+import web_4 from "@/assets/mockup/web_4.png";
 
 const services = [
   {
@@ -165,15 +169,19 @@ const services = [
     ],
     media: [
       {
-        src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+        src: web_1,
         type: "image" as const,
       },
       {
-        src: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80",
+        src: web_2,
         type: "image" as const,
       },
       {
-        src: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
+        src: web_3,
+        type: "image" as const,
+      },
+      {
+        src: web_4,
         type: "image" as const,
       },
     ],

@@ -102,7 +102,7 @@ const JoinTheLeague = () => {
                           <img
                             src={client}
                             alt="Client logo"
-                            className="h-12 md:h-14 w-auto object-contain"
+                            className="h-12 md:h-16 w-auto object-contain"
                           />
                         </div>
                       ),
