@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import GreenButton from "@/components/shared/GreenButton";
-import { Quote } from "lucide-react";
+import { Quote, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import founderImg from "@/assets/people/akmal.webp";
+import founder_home_img from "@/assets/people/akmal_home_img.png"
 
 const FounderSection = () => {
   return (
@@ -10,7 +12,7 @@ const FounderSection = () => {
       <div className="max-w-6xl mx-auto relative z-10">
             <div className="mb-10 text-center ">
               <GreenButton>The Founder</GreenButton>
-              <h2 className="font-dela text-[26px] sm:text-3xl md:text-5xl text-primary mt-6 leading-[1.1] uppercase break-words">
+              <h2 className="font-dela text-3xl  md:text-4xl lg:text-5xl text-primary mt-6 leading-[1.1] uppercase break-words">
                 The marketing practitioner who sat on <WavyUnderline>your side</WavyUnderline> of the table
               </h2>
             </div>
@@ -26,46 +28,33 @@ const FounderSection = () => {
           >
             <div className="space-y-4 ">
               <h3 className="font-dela text-2xl text-primary">Akmal Rahman</h3>
-              <p className="font-bricolage text-xl text-foreground/80 font-medium">Chief Growth Architect</p>
+              <p className="font-bricolage text-xl text-foreground/80 font-medium">Founder</p>
 
               <p className="font-bricolage text-lg text-foreground/70 leading-relaxed">
-                <span className="font-bold text-foreground">15 years client-side.</span> Before building EyeLevel, Akmal managed multi-million dollar budgets and ran aggressive growth mandates for some of the biggest names in the industry.
+                EyeLevel was built by a marketing head who spent 15 years on the client side. The full story, and the brands, live on akmalrahman.com.
               </p>
-            </div>
-
-            <div className="py-6 border-y border-white/10">
-              <h4 className="font-bricolage text-sm font-semibold text-foreground/50 uppercase tracking-wider mb-4">Past Leadership & Mandates at:</h4>
-              <div className="flex flex-wrap gap-3">
-                {["Hyundai Motors India", "SPR Highliving", "FreshToHome", "Schwing Stetter India", "Propel Industries"].map((employer, i) => (
-                  <span key={i} className="px-4 py-2 rounded-full bg-white/5 border border-white/10 font-bricolage text-sm text-foreground/80">
-                    {employer}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Stat Cards */}
-            <div className="grid grid-cols-3 gap-2 sm:gap-4">
-              <div className="bg-primary/5 rounded-2xl p-2 sm:p-4 text-center border border-primary/20">
-                <div className="font-dela text-[22px] sm:text-2xl md:text-3xl text-primary mb-1">15+</div>
-                <div className="font-bricolage text-[10px] sm:text-xs text-foreground/70 uppercase break-words">Years Client-Side</div>
-              </div>
-              <div className="bg-primary/5 rounded-2xl p-2 sm:p-4 text-center border border-primary/20">
-                <div className="font-dela text-[22px] sm:text-2xl md:text-3xl text-primary mb-1">5+</div>
-                <div className="font-bricolage text-[10px] sm:text-xs text-foreground/70 uppercase break-words">Major Verticals</div>
-              </div>
-              <div className="bg-primary/5 rounded-2xl p-2 sm:p-4 text-center border border-primary/20">
-                <div className="font-dela text-[22px] sm:text-2xl md:text-3xl text-primary mb-1">100%</div>
-                <div className="font-bricolage text-[10px] sm:text-xs text-foreground/70 uppercase break-words">Accountability</div>
-              </div>
             </div>
 
             {/* Quote */}
             <div className="relative pt-6">
               <Quote className="absolute top-0 left-0 w-8 h-8 text-primary/20 -scale-x-100" />
               <p className="font-dela text-lg md:text-xl text-foreground/90 italic leading-relaxed pl-10">
-                Founder Quote to be added. E.g., 'Agencies are built to bill you. We are built to grow you.
+                I have been the person deciding which agency gets the budget and which one gets fired. I built EyeLevel because I knew exactly what was always missing.
               </p>
+            </div>
+
+            {/* CTA */}
+            <div className="pt-4">
+              <Button
+                asChild
+                size="lg"
+                className="group px-6 sm:px-10 py-6 text-sm md:text-lg w-full sm:w-auto"
+              >
+                <a href="https://akmalrahman.com" target="_blank" rel="noopener noreferrer">
+                  Read the founder's story
+                  <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
+                </a>
+              </Button>
             </div>
 
           </motion.div>
@@ -78,22 +67,17 @@ const FounderSection = () => {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden group border border-white/5">
+            <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden group border border-2 border-primary/10">
               {/* Background styling for image container */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none" />
+              <div className="absolute inset-0  transition-opacity duration-500 z-10 pointer-events-none" />
 
               <img
-                src={founderImg}
+                src={founder_home_img}
                 alt="Akmal Rahman - Chief Growth Architect"
-                className="w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                className="w-full h-full px-10 pt-10 object-cover object-top  transition-all duration-700"
               />
 
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-20">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                  <span className="font-bricolage text-white text-sm font-medium tracking-wider uppercase">Built For Growth</span>
-                </div>
-              </div>
+
             </div>
 
             {/* Decorative background element */}

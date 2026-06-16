@@ -1,13 +1,14 @@
 import Header from "@/components/layout/Header";
 import Hero from "@/components/pages/home/Hero";
-import JoinTheLeague from "@/components/sections/JoinTheLeague";
-import WhatWeDo from "@/components/pages/home/WhatWeDo";
+import ClientLogos from "@/components/sections/ClientLogos";
+import WhyEyeLevelExists from "@/components/pages/home/WhyEyeLevelExists";
 import ServicesSection from "@/components/pages/home/ServicesSection";
 import HomeIndustriesSection from "@/components/pages/home/HomeIndustriesSection";
 import ProcessSection from "@/components/sections/ProcessSection";
-import TextTestimonials from "@/components/sections/TextTestimonials";
+import Results from "@/components/sections/Results";
 import FounderSection from "@/components/pages/home/FounderSection";
-import WhyEyeLevel from "@/components/pages/home/WhyEyeLevel";
+import Difference from "@/components/pages/home/Difference";
+import ComparisonTable from "@/components/pages/home/ComparisonTable";
 import FAQSection from "@/components/sections/FAQSection";
 import CTABand from "@/components/sections/CTABand";
 import EnhancedFooter from "@/components/layout/EnhancedFooter";
@@ -51,19 +52,20 @@ const Index = () => {
         canonical="https://theeyelevelstudio.com/"
         url="https://theeyelevelstudio.com/"
       />
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background overflow-x-clip">
         <Header />
         <Hero />
-        <JoinTheLeague />
-        <WhatWeDo />
+        <ClientLogos />
+        <WhyEyeLevelExists />
         <HomeIndustriesSection />
         <ServicesSection />
         <ProcessSection />
-        <TextTestimonials />
+        <ComparisonTable />
+        <Difference />
         <FounderSection />
-        <WhyEyeLevel />
-        <FAQSection faqs={faqs["Home"]} />
+        <Results />
         <CTABand />
+        <FAQSection faqs={faqs["Home"]} />
         <EnhancedFooter showCTA={false} mascotBgClass="bg-forest-deep" />
       </div>
     </>

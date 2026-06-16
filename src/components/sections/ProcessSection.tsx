@@ -27,28 +27,28 @@ const processSteps = [
     number: "1",
     title: "We Stare",
     description:
-      "We start by finding what your competition missed. AI-assisted market research, funnel audits, and audience mapping — done in days, not weeks."
+      "Most agencies blink; we don't. We find the leaks in your funnel that others miss."
   },
   {
     animationKey: "scatt" as AnimationKey,
     number: "2",
     title: "We Plan",
     description:
-      "No option paralysis. We give you a focused go-to-market plan — channels, messaging, sequence — and tell you exactly what to do first."
+      "You don't need options; you need a decision. We chart the straightest route to profit."
   },
   {
     animationKey: "blocks" as AnimationKey,
     number: "3",
     title: "We Execute",
     description:
-      "We build the engine: WhatsApp flows, content pipelines, ad campaigns, AI agents, and event systems — all running in parallel under one team.",
+      "Strategy without tactics is just an illusion. We build the systems that print results.",
   },
   {
     animationKey: "gun" as AnimationKey,
     number: "4",
     title: "We Enforce",
     description:
-      "We don't set and forget. Weekly performance reviews, budget reallocations, and creative refreshes — until the numbers move in the right direction."
+      "We act as your Growth Enforcer. We kill wasteful ads and scale the winners."
   },
 ];
 const ProcessSection = () => {
@@ -175,16 +175,16 @@ const ProcessSection = () => {
       }}
     >
       {/* Sticky container */}
-      <div className="sticky top-0 min-h-[100vh] flex items-center overflow-hidden pb-0">
-        <div className="max-w-5xl mx-auto w-full px-4 md:px-8">
+      <div className="sticky top-0 min-h-[100vh] flex items-center overflow-hidden ">
+        <div className="max-w-5xl mx-auto w-full px-4 md:px-8 ">
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center py-0"
+            className="text-center "
           >
-            <GreenButton >The EyeLevel Growth System</GreenButton>
+            <GreenButton>The EyeLevel Growth System</GreenButton>
             <h2 className="font-dela text-3xl text-primary md:text-4xl lg:text-5xl leading-[1.05] uppercase">
               HOW WE <span></span>
               <WavyUnderline>WORK</WavyUnderline>

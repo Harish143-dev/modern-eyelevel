@@ -8,30 +8,30 @@ const testimonials = [
   {
     id: 1,
     quote:
-      "Performance marketing driven by data and scale. [Metric to be added]",
-    company: "Da One Sports",
+      "Professional, proactive, and perfectly aligned with our brand. EyeLevel's celebrity connect delivered measurable buzz and real results.",
+    company: "Joyalukkas",
   },
   {
     id: 2,
     quote:
-      "Scaled brand visibility and footfall across 35+ retail stores.",
-    company: "Heaven's ELIX",
+      "Performance marketing across sports categories [CPA metric pending].",
+    company: "Da One Sports",
   },
   {
     id: 3,
     quote:
-      "Strategic event execution and digital marketing for Season 2.",
-    company: "TNPPL",
+      "35+ retail stores supported with content and social.",
+    company: "Heaven's ELIX",
   },
   {
     id: 4,
     quote:
-      "Professional, proactive, and perfectly aligned with our brand. EyeLevel's celebrity connect delivered measurable buzz and real results.",
-    company: "Joyalukkas",
+      "Season 2 social and event marketing.",
+    company: "TNPPL",
   },
 ];
 
-const TextTestimonials = () => {
+const Results = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(1);
 
@@ -180,7 +180,7 @@ const TextTestimonials = () => {
   );
 };
 
-export default TextTestimonials;
+export default Results;
 
 
 

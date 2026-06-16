@@ -16,7 +16,7 @@ import logo_14 from "@/assets/logos/logo_14.png";
 import logo_15 from "@/assets/logos/logo_15.png";
 import logo_16 from "@/assets/logos/logo_16.png";
 
-const JoinTheLeague = () => {
+const ClientLogos = () => {
   const clientLogo = [
     logo_1,
     logo_2,
@@ -123,4 +123,4 @@ const JoinTheLeague = () => {
     </section>
   );
 };
-export default JoinTheLeague;
+export default ClientLogos;
