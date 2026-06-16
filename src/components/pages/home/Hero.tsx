@@ -148,7 +148,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="font-bricolage text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-14 leading-relaxed text-foreground"
           >
-            Agencies are built to bill you. We're built to grow you. One team. One strategy.
+            Not an agency you manage. Your extended marketing team. Built to grow you, not to bill you.
           </motion.p>
 
           {/* CTA Buttons */}
