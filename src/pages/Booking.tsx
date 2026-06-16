@@ -3,6 +3,7 @@ import Header from "@/components/layout/Header";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import SEO from "@/components/utils/SEO";
 import { bookingPageSchema } from "@/hooks/schemas";
+import CustomCalendarBooking from "@/components/booking/CustomCalendarBooking";
 
 const Booking = () => {
   return (
@@ -45,23 +46,17 @@ const Booking = () => {
           </p>
         </motion.div>
 
-        {/* Google Calendar Embed */}
+        {/* Custom Booking Form Container */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15 }}
-          className="rounded-xl overflow-hidden border"
+          className="rounded-[2rem] overflow-hidden border-3 border-brand-black shadow-neo-md"
           style={{
             backgroundColor: "#F8FFE8",
-            borderColor: "rgba(208, 233, 153, 0.3)",
           }}
         >
-          <iframe
-            src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2pwEfwQCBbY8eZgs7bPdbaTLJzzCmU6_ZuQaRnAisL2VBrlPAkUxElWoEZJVhcNfXvR-PGB4LA?gv=true"
-            title="Book a consultation with EyeLevel Growth Studio"
-            className="block w-full h-[720px] sm:h-[820px] md:h-[950px] lg:h-[1100px]"
-            style={{ border: 0 }}
-          />
+          <CustomCalendarBooking />
         </motion.div>
       </div>
     </div>

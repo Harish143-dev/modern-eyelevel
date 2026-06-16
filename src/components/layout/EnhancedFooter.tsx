@@ -27,25 +27,17 @@ import ClientLottie, { type ClientLottieRef } from "@/components/shared/ClientLo
 
 const footerLinks = [
   {
-    title: "Company",
-    links: [
-      { label: "About", href: "/about-us" },
-      { label: "Work", href: "/works" },
-      { label: "Blog", href: "/blog" },
-      { label: "Book a call", href: "/booking" },
-      { label: "Contact", href: "/contact-us" },
-    ],
-  },
-  {
     title: "Services",
     links: [
       { label: "Performance Marketing", href: "/services/performance-marketing" },
       { label: "AI-Era SEO", href: "/services/seo" },
-      { label: "Social Media", href: "/services/social-media" },
-      { label: "Content & Creative", href: "/services/content-creative" },
-      { label: "LinkedIn B2B", href: "/services/linkedin-b2b" },
-      { label: "CRO and Funnels", href: "/services/cro-funnel" },
-      { label: "All Services", href: "/services" },
+      { label: "Social Media Management", href: "/services/social-media" },
+      { label: "Content and Creative", href: "/services/content-creative" },
+      { label: "LinkedIn B2B Marketing", href: "/services/linkedin-b2b" },
+      { label: "CRO and Funnel Design", href: "/services/cro-funnel" },
+      { label: "Revenue Attribution Dashboard", href: "/services" },
+      { label: "Brand and Identity", href: "/services" },
+      { label: "Website Design and Development", href: "/services" },
     ],
   },
   {
@@ -56,6 +48,16 @@ const footerLinks = [
       { label: "Healthcare", href: "/healthcare-marketing-agency" },
       { label: "Automotive", href: "/automotive-marketing-agency" },
       { label: "Manufacturing / B2B", href: "/manufacturing-b2b-marketing-agency" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { label: "About", href: "/about-us" },
+      { label: "Work", href: "/works" },
+      { label: "Blog", href: "/blog" },
+      { label: "Book a call", href: "/booking" },
+      { label: "Contact", href: "/contact-us" },
     ],
   },
 ];
@@ -730,7 +732,7 @@ const EnhancedFooter = ({
               <ul className="space-y-2 mb-6">
                 <li><a href="mailto:hello@eyelevelstudio.in" className="text-white/50 hover:text-primary transition-colors duration-300 text-sm font-bricolage">hello@eyelevelstudio.in</a></li>
                 <li><a href="tel:+919789099499" className="text-white/50 hover:text-primary transition-colors duration-300 text-sm font-bricolage">+91 97890 99499</a></li>
-                <li className="text-white/50 text-sm font-bricolage">Chennai, India</li>
+                <li className="text-white/50 text-sm font-bricolage">Chennai, Tamil Nadu, India</li>
               </ul>
               
               <h3 className="text-white font-semibold font-bricolage mb-4 text-sm">
@@ -767,7 +769,7 @@ const EnhancedFooter = ({
                 title="EyeLevel"
                 className="h-8 w-auto mb-1"
               />
-              <span className="text-white/50 text-xs font-bricolage tracking-wide">Built by a marketing head, for marketing heads.</span>
+              <span className="text-white/50 text-xs font-bricolage tracking-wide">Built by a marketing head, for marketing heads. Chennai's full-service AI-powered growth studio.</span>
             </div>
             <p className="text-white/40 text-xs md:text-sm font-bricolage">
               (c) 2026, EyeLevel Growth Studio. All Rights Reserved.

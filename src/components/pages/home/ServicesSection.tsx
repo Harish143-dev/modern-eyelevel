@@ -3,6 +3,7 @@ import GreenButton from "@/components/shared/GreenButton";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 export interface ServiceItem {
   id: string;
@@ -17,63 +18,63 @@ const services: ServiceItem[] = [
     id: "performance",
     number: "01",
     title: "Performance Marketing",
-    description: "We orchestrate paid acquisition that doesn't just buy clicks, but acquires actual market share. (Note: Please provide exact copy from homepage_v1.html)",
+    description: "Meta and Google Ads built for revenue, not clicks. Flat fees, full attribution from ad to close.",
     link: "/services/performance-marketing"
   },
   {
     id: "seo",
     number: "02",
     title: "AI-Era SEO (AEO + GEO)",
-    description: "Future-proof your organic visibility for the era of AI search engines and generative answers. (Note: Please provide exact copy from homepage_v1.html)",
+    description: "Traditional SEO plus AEO (AI Overviews, Featured Snippets) and GEO (ChatGPT, Gemini, Perplexity citations).",
     link: "/services/seo"
   },
   {
     id: "social",
     number: "03",
     title: "Social Media Management",
-    description: "Build an active, engaging community around your brand with data-backed social strategies. (Note: Please provide exact copy from homepage_v1.html)",
+    description: "Content that builds the audience your sales team needs.",
     link: "/services/social-media"
   },
   {
     id: "content",
     number: "04",
     title: "Content & Creative",
-    description: "Compelling narratives and thumb-stopping visuals that convert attention into intent. (Note: Please provide exact copy from homepage_v1.html)",
+    description: "AI handles production speed, humans handle strategy and voice. Video, design, copy, brand assets.",
     link: "/services/content-creative"
   },
   {
     id: "linkedin",
     number: "05",
     title: "LinkedIn B2B Marketing",
-    description: "Turn your LinkedIn presence into a predictable pipeline generation engine. (Note: Please provide exact copy from homepage_v1.html)",
+    description: "Profile optimisation, content strategy, and targeted outreach that builds real pipeline.",
     link: "/services/linkedin-b2b"
   },
   {
     id: "cro",
     number: "06",
     title: "CRO and Funnel Design",
-    description: "Maximize your existing traffic by engineering high-converting landing pages and user flows. (Note: Please provide exact copy from homepage_v1.html)",
+    description: "We fix what happens after the click. Landing pages, conversion flows, lead qualification.",
     link: "/services/cro-funnel"
   },
   {
     id: "revenue",
     number: "07",
     title: "Revenue Attribution Dashboard",
-    description: "See exactly which marketing activities are driving closed-won revenue, down to the dollar. (Note: Please provide exact copy from homepage_v1.html)",
+    description: "Bundled into growth retainers. Every campaign tied to a business outcome.",
     link: "/services/revenue-attribution"
   },
   {
     id: "brand",
     number: "08",
     title: "Brand & Identity",
-    description: "Establish a category-defining brand presence that sets you apart from the noise. (Note: Please provide exact copy from homepage_v1.html)",
+    description: "Visual identity, positioning, and brand architecture.",
     link: "/services/brand-identity"
   },
   {
     id: "web",
     number: "09",
     title: "Website Design and Development",
-    description: "High-performance digital experiences engineered for speed, SEO, and conversion. (Note: Please provide exact copy from homepage_v1.html)",
+    description: "Fast, conversion-optimised sites. A sales tool, not a brochure.",
     link: "/services/website-design"
   },
 ];
@@ -83,17 +84,16 @@ const ServicesSection = () => {
     <section className="mb-20 bg-background relative overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4 relative z-10">
         <div className="text-center mb-16 md:mb-24">
-          <GreenButton>What We Do</GreenButton>
+          <GreenButton>Services</GreenButton>
 
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-dela text-3xl md:text-5xl lg:text-5xl text-foreground  leading-[1.1] tracking-wide mt-6 uppercase"
+            className="font-dela text-3xl md:text-4xl lg:text-5xl text-foreground  leading-[1.1] tracking-wide mt-6 uppercase"
           >
-            <span className="text-primary">One studio</span><br /> 
-            <span className="text-primary">Every service built to </span> <WavyUnderline>work </WavyUnderline> <WavyUnderline >together</WavyUnderline>
+            <span className="text-primary">What we do</span>
           </motion.h2>
         </div>
 
@@ -123,6 +123,25 @@ const ServicesSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-12 md:mt-16 flex justify-center"
+        >
+          <Link to="/services">
+            <Button
+              size="lg"
+              className="group px-5 sm:px-10 py-4 mt-5 text-sm md:text-lg w-full sm:w-auto mb-5"
+            >
+              Explore all services
+              <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
+            </Button>
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import GreenButton from "@/components/shared/GreenButton";
+import { Button } from "@/components/ui/button";
 
 import realestateImg from "@/assets/industries/h_industry/realestate.webp";
 import healthcareImg from "@/assets/industries/h_industry/healthcare.webp";
@@ -23,7 +24,7 @@ const industries: Industry[] = [
     id: "realestate",
     number: "01",
     title: "Real Estate",
-    description: "High-trust, slow-burn sales; built for closed deals and site visits.",
+    description: "High-trust, slow-burn sales. Built for closed deals and site visits, not cheap leads.",
     link: "/industries/real-estate",
     linkText: "Hook: SPR Highliving",
     image: realestateImg,
@@ -32,7 +33,7 @@ const industries: Industry[] = [
     id: "it-saas",
     number: "02",
     title: "IT / SaaS",
-    description: "Demand gen, LinkedIn brand and content that produces pipeline.",
+    description: "Funded product companies and profitable B2B software. Demand gen, LinkedIn brand, and content that produces pipeline.",
     link: "/industries/it-saas",
     linkText: "Hook: FreshToHome",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
@@ -41,7 +42,7 @@ const industries: Industry[] = [
     id: "healthcare",
     number: "03",
     title: "Healthcare",
-    description: "Specialty clinics and hospitals; patient acquisition and trust architecture.",
+    description: "Specialty clinics and multi-specialty hospitals. Patient acquisition built on trust architecture, not product marketing.",
     link: "/industries/healthcare",
     linkText: "Hook: active healthcare clients",
     image: healthcareImg,
@@ -50,7 +51,7 @@ const industries: Industry[] = [
     id: "automotive",
     number: "04",
     title: "Automotive",
-    description: "Dealership footfall, test-drive bookings, OEM mandates.",
+    description: "Dealerships and component makers. Showroom footfall, test-drive bookings, OEM mandates.",
     link: "/industries/automotive",
     linkText: "Hook: Hyundai Motors India",
     image: "https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&w=800&auto=format&fit=crop",
@@ -59,7 +60,7 @@ const industries: Industry[] = [
     id: "manufacturing",
     number: "05",
     title: "Manufacturing / B2B",
-    description: "Chennai and Coimbatore manufacturers; your buyers moved online.",
+    description: "Chennai and Coimbatore manufacturers. Your buyers moved online; your marketing needs to catch up.",
     link: "/industries/manufacturing",
     linkText: "Hook: Schwing Stetter",
     image: b2bImg,
@@ -78,21 +79,12 @@ const HomeIndustriesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-dela text-3xl uppercase md:text-5xl lg:text-5xl text-primary text-foreground mb-6 leading-[1.1] tracking-wide mt-6"
+          className="font-dela text-3xl uppercase md:text-4xl lg:text-5xl text-primary text-foreground mb-6 leading-[1.1] tracking-wide mt-6"
         >
-          WE DON'T WORK WITH EVERYONE<br className="hidden md:block" />
-          <span className="text-primary">We work with <WavyUnderline>these</WavyUnderline></span>
+                 Industries <WavyUnderline className="text-white">We work in</WavyUnderline>
         </motion.h2>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="font-bricolage text-foreground/70 text-base md:text-lg"
-        >
-          Five industries the studio goes deep in across <span className="font-medium ">India and Chennai.</span>
-        </motion.p>
+
       </div>
 
       {/* Accordion Area */}
@@ -103,6 +95,27 @@ const HomeIndustriesSection = () => {
           ))}
         </div>
       </div>
+
+      {/* Bottom CTA */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="mt-12 md:mt-16 flex justify-center px-4"
+      >
+        <Link 
+          to="/industries" 
+        >
+          <Button
+            size="lg"
+            className="group px-5 sm:px-10 py-4 mt-5 text-sm md:text-lg w-full sm:w-auto"
+          >
+            See how we work in your industry
+            <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
+          </Button>
+        </Link>
+      </motion.div>
     </section>
   );
 };
@@ -119,7 +132,7 @@ const IndustryCard = ({ industry, index }: IndustryCardProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="group relative w-full md:w-auto h-[260px] md:h-full rounded-[1.5rem] overflow-hidden cursor-pointer flex-none md:flex-1 md:hover:flex-[2.5] lg:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] border border-white/5 bg-[#111C15]"
+      className="group relative w-full md:w-auto h-[340px] sm:h-[320px] md:h-full rounded-[1.5rem] overflow-hidden cursor-pointer flex-none md:flex-1 md:hover:flex-[2.5] lg:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] border border-white/5 bg-[#111C15]"
     >
       {/* Background Image */}
       <img

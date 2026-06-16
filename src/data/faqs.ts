@@ -3,37 +3,37 @@ const faqs = {
     {
       id: 1,
       question: "What does EyeLevel Growth Studio do?",
-      answer: "EyeLevel acts as your fractional CMO and full-stack marketing team. We build complete growth engines combining performance marketing, AI-Era SEO, and content creation. We also handle large-scale event production, having produced 15+ sporting events from concept to live broadcast."
+      answer: "EyeLevel Growth Studio is a full-service AI-powered marketing agency in Chennai. We run strategy, performance marketing, SEO, content, and creative as one connected system across Real Estate, Healthcare, IT/SaaS, Automotive, and Manufacturing."
     },
     {
       id: 2,
-      question: "What industries does EyeLevel serve?",
-      answer: "We specialize deeply in five key verticals: Real Estate, IT / SaaS, Healthcare, Automotive, and Manufacturing / B2B. By focusing strictly on these industries, we eliminate the learning curve and apply proven frameworks that generate immediate pipeline and measurable revenue."
+      question: "Which industries does EyeLevel work with?",
+      answer: "EyeLevel works across five industries: Real Estate, IT/SaaS, Healthcare, Automotive, and Manufacturing/B2B. Our founder has 15 years of hands-on client-side experience across all five."
     },
     {
       id: 3,
-      question: "How is EyeLevel an AI-powered agency?",
-      answer: "We integrate AI at the core production layer—automating research, content generation, and data analysis. This allows our senior strategists to focus entirely on growth strategy and human-led judgment. The result is agency-level output at startup speed without the traditional agency bloat."
+      question: "Does EyeLevel offer fractional CMO services?",
+      answer: "Yes. EyeLevel operates as a fractional CMO and extended marketing team for growth-stage and mid-market companies across India. One team owns strategy, performance, and execution."
     },
     {
       id: 4,
-      question: "What is AI-Era SEO (AEO + GEO)?",
-      answer: "AI-Era SEO focuses on Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO). Instead of just ranking for blue links on Google, we optimize your content to be the definitive answer cited by AI search engines like ChatGPT, Perplexity, and Google's AI Overviews."
+      question: "Is EyeLevel an AI-powered marketing agency?",
+      answer: "Yes. EyeLevel uses AI for production speed, campaign intelligence, and SEO — but human practitioners lead every strategy and judgment call. AI accelerates; people decide."
     },
     {
       id: 5,
-      question: "Is EyeLevel only for Chennai-based businesses?",
-      answer: "No. While our headquarters and primary event production teams are in Chennai, we actively manage marketing for clients across the US, UAE, and Pan-India. We operate on a seamless, async-first model that delivers global standards with local efficiency."
+      question: "What is AI-Era SEO and why does it matter?",
+      answer: "AI-Era SEO covers traditional SEO plus AEO (Answer Engine Optimization for AI Overviews and featured snippets) and GEO (Generative Engine Optimization for ChatGPT, Gemini, and Perplexity citations). Buyers now get answers before they click."
     },
     {
       id: 6,
-      question: "How quickly can EyeLevel start and show results?",
-      answer: "We move fast. After you book a call at theeyelevelstudio.com/booking, we provide a scoped proposal within 48 hours. Once approved, we kick off strategy in Week 1, build out campaigns in Weeks 2-3, and launch active campaigns by Week 4 to drive immediate ROI."
+      question: "Where is EyeLevel based and which cities do you serve?",
+      answer: "EyeLevel is based in Chennai, Tamil Nadu. We serve clients across Chennai, Coimbatore, Bengaluru, and other Indian cities, as well as international clients remotely."
     },
     {
       id: 7,
-      question: "What is the minimum retainer to work with EyeLevel?",
-      answer: "Our minimum monthly retainer starts at ₹75,000. This ensures we can dedicate the senior strategy, creative resources, and full-stack execution required to actually move the needle for your business, rather than spreading our team too thin across small accounts."
+      question: "What is the minimum retainer?",
+      answer: "Our minimum retainer is Rs. 75,000 per month with a 6-month minimum commitment. This covers strategy, execution, and reporting with no account managers in between."
     }
   ],
   "About Us": [

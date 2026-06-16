@@ -1,16 +1,18 @@
 import { motion } from "framer-motion";
-import { Check, X, Minus, Trophy, Star } from "lucide-react";
+import { Check, X, Trophy, Star, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import WavyUnderline from "@/components/shared/WavyUnderline";
-import GreenButton from "@/components/shared/GreenButton";
+
 const criteria = [
-  "AI-Powered Execution",
-  "WhatsApp Marketing Capability",
-  "Sports Event Experience",
-  "Offshore Client Capability",
-  "Speed of Delivery",
-  "Transparent Reporting",
-  "Senior-Level Strategy",
-  "Founder Accountability",
+  "Strategic Approach",
+  "Execution Quality",
+  "Cost Efficiency",
+  "Speed",
+  "Industry Expertise",
+  "Scalability",
+  "ROI Focus",
+  "Transparency",
 ];
 
 // Status: 'yes' = check, 'partial' = minus, 'no' = X
@@ -21,115 +23,69 @@ const competitors: {
 }[] = [
     {
       name: "In-House Team",
-      checks: ["partial", "no", "no", "no", "no", "no", "no", "no"],
+      checks: ["partial", "partial", "no", "no", "partial", "no", "partial", "yes"],
     },
     {
       name: "Marketing Agency",
-      checks: ["partial", "partial", "no", "no", "partial", "no", "no", "no"],
+      checks: ["yes", "partial", "no", "no", "partial", "yes", "no", "no"],
     },
     {
       name: "Ad Agency",
-      checks: ["no", "partial", "no", "partial", "no", "partial", "no", "no"],
+      checks: ["partial", "yes", "no", "partial", "no", "yes", "no", "no"],
     },
     {
       name: "Digital Marketing Agency",
       checks: [
         "no",
         "partial",
+        "partial",
+        "yes",
         "no",
         "partial",
-        "no",
         "partial",
         "partial",
-        "no",
       ],
     },
   ];
-const WhyEyeLevel = () => {
+
+const ComparisonTable = () => {
   const getScore = (checks: Status[]) => {
     return checks.filter((c) => c === "yes" || c === "partial").length;
   };
   return (
-    <section className="py-12 md:py-16 px-4 bg-forest-deep relative overflow-hidden">
+    <section className="pb-12 md:pb-16 pt-10 px-4 bg-forest-deep relative overflow-hidden">
       <div className="max-w-4xl mx-auto relative z-10">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12 md:mb-16"
-        >
-          <GreenButton>The Difference</GreenButton>
-          <h2 className="font-dela text-3xl md:text-4xl lg:text-5xl text-primary mb-6 uppercase leading-tight">
-            Three things no other <br className="hidden md:block" /> Chennai agency <WavyUnderline>can say</WavyUnderline>
-          </h2>
-        </motion.div>
-
-        {/* 3 Differentiator Cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-20 lg:mb-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="bg-background rounded-3xl p-8 border border-white/10"
-          >
-            <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-6">
-              <Star className="w-5 h-5 text-primary fill-primary" />
-            </div>
-            <h3 className="font-dela text-xl text-white mb-4">The Founder Was The Client</h3>
-            <p className="font-bricolage text-white/60">Built by someone who knows what it's like to be on the other side of the table, demanding real ROI.</p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="bg-background rounded-3xl p-8 border border-white/10"
-          >
-            <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-6">
-              <Star className="w-5 h-5 text-primary fill-primary" />
-            </div>
-            <h3 className="font-dela text-xl text-white mb-4">One Team, Full Stack</h3>
-            <p className="font-bricolage text-white/60">Strategy, performance, content, and AI seamlessly connected. Not three vendors, one studio.</p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="bg-background rounded-3xl p-8 border border-white/10"
-          >
-            <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-6">
-              <Star className="w-5 h-5 text-primary fill-primary" />
-            </div>
-            <h3 className="font-dela text-xl text-white mb-4">Revenue Attribution Built In</h3>
-            <p className="font-bricolage text-white/60">We don't just report on clicks and impressions. We tie every marketing activity directly to closed-won revenue.</p>
-          </motion.div>
-        </div>
-
-        <motion.div
+        {/* <motion.div
            initial={{ opacity: 0, y: 20 }}
            whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true }}
            className="text-center mb-10"
         >
-          <h3 className="font-dela text-2xl md:text-3xl text-white/90">And here is how we stack up</h3>
+          <h2 className="font-dela text-2xl md:text-3xl text-white/90">We're not your agency. We're your extended marketing team.</h2>
+        </motion.div> */}
+         <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16 md:mb-20"
+        >
+          <h2 className="font-dela text-3xl md:text-4xl lg:text-5xl text-primary mb-6 leading-tight uppercase">
+            We're not your agency. We're your extended <WavyUnderline className="text-white"> marketing team</WavyUnderline>
+          </h2>
+          <p className="font-bricolage text-lg">
+            <span
+              className="inline-block px-4 py-2 rounded-full text-sm font-semibold tracking-wider bg-primary text-secondary" 
+            >
+             Eight things growth needs. Here's who actually delivers all eight. 
+            </span>
+          </p>
         </motion.div>
 
         {/* Comparison Table - Desktop */}
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 40,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-          }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="hidden lg:block rounded-3xl overflow-hidden border border-white/10"
         >
           {/* Table Header */}
@@ -155,7 +111,7 @@ const WhyEyeLevel = () => {
                 <Trophy className="w-4 h-4" />
               </div>
               <span className="font-dela text-forest-dark text-sm">
-                EyeLevel Growth Studio
+                Your Extended Marketing Team (EyeLevel)
               </span>
             </div>
           </div>
@@ -164,20 +120,10 @@ const WhyEyeLevel = () => {
           {criteria.map((criterion, rowIndex) => (
             <motion.div
               key={criterion}
-              initial={{
-                opacity: 0,
-                x: -20,
-              }}
-              whileInView={{
-                opacity: 1,
-                x: 0,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{
-                delay: rowIndex * 0.05,
-              }}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: rowIndex * 0.05 }}
               className={`grid grid-cols-6 ${rowIndex % 2 === 0 ? "bg-[#152420]" : "bg-background"}`}
             >
               <div className="p-5 font-bricolage text-white font-medium border-t border-white/5">
@@ -203,20 +149,10 @@ const WhyEyeLevel = () => {
                 }}
               >
                 <motion.div
-                  initial={{
-                    scale: 0,
-                  }}
-                  whileInView={{
-                    scale: 1,
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
-                  transition={{
-                    delay: 0.1 + rowIndex * 0.05,
-                    type: "spring",
-                    stiffness: 400,
-                  }}
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 + rowIndex * 0.05, type: "spring", stiffness: 400 }}
                   className="w-10 h-10 rounded-full flex items-center justify-center"
                   style={{
                     backgroundColor: "#d0e999",
@@ -247,30 +183,14 @@ const WhyEyeLevel = () => {
               }}
             >
               <motion.div
-                initial={{
-                  scale: 0.5,
-                  opacity: 0,
-                }}
-                whileInView={{
-                  scale: 1,
-                  opacity: 1,
-                }}
-                viewport={{
-                  once: true,
-                }}
+                initial={{ scale: 0.5, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
                 className="flex items-center justify-center gap-2"
               >
-                <Star
-                  className="w-6 h-6 text-primary fill-primary"
-                />
-                <span
-                  className="font-dela text-3xl text-primary"
-                >
-                  8/8
-                </span>
-                <Star
-                  className="w-6 h-6 text-primary fill-primary"
-                />
+                <Star className="w-6 h-6 text-primary fill-primary" />
+                <span className="font-dela text-3xl text-primary">8/8</span>
+                <Star className="w-6 h-6 text-primary fill-primary" />
               </motion.div>
             </div>
           </div>
@@ -280,48 +200,28 @@ const WhyEyeLevel = () => {
         <div className="lg:hidden space-y-6">
           {/* EyeLevel Card - Featured */}
           <motion.div
-            initial={{
-              opacity: 0,
-              y: 20,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="rounded-3xl p-6 shadow-xl relative overflow-hidden bg-primary"
           >
             <div className="absolute top-1 md:top-4 right-4">
-              <div
-                className="px-3 py-1 rounded-full font-dela text-xs flex items-center gap-1 bg-background text-primary"
-              >
+              <div className="px-3 py-1 rounded-full font-dela text-xs flex items-center gap-1 bg-background text-primary">
                 <Trophy className="w-3 h-3" />
                 Winner
               </div>
             </div>
             <h3 className="font-dela text-xl text-forest-dark mb-4">
-              EyeLevel Growth Studio
+              Your Extended Marketing Team (EyeLevel)
             </h3>
             <div className="grid grid-cols-2 gap-3">
               {criteria.map((criterion, i) => (
                 <motion.div
                   key={criterion}
-                  initial={{
-                    opacity: 0,
-                    scale: 0.8,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    scale: 1,
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
-                  transition={{
-                    delay: i * 0.05,
-                  }}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.05 }}
                   className="bg-background/10 rounded-xl p-3 flex items-center gap-2"
                 >
                   <div className="w-6 h-6 rounded-full bg-background flex items-center justify-center flex-shrink-0">
@@ -347,20 +247,10 @@ const WhyEyeLevel = () => {
             {competitors.map((comp, index) => (
               <motion.div
                 key={comp.name}
-                initial={{
-                  opacity: 0,
-                  y: 20,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: true,
-                }}
-                transition={{
-                  delay: index * 0.1,
-                }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
                 className="bg-background rounded-2xl p-4 border border-white/10"
               >
                 <h4 className="font-bricolage text-sm font-semibold text-white mb-3">
@@ -385,27 +275,21 @@ const WhyEyeLevel = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 30,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-          }}
-          className="text-center mt-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12 md:mt-16 flex justify-center"
         >
-          <p className="text-white/60 font-bricolage text-lg mb-2">
-            Ready to work with the team that checks every box?
-          </p>
-          <p
-            className="font-dela text-xl uppercase text-primary"
+          <Button
+            asChild
+            size="lg"
+            className="group px-5 sm:px-10 py-4 mt-5 text-sm md:text-lg w-full sm:w-auto h-auto whitespace-normal text-center"
           >
-            Let's talk about your growth.
-          </p>
+            <Link to="/booking" className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-0">
+              <span>Ready for the team that checks every box? Let's talk.</span>
+              <ArrowRight className="sm:ml-3 w-5 h-5 shrink-0 group-hover:translate-x-1.5 transition-transform" />
+            </Link>
+          </Button>
         </motion.div>
       </div>
     </section>
@@ -427,18 +311,10 @@ const StatusIcon = ({
   if (status === "yes") {
     return (
       <motion.div
-        initial={{
-          scale: 0,
-        }}
-        whileInView={{
-          scale: 1,
-        }}
-        viewport={{
-          once: true,
-        }}
-        transition={{
-          delay,
-        }}
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay }}
         className={`${size} rounded-full bg-emerald-500 flex items-center justify-center`}
       >
         <Check className={`${iconSize} text-white stroke-[3]`} />
@@ -448,18 +324,10 @@ const StatusIcon = ({
   if (status === "partial") {
     return (
       <motion.div
-        initial={{
-          scale: 0,
-        }}
-        whileInView={{
-          scale: 1,
-        }}
-        viewport={{
-          once: true,
-        }}
-        transition={{
-          delay,
-        }}
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay }}
         className={`${size} rounded-full bg-amber-500/80 flex items-center justify-center`}
       >
         <Check className={`${iconSize} text-white stroke-[3]`} />
@@ -470,26 +338,15 @@ const StatusIcon = ({
   // 'no' status
   return (
     <motion.div
-      initial={{
-        scale: 0,
-      }}
-      whileInView={{
-        scale: 1,
-      }}
-      viewport={{
-        once: true,
-      }}
-      transition={{
-        delay,
-      }}
+      initial={{ scale: 0 }}
+      whileInView={{ scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ delay }}
       className={`${size} rounded-full bg-red-500/80 flex items-center justify-center`}
     >
       <X className={`${iconSize} text-white stroke-[3]`} />
     </motion.div>
   );
 };
-export default WhyEyeLevel;
 
-
-
-
+export default ComparisonTable;
