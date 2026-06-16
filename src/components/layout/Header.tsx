@@ -185,14 +185,14 @@ const Header = ({ compact = false }: HeaderProps) => {
               </div>
             ) : (
               <div className="hidden md:flex items-center rounded-full relative font-bricolage z-50">
-                <a href="https://theeyelevelstudio.com/booking">
+                <Link to="/booking">
                   <Button
                     size="sm"
                     className="px-6 font-semibold"
                   >
                     Book a call
                   </Button>
-                </a>
+                </Link>
 
                 <button
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -281,77 +281,79 @@ const Header = ({ compact = false }: HeaderProps) => {
             </motion.div>
           )}
         </AnimatePresence>
-      </motion.header>
+      </motion.header >
 
       {/* Floating Back to Top / Menu Button */}
       <AnimatePresence>
-        {showBackToTop && !isMenuOpen && (
-          <motion.div
-            initial={{
-              opacity: 0,
-              scale: 0.8,
-              x: 100,
-            }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              x: 0,
-            }}
-            exit={{
-              opacity: 0,
-              scale: 0.8,
-              x: 100,
-            }}
-            transition={{
-              duration: 0.4,
-              ease: [0.16, 1, 0.3, 1],
-            }}
-            className="fixed right-6 bottom-8 z-50 flex flex-col gap-3"
-          >
-            {/* Menu Button */}
-            <motion.button
-              onClick={openMenuAndScrollTop}
-              whileHover={{
-                scale: 1.1,
+        {
+          showBackToTop && !isMenuOpen && (
+            <motion.div
+              initial={{
+                opacity: 0,
+                scale: 0.8,
+                x: 100,
               }}
-              whileTap={{
-                scale: 0.95,
+              animate={{
+                opacity: 1,
+                scale: 1,
+                x: 0,
               }}
-              className="group relative w-14 h-14 rounded-2xl flex items-center justify-center font-bricolage overflow-hidden bg-primary border-3 border-brand-black"
+              exit={{
+                opacity: 0,
+                scale: 0.8,
+                x: 100,
+              }}
+              transition={{
+                duration: 0.4,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+              className="fixed right-6 bottom-8 z-50 flex flex-col gap-3"
             >
-              <Menu className="w-5 h-5 text-black relative z-10" />
-
-            </motion.button>
-
-            {/* Back to Top Button */}
-            <motion.button
-              onClick={scrollToTop}
-              whileHover={{
-                scale: 1.1,
-                y: -2,
-              }}
-              whileTap={{
-                scale: 0.95,
-              }}
-              className="group relative w-14 h-14 rounded-2xl flex items-center justify-center overflow-hidden bg-primary border-3 border-brand-black"
-            >
-              <motion.div
-                animate={{
-                  y: [0, -3, 0],
+              {/* Menu Button */}
+              <motion.button
+                onClick={openMenuAndScrollTop}
+                whileHover={{
+                  scale: 1.1,
                 }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
+                whileTap={{
+                  scale: 0.95,
                 }}
+                className="group relative w-14 h-14 rounded-2xl flex items-center justify-center font-bricolage overflow-hidden bg-primary border-3 border-brand-black"
               >
-                <ArrowUp className="w-5 h-5 text-black relative z-10" />
-              </motion.div>
+                <Menu className="w-5 h-5 text-black relative z-10" />
 
-            </motion.button>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              </motion.button>
+
+              {/* Back to Top Button */}
+              <motion.button
+                onClick={scrollToTop}
+                whileHover={{
+                  scale: 1.1,
+                  y: -2,
+                }}
+                whileTap={{
+                  scale: 0.95,
+                }}
+                className="group relative w-14 h-14 rounded-2xl flex items-center justify-center overflow-hidden bg-primary border-3 border-brand-black"
+              >
+                <motion.div
+                  animate={{
+                    y: [0, -3, 0],
+                  }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <ArrowUp className="w-5 h-5 text-black relative z-10" />
+                </motion.div>
+
+              </motion.button>
+            </motion.div>
+          )
+        }
+      </AnimatePresence >
     </>
   );
 };
