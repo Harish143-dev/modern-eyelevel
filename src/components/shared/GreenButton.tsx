@@ -10,7 +10,7 @@ const GreenButton = ({ children }: GreenButtonprops) => {
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-6"
+      className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-6 mt-4"
       style={{
         backgroundColor: "rgba(226, 254, 165, 0.1)",
         border: "1px solid rgba(226, 254, 165, 0.2)",

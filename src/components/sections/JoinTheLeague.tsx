@@ -70,14 +70,14 @@ const JoinTheLeague = () => {
           {/* Content layout */}
           <div className="flex flex-col lg:items-center lg:justify-between gap-8 lg:gap-12">
             {/* Left side - Title */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 text-center">
               <h2
-                className="font-dela text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight uppercase"
+                className="font-dela text-3xl md:text-4xl lg:text-5xl leading-[1.1] tracking-tight uppercase"
                 style={{
                   color: "#0a0a0a",
                 }}
               >
-                <span className="block">Join the League</span>
+                <span className="block">Brands choosing depth over noise</span>
               </h2>
             </div>
 

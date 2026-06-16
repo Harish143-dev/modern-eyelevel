@@ -54,27 +54,67 @@ const WhyEyeLevel = () => {
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Header */}
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 30,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-          }}
-          className="text-center mb-16 md:mb-20"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12 md:mb-16"
         >
-          <GreenButton>Why Choose Us?</GreenButton>
-          <h2 className="font-dela text-4xl md:text-5xl lg:text-6xl text-primary mb-6 uppercase">
-            WHY We are <WavyUnderline>DIFFERENT</WavyUnderline>
+          <GreenButton>The Difference</GreenButton>
+          <h2 className="font-dela text-3xl md:text-4xl lg:text-5xl text-primary mb-6 uppercase leading-tight">
+            Three things no other <br className="hidden md:block" /> Chennai agency <WavyUnderline>can say</WavyUnderline>
           </h2>
-          <p className="text-white/60 font-bricolage text-lg max-w-2xl mx-auto">
-            See how we stack up against the competition. (Spoiler alert : We are
-            a 10/10)
-          </p>
+        </motion.div>
+
+        {/* 3 Differentiator Cards */}
+        <div className="grid md:grid-cols-3 gap-6 mb-20 lg:mb-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="bg-background rounded-3xl p-8 border border-white/10"
+          >
+            <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-6">
+              <Star className="w-5 h-5 text-primary fill-primary" />
+            </div>
+            <h3 className="font-dela text-xl text-white mb-4">The Founder Was The Client</h3>
+            <p className="font-bricolage text-white/60">Built by someone who knows what it's like to be on the other side of the table, demanding real ROI.</p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="bg-background rounded-3xl p-8 border border-white/10"
+          >
+            <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-6">
+              <Star className="w-5 h-5 text-primary fill-primary" />
+            </div>
+            <h3 className="font-dela text-xl text-white mb-4">One Team, Full Stack</h3>
+            <p className="font-bricolage text-white/60">Strategy, performance, content, and AI seamlessly connected. Not three vendors, one studio.</p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="bg-background rounded-3xl p-8 border border-white/10"
+          >
+            <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-6">
+              <Star className="w-5 h-5 text-primary fill-primary" />
+            </div>
+            <h3 className="font-dela text-xl text-white mb-4">Revenue Attribution Built In</h3>
+            <p className="font-bricolage text-white/60">We don't just report on clicks and impressions. We tie every marketing activity directly to closed-won revenue.</p>
+          </motion.div>
+        </div>
+
+        <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           className="text-center mb-10"
+        >
+          <h3 className="font-dela text-2xl md:text-3xl text-white/90">And here is how we stack up</h3>
         </motion.div>
 
         {/* Comparison Table - Desktop */}

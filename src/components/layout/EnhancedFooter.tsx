@@ -27,35 +27,35 @@ import ClientLottie, { type ClientLottieRef } from "@/components/shared/ClientLo
 
 const footerLinks = [
   {
-    title: "Important Links",
+    title: "Company",
     links: [
-      { label: "Contact Us", href: "/contact-us" },
-      { label: "About Us", href: "/about-us" },
-      { label: "Works", href: "/works" },
-      { label: "Industry", href: "/industries" },
-      { label: "Blogs", href: "/blog" },
+      { label: "About", href: "/about-us" },
+      { label: "Work", href: "/works" },
+      { label: "Blog", href: "/blog" },
+      { label: "Book a call", href: "/booking" },
+      { label: "Contact", href: "/contact-us" },
     ],
   },
   {
     title: "Services",
     links: [
-      { label: "Growth Strategy", href: "/services" },
-      { label: "Performance Marketing", href: "/services" },
-      { label: "AI & Automation", href: "/services" },
-      { label: "Creative & Branding", href: "/services" },
+      { label: "Performance Marketing", href: "/services/performance-marketing" },
+      { label: "AI-Era SEO", href: "/services/seo" },
+      { label: "Social Media", href: "/services/social-media" },
+      { label: "Content & Creative", href: "/services/content-creative" },
+      { label: "LinkedIn B2B", href: "/services/linkedin-b2b" },
+      { label: "CRO and Funnels", href: "/services/cro-funnel" },
+      { label: "All Services", href: "/services" },
     ],
   },
   {
     title: "Industries",
     links: [
-      {
-        label: "Edu-Marketing",
-        href: "/education-marketing-agency/",
-      },
-      { label: "Sports Marketing", href: "/sports-marketing-agency" },
       { label: "Real Estate", href: "/real-estate-marketing-agency" },
-      { label: "B2B Marketing", href: "/b2b-marketing-agency" },
-      { label: "Pickleball Marketing", href: "/pickleball-marketing-agency" },
+      { label: "IT/SaaS", href: "/it-saas-marketing-agency" },
+      { label: "Healthcare", href: "/healthcare-marketing-agency" },
+      { label: "Automotive", href: "/automotive-marketing-agency" },
+      { label: "Manufacturing / B2B", href: "/manufacturing-b2b-marketing-agency" },
     ],
   },
 ];
@@ -82,11 +82,6 @@ const socialLinks = [
     href: "https://www.youtube.com/@theeyelevelstudio",
   },
   { icon: Twitter, label: "Twitter", href: "https://x.com/Eye_Levelstudio" },
-  {
-    icon: Mail,
-    label: "Email",
-    href: "https://mail.google.com/mail/?view=cm&to=hello@eyelevelstudio.in",
-  },
 ];
 
 const trustElements = [
@@ -722,7 +717,7 @@ const EnhancedFooter = ({
               </motion.div>
             ))}
 
-            {/* Social Column */}
+            {/* Contact & Social Column */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -730,9 +725,18 @@ const EnhancedFooter = ({
               transition={{ delay: 0.3 }}
             >
               <h3 className="text-white font-semibold font-bricolage mb-4 text-sm">
+                Contact
+              </h3>
+              <ul className="space-y-2 mb-6">
+                <li><a href="mailto:hello@eyelevelstudio.in" className="text-white/50 hover:text-primary transition-colors duration-300 text-sm font-bricolage">hello@eyelevelstudio.in</a></li>
+                <li><a href="tel:+919789099499" className="text-white/50 hover:text-primary transition-colors duration-300 text-sm font-bricolage">+91 97890 99499</a></li>
+                <li className="text-white/50 text-sm font-bricolage">Chennai, India</li>
+              </ul>
+              
+              <h3 className="text-white font-semibold font-bricolage mb-4 text-sm">
                 Connect
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              <div className="flex flex-wrap gap-3">
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
@@ -746,19 +750,24 @@ const EnhancedFooter = ({
                   </a>
                 ))}
               </div>
+              
+              <div className="mt-8 pt-6 border-t border-white/10">
+                <p className="font-dela text-xl text-primary uppercase">Fire your ad agency.</p>
+              </div>
             </motion.div>
           </div>
 
           {/* Bottom Bar */}
           <div className="flex flex-col md:flex-row items-center relative justify-between gap-4 pt-8 border-t border-white/10">
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col items-center md:items-start gap-1">
               <img
                 loading="lazy"
                 src={eyelevelLogoColor}
                 alt="EyeLevel"
                 title="EyeLevel"
-                className="h-8 w-auto"
+                className="h-8 w-auto mb-1"
               />
+              <span className="text-white/50 text-xs font-bricolage tracking-wide">Built by a marketing head, for marketing heads.</span>
             </div>
             <p className="text-white/40 text-xs md:text-sm font-bricolage">
               (c) 2026, EyeLevel Growth Studio. All Rights Reserved.

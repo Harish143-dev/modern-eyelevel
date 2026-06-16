@@ -28,7 +28,7 @@ const FAQSection = ({ faqs }: { faqs: FAQ[] }) => {
           className="text-center mb-16 md:mb-20"
         >
           {/* Interrogation badge */}
-          <GreenButton>The Interrogation</GreenButton>
+          <GreenButton>Common questions</GreenButton>
 
           <h2 className="font-dela text-3xl md:text-4xl lg:text-5xl text-primary mb-6 leading-tight uppercase">
             Here’s what people <WavyUnderline> want to know</WavyUnderline>
@@ -54,8 +54,8 @@ const FAQSection = ({ faqs }: { faqs: FAQ[] }) => {
             >
               <div
                 className={`relative rounded-2xl overflow-hidden transition-all duration-500 ${openIndex === index
-                    ? "bg-gradient-to-br from-lime/20 via-lime/10 to-transparent border-primary/30"
-                    : "bg-white/5 hover:bg-white/[0.07] border-white/10"
+                  ? "bg-gradient-to-br from-lime/20 via-lime/10 to-transparent border-primary/30"
+                  : "bg-white/5 hover:bg-white/[0.07] border-white/10"
                   } border`}
               >
                 {/* Question Button */}
@@ -63,38 +63,62 @@ const FAQSection = ({ faqs }: { faqs: FAQ[] }) => {
                   onClick={() =>
                     setOpenIndex(openIndex === index ? null : index)
                   }
-                  className="w-full p-6 md:p-8 text-left flex items-start gap-4 group"
+                  className="w-full p-6 md:p-8 text-left flex flex-col md:flex-row md:items-start gap-4 group"
                 >
-                  {/* Number indicator */}
-                  <div
-                    className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center font-dela text-sm transition-all duration-300"
-                    style={{
-                      backgroundColor:
-                        openIndex === index
-                          ? "#d0e999"
-                          : "rgba(255,255,255,0.1)",
-                      color:
-                        openIndex === index
-                          ? "#173229"
-                          : "rgba(255,255,255,0.6)",
-                    }}
-                  >
-                    {String(index + 1).padStart(2, "0")}
+                  {/* Mobile Top Row: Number & Icon */}
+                  <div className="flex items-center justify-between w-full md:w-auto">
+                    {/* Number indicator */}
+                    <div
+                      className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center font-dela text-sm transition-all duration-300"
+                      style={{
+                        backgroundColor:
+                          openIndex === index
+                            ? "#d0e999"
+                            : "rgba(255,255,255,0.1)",
+                        color:
+                          openIndex === index
+                            ? "#173229"
+                            : "rgba(255,255,255,0.6)",
+                      }}
+                    >
+                      {String(index + 1).padStart(2, "0")}
+                    </div>
+
+                    {/* Toggle Icon (Mobile Only) */}
+                    <div
+                      className="flex-shrink-0 w-10 h-10 rounded-full flex md:hidden items-center justify-center transition-all duration-300"
+                      style={{
+                        backgroundColor:
+                          openIndex === index
+                            ? "#d0e999"
+                            : "rgba(255,255,255,0.1)",
+                        color:
+                          openIndex === index
+                            ? "#173229"
+                            : "rgba(255,255,255,0.6)",
+                      }}
+                    >
+                      {openIndex === index ? (
+                        <Minus className="w-5 h-5" />
+                      ) : (
+                        <Plus className="w-5 h-5" />
+                      )}
+                    </div>
                   </div>
 
-                  <div className="flex-1">
+                  <div className="flex-1 pt-1 md:pt-[6px]">
                     {/* Question */}
                     <h3
-                      className={`font-bricolage text-lg md:text-xl font-semibold pr-8 transition-colors duration-300 ${openIndex === index ? "text-white" : "text-white/80"
+                      className={`font-bricolage text-lg md:text-xl font-semibold md:pr-8 transition-colors duration-300 ${openIndex === index ? "text-white" : "text-white/80"
                         }`}
                     >
                       {faq.question}
                     </h3>
                   </div>
 
-                  {/* Toggle Icon */}
+                  {/* Toggle Icon (Desktop Only) */}
                   <div
-                    className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
+                    className="flex-shrink-0 w-10 h-10 rounded-full hidden md:flex items-center justify-center transition-all duration-300"
                     style={{
                       backgroundColor:
                         openIndex === index
@@ -124,7 +148,7 @@ const FAQSection = ({ faqs }: { faqs: FAQ[] }) => {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 md:px-8 pb-6 md:pb-8 pl-[4.5rem] md:pl-[5.5rem]">
+                      <div className="px-6 md:px-8 pb-6 md:pb-8 md:pl-[5.5rem]">
                         <motion.div
                           initial={{ y: -10, opacity: 0 }}
                           animate={{ y: 0, opacity: 1 }}
@@ -132,8 +156,8 @@ const FAQSection = ({ faqs }: { faqs: FAQ[] }) => {
                           transition={{ delay: 0.1, duration: 0.3 }}
                           className="relative"
                         >
-                          {/* Decorative line */}
-                          <div className="absolute -left-6 top-0 bottom-0 w-px bg-gradient-to-b from-lime/50 via-lime/20 to-transparent" />
+                          {/* Decorative line (desktop only since mobile has no indent) */}
+                          <div className="absolute -left-6 top-0 bottom-0 w-px bg-gradient-to-b from-lime/50 via-lime/20 to-transparent hidden md:block" />
 
                           <p className="text-white/70 font-bricolage text-base md:text-lg leading-relaxed">
                             {faq.answer}

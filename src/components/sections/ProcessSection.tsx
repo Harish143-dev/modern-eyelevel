@@ -25,28 +25,28 @@ const processSteps = [
   {
     animationKey: "stare" as AnimationKey,
     number: "1",
-    title: "We Stare.",
+    title: "We Stare",
     description:
       "We start by finding what your competition missed. AI-assisted market research, funnel audits, and audience mapping — done in days, not weeks."
   },
   {
     animationKey: "scatt" as AnimationKey,
     number: "2",
-    title: "We Guide.",
+    title: "We Plan",
     description:
       "No option paralysis. We give you a focused go-to-market plan — channels, messaging, sequence — and tell you exactly what to do first."
   },
   {
     animationKey: "blocks" as AnimationKey,
     number: "3",
-    title: "We Build.",
+    title: "We Execute",
     description:
       "We build the engine: WhatsApp flows, content pipelines, ad campaigns, AI agents, and event systems — all running in parallel under one team.",
   },
   {
     animationKey: "gun" as AnimationKey,
     number: "4",
-    title: "We Enforce.",
+    title: "We Enforce",
     description:
       "We don't set and forget. Weekly performance reviews, budget reallocations, and creative refreshes — until the numbers move in the right direction."
   },
@@ -179,23 +179,15 @@ const ProcessSection = () => {
         <div className="max-w-5xl mx-auto w-full px-4 md:px-8">
           {/* Header */}
           <motion.div
-            initial={{
-              opacity: 0,
-              y: 20,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="text-center py-0"
           >
-            <GreenButton>The EyeLevel Growth System</GreenButton>
-            <h2 className="font-dela text-4xl text-primary md:text-5xl lg:text-6xl leading-[1.05] uppercase">
+            <GreenButton >The EyeLevel Growth System</GreenButton>
+            <h2 className="font-dela text-3xl text-primary md:text-4xl lg:text-5xl leading-[1.05] uppercase">
               HOW WE <span></span>
-              <WavyUnderline>DOMINATE</WavyUnderline>
+              <WavyUnderline>WORK</WavyUnderline>
             </h2>
           </motion.div>
 
@@ -233,7 +225,7 @@ const ProcessSection = () => {
           </div>
 
           {/* Progress dots */}
-          <div className="flex justify-center gap-3">
+          <div className="flex justify-center gap-3 mt-4 mb-10 lg:mb-0">
             {processSteps.map((_, index) => (
               <ProgressDot
                 key={index}
