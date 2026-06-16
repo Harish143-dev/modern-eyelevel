@@ -734,7 +734,7 @@ const EnhancedFooter = ({
                 <li><a href="tel:+919789099499" className="text-white/50 hover:text-primary transition-colors duration-300 text-sm font-bricolage">+91 97890 99499</a></li>
                 <li className="text-white/50 text-sm font-bricolage">Chennai, Tamil Nadu, India</li>
               </ul>
-              
+
               <h3 className="text-white font-semibold font-bricolage mb-4 text-sm">
                 Connect
               </h3>
@@ -752,7 +752,7 @@ const EnhancedFooter = ({
                   </a>
                 ))}
               </div>
-              
+
               <div className="mt-8 pt-6 border-t border-white/10">
                 <p className="font-dela text-xl text-primary uppercase">Fire your ad agency.</p>
               </div>

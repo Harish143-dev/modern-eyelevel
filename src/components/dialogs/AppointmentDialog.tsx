@@ -47,17 +47,17 @@ const AppointmentDialog = ({ children }: AppointmentDialogProps) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!date) {
       toast.error("Please select a date for your appointment");
       return;
     }
 
     setIsSubmitting(true);
-    
+
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
     toast.success("Appointment request submitted! We'll get back to you within 24 hours.");
     setOpen(false);
     setFormData({
@@ -87,7 +87,7 @@ const AppointmentDialog = ({ children }: AppointmentDialogProps) => {
             Book Your Free Consultation
           </DialogTitle>
         </DialogHeader>
-        
+
         <form onSubmit={handleSubmit} className="space-y-4 mt-4">
           {/* Date Picker */}
           <div className="space-y-2">

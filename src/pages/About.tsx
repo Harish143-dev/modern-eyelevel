@@ -16,12 +16,13 @@ import video1 from "@/assets/videos/videogallery2.mp4";
 import akmal from "@/assets/people/akmal.webp";
 import jameel from "@/assets/people/jameel.webp";
 import jahangeer from "@/assets/people/jahangeer.webp";
-import { Linkedin } from "lucide-react";
+import { Linkedin, Link as LinkIcon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import ClientLottie, { type ClientLottieRef } from "@/components/shared/ClientLottie";
 import SEO from "@/components/utils/SEO";
 import FAQSection from "@/components/sections/FAQSection";
 import faqs from "@/data/faqs";
+import { Card } from "@/components/ui/card";
 import {
   aboutPageSchema,
   faqPageSchema,
@@ -153,18 +154,37 @@ const About = () => {
 
   const authors = [
     {
-      name: "Mohammad Jameel",
-      role: "Founder & CEO",
-      image: jameel,
-      dec: "Seasoned investment professional and entrepreneur with a background in wealth management and alternative investments. Founded EyeLevel to bring precision-driven, ROI-focused marketing to brands that are tired of guesswork.",
-      socials: "https://www.linkedin.com/in/muhammad-jameel-1b340836/",
+      name: "Akmal Rahman",
+      role: "Founder",
+      image: akmal,
+      dec: "He runs the craft: 15 years as a client-side marketing head across automotive, real estate, D2C, and manufacturing. He owns strategy, positioning, and growth for every EyeLevel client. The full career, and the brands, live on akmalrahman.com.",
+      socials: "https:www.linkedin.com/in/akmalbillekar",
+      website: "https://akmalrahman.com/"
     },
     {
-      name: "Akmal Rahman",
-      role: "Co-Founder & Chief Growth Architect",
-      image: akmal,
-      dec: "Senior marketing leader with 15+ years of experience driving scalable growth, building brands, and executing go-to-market strategies across sports, SaaS, D2C, and offline. Co-Producer of the Tamil Nadu Pickleball Premier League and the World Pickleball Premier League.",
-      socials: "https://www.linkedin.com/in/akmalbillekar/",
+      name: "Mohammad Jameel",
+      role: "Co-Founder",
+      image: jameel,
+      dec: "A seasoned investment banking professional specializing in wealth management and alternative investment solutions for high-net-worth and celebrity clients. At EyeLevel, he leads the business, finance, and partnership side of the studio.",
+      socials: "https://www.linkedin.com/in/muhammad-jameel-1b340836/",
+      website: "",
+    },
+  ];
+  const pillars = [
+    {
+      number: "01",
+      title: "The Insider Advantage",
+      body: "Built from the client side. The person who builds your strategy has sat in your chair.",
+    },
+    {
+      number: "02",
+      title: "One Team, Full Stack",
+      body: "Strategy and campaigns built by the same people. Nothing subcontracted.",
+    },
+    {
+      number: "03",
+      title: "Outcomes, Not Activities",
+      body: "We measure what your board measures. Not reach. Not impressions. Revenue.",
     },
   ];
   return (
@@ -226,7 +246,7 @@ const About = () => {
             <span
               className="text-sm font-medium font-bricolage text-primary"
             >
-              About Us
+              About Eyelevel
             </span>
           </motion.div>
 
@@ -247,9 +267,9 @@ const About = () => {
             )}
 
             <h1
-              className="text-4xl md:text-6xl lg:text-7xl font-dela uppercase text-primary"
+              className="text-3xl md:text-5xl lg:text-6xl font-dela uppercase text-primary"
             >
-              THE TEAM BEHIND <WavyUnderline>THE GROWTH</WavyUnderline>
+              BUILT FROM <WavyUnderline>THE CLIENT</WavyUnderline>
             </h1>
             {/* <motion.img
               src={mascotWave}
@@ -268,163 +288,28 @@ const About = () => {
             className="text-base md:text-lg max-w-2xl mx-auto font-bricolage"
             style={{ color: "rgba(248, 255, 232, 0.7)" }}
           >
-            Strategists, creatives, and performance marketers united by a single
-            obsession: driving measurable growth for our clients.
+            Eyelevel was not built by an agency chasing clients. It was built by a marketing head who spent 15 years hiring agencies, and knowing exactly what they failed to deliver.
           </motion.p>
-        </div>
-      </section>
-
-      {/* Our Story - Simplified */}
-      <section
-        className="py-20 px-4 relative bg-background"
-      >
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-20 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <div
-                className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-6 relative top-0"
-                style={{
-                  backgroundColor: "rgba(226, 254, 165, 0.1)",
-                  border: "1px solid rgba(226, 254, 165, 0.2)",
-                }}
-              >
-                <span
-                  className="text-sm font-medium font-bricolage text-primary"
-                >
-                  Our Story
-                </span>
-              </div>
-              <h2
-                className="text-3xl md:text-5xl font-dela mb-6 uppercase text-primary"
-              >
-                FROM FRUSTRATION
-                <br />
-                TO <WavyUnderline>FOCUS</WavyUnderline>
-              </h2>
-              <p
-                className="text-lg leading-relaxed mb-6 font-bricolage"
-                style={{ color: "rgba(248, 255, 232, 0.7)" }}
-              >
-                EyeLevel was founded on a simple idea: marketing should be a
-                growth engine, not a cost center. We were tired of seeing
-                businesses waste money on marketing that didn't deliver.
-              </p>
-              <p
-                className="text-lg leading-relaxed font-bricolage"
-                style={{ color: "rgba(248, 255, 232, 0.7)" }}
-              >
-                So we built a new kind of agency - a growth studio that combines
-                strategic clarity with precision execution.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div
-                  className="rounded-2xl p-4 md:p-6 text-center"
-                  style={{ backgroundColor: "rgba(226, 254, 165, 0.1)" }}
-                >
-                  <span
-                    className="text-2xl font-dela text-primary"
-                  >
-                    50+
-                  </span>
-                  <p
-                    className="text-xs md:text-sm mt-2 font-bricolage"
-                    style={{ color: "rgba(248, 255, 232, 0.7)" }}
-                  >
-                    Clients Served
-                  </p>
-                </div>
-                <div
-                  className="rounded-2xl p-4 md:p-6 text-center"
-                  style={{ backgroundColor: "rgba(226, 254, 165, 0.1)" }}
-                >
-                  <span
-                    className="text-2xl font-dela text-primary"
-                  >
-                    15+
-                  </span>
-                  <p
-                    className="text-xs md:text-sm mt-2 font-bricolage"
-                    style={{ color: "rgba(248, 255, 232, 0.7)" }}
-                  >
-                    Sporting Events
-                  </p>
-                </div>
-                <div
-                  className="rounded-2xl p-4 md:p-6 text-center"
-                  style={{ backgroundColor: "rgba(226, 254, 165, 0.1)" }}
-                >
-                  <span
-                    className="text-2xl font-dela text-primary"
-                  >
-                    200+
-                  </span>
-                  <p
-                    className="text-xs md:text-sm mt-2 font-bricolage"
-                    style={{ color: "rgba(248, 255, 232, 0.7)" }}
-                  >
-                    Digital Campaigns Completed
-                  </p>
-                </div>
-                <div
-                  className="col-span-1 sm:col-span-3 rounded-2xl p-6 md:p-8 flex flex-col sm:items-center justify-between gap-4 text-left"
-                  style={{ backgroundColor: "rgba(226, 254, 165, 0.1)" }}
-                >
-                  <div className="flex-1">
-                    <span
-                      className="text-lg md:text-xl font-dela block leading-tight text-primary"
-                    >
-                      Growth Focus,
-                      <br />
-                      Not Vanity Metrics
-                    </span>
-                  </div>
-                  <div className="flex-1 sm:max-w-xs md:max-w-md">
-                    <p
-                      className="text-xs md:text-sm font-bricolage leading-snug"
-                      style={{ color: "rgba(248, 255, 232, 0.7)" }}
-                    >
-                      We report pipeline and revenue — not impressions.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+          <div className="flex items-center rounded-full relative font-bricolage z-1000 mt-8 justify-center gap-4">
+            <Link to="/booking">
+              <Button className="h-12 px-6 lg:h-14 lg:px-8 text-sm lg:text-base font-semibold rounded-full">
+                Book a free 30-min diagnostic
+              </Button>
+            </Link>
           </div>
         </div>
-      </section>
+      </section >
 
-      {/* Values Section - Dynamic Bento Grid */}
-      <section
-        className="py-20 px-4 relative border-t border-b overflow-hidden"
-        style={{
-          backgroundColor: "#253e35",
-          borderColor: "rgba(248, 255, 232, 0.15)",
-        }}
-      >
-        {/* Background decoration */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px]" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#667eea]/10 rounded-full blur-[120px]" />
-        </div>
+      {/* Why EyeLevel Exists */}
+      < section className="py-20 px-4 relative bg-background" >
+        <div className="max-w-5xl mx-auto">
 
-        <div className="max-w-4xl mx-auto relative z-10">
+          {/* Eyebrow */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="mb-12"
           >
             <div
               className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-6"
@@ -433,205 +318,330 @@ const About = () => {
                 border: "1px solid rgba(226, 254, 165, 0.2)",
               }}
             >
-              <span
-                className="text-sm font-medium font-bricolage text-primary"
-              >
-                Our Values
+              <span className="text-sm font-medium font-bricolage text-primary">
+                Our Story
               </span>
             </div>
-            <h2
-              className="text-3xl md:text-5xl font-dela uppercase text-primary"
-            >
-              WHY WE STAND FOR
-              <br />
-              <WavyUnderline>EXCELLENCE</WavyUnderline>
+
+            <h2 className="text-2xl  md:text-4xl lg:text-5xl font-dela uppercase text-primary">
+              Why <WavyUnderline>EyeLevel</WavyUnderline> exists
             </h2>
           </motion.div>
 
-          {/* Bento Grid Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-6">
-            {/* Large card - spans 4 cols */}
+          {/* Body + Pull-quote grid */}
+          <div className="grid md:grid-cols-[1fr_1px_360px] gap-10 md:gap-14 items-start">
+
+            {/* Left — paragraphs */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="md:col-span-4 relative group"
+              className="space-y-6"
             >
+              <p
+                className="text-lg leading-relaxed font-bricolage"
+                style={{ color: "rgba(248, 255, 232, 0.7)" }}
+              >
+                For 15 years, our founder sat on the other side of the table. He was
+                the marketing head agencies pitched to. The person deciding which
+                agency got the budget, which strategy got approved, and which agency
+                got fired.
+              </p>
+              <p
+                className="text-lg leading-relaxed font-bricolage"
+                style={{ color: "rgba(248, 255, 232, 0.7)" }}
+              >
+                He saw the same pattern everywhere. Agencies built to bill, not to
+                grow. Retainers that padded. Reports that obscured. That is not a few
+                bad agencies. That is how the industry is structured.
+              </p>
+              <p
+                className="text-lg leading-relaxed font-bricolage"
+                style={{ color: "rgba(248, 255, 232, 0.7)" }}
+              >
+                EyeLevel answers one question. What would the agency look like if it
+                were built by the client, for the client? Marketing as a growth
+                engine, not a cost center.
+              </p>
+            </motion.div>
+
+            {/* Vertical divider — hidden on mobile */}
+            <div
+              className="hidden md:block w-px self-stretch"
+              style={{ backgroundColor: "rgba(226, 254, 165, 0.15)" }}
+            />
+
+            {/* Right — pull-quote */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col justify-center"
+            >
+              {/* Horizontal rule above on mobile */}
               <div
-                className="h-full min-h-[280px] rounded-3xl p-8 md:p-10 relative overflow-hidden transition-all duration-500 group-hover:scale-[1.02]"
+                className="block md:hidden h-px w-full mb-8"
+                style={{ backgroundColor: "rgba(226, 254, 165, 0.15)" }}
+              />
+
+              <div
+                className="rounded-2xl p-7 md:p-8"
                 style={{
-                  backgroundColor: "#F8FFE8",
-                  border: "1px solid rgba(37, 62, 53, 0.2)",
+                  backgroundColor: "rgba(226, 254, 165, 0.07)",
+                  border: "1px solid rgba(226, 254, 165, 0.12)",
                 }}
               >
-                <div className="relative z-10">
-                  <span
-                    className="text-6xl md:text-8xl font-dela opacity-20 text-forest-muted"
-                  >
-                    01
-                  </span>
-                  <h3
-                    className="text-2xl md:text-3xl font-dela mt-4 mb-4 uppercase text-forest-muted"
-                  >
-                    {values[0].title}
-                  </h3>
-                  <p
-                    className="text-base md:text-lg font-bricolage max-w-md"
-                    style={{ color: "rgba(37, 62, 53, 0.7)" }}
-                  >
-                    {values[0].description}
-                  </p>
+                <span
+                  className="block text-5xl font-dela leading-none mb-4 text-primary"
+                  aria-hidden="true"
+                >
+                  "
+                </span>
+
+                <p className="text-xl md:text-2xl font-dela leading-snug text-primary">
+                  We're not your agency. We're your extended marketing team.
+                </p>
+
+                <div className="flex items-center gap-3 mt-6">
+                  <div
+                    className="w-8 h-px"
+                    style={{ backgroundColor: "rgba(226, 254, 165, 0.4)" }}
+                  />
                 </div>
               </div>
             </motion.div>
 
-            {/* Medium card - spans 2 cols */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="md:col-span-2 relative group"
-            >
-              <div
-                className="h-full min-h-[280px] rounded-3xl p-6 md:p-8 relative overflow-hidden transition-all duration-500 group-hover:scale-[1.02]"
-                style={{
-                  backgroundColor: "#F8FFE8",
-                  border: "1px solid rgba(37, 62, 53, 0.2)",
-                }}
-              >
-                <div className="relative z-10">
-                  <span
-                    className="text-5xl md:text-6xl font-dela opacity-20 text-forest-muted"
-                  >
-                    02
-                  </span>
-                  <h3
-                    className="text-xl md:text-2xl font-dela mt-3 mb-3 uppercase text-forest-muted"
-                  >
-                    {values[1].title}
-                  </h3>
-                  <p
-                    className="text-sm md:text-base font-bricolage"
-                    style={{ color: "rgba(37, 62, 53, 0.7)" }}
-                  >
-                    {values[1].description}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Medium card - spans 2 cols */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="md:col-span-2 relative group"
-            >
-              <div
-                className="h-full min-h-[260px] rounded-3xl p-6 md:p-8 relative overflow-hidden transition-all duration-500 group-hover:scale-[1.02]"
-                style={{
-                  backgroundColor: "#F8FFE8",
-                  border: "1px solid rgba(37, 62, 53, 0.2)",
-                }}
-              >
-                <div className="relative z-10">
-                  <span
-                    className="text-5xl md:text-6xl font-dela opacity-20 text-forest-muted"
-                  >
-                    03
-                  </span>
-                  <h3
-                    className="text-xl md:text-2xl font-dela mt-3 mb-3 uppercase text-forest-muted"
-                  >
-                    {values[2].title}
-                  </h3>
-                  <p
-                    className="text-sm md:text-base font-bricolage"
-                    style={{ color: "rgba(37, 62, 53, 0.7)" }}
-                  >
-                    {values[2].description}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Medium card - spans 2 cols */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="md:col-span-2 relative group"
-            >
-              <div
-                className="h-full min-h-[260px] rounded-3xl p-6 md:p-8 relative overflow-hidden transition-all duration-500 group-hover:scale-[1.02]"
-                style={{
-                  backgroundColor: "#F8FFE8",
-                  border: "1px solid rgba(37, 62, 53, 0.2)",
-                }}
-              >
-                <div className="relative z-10">
-                  <span
-                    className="text-5xl md:text-6xl font-dela opacity-20 text-forest-muted"
-                  >
-                    04
-                  </span>
-                  <h3
-                    className="text-xl md:text-2xl font-dela mt-3 mb-3 uppercase text-forest-muted"
-                  >
-                    {values[3].title}
-                  </h3>
-                  <p
-                    className="text-sm md:text-base font-bricolage"
-                    style={{ color: "rgba(37, 62, 53, 0.7)" }}
-                  >
-                    {values[3].description}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Wide card - spans 2 cols */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-              className="md:col-span-2 relative group"
-            >
-              <div
-                className="h-full min-h-[260px] rounded-3xl p-6 md:p-8 relative overflow-hidden transition-all duration-500 group-hover:scale-[1.02]"
-                style={{
-                  backgroundColor: "#F8FFE8",
-                  border: "1px solid rgba(37, 62, 53, 0.2)",
-                }}
-              >
-                <div className="relative z-10">
-                  <span
-                    className="text-5xl md:text-6xl font-dela opacity-20 text-forest-muted"
-                  >
-                    05
-                  </span>
-                  <h3
-                    className="text-xl md:text-2xl font-dela mt-3 mb-3 uppercase text-forest-muted"
-                  >
-                    {values[4].title}
-                  </h3>
-                  <p
-                    className="text-sm md:text-base font-bricolage"
-                    style={{ color: "rgba(37, 62, 53, 0.7)" }}
-                  >
-                    {values[4].description}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </div>
-      </section>
+      </section >
+
+      {/* Values Section - Dynamic Bento Grid */}
+      {/* <section
+        className="py-20 px-4 relative border-t border-b overflow-hidden"
+        style={{
+          backgroundColor: "#253e35",
+          borderColor: "rgba(248, 255, 232, 0.15)",
+        }}
+      >
+        {/* Background decoration */}
+      {/*<div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px]" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#667eea]/10 rounded-full blur-[120px]" />
+      </div>
+
+      <div className="max-w-4xl mx-auto relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <div
+            className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-6"
+            style={{
+              backgroundColor: "rgba(226, 254, 165, 0.1)",
+              border: "1px solid rgba(226, 254, 165, 0.2)",
+            }}
+          >
+            <span
+              className="text-sm font-medium font-bricolage text-primary"
+            >
+              Our Values
+            </span>
+          </div>
+          <h2
+            className="text-3xl md:text-5xl font-dela uppercase text-primary"
+          >
+            WHY WE STAND FOR
+            <br />
+            <WavyUnderline>EXCELLENCE</WavyUnderline>
+          </h2>
+        </motion.div> */}
+
+      {/* Bento Grid Layout */}
+      {/* <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-6">
+          {/* Large card - spans 4 cols */}
+      {/* <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="md:col-span-4 relative group"
+          >
+            <div
+              className="h-full min-h-[280px] rounded-3xl p-8 md:p-10 relative overflow-hidden transition-all duration-500 group-hover:scale-[1.02]"
+              style={{
+                backgroundColor: "#F8FFE8",
+                border: "1px solid rgba(37, 62, 53, 0.2)",
+              }}
+            >
+              <div className="relative z-10">
+                <span
+                  className="text-6xl md:text-8xl font-dela opacity-20 text-forest-muted"
+                >
+                  01
+                </span>
+                <h3
+                  className="text-2xl md:text-3xl font-dela mt-4 mb-4 uppercase text-forest-muted"
+                >
+                  {values[0].title}
+                </h3>
+                <p
+                  className="text-base md:text-lg font-bricolage max-w-md"
+                  style={{ color: "rgba(37, 62, 53, 0.7)" }}
+                >
+                  {values[0].description}
+                </p>
+              </div>
+            </div>
+          </motion.div> */}
+
+      {/* Medium card - spans 2 cols */}
+      {/* <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="md:col-span-2 relative group"
+          >
+            <div
+              className="h-full min-h-[280px] rounded-3xl p-6 md:p-8 relative overflow-hidden transition-all duration-500 group-hover:scale-[1.02]"
+              style={{
+                backgroundColor: "#F8FFE8",
+                border: "1px solid rgba(37, 62, 53, 0.2)",
+              }}
+            >
+              <div className="relative z-10">
+                <span
+                  className="text-5xl md:text-6xl font-dela opacity-20 text-forest-muted"
+                >
+                  02
+                </span>
+                <h3
+                  className="text-xl md:text-2xl font-dela mt-3 mb-3 uppercase text-forest-muted"
+                >
+                  {values[1].title}
+                </h3>
+                <p
+                  className="text-sm md:text-base font-bricolage"
+                  style={{ color: "rgba(37, 62, 53, 0.7)" }}
+                >
+                  {values[1].description}
+                </p>
+              </div>
+            </div>
+          </motion.div> */}
+
+      {/* Medium card - spans 2 cols */}
+      {/* <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="md:col-span-2 relative group"
+          >
+            <div
+              className="h-full min-h-[260px] rounded-3xl p-6 md:p-8 relative overflow-hidden transition-all duration-500 group-hover:scale-[1.02]"
+              style={{
+                backgroundColor: "#F8FFE8",
+                border: "1px solid rgba(37, 62, 53, 0.2)",
+              }}
+            >
+              <div className="relative z-10">
+                <span
+                  className="text-5xl md:text-6xl font-dela opacity-20 text-forest-muted"
+                >
+                  03
+                </span>
+                <h3
+                  className="text-xl md:text-2xl font-dela mt-3 mb-3 uppercase text-forest-muted"
+                >
+                  {values[2].title}
+                </h3>
+                <p
+                  className="text-sm md:text-base font-bricolage"
+                  style={{ color: "rgba(37, 62, 53, 0.7)" }}
+                >
+                  {values[2].description}
+                </p>
+              </div>
+            </div>
+          </motion.div> */}
+
+      {/* Medium card - spans 2 cols */}
+      {/* <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            className="md:col-span-2 relative group"
+          >
+            <div
+              className="h-full min-h-[260px] rounded-3xl p-6 md:p-8 relative overflow-hidden transition-all duration-500 group-hover:scale-[1.02]"
+              style={{
+                backgroundColor: "#F8FFE8",
+                border: "1px solid rgba(37, 62, 53, 0.2)",
+              }}
+            >
+              <div className="relative z-10">
+                <span
+                  className="text-5xl md:text-6xl font-dela opacity-20 text-forest-muted"
+                >
+                  04
+                </span>
+                <h3
+                  className="text-xl md:text-2xl font-dela mt-3 mb-3 uppercase text-forest-muted"
+                >
+                  {values[3].title}
+                </h3>
+                <p
+                  className="text-sm md:text-base font-bricolage"
+                  style={{ color: "rgba(37, 62, 53, 0.7)" }}
+                >
+                  {values[3].description}
+                </p>
+              </div>
+            </div>
+          </motion.div> */}
+
+      {/* Wide card - spans 2 cols */}
+      {/*<motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5 }}
+            className="md:col-span-2 relative group"
+          >
+            <div
+              className="h-full min-h-[260px] rounded-3xl p-6 md:p-8 relative overflow-hidden transition-all duration-500 group-hover:scale-[1.02]"
+              style={{
+                backgroundColor: "#F8FFE8",
+                border: "1px solid rgba(37, 62, 53, 0.2)",
+              }}
+            >
+              <div className="relative z-10">
+                <span
+                  className="text-5xl md:text-6xl font-dela opacity-20 text-forest-muted"
+                >
+                  05
+                </span>
+                <h3
+                  className="text-xl md:text-2xl font-dela mt-3 mb-3 uppercase text-forest-muted"
+                >
+                  {values[4].title}
+                </h3>
+                <p
+                  className="text-sm md:text-base font-bricolage"
+                  style={{ color: "rgba(37, 62, 53, 0.7)" }}
+                >
+                  {values[4].description}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section> */}
 
       {/* Author Profiles - Light Background */}
       <section
@@ -641,6 +651,19 @@ const About = () => {
           borderColor: "rgba(248, 255, 232, 0.15)",
         }}
       >
+        <div className="flex justify-center">
+          <div
+            className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-6"
+            style={{
+              backgroundColor: "rgba(226, 254, 165, 0.1)",
+              border: "1px solid rgba(226, 254, 165, 0.2)",
+            }}
+          >
+            <span className="text-sm font-medium font-bricolage text-primary">
+              Leadership
+            </span>
+          </div>
+        </div>
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -648,9 +671,9 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-dela uppercase">
-              <span className="text-primary">The Leadership</span>{" "}
-              <WavyUnderline>Team</WavyUnderline>
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-dela uppercase">
+              <span className="text-primary">Two founders.</span>{" "}
+              <WavyUnderline>One Studio.</WavyUnderline>
             </h2>
           </motion.div>
 
@@ -695,17 +718,26 @@ const About = () => {
                 <p className="text-sm font-bricolage mt-3 mx-4 text-forest-muted/70">
                   {author?.dec}
                 </p>
-                <a
-                  className="text-sm flex justify-center gap-2 font-bricolage mt-2 mx-4 text-primary bg-secondary px-4 py-2 rounded-full border-2 border-primary hover:bg-secondary/90 transition-colors"
-                  href={author.socials}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>
-                    <Linkedin className="size-5 pb-1" />
-                  </span>
-                  Connect
-                </a>
+                <div className="flex items-center gap-3 py-4">
+                  <a
+                    className="text-sm flex justify-center gap-2 font-bricolage text-primary px-4 py-2 rounded-full border-2 border-background hover:bg-primary/90 transition-colors"
+                    href={author.socials}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Linkedin className="size-5 text-background" />
+                  </a>
+
+                  {author.website && (<a
+                    className="text-sm flex justify-center gap-2 font-bricolage text-primary px-4 py-2 rounded-full border-2 border-background hover:bg-primary/90 transition-colors"
+                    href={author.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <LinkIcon className="size-5 text-background" />
+                  </a>
+                  )}
+                </div>
               </motion.div>
             ))}
           </div>
@@ -714,7 +746,7 @@ const About = () => {
 
       {/* Gallery Section */}
       <section
-        className="py-20 px-4 relative bg-secondary"
+        className="py-20 px-4 relative bg-background"
       >
         <div className="max-w-4xl mx-auto">
           <motion.div
@@ -737,7 +769,7 @@ const About = () => {
               </span>
             </div>
             <h2
-              className="text-3xl md:text-5xl font-dela uppercase text-primary"
+              className="text-2xl md:text-4xl lg:text-5xl font-dela uppercase text-primary"
             >
               LIFE AT <WavyUnderline>EYELEVEL</WavyUnderline>
             </h2>
@@ -812,13 +844,137 @@ const About = () => {
         </div>
       </section>
 
+      {/* What We Believe */}
+      <section className="py-20 px-4 relative bg-secondary">
+        <div className="max-w-5xl mx-auto">
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <div className="flex justify-center">
+              <div
+                className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-6"
+                style={{
+                  backgroundColor: "rgba(226, 254, 165, 0.1)",
+                  border: "1px solid rgba(226, 254, 165, 0.2)",
+                }}
+              >
+                <span className="text-sm font-medium font-bricolage text-primary">
+                  Our Beliefs
+                </span>
+              </div>
+            </div>
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-dela uppercase text-primary text-center">
+              What we <WavyUnderline>believe</WavyUnderline>
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {pillars.map((pillar, index) => (
+              <motion.div
+                key={pillar.number}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="flex flex-col gap-4 rounded-2xl p-6 md:p-8"
+                style={{
+                  backgroundColor: "rgba(226, 254, 165, 0.2)",
+                  border: "1px solid rgba(226, 254, 165, 0.1)",
+                }}
+              >
+                <span
+                  className="text-4xl font-dela text-primary opacity-30 leading-none"
+                >
+                  {pillar.number}
+                </span>
+                <h3 className="text-lg font-dela uppercase text-primary leading-snug">
+                  {pillar.title}
+                </h3>
+                <p
+                  className="text-sm font-bricolage leading-relaxed"
+                  style={{ color: "rgba(248, 255, 232, 0.7)" }}
+                >
+                  {pillar.body}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* The Numbers */}
+      <section className="py-20 px-4 relative bg-background">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12 text-center"
+          >
+            <div className="flex justify-center">
+              <div
+                className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-6"
+                style={{
+                  backgroundColor: "rgba(226, 254, 165, 0.1)",
+                  border: "1px solid rgba(226, 254, 165, 0.2)",
+                }}
+              >
+                <span className="text-sm font-medium font-bricolage text-primary">
+                  The Numbers
+                </span>
+              </div>
+            </div>
+
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-dela uppercase text-primary text-center">
+              Built on experience, <WavyUnderline>not layers.</WavyUnderline>
+            </h2>
+          </motion.div>
+
+          <div
+            className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x rounded-2xl overflow-hidden"
+            style={{
+              border: "2px solid rgba(226, 254, 165, 0.15)",
+            }}
+          >
+            {[
+              { stat: "15+", label: "Years client-side" },
+              { stat: "5", label: "Industries, hands-on" },
+              { stat: "0", label: "Account Managers between you and the person accountable" },
+            ].map((item, index) => (
+              <motion.div
+                key={item.stat}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="flex flex-col items-center justify-center text-center px-4 md:px-8 py-10 md:py-12 gap-2"
+              >
+                <span className="text-4xl md:text-6xl lg:text-7xl font-dela text-primary leading-none">
+                  {item.stat}
+                </span>
+
+                <span
+                  className="text-xs md:text-sm font-bricolage leading-relaxed max-w-[120px] md:max-w-[160px]"
+                  style={{ color: "rgba(248, 255, 232, 0.6)" }}
+                >
+                  {item.label}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQS */}
       <FAQSection faqs={faqs["About Us"]} />
 
       {/* Join Us Section */}
-      <section
-        className="py-20 px-4 relative overflow-hidden bg-secondary"
-      >
+      <section className="py-20 px-4 relative overflow-hidden bg-background">
         <div className="max-w-4xl mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -826,38 +982,31 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            <GreenButton>We're Hiring</GreenButton>
-
-            <h2
-              className="text-3xl md:text-5xl font-dela mb-6 uppercase text-primary"
-            >
-              Join the <WavyUnderline>Growth Squad</WavyUnderline>
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-dela mb-6 uppercase text-primary">
+              Want the marketing team you always wished you could{" "}
+              <WavyUnderline>plug in?</WavyUnderline>
             </h2>
 
             <p
-              className="text-lg max-w-2xl mx-auto mb-8 font-bricolage"
+              className="text-lg max-w-xl mx-auto mb-10 font-bricolage"
               style={{ color: "rgba(248, 255, 232, 0.7)" }}
             >
-              We're always looking for talented individuals who are passionate
-              about growth, collaborative and creative problem-solvers. Ready to
-              make an impact?
+              30 minutes. No pitch deck. We will tell you what we see.
             </p>
 
-            <Link to="/careers">
+            <Link to="/booking">
               <Button
-                size="lg"
-                className="group px-10 py-7 text-base md:text-lg font-semibold"
+                className="group h-12 md:h-14 px-5 md:px-8 text-sm md:text-base font-semibold w-full sm:w-auto"
               >
-                View Open Positions
-                <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                <span>Book a free 30-min diagnostic</span>
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
           </motion.div>
         </div>
       </section>
-
-      <EnhancedFooter showCTA={false} mascotBgClass="bg-secondary" />
-    </div>
+      <EnhancedFooter showCTA={false} mascotBgClass="bg-background" />
+    </div >
   );
 };
 
