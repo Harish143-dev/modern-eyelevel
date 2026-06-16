@@ -3,63 +3,38 @@ const faqs = {
     {
       id: 1,
       question: "What does EyeLevel Growth Studio do?",
-      answer:
-        "EyeLevel Growth Studio is a Chennai-based digital marketing agency specialising in AI-powered content production, WhatsApp marketing campaigns, paid media, LinkedIn B2B marketing, influencer and celebrity partnerships, and sports event marketing. We work with SaaS companies, D2C brands, and offshore clients in the US and UAE.",
+      answer: "EyeLevel acts as your fractional CMO and full-stack marketing team. We build complete growth engines combining performance marketing, AI-Era SEO, and content creation. We also handle large-scale event production, having produced 15+ sporting events from concept to live broadcast."
     },
     {
       id: 2,
-      question: "Is EyeLevel only for Chennai-based businesses?",
-      answer:
-        "No. While we are based in Chennai, we currently manage marketing for clients in the US and UAE, working fully remote and async-first. We also serve clients across Bangalore, Hyderabad, and Pune.",
+      question: "What industries does EyeLevel serve?",
+      answer: "We specialize deeply in five key verticals: Real Estate, IT / SaaS, Healthcare, Automotive, and Manufacturing / B2B. By focusing strictly on these industries, we eliminate the learning curve and apply proven frameworks that generate immediate pipeline and measurable revenue."
     },
     {
       id: 3,
-      question: "What industries does EyeLevel serve?",
-      answer:
-        "We specialize in four key areas: SaaS & Tech Startups, D2C & E-commerce, Sports & Pickleball marketing, and Offshore / US Clients. Our approach is to build specialized growth engines for these verticals rather than being a generic, one-size-fits-all agency.",
+      question: "How is EyeLevel an AI-powered agency?",
+      answer: "We integrate AI at the core production layer—automating research, content generation, and data analysis. This allows our senior strategists to focus entirely on growth strategy and human-led judgment. The result is agency-level output at startup speed without the traditional agency bloat."
     },
     {
       id: 4,
-      question: "Do you offer AI content creation as a service?",
-      answer:
-        "Yes. We use AI at the production layer — content, creatives, research, and reporting — which means we move significantly faster than a traditional agency. We also build custom AI agents for lead qualification and marketing automation.",
+      question: "What is AI-Era SEO (AEO + GEO)?",
+      answer: "AI-Era SEO focuses on Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO). Instead of just ranking for blue links on Google, we optimize your content to be the definitive answer cited by AI search engines like ChatGPT, Perplexity, and Google's AI Overviews."
     },
     {
       id: 5,
-      question: "What is WhatsApp marketing and do you offer it?",
-      answer:
-        "WhatsApp marketing allows brands to reach audiences directly on their phones with high open rates. We design and execute WhatsApp campaigns, particularly for D2C brands, to reduce customer acquisition cost (CAC) and increase lifetime value (LTV).",
+      question: "Is EyeLevel only for Chennai-based businesses?",
+      answer: "No. While our headquarters and primary event production teams are in Chennai, we actively manage marketing for clients across the US, UAE, and Pan-India. We operate on a seamless, async-first model that delivers global standards with local efficiency."
     },
     {
       id: 6,
-      question: "Does EyeLevel work with sports leagues and events?",
-      answer:
-        "Yes. We have produced two national pickleball leagues — TNPPL and WPPL — end-to-end, covering marketing, sponsorship, content, and live broadcast. We have 15+ sporting events in our production history.",
+      question: "How quickly can EyeLevel start and show results?",
+      answer: "We move fast. After you book a call at theeyelevelstudio.com/booking, we provide a scoped proposal within 48 hours. Once approved, we kick off strategy in Week 1, build out campaigns in Weeks 2-3, and launch active campaigns by Week 4 to drive immediate ROI."
     },
     {
       id: 7,
-      question: "Can EyeLevel help a US or UAE company with marketing?",
-      answer:
-        "Absolutely. We actively manage marketing for offshore clients in the US and UAE. We offer full-service retainers with an async-first workflow, combining senior strategy with Indian execution efficiency to match your market's standards.",
-    },
-    {
-      id: 8,
-      question: "What celebrity and influencer connections does EyeLevel have?",
-      answer:
-        "We have strong connections with celebrities and influencers to align your brand with the right personalities. Our celebrity connect campaigns are structured to deliver measurable buzz, real engagement, and tangible performance results.",
-    },
-    {
-      id: 9,
-      question: "How quickly can EyeLevel start working with us?",
-      answer:
-        "We move fast. After our initial consultation, we share a scoped proposal within 48 hours. Once approved, we kick off strategy in Week 1, build out campaigns in Weeks 2-3, and launch active campaigns by Week 4.",
-    },
-    {
-      id: 10,
-      question: "How do I book a discovery call with EyeLevel?",
-      answer:
-        "You can book a discovery call at theeyelevelstudio.com/booking. We respond within 24 hours to schedule a free, 30-minute consultation with no sales pressure to understand your growth goals.",
-    },
+      question: "What is the minimum retainer to work with EyeLevel?",
+      answer: "Our minimum monthly retainer starts at ₹75,000. This ensures we can dedicate the senior strategy, creative resources, and full-stack execution required to actually move the needle for your business, rather than spreading our team too thin across small accounts."
+    }
   ],
   "About Us": [
     {

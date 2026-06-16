@@ -22,15 +22,16 @@ export const pageMetadataRegistry: Record<string, PageMetadata> = {
   // Core Pages (Published)
   "/": {
     route: "/",
-    title: "Sports, Healthcare & Education Marketing Agency | EyeLevel",
+    title: "Digital Marketing Agency Chennai | EyeLevel Growth Studio",
     description:
-      "Chennai's only digital marketing agency for Sports, Healthcare & Education. Performance marketing, event production & video. Book a free consultation today.",
+      "EyeLevel Growth Studio is a full-service AI-powered marketing agency in Chennai. Real Estate, Healthcare, IT/SaaS, Automotive, Manufacturing. Book a free 30-min diagnostic.",
     keywords: [
-      "digital marketing agency",
-      "sports marketing",
-      "healthcare marketing",
-      "education marketing",
-      "marketing agency Chennai",
+      "digital marketing agency Chennai",
+      "AI-powered marketing agency",
+      "real estate marketing agency Chennai",
+      "healthcare marketing agency Chennai",
+      "fractional CMO India",
+      "performance marketing Chennai",
     ],
     canonical: "https://theeyelevelstudio.com/",
     ogType: "website",

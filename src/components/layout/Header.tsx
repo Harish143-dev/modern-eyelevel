@@ -7,36 +7,24 @@ import eyelevelLogo from "@/assets/branding/eyelevel_Logo.svg";
 import mascotGrowth from "@/assets/mascot/hide.webp";
 const navLinks = [
   {
-    href: "/",
-    label: "Home",
-  },
-  {
-    href: "/about-us",
-    label: "About Us",
+    href: "/services",
+    label: "Services",
   },
   {
     href: "/industries",
     label: "Industries",
   },
   {
-    href: "/services",
-    label: "Services",
+    href: "/work",
+    label: "Work",
   },
   {
-    href: "/works",
-    label: "Works",
-  },
-  {
-    href: "/careers",
-    label: "Careers",
+    href: "/about",
+    label: "About",
   },
   {
     href: "/blog",
     label: "Blog",
-  },
-  {
-    href: "/contact-us",
-    label: "Contact",
   },
 ];
 
@@ -157,59 +145,67 @@ const Header = ({ compact = false }: HeaderProps) => {
         style={{
           pointerEvents: isHeaderVisible || isMenuOpen ? "auto" : "none",
         }}
-        className="absolute top-5 left-20 right-0 z-50 py-0 max-w-3xl mx-auto"
+        className="absolute top-5 left-0 right-0 z-50 py-0 max-w-5xl mx-auto px-4 md:px-8"
       >
-        <nav className="max-w-full mx-auto flex items-center justify-between px-4">
-          {/* Logo with floating flag background */}
-
-          {/* Desktop Navigation - Compact mode: just menu button */}
+        <nav className="w-full flex items-center justify-between">
           <div
-            className="absolute bg-card border-3 border-brand-black shadow-neo-sm top-2 px-5 right-10 w-full transition-all rounded-full flex items-center justify-between"
+            className="w-full bg-card border-3 border-brand-black shadow-neo-sm px-5 py-2 transition-all rounded-full flex items-center justify-between"
           >
-            <Link to="/" className="relative z-50">
-              {/* Flag background extending from top */}
+            <Link to="/" className="relative z-50 flex items-center">
               <img loading="lazy"
                 src={eyelevelLogo}
                 alt="EyeLevel Studio"
                 title="EyeLevel Studio"
-                className="h-[42px] md:h-[65px] w-auto z-50"
+                className="h-[35px] md:h-[45px] w-auto z-50"
               />
             </Link>
+
+            {!compact && (
+              <div className="hidden lg:flex items-center space-x-8 font-bricolage z-50">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    className="text-brand-black hover:text-forest-dark transition-colors font-medium text-[15px]"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+
             {compact ? (
               <div className="hidden md:flex relative items-center">
                 <button
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  className="w-14 h-14 md:w-14 md:h-14 rounded-2xl relative transition-transform hover:scale-105 bg-card border-3 border-brand-black border border-2 text-brand-black flex items-center justify-center"
+                  className="w-12 h-12 md:w-14 md:h-14 rounded-2xl relative transition-transform hover:scale-105 bg-card border-3 border-brand-black text-brand-black flex items-center justify-center"
                 >
                   {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
                 </button>
               </div>
             ) : (
               <div className="hidden md:flex items-center rounded-full relative font-bricolage z-50">
-                {/* CTA Button */}
-                <Link to="/booking">
+                <a href="https://theeyelevelstudio.com/booking">
                   <Button
                     size="sm"
                     className="px-6 font-semibold"
                   >
-                    Let's talk!
+                    Book a call
                   </Button>
-                </Link>
+                </a>
 
-                {/* Hamburger icon - toggle menu */}
                 <button
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  className="w-10 h-10 rounded-full flex items-center justify-center ml-2 transition-transform hover:scale-105 border border-brand-black bg-brand-black"
+                  className="lg:hidden w-10 h-10 rounded-full flex items-center justify-center ml-2 transition-transform hover:scale-105 border border-brand-black bg-brand-black text-white"
                 >
                   {isMenuOpen ? <X size={18} /> : <Menu size={18} />}
                 </button>
               </div>
             )}
-            {/* Mobile Hamburger */}
+
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden border border-brand-black bg-brand-black text-white w-8 h-8 flex items-center justify-center rounded-full transition-colors z-50"
-
             >
               {isMenuOpen ? (
                 <X className="size-4" />
@@ -227,54 +223,45 @@ const Header = ({ compact = false }: HeaderProps) => {
               initial={{
                 height: 0,
                 opacity: 0,
+                y: -10,
               }}
               animate={{
                 height: "auto",
                 opacity: 1,
+                y: 0,
               }}
               exit={{
                 height: 0,
                 opacity: 0,
+                y: -10,
               }}
               transition={{
-                duration: 0.4,
-                ease: [0.16, 1, 0.3, 1],
+                duration: 0.3,
+                ease: "easeOut",
               }}
-              className="absolute top-0 mt-2 z-40 right-10 w-full"
-              style={{
-                overflow: "visible",
-              }}
+              className="absolute top-[110%] left-0 right-0 w-full z-40 px-4 md:px-8"
             >
               {/* Cream outer frame with dark green interior */}
               <div
-                className="rounded-2xl pt-[45px] md:pt-[65px] p-1.5 bg-card border-2 border-brand-black shadow-neo-sm"
+                className="rounded-3xl p-1.5 bg-card border-2 border-brand-black shadow-neo-sm overflow-hidden"
               >
                 {/* Dark green interior */}
                 <div
-                  className="rounded-2xl relative overflow-visible min-h-[45vh] md:min-h-[30vh] bg-background"
+                  className="rounded-2xl relative min-h-[40vh] md:min-h-[30vh] bg-background flex flex-col justify-center py-8 overflow-hidden"
                 >
                   {/* Navigation links - centered */}
-                  <div className="flex flex-col items-center py-5 md:justify-center">
+                  <div className="flex flex-col items-center justify-center relative z-10 space-y-1 md:space-y-2">
                     {navLinks.map((link, index) => (
                       <motion.div
                         key={link.href}
-                        initial={{
-                          opacity: 0,
-                          y: 20,
-                        }}
-                        animate={{
-                          opacity: 1,
-                          y: 0,
-                        }}
-                        transition={{
-                          delay: index * 0.05,
-                        }}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.05 }}
                       >
                         <Link
                           to={link.href}
                           onClick={() => setIsMenuOpen(false)}
-                          className={`font-dela text-lg md:text-base lg:text-lg tracking-[0.08em] text-primary transition-all duration-200 text-lime hover:scale-105 block py-2 md:py-3 text-center ${location.pathname === link.href ? "opacity-100" : "opacity-80 hover:opacity-100"}`}
-
+                          className={`font-dela text-xl md:text-2xl lg:text-3xl tracking-[0.08em] transition-all duration-200 text-primary hover:scale-105 block py-3 md:py-2 text-center ${location.pathname === link.href ? "opacity-100" : "opacity-70 hover:opacity-100"}`}
                         >
                           {link.label.toUpperCase()}
                         </Link>
@@ -287,7 +274,7 @@ const Header = ({ compact = false }: HeaderProps) => {
                     src={mascotGrowth}
                     alt="EyeLevel Mascot"
                     title="EyeLevel Mascot"
-                    className="absolute -right-[52px] md:-right-[94px] lg:-right-[104px] bottom-5 md:bottom-5 lg:bottom-4 size-40 md:size-72 lg:w-80 lg:h-80 object-contain pointer-events-none"
+                    className="absolute -right-4 -bottom-4 md:right-0 md:bottom-0 w-32 md:w-48 lg:w-64 object-contain pointer-events-none opacity-40 md:opacity-100 translate-x-2 md:translate-x-8 translate-y-2 md:translate-y-8"
                   />
                 </div>
               </div>

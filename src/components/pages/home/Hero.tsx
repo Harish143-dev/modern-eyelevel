@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import ClientLottie, { type ClientLottieRef } from "@/components/shared/ClientLottie";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import { useMotionValueEvent } from "framer-motion";
+import GreenButton from "@/components/shared/GreenButton";
 
 // 14-pointed star SVG component
 const Star18 = ({ className }: { className?: string }) => {
@@ -89,14 +90,14 @@ const Hero = () => {
   return (
     <section
       ref={ref}
-      className="relative min-h-[65vh] lg:min-h-[95vh] flex items-center justify-center pt-40 md:pt-48 pb-4 px-4 overflow-hidden bg-secondary"
+      className="relative min-h-[65vh] lg:min-h-[95vh] flex items-center justify-center pt-40 md:pt-38 pb-4 px-4 overflow-hidden bg-secondary"
     >
       {/* Rotating 32-pointed star - centered upper area */}
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
         className="absolute inset-0 m-auto w-[350px] md:w-[600px] lg:w-[750px] h-[350px] md:h-[600px] lg:h-[750px] text-forest-dark/60 pointer-events-none"
-      > 
+      >
         <Star18 className="w-full h-full" />
       </motion.div>
 
@@ -110,6 +111,9 @@ const Hero = () => {
 
       <div className="w-full relative z-10">
         <div className="max-w-5xl mx-auto text-center overflow-visible">
+          {/* Eyebrow */}
+          <GreenButton>Full-service AI-powered growth studio — Chennai</GreenButton>
+
           {/* Main headline */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -133,7 +137,7 @@ const Hero = () => {
             </span>
             {" "}
             <span className="block text-2xl md:text-5xl lg:text-6xl xl:text-7xl mt-2 whitespace-nowrap">
-              YOUR <WavyUnderline>AD AGENCY!</WavyUnderline>
+              YOUR <WavyUnderline>AD AGENCY</WavyUnderline>
             </span>
           </motion.h1>
 
@@ -142,37 +146,51 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="font-bricolage text-lg md:text-xl lg:text-2xl max-w-2xl mx-auto mb-14 leading-relaxed text-foreground"
+            className="font-bricolage text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-14 leading-relaxed text-foreground"
           >
-            Agencies are built to bill you. We're built to grow you.
+            Agencies are built to bill you. We're built to grow you. One team. One strategy.
           </motion.p>
 
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex items-center gap-4 justify-center"
+            className="flex flex-col sm:flex-row items-center gap-4 justify-center"
           >
             <Link to="/booking">
               <Button
                 size="lg"
-                className="group px-10 py-7 mt-5 text-base md:text-lg"
+                className="group px-5 sm:px-10 py-4 mt-5 text-sm md:text-lg w-full sm:w-auto"
               >
-                Let's talk
-
+                Book a free 30-min diagnostic
+                <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
               </Button>
             </Link>
             <Link to="/work">
               <Button
                 size="lg"
                 variant="outline"
-                className="group px-10 py-7 mt-5 text-base md:text-lg"
+                className="group px-8 sm:px-10 py-7 mt-5 text-base md:text-lg w-full sm:w-auto"
               >
                 See our work
                 <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
               </Button>
             </Link>
+          </motion.div>
+
+          {/* Proof row */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-10 md:mt-12 text-sm md:text-base font-bricolage text-foreground/70 flex flex-wrap justify-center items-center gap-x-3 gap-y-1 px-4"
+          >
+            <span>15+ years client-side</span>
+            <span className="hidden md:inline">&middot;</span>
+            <span>5 verticals with named-employer proof</span>
+            <span className="hidden md:inline">&middot;</span>
+            <span>1 team, strategy to execution</span>
           </motion.div>
         </div>
 

@@ -4,11 +4,8 @@ import { ArrowRight } from "lucide-react";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import GreenButton from "@/components/shared/GreenButton";
 
-// Assuming these images exist based on previous workspace state
-import sportImg from "@/assets/industries/h_industry/sport.webp";
 import realestateImg from "@/assets/industries/h_industry/realestate.webp";
 import healthcareImg from "@/assets/industries/h_industry/healthcare.webp";
-import d2cImg from "@/assets/industries/h_industry/d2c.webp";
 import b2bImg from "@/assets/industries/h_industry/b2b.webp";
 
 export interface Industry {
@@ -23,48 +20,48 @@ export interface Industry {
 
 const industries: Industry[] = [
   {
-    id: "sports",
+    id: "realestate",
     number: "01",
-    title: "Sports & Fitness",
-    description: "Sports marketing in India is built around cricket. Every other sport is left to figure it out alone. EyeLevel is India's only studio built specifically for sports brands. Leagues, academies, federations, and athletes.",
-    link: "/services/sports-marketing",
-    linkText: "Sports marketing agency in India",
-    image: sportImg,
+    title: "Real Estate",
+    description: "High-trust, slow-burn sales; built for closed deals and site visits.",
+    link: "/industries/real-estate",
+    linkText: "Hook: SPR Highliving",
+    image: realestateImg,
   },
   {
-    id: "realestate",
+    id: "it-saas",
     number: "02",
-    title: "Real Estate",
-    description: "Real estate is a high-trust, slow-burn sale. Months of buyer research before a site visit. Most agencies optimise for cheap leads. We're built for closed deals.",
-    link: "/industries/real-estate",
-    linkText: "Real estate marketing agency in Chennai",
-    image: realestateImg,
+    title: "IT / SaaS",
+    description: "Demand gen, LinkedIn brand and content that produces pipeline.",
+    link: "/industries/it-saas",
+    linkText: "Hook: FreshToHome",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: "healthcare",
     number: "03",
     title: "Healthcare",
-    description: "Patients aren't buying products. They're making decisions about their family's care. Healthcare marketing demands a different kind of seriousness. And a different kind of agency.",
+    description: "Specialty clinics and hospitals; patient acquisition and trust architecture.",
     link: "/industries/healthcare",
-    linkText: "Healthcare digital marketing in Chennai",
+    linkText: "Hook: active healthcare clients",
     image: healthcareImg,
   },
   {
-    id: "d2c",
+    id: "automotive",
     number: "04",
-    title: "FMCG & D2C",
-    description: "Most FMCG agencies sell you retail support. Most D2C agencies sell you performance ads. We do both. Because that's how consumer brands actually grow.",
-    link: "/industries/d2c",
-    linkText: "D2C marketing agency India",
-    image: d2cImg,
+    title: "Automotive",
+    description: "Dealership footfall, test-drive bookings, OEM mandates.",
+    link: "/industries/automotive",
+    linkText: "Hook: Hyundai Motors India",
+    image: "https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&w=800&auto=format&fit=crop",
   },
   {
-    id: "b2b",
+    id: "manufacturing",
     number: "05",
-    title: "Manufacturing & B2B",
-    description: "Chennai is India's #1 manufacturing hub. Most B2B brands here have a 2014 website and 200 LinkedIn followers. Their buyers moved online. Their marketing didn't.",
-    link: "/industries/b2b",
-    linkText: "B2B marketing agency in Chennai",
+    title: "Manufacturing / B2B",
+    description: "Chennai and Coimbatore manufacturers; your buyers moved online.",
+    link: "/industries/manufacturing",
+    linkText: "Hook: Schwing Stetter",
     image: b2bImg,
   }
 ];
@@ -81,10 +78,10 @@ const HomeIndustriesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-dela text-3xl md:text-5xl lg:text-[56px] text-foreground mb-6 leading-[1.1] tracking-wide mt-6"
+          className="font-dela text-3xl uppercase md:text-5xl lg:text-5xl text-primary text-foreground mb-6 leading-[1.1] tracking-wide mt-6"
         >
-          We don't work with everyone.<br className="hidden md:block" />
-          <span className="text-primary">We work with <WavyUnderline>these.</WavyUnderline></span>
+          WE DON'T WORK WITH EVERYONE<br className="hidden md:block" />
+          <span className="text-primary">We work with <WavyUnderline>these</WavyUnderline></span>
         </motion.h2>
 
         <motion.p
@@ -94,13 +91,13 @@ const HomeIndustriesSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="font-bricolage text-foreground/70 text-base md:text-lg"
         >
-          Five industries the studio goes deep in across <span className="font-medium text-primary">India and Chennai.</span>
+          Five industries the studio goes deep in across <span className="font-medium ">India and Chennai.</span>
         </motion.p>
       </div>
 
       {/* Accordion Area */}
-      <div className="w-full max-w-[1300px] mx-auto px-4">
-        <div className="flex flex-col md:flex-row gap-4 h-[auto] md:h-[450px] lg:h-[500px]">
+      <div className="w-full max-w-[1300px] mx-auto px-4 md:px-8">
+        <div className="flex flex-col md:flex-row gap-4 h-auto md:h-[450px] lg:h-[500px]">
           {industries.map((industry, index) => (
             <IndustryCard key={industry.id} industry={industry} index={index} />
           ))}
@@ -122,7 +119,7 @@ const IndustryCard = ({ industry, index }: IndustryCardProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="group relative w-full md:w-auto h-[400px] md:h-full rounded-[1.5rem] overflow-hidden cursor-pointer flex-1 md:hover:flex-[2.5] lg:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] border border-white/5 bg-[#111C15]"
+      className="group relative w-full md:w-auto h-[260px] md:h-full rounded-[1.5rem] overflow-hidden cursor-pointer flex-none md:flex-1 md:hover:flex-[2.5] lg:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] border border-white/5 bg-[#111C15]"
     >
       {/* Background Image */}
       <img
@@ -133,7 +130,7 @@ const IndustryCard = ({ industry, index }: IndustryCardProps) => {
           (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?q=80&w=800&auto=format&fit=crop';
         }}
       />
-      
+
       {/* Dark Overlay Gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent z-10" />
 
@@ -149,7 +146,7 @@ const IndustryCard = ({ industry, index }: IndustryCardProps) => {
 
       {/* EXPANDED STATE CONTENT (Visible on mobile by default, fades/slides in on hover on desktop) */}
       <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-between z-30 opacity-100 pointer-events-auto md:opacity-0 md:pointer-events-none md:group-hover:opacity-100 md:group-hover:pointer-events-auto transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] md:translate-x-4 md:group-hover:translate-x-0 translate-y-0">
-        
+
         {/* Top row: Number */}
         <div className="flex items-center justify-between text-primary">
           <span className="font-bricolage text-sm">{industry.number}</span>
@@ -165,10 +162,10 @@ const IndustryCard = ({ industry, index }: IndustryCardProps) => {
           </p>
 
           <Link to={industry.link} className="flex items-center justify-between group/link gap-4 mt-2 border-t border-primary/20 pt-4">
-             <span className="font-bricolage text-sm font-medium text-primary group-hover/link:text-white transition-colors">
-               {industry.linkText}
-             </span>
-             <ArrowRight className="w-5 h-5 text-primary group-hover/link:translate-x-1 transition-transform" />
+            <span className="font-bricolage text-sm font-medium text-primary group-hover/link:text-white transition-colors">
+              {industry.linkText}
+            </span>
+            <ArrowRight className="w-5 h-5 text-primary group-hover/link:translate-x-1 transition-transform" />
           </Link>
         </div>
 

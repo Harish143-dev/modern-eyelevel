@@ -1,4 +1,4 @@
-﻿import industryEducation from "@/assets/industries/edu.webp";
+import industryEducation from "@/assets/industries/edu.webp";
 import industrySports from "@/assets/industries/sport.webp";
 import industryRealestate from "@/assets/industries/realestate.webp";
 import industryB2b from "@/assets/industries/b2b.webp";

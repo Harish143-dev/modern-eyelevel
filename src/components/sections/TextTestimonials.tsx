@@ -8,38 +8,26 @@ const testimonials = [
   {
     id: 1,
     quote:
-      "Professional, proactive, and perfectly aligned with our brand. EyeLevel's celebrity connect delivered measurable buzz and real results.",
-    company: "Joyalukkas",
+      "Performance marketing driven by data and scale. [Metric to be added]",
+    company: "Da One Sports",
   },
   {
     id: 2,
     quote:
-      "Thank you for all your effort & support. Appreciate what your team has done for the Chennai Open. Look forward to more partnership between CSC & yourselves.",
-    company: "Chennai Super Champs",
+      "Scaled brand visibility and footfall across 35+ retail stores.",
+    company: "Heaven's ELIX",
   },
   {
     id: 3,
     quote:
-      "Super experience! Akmal and team executed our stall quickly and without any surprises. Highly recommend.",
-    company: "Gataca",
+      "Strategic event execution and digital marketing for Season 2.",
+    company: "TNPPL",
   },
   {
     id: 4,
     quote:
-      "This partnership with EyeLevel Growth Studio for Bengaluru Open 2025 meant a lot. They aren't just an agency but turned out to be part of our team. Their passion and creativity brought our vision to life. Grateful for this collaboration, excited for what's next.",
-    company: "Bengaluru Jawans",
-  },
-  {
-    id: 5,
-    quote:
-      "Their approach was structured and performance-driven. We noticed better engagement, improved visibility, and a stronger brand image across platforms. What stood out was their professionalism, creativity, and attention to detail.",
-    company: "Nasheel Irfan, Owner, Liza Royale Hotel, Chennai",
-  },
-  {
-    id: 6,
-    quote:
-      "Great team to work with. They understand your needs and go all the way to get it done. For any organisation looking to execute events and marketing strategy — EyeLevel is who I would recommend.",
-    company: "Naveen Kumar, Franchise Business Owner",
+      "Professional, proactive, and perfectly aligned with our brand. EyeLevel's celebrity connect delivered measurable buzz and real results.",
+    company: "Joyalukkas",
   },
 ];
 
@@ -100,9 +88,9 @@ const TextTestimonials = () => {
           viewport={{ once: true }}
           className="text-center mb-12 md:mb-16"
         >
-          <GreenButton>The Skeptic's Proof</GreenButton>
+          <GreenButton>Results</GreenButton>
 
-          <h2 className="font-dela text-4xl md:text-5xl text-primary lg:text-6xl leading-[1.05] uppercase">
+          <h2 className="font-dela text-3xl md:text-4xl text-primary lg:text-5xl leading-[1.05] uppercase">
             <span>
               Proof That We <br /> <WavyUnderline>walk</WavyUnderline> the Talk
             </span>

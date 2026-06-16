@@ -22,12 +22,14 @@ import WhatsappMarketing from "./pages/WhatsappMarketing";
 const AppRoutes = () => (
   <Routes>
     <Route path="/" element={<Index />} />
-    <Route path="/about-us" element={<About />} />
+    <Route path="/about-us" element={<Navigate to="/about" replace />} />
+    <Route path="/about" element={<About />} />
     <Route path="/careers" element={<Careers />} />
     <Route path="/services" element={<ServicesPage />} />
     <Route path="/services/whatsapp-marketing" element={<WhatsappMarketing />} />
-    <Route path="/works" element={<Works />} />
-    <Route path="/how-we-work" element={<Navigate to="/about-us" replace />} />
+    <Route path="/works" element={<Navigate to="/work" replace />} />
+    <Route path="/work" element={<Works />} />
+    <Route path="/how-we-work" element={<Navigate to="/about" replace />} />
     <Route path="/industries" element={<Industries />} />
     <Route path="/contact-us" element={<Contact />} />
     <Route path="/blog" element={<Blog />} />
