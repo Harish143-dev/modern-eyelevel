@@ -1,4 +1,4 @@
-import FAQSection from "@/components/sections/FAQSection";
+import FAQSection from "@/components/sections/shared/FAQSection";
 
 const whatsappFaqs = [
   {
