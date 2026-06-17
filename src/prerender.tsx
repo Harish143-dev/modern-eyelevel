@@ -97,7 +97,7 @@ const ensurePrerenderDom = () => {
   };
 
   if (!globalScope.window) {
-    globalScope.window = globalScope as Window & typeof globalThis;
+    globalScope.window = globalScope as unknown as Window & typeof globalThis;
   }
 
   if (!globalScope.window.addEventListener) {
@@ -122,11 +122,11 @@ const ensurePrerenderDom = () => {
       querySelector: () => null,
       addEventListener: () => undefined,
       removeEventListener: () => undefined,
-    };
+    } as any;
   }
 
   if (!globalScope.navigator) {
-    globalScope.navigator = { userAgent: "prerender" };
+    globalScope.navigator = { userAgent: "prerender" } as any;
   }
 
   if (!globalScope.Event) {
@@ -140,16 +140,16 @@ const ensurePrerenderDom = () => {
   }
 
   if (!globalScope.HTMLElement) {
-    globalScope.HTMLElement = Object;
+    globalScope.HTMLElement = Object as any;
   }
 
   if (!globalScope.Node) {
-    globalScope.Node = Object;
+    globalScope.Node = Object as any;
   }
 
   if (!globalScope.requestAnimationFrame) {
     globalScope.requestAnimationFrame = (callback) =>
-      setTimeout(() => callback(Date.now()), 0);
+      setTimeout(() => callback(Date.now()), 0) as unknown as number;
   }
 
   if (!globalScope.cancelAnimationFrame) {
@@ -164,7 +164,7 @@ const ensurePrerenderDom = () => {
       takeRecords() {
         return [];
       }
-    } as typeof globalThis.IntersectionObserver;
+    } as unknown as typeof globalThis.IntersectionObserver;
   }
 
   if (!globalScope.MutationObserver) {
@@ -174,7 +174,7 @@ const ensurePrerenderDom = () => {
       takeRecords() {
         return [];
       }
-    } as typeof globalThis.MutationObserver;
+    } as unknown as typeof globalThis.MutationObserver;
   }
 };
 

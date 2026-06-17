@@ -1,4 +1,4 @@
-import BlogArchive from "@/components/pages/blog/BlogArchive";
+import BlogArchive from "@/components/sections/blog/BlogArchive";
 import {
   ALL_BLOGS_CATEGORY,
   getBlogCategorySeo,

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Check, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import ServiceGallery from "@/components/pages/services/ServiceGallery";
+import ServiceGallery from "@/components/sections/services/ServiceGallery";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import influencerCelebrityImg from "@/assets/services/content/influencer-celebrity.webp";
 import eventsVideo1 from "@/assets/videos/events-video-1.mp4";
@@ -40,7 +40,7 @@ import {
   breadcrumbSchema,
 } from "@/hooks/schemas";
 import faqs from "@/data/faqs";
-import FAQSection from "@/components/sections/FAQSection";
+import FAQSection from "@/components/sections/shared/FAQSection";
 
 const services = [
   {

@@ -20,7 +20,7 @@ import { Linkedin, Link as LinkIcon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import ClientLottie, { type ClientLottieRef } from "@/components/shared/ClientLottie";
 import SEO from "@/components/utils/SEO";
-import FAQSection from "@/components/sections/FAQSection";
+import FAQSection from "@/components/sections/shared/FAQSection";
 import faqs from "@/data/faqs";
 import { Card } from "@/components/ui/card";
 import {
