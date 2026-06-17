@@ -9,7 +9,7 @@ const stats = [
 
 const Numbers = () => {
   return (
-    <section className="py-20 px-4 relative bg-background">
+    <section className="py-20 px-4 relative bg-secondary">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -32,7 +32,7 @@ const Numbers = () => {
           </div>
 
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-dela uppercase text-primary text-center">
-            Built on experience, <WavyUnderline>not layers.</WavyUnderline>
+            Built on experience, <WavyUnderline>not layers</WavyUnderline>
           </h2>
         </motion.div>
 
