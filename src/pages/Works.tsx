@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink, Play } from "lucide-react";
+import { X, ExternalLink, Play, ArrowRight } from "lucide-react";
 import Header from "@/components/layout/Header";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import EnhancedFooter from "@/components/layout/EnhancedFooter";
@@ -60,19 +60,7 @@ const CATEGORIES: ("All" | Category)[] = [
   "Events",
 ];
 
-const getWorkAspectClass = (orientation: Work["orientation"]) =>
-  orientation === "portrait" ? "aspect-[4/5]" : "aspect-[16/10]";
 
-const interleaveByOrientation = (works: Work[]) => {
-  const portrait = works.filter((work) => work.orientation === "portrait");
-  const landscape = works.filter((work) => work.orientation === "landscape");
-  const primary = portrait.length >= landscape.length ? portrait : landscape;
-  const secondary = primary === portrait ? landscape : portrait;
-
-  return primary.flatMap((work, index) =>
-    secondary[index] ? [work, secondary[index]] : [work],
-  );
-};
 
 const WORKS: Work[] = [
   {
@@ -83,7 +71,7 @@ const WORKS: Work[] = [
     category: "Branding",
     type: "image",
     src: brand_1,
-    orientation: "portrait",
+    orientation: "landscape",
     themeColor: "76 96% 82%", // Lime
   },
 
@@ -95,8 +83,8 @@ const WORKS: Work[] = [
     category: "Print",
     type: "image",
     src: print_2,
-    orientation: "portrait",
-    themeColor: "0 100% 85%", // Pink
+    orientation: "landscape",
+    themeColor: "76 96% 82%", // Lime
   },
   {
     id: "w3",
@@ -106,8 +94,8 @@ const WORKS: Work[] = [
     category: "Print",
     type: "image",
     src: print_3,
-    orientation: "portrait",
-    themeColor: "170 90% 75%", // Teal
+    orientation: "landscape",
+    themeColor: "76 96% 82%", // Lime
   },
   {
     id: "w4",
@@ -140,7 +128,7 @@ const WORKS: Work[] = [
     category: "Branding",
     type: "image",
     src: brand_5,
-    orientation: "portrait",
+    orientation: "landscape",
     themeColor: "76 96% 82%", // Lime
   },
   {
@@ -162,10 +150,10 @@ const WORKS: Work[] = [
     category: "Social Media",
     type: "image",
     src: social_2,
-    orientation: "portrait",
+    orientation: "landscape",
     themeColor: "58 91% 87%", // Yellow
   },
- 
+
   {
     id: "w9",
     title: "Real Estate Brochure Design",
@@ -184,7 +172,7 @@ const WORKS: Work[] = [
     category: "Photo Shoot",
     type: "image",
     src: shoot_1,
-    orientation: "portrait",
+    orientation: "landscape",
     themeColor: "0 100% 85%", // Pink
   },
   {
@@ -226,11 +214,9 @@ const Works = () => {
   const [openId, setOpenId] = useState<string | null>(null);
 
   const filtered = useMemo(() => {
-    const visibleWorks = active === "All"
+    return active === "All"
       ? WORKS
       : WORKS.filter((w) => w.category === active);
-
-    return interleaveByOrientation(visibleWorks);
   }, [active]);
 
   const open = openId ? (WORKS.find((w) => w.id === openId) ?? null) : null;
@@ -243,40 +229,40 @@ const Works = () => {
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <div className="max-w-4xl mx-auto text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8"
-            style={{
-              backgroundColor: "rgba(226, 254, 165, 0.1)",
-              border: "1px solid rgba(226, 254, 165, 0.2)",
-            }}
-          >
-            <span
-              className="text-sm font-medium font-bricolage text-primary"
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8"
+              style={{
+                backgroundColor: "rgba(226, 254, 165, 0.1)",
+                border: "1px solid rgba(226, 254, 165, 0.2)",
+              }}
             >
-              Selected Works
-            </span>
-          </motion.div>
-           <motion.h1
-            initial={{ y: 30 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-dela text-4xl md:text-6xl lg:text-7xl uppercase mb-8 leading-[1.05] text-primary"
-          >
-            WORK WE'RE <WavyUnderline>PROUD OF</WavyUnderline>
-          </motion.h1>
-          <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3, duration: 0.6 }}
-                        className="text-lg md:text-lg lg:text-lg max-w-3xl mx-auto font-bricolage leading-relaxed"
-                        style={{ color: "rgba(248, 255, 232, 0.7)" }}
-                      >
-                        A curated mix of campaigns, brands, sites, films and events. Tap
-                        any card to view in detail.
-                      </motion.p>
+              <span
+                className="text-sm font-medium font-bricolage text-primary"
+              >
+                Selected Works
+              </span>
+            </motion.div>
+            <motion.h1
+              initial={{ y: 30 }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="font-dela text-4xl md:text-6xl lg:text-7xl uppercase mb-8 leading-[1.05] text-primary"
+            >
+              WORK WE'RE <WavyUnderline>PROUD OF</WavyUnderline>
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="text-lg md:text-lg lg:text-lg max-w-3xl mx-auto font-bricolage leading-relaxed"
+              style={{ color: "rgba(248, 255, 232, 0.7)" }}
+            >
+              A curated mix of campaigns, brands, sites, films and events. Tap
+              any card to view in detail.
+            </motion.p>
           </div>
 
           {/* Category filters */}
@@ -287,11 +273,10 @@ const Works = () => {
                 <button
                   key={cat}
                   onClick={() => setActive(cat)}
-                  className={`px-4 py-2 rounded-full font-bricolage text-sm transition-all border-2 ${
-                    isActive
+                  className={`px-4 py-2 rounded-full font-bricolage text-sm transition-all border-2 ${isActive
                       ? "bg-foreground text-background border-foreground"
                       : "bg-transparent text-foreground border-foreground/15 hover:border-foreground/40"
-                  }`}
+                    }`}
                 >
                   {cat}
                 </button>
@@ -299,8 +284,8 @@ const Works = () => {
             })}
           </div>
 
-          {/* Masonry grid */}
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 [column-fill:_balance]">
+          {/* Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence mode="popLayout">
               {filtered.map((w) => (
                 <motion.div
@@ -310,7 +295,6 @@ const Works = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 8 }}
                   transition={{ duration: 0.35 }}
-                  className="mb-5 break-inside-avoid"
                 >
                   <button
                     onClick={() => setOpenId(w.id)}
@@ -319,14 +303,9 @@ const Works = () => {
                       "--theme-color": w.themeColor,
                       boxShadow: `0 0 35px -15px hsl(${w.themeColor} / 0.45)`,
                     } as React.CSSProperties}
-                    className="group relative block w-full overflow-hidden rounded-2xl transition-all duration-500 ease-in-out text-left hover:scale-[1.03] hover:shadow-[0_0_50px_-15px_hsl(var(--theme-color)/0.6)]"
+                    className="group relative flex flex-col w-full h-full overflow-hidden rounded-[24px] bg-[#1a261f] border border-white/5 transition-all duration-300 text-left hover:border-white/15 hover:-translate-y-1 hover:shadow-[0_0_50px_-15px_hsl(var(--theme-color)/0.6)]"
                   >
-                    <div
-                      className={`relative overflow-hidden bg-muted ${getWorkAspectClass(
-                        w.orientation,
-                      )}`}
-                    >
-                      {/* Background Image/Video with Parallax Zoom */}
+                    <div className="relative w-full aspect-video overflow-hidden bg-black shrink-0">
                       {w.type === "video" ? (
                         <>
                           <video
@@ -335,14 +314,12 @@ const Works = () => {
                             playsInline
                             loop
                             preload="metadata"
-                            onMouseEnter={(e) =>
-                              e.currentTarget.play().catch(() => {})
-                            }
+                            onMouseEnter={(e) => e.currentTarget.play().catch(() => { })}
                             onMouseLeave={(e) => {
                               e.currentTarget.pause();
                               e.currentTarget.currentTime = 0;
                             }}
-                            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110 z-0"
+                            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 z-0"
                           />
                           <div className="absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-300 group-hover:opacity-0 z-20">
                             <div className="w-14 h-14 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center">
@@ -352,36 +329,29 @@ const Works = () => {
                         </>
                       ) : (
                         <div
-                          className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110 z-0"
+                          className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-105 z-0"
                           style={{ backgroundImage: `url(${w.src})` }}
                         />
                       )}
 
-                      {/* Category tag — top-left overlay */}
-                      <span className="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-background/80 backdrop-blur-sm font-bricolage text-[10px] uppercase tracking-[0.18em] text-foreground border border-foreground/10">
+                      <span
+                        className="absolute top-4 left-4 z-20 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.18em] text-[#1a261f]"
+                        style={{ backgroundColor: `hsl(${w.themeColor})` }}
+                      >
                         {w.category}
                       </span>
+                    </div>
 
-                      {/* Black Gradient Overlay */}
-                      <div
-                        className="absolute inset-0 z-10"
-                        style={{
-                          background: `linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 40%, transparent 80%)`,
-                        }}
-                      />
+                    <div className="p-5 md:p-6 flex flex-col flex-grow text-white">
+                      <h3 className="font-dela text-lg md:text-xl leading-snug text-white mb-2 line-clamp-2">
+                        {w.title}
+                      </h3>
+                      <p className="font-bricolage text-sm text-white/70 leading-relaxed line-clamp-2 mb-6">
+                        {w.description}
+                      </p>
 
-                      {/* Content Overlay */}
-                      <div className="absolute inset-0 z-20 flex flex-col justify-end p-5 md:p-6 text-white">
-                        <h3 className="font-dela text-lg md:text-xl leading-snug text-white">
-                          {w.title}
-                        </h3>
-                        <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-300 ease-out">
-                          <div className="overflow-hidden">
-                            <p className="font-bricolage text-xs md:text-sm text-white/80 leading-relaxed line-clamp-2 pt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                              {w.description}
-                            </p>
-                          </div>
-                        </div>
+                      <div className="mt-auto flex items-center gap-2 font-bricolage text-sm font-semibold transition-colors duration-300 group-hover:underline" style={{ color: `hsl(${w.themeColor})` }}>
+                        View Project <ArrowRight className="w-4 h-4" />
                       </div>
                     </div>
                   </button>
