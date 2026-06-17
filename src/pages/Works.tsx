@@ -72,7 +72,7 @@ const WORKS: Work[] = [
     type: "image",
     src: brand_1,
     orientation: "landscape",
-    themeColor: "76 96% 82%", // Lime
+    themeColor: "76 96% 82%",
   },
 
   {
@@ -118,7 +118,7 @@ const WORKS: Work[] = [
     type: "image",
     src: brand_4,
     orientation: "landscape",
-    themeColor: "20 95% 75%", // Peach
+    themeColor: "76 96% 82%", // Peach
   },
   {
     id: "w6",
@@ -151,7 +151,7 @@ const WORKS: Work[] = [
     type: "image",
     src: social_2,
     orientation: "landscape",
-    themeColor: "58 91% 87%", // Yellow
+    themeColor: "76 96% 82%",
   },
 
   {
@@ -162,7 +162,7 @@ const WORKS: Work[] = [
     type: "image",
     src: brand_7,
     orientation: "landscape",
-    themeColor: "20 95% 75%", // Peach
+    themeColor: "76 96% 82%",
   },
   {
     id: "w10",
@@ -173,7 +173,7 @@ const WORKS: Work[] = [
     type: "image",
     src: shoot_1,
     orientation: "landscape",
-    themeColor: "0 100% 85%", // Pink
+    themeColor: "76 96% 82%",
   },
   {
     id: "w11",
@@ -184,7 +184,7 @@ const WORKS: Work[] = [
     type: "image",
     src: web_1,
     orientation: "landscape",
-    themeColor: "170 90% 75%", // Teal
+    themeColor: "76 96% 82%",
   },
   {
     id: "w12",
@@ -195,7 +195,7 @@ const WORKS: Work[] = [
     type: "image",
     src: web_2,
     orientation: "landscape",
-    themeColor: "260 90% 80%", // Purple
+    themeColor: "76 96% 82%",
   },
   {
     id: "w13",
@@ -205,7 +205,7 @@ const WORKS: Work[] = [
     type: "image",
     src: social_1,
     orientation: "landscape",
-    themeColor: "58 91% 87%", // Yellow
+    themeColor: "76 96% 82%",
   },
 ];
 
@@ -274,8 +274,8 @@ const Works = () => {
                   key={cat}
                   onClick={() => setActive(cat)}
                   className={`px-4 py-2 rounded-full font-bricolage text-sm transition-all border-2 ${isActive
-                      ? "bg-foreground text-background border-foreground"
-                      : "bg-transparent text-foreground border-foreground/15 hover:border-foreground/40"
+                    ? "bg-foreground text-background border-foreground"
+                    : "bg-transparent text-foreground border-foreground/15 hover:border-foreground/40"
                     }`}
                 >
                   {cat}
@@ -335,8 +335,12 @@ const Works = () => {
                       )}
 
                       <span
-                        className="absolute top-4 left-4 z-20 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.18em] text-[#1a261f]"
-                        style={{ backgroundColor: `hsl(${w.themeColor})` }}
+                        className="absolute top-4 left-4 z-20 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.18em]"
+                        style={{
+                          color: "#E2FEA5",
+                          backgroundColor: "#1a261f",
+                          border: "1px solid rgba(226,254,165,0.3)",
+                        }}
                       >
                         {w.category}
                       </span>
@@ -386,45 +390,49 @@ const Works = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.96, opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="relative max-w-6xl w-full max-h-[90vh] flex flex-col items-center"
+              className="relative max-w-4xl w-full max-h-[90vh] flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="w-full flex items-center justify-center overflow-hidden rounded-2xl bg-black">
-                {open.type === "video" ? (
-                  <video
-                    src={open.src}
-                    controls
-                    autoPlay
-                    className="max-h-[75vh] w-auto max-w-full"
-                  />
-                ) : (
-                  <img
-                    src={open.src}
-                    alt={open.title}
-                    className="max-h-[75vh] w-auto max-w-full object-contain"
-                  />
-                )}
-              </div>
+              <div className="relative flex flex-col w-full overflow-hidden rounded-3xl bg-[#1a261f] border border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.5)]">
+                {/* Media Container */}
+                <div className="relative w-full overflow-hidden bg-[black] shrink-0 flex items-center justify-center">
+                  {open.type === "video" ? (
+                    <video
+                      src={open.src}
+                      controls
+                      autoPlay
+                      className="max-h-[55vh] w-auto max-w-full"
+                    />
+                  ) : (
+                    <img
+                      src={open.src}
+                      alt={open.title}
+                      className="max-h-[55vh] w-auto max-w-full object-contain"
+                    />
+                  )}
 
-              <div className="w-full mt-5 flex flex-col md:flex-row md:items-end md:justify-between gap-4 text-white">
-                <div>
-                  <p className="font-bricolage text-xs uppercase tracking-[0.18em] text-white/60 mb-1">
+                  {/* Badge */}
+                  <span
+                    className="absolute top-4 left-4 z-20 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.18em]"
+                    style={{
+                      color: "#E2FEA5",
+                      backgroundColor: "#1a261f",
+                      border: "1px solid rgba(226,254,165,0.3)",
+                    }}
+                  >
                     {open.category}
-                  </p>
-                  <h3 className="font-dela text-2xl md:text-3xl mb-1">
+                  </span>
+                </div>
+
+                {/* Detail Panel */}
+                <div className="p-6 md:p-8 flex flex-col text-white">
+                  <h3 className="font-dela text-2xl md:text-3xl text-white mb-2 leading-tight">
                     {open.title}
                   </h3>
-                  <p className="font-bricolage text-sm md:text-base text-white/75 max-w-2xl">
+                  <p className="font-bricolage text-sm md:text-base text-white/70 leading-relaxed">
                     {open.description}
                   </p>
                 </div>
-                {open.url && (
-                  <a href={open.url} target="_blank" rel="noopener noreferrer">
-                    <Button variant="lime" className="gap-2">
-                      Visit Website <ExternalLink className="w-4 h-4" />
-                    </Button>
-                  </a>
-                )}
               </div>
             </motion.div>
           </motion.div>

@@ -21,7 +21,7 @@ const pillars = [
 
 const Beliefs = () => {
   return (
-    <section className="py-20 px-4 relative bg-secondary">
+    <section className="py-20 px-4 relative bg-background">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -58,7 +58,7 @@ const Beliefs = () => {
                 className="flex flex-col gap-4 rounded-2xl p-6 md:p-8 h-full min-h-[200px] relative z-10 w-full"
                 style={{
                   backgroundColor: "rgba(226, 254, 165, 0.1)",
-                  border: "4px solid rgba(226, 254, 165, 0.1)",
+                  border: "2px solid rgba(226, 254, 165, 0.1)",
                 }}
               >
                 <h3 className="text-lg font-dela uppercase text-primary leading-snug">

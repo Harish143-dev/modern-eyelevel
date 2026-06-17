@@ -13,7 +13,7 @@ const FAQSection = ({ faqs }: { faqs: FAQ[] }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-12 md:py-16 px-4 bg-secondary relative overflow-hidden">
+    <section className="py-12 md:py-16 px-4 bg-background relative overflow-hidden">
       {/* Background Elements */}
       {/* <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -bottom-40 -left-40 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px]" />

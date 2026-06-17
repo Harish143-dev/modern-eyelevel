@@ -53,8 +53,8 @@ const Leadership = () => {
           className="text-center mb-12"
         >
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-dela uppercase">
-            <span className="text-primary">Two founders.</span>{" "}
-            <WavyUnderline>One Studio.</WavyUnderline>
+            <span className="text-primary">Two founders</span>{" "}
+            <WavyUnderline>One Studio</WavyUnderline>
           </h2>
         </motion.div>
 

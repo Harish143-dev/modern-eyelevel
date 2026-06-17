@@ -12,7 +12,6 @@ import {
 import AboutHero from "@/components/sections/about/AboutHero";
 import WhyEyeLevelExists from "@/components/sections/about/aboutWhyEyeLevelExists";
 import Leadership from "@/components/sections/about/aboutLeadership";
-import Gallery from "@/components/sections/about/aboutGallery";
 import Beliefs from "@/components/sections/about/aboutBeliefs";
 import Numbers from "@/components/sections/about/aboutNumbers";
 import JoinUs from "@/components/sections/about/aboutJoinUs";
@@ -48,7 +47,6 @@ const About = () => {
           as its own component (components/about/Values.tsx). */}
 
       <Leadership />
-      <Gallery />
       <Beliefs />
       <Numbers />
 
@@ -56,7 +54,7 @@ const About = () => {
 
       <JoinUs />
 
-      <EnhancedFooter showCTA={false} mascotBgClass="bg-background" />
+      <EnhancedFooter showCTA={false} mascotBgClass="bg-secondary" />
     </div>
   );
 };
