@@ -21,7 +21,7 @@ import ClientLottie, { type ClientLottieRef } from "@/components/shared/ClientLo
 import SEO from "@/components/utils/SEO";
 import { openPositions } from "@/data/careers";
 import faqs from "@/data/faqs";
-import FAQSection from "@/components/sections/FAQSection";
+import FAQSection from "@/components/sections/shared/FAQSection";
 import { faqPageSchema, organizationSchema, websiteSchema } from "@/hooks/schemas";
 
 const benefits = [

@@ -13,9 +13,9 @@ import {
   websiteSchema,
   breadcrumbSchema,
 } from "@/hooks/schemas";
-import FAQSection from "@/components/sections/FAQSection";
+import FAQSection from "@/components/sections/shared/FAQSection";
 import faqs from "@/data/faqs";
-import { industriesPageData, IndustryShowcase } from "@/components/pages/industries/IndustryShowcase";
+import { industriesPageData, IndustryShowcase } from "@/components/sections/industries/IndustryShowcase";
 import { Star18 } from "@/components/shared/Star18";
 import GreenButton from "@/components/shared/GreenButton";
 

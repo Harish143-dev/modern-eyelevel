@@ -21,7 +21,7 @@ import {
   localBusinessSchema,
 } from "@/hooks/schemas";
 import faqs from "@/data/faqs";
-import FAQSection from "@/components/sections/FAQSection";
+import FAQSection from "@/components/sections/shared/FAQSection";
 
 const contactSchema = z.object({
   name: z

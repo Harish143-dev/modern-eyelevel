@@ -19,7 +19,7 @@ import {
 } from "@/data/blogs";
 import { blogPageSchema, breadcrumbSchema, faqPageSchema } from "@/hooks/schemas";
 import faqs from "@/data/faqs";
-import FAQSection from "@/components/sections/FAQSection";
+import FAQSection from "@/components/sections/shared/FAQSection";
 
 type BlogArchiveProps = {
   title: string;
