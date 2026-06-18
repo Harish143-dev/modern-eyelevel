@@ -22,6 +22,7 @@ import poster_3 from "@/assets/services/content/poster_3.webp";
 import social_1 from "@/assets/services/social/google.webp";
 import social_2 from "@/assets/services/social/social-media.webp";
 import social_3 from "@/assets/services/social/linkedin.webp";
+import performance_1 from "@/assets/services/social/Performance marketing.webp"
 import celebrityEvent from "@/assets/services/content/celebrity.webp";
 import meeting from "@/assets/services/content/meeting.webp";
 import crm from "@/assets/services/content/crm.webp";
@@ -45,38 +46,42 @@ import FAQSection from "@/components/sections/shared/FAQSection";
 const services = [
   {
     id: 1,
-    title: "Events Management",
-    tagline: "Experiences designed with purpose and precision.",
+    title: "Performance Marketing",
     description:
-      "We plan and deliver events that strengthen brand presence and engage audiences. From concept to execution, every experience is built to be seamless and impactful.",
-    includes: [
-      "Concept and theme development",
-      "Venue selection and setup",
-      "Stage design, lighting, and AV production",
-      "Influencer and celebrity coordination",
-      "Branding and event collaterals",
-      "Guest management and on-ground execution",
-    ],
+      "Meta and Google Ads built for revenue, not reach. Full-funnel campaigns with flat fees and complete attribution from ad to close. No black-box reporting, no padded spend.",
     media: [
-      { src: eventsVideo1, type: "video" as const },
-      { src: eventsVideo2, type: "video" as const },
+      {
+        src: performance_1,
+        type: "image" as const,
+      },
+      {
+        src: social_3,
+        type: "image" as const,
+      },
     ],
-    bgColor: "#0D1F1A",
+    bgColor: "#1a2f28",
+    cta: { text: "Learn More →", link: "/services/performance-marketing", }
   },
   {
     id: 2,
-    title: "Influencer & Celebrity Partnerships",
-    tagline: "Turning influence into measurable outcomes.",
+    title: "AI-ERA SEO",
     description:
-      "We connect brands with the right voices to amplify credibility and reach. Campaigns are managed end-to-end, with clarity on content, contracts, and amplification.",
-    includes: [
-      "Celebrity endorsements",
-      "Influencer partnerships",
-      "Campaign and content planning",
-      "Brief development",
-      "Contracting and usage rights",
-      "360° amplification",
+      " Traditional SEO is table stakes. We add AEO (AI Overviews, featured snippets) and GEO (ChatGPT, Gemini, Perplexity citations). Buyers get answers before they click. We make sure yours is the answer they get.",
+    media: [
+      { src: "https://connectedmarkets.com/wp-content/uploads/2025/02/AI-SEO-in-2025-1200x686.webp", type: "image" as const }, {
+        src: social_1,
+        type: "image" as const,
+      },
+
     ],
+    bgColor: "#0D1F1A",
+    cta: { text: "Learn More →", link: "/services/ai-era-seo" },
+  },
+  {
+    id: 3,
+    title: "SOCIAL MEDIA MANAGEMENT",
+    description:
+      "Content that builds the audience your sales team needs. Strategy, calendars, creative, and posting fully managed. Communities that convert, not just follower counts.",
     media: [
       { src: influencerCelebrityImg, type: "image" as const },
       {
@@ -84,20 +89,14 @@ const services = [
         type: "image" as const,
       },
     ],
-    bgColor: "#253e35",
+    bgColor: "#1a2f28",
+    cta: { text: "Learn More →", link: "/services/social-media-management" },
   },
   {
-    id: 3,
-    title: "Photo & Video Production",
-    tagline: "High-impact visuals built for performance.",
+    id: 4,
+    title: "CONTENT AND CREATIVE",
     description:
-      "We create content that blends storytelling with results. From short-form content to full-scale productions, visuals are crafted to support campaigns and strengthen brand presence.",
-    includes: [
-      "Brand films and commercial production",
-      "Product, lifestyle, and campaign photography",
-      "Social and short-form video content",
-      "Post-production and finishing",
-    ],
+      " AI handles production speed. Humans handle strategy and voice. Video, design, copy, and brand assets built with your brief, delivered with your tone.",
     media: [
       { src: production_1, type: "image" as const },
       { src: production_2, type: "image" as const },
@@ -106,22 +105,14 @@ const services = [
       { src: photoGallery2, type: "image" as const },
       { src: photoGallery3, type: "image" as const },
     ],
-    bgColor: "#1a2f28",
+    bgColor: "#0D1F1A",
+    cta: { text: "Learn More →", link: "/services/content-and-creative" },
   },
   {
-    id: 4,
-    title: "Growth Strategy",
-    tagline: "Clear direction before execution.",
+    id: 5,
+    title: "LINKEDIN B2B MARKETING",
     description:
-      "We build growth strategies that align customers, value propositions, and funnels. From research to measurement, every decision is designed to drive predictable, long-term growth.",
-    includes: [
-      "Go-To-Market (GTM) roadmaps",
-      "Audience and market research",
-      "Messaging architecture",
-      "Funnel design",
-      "Measurement frameworks",
-      "OKR and execution backlogs",
-    ],
+      "Profile optimisation, content strategy, and targeted outreach that builds real pipeline. For founders and companies that sell to other businesses.",
     media: [
       {
         src: meeting,
@@ -133,52 +124,60 @@ const services = [
         type: "image" as const,
       },
     ],
-    bgColor: "#253e35",
-  },
-  {
-    id: 5,
-    title: "Brand & Creative Design",
-    tagline: "Design systems that communicate and convert.",
-    description:
-      "We craft brand identities and creative assets that build trust and drive action. Every visual system is designed to scale across platforms while staying consistent and clear.",
-    includes: [
-      "Brand identity systems",
-      "Campaign concepts",
-      "Marketing collateral and sales kits",
-      "Decks and presentations",
-      "Motion design",
-      "UI and UX design",
-      "Packaging and print design",
-    ],
-    media: [
-      {
-        src: poster_1,
-        type: "image" as const,
-      },
-      {
-        src: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=80",
-        type: "image" as const,
-      },
-      {
-        src: poster_3,
-        type: "image" as const,
-      },
-    ],
-    bgColor: "#0D1F1A",
+    bgColor: "#1a2f28",
+    cta: { text: "Learn More →", link: "/services/linkedin-b2b-marketing" },
   },
   {
     id: 6,
-    title: "Web & App Development",
-    tagline: "Digital products built for performance.",
+    title: "CRO AND FUNNEL DESIGN",
     description:
-      "We design and develop websites and applications that look strong, function seamlessly, and convert users. Each platform is built to scale as the business grows.",
-    includes: [
-      "Website design and development",
-      "Web and mobile applications",
-      "E-commerce solutions",
-      "UI/UX systems",
-      "Conversion-focused landing pages",
+      "We fix what happens after the click. Landing pages, conversion flows, lead qualification systems built to turn visitors into conversations.", media: [
+        {
+          src: poster_1,
+          type: "image" as const,
+        },
+        {
+          src: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=80",
+          type: "image" as const,
+        },
+        {
+          src: poster_3,
+          type: "image" as const,
+        },
+      ],
+    bgColor: "#0D1F1A",
+    cta: { text: "Learn More →", link: "/services/cro-and-funnel-design" },
+  },
+  {
+    id: 7,
+    title: "REVENUE ATTRIBUTION DASHBOARD",
+    description:
+      " Bundled into every growth retainer. Every channel tied to a business outcome. You will always know which activity is producing revenue and which one to cut.",
+    media: [
+      { src: crm, type: "image" as const },
+      { src: social_2, type: "image" as const },
     ],
+    bgColor: "#1a2f28",
+    cta: { text: "Learn More →", link: "/services/revenue-attribution-dashboard" },
+  },
+  {
+    id: 8,
+    title: "BRAND AND IDENTITY",
+    description:
+      "Visual identity, positioning, and brand architecture for companies that are growing and need their brand to do the work. Logo, guidelines, tone of voice, and the full system.",
+    media: [
+      { src: martechGallery1, type: "image" as const },
+      { src: martechGallery2, type: "image" as const },
+      { src: crm, type: "image" as const },
+    ],
+    bgColor: "#0D1F1A",
+    cta: { text: "Learn More →", link: "/services/brand-and-identity" },
+  },
+  {
+    id: 9,
+    title: "WEBSITE DESIGN AND DEVELOPMENT",
+    description:
+      "Fast, conversion-optimised sites built as sales tools, not brochures. Designed to do one thing: turn a visitor into a lead.",
     media: [
       {
         src: web_1,
@@ -197,95 +196,8 @@ const services = [
         type: "image" as const,
       },
     ],
-    bgColor: "#253e35",
-  },
-  {
-    id: 7,
-    title: "Performance Marketing",
-    tagline: "Managing the full funnel—from acquisition to retention.",
-    description:
-      "We combine performance media with lifecycle messaging to optimize every touchpoint. The focus is always on ROI, efficiency, and sustainable growth.",
-    includes: [
-      "Full-funnel ad strategy",
-      "Google, Meta, and LinkedIn campaigns",
-      "Shopping and retargeting ads",
-      "Automated journeys",
-      "Lead nurture flows",
-      "Retention and win-back programs",
-    ],
-    media: [
-      {
-        src: social_1,
-        type: "image" as const,
-      },
-      {
-        src: social_2,
-        type: "image" as const,
-      },
-      {
-        src: social_3,
-        type: "image" as const,
-      },
-    ],
     bgColor: "#1a2f28",
-  },
-  {
-    id: 8,
-    title: "Marketing Technology",
-    tagline: "Systems that automate and scale growth.",
-    description:
-      "CRM setup, marketing automation, Make.com and Zapier workflows, and AI agent deployment. For brands ready to systemise their growth operations.",
-    includes: [
-      "CRM setup and integration",
-      "Marketing automation",
-      "Make.com & Zapier workflows",
-      "AI agent deployment",
-    ],
-    media: [
-      { src: martechGallery1, type: "image" as const },
-      { src: martechGallery2, type: "image" as const },
-      { src: crm, type: "image" as const },
-    ],
-    bgColor: "#253e35",
-    cta: { text: "Learn More →", link: "/services/ai-marketing" },
-  },
-  {
-    id: 9,
-    title: "WhatsApp Marketing",
-    tagline: "Where your customers actually read your messages.",
-    description:
-      "Broadcast campaigns, drip sequences, chatbots, and WhatsApp Business API setup — fully managed.",
-    includes: [
-      "Broadcast campaigns",
-      "Drip sequences",
-      "Chatbots",
-      "WhatsApp Business API setup",
-    ],
-    media: [
-      { src: crm, type: "image" as const },
-      { src: social_2, type: "image" as const },
-    ],
-    bgColor: "#0D1F1A",
-    cta: { text: "Learn More →", link: "/services/whatsapp-marketing" },
-  },
-  {
-    id: 10,
-    title: "AI Marketing & Automation",
-    tagline: "AI at the engine. Speed at every layer.",
-    description:
-      "AI-powered content (videos, ads, reels, product visuals) combined with AI agents that automate lead qualification and sales follow-up.",
-    includes: [
-      "AI-powered content creation",
-      "Automated lead qualification",
-      "AI agents for sales follow-up",
-      "Dynamic ad creatives",
-    ],
-    media: [
-      { src: web_1, type: "image" as const },
-      { src: web_2, type: "image" as const },
-    ],
-    bgColor: "#1a2f28",
-    cta: { text: "Learn More →", link: "/services/ai-marketing" },
+    cta: { text: "Learn More →", link: "/services/website-design-and-development" },
   },
 ];
 
@@ -368,13 +280,14 @@ const ServicesPage = () => {
   return (
     <div className="min-h-screen bg-forest-deep">
       <SEO
-        title="Marketing Services — EyeLevel Growth Studio, Chennai"
-        description="AI content, WhatsApp marketing, influencer partnerships, performance ads, sports event marketing, and more — EyeLevel Growth Studio, Chennai."
+        title="Digital Marketing Services Chennai | EyeLevel Growth Studio"
+        description="Performance marketing, SEO, social media, content, LinkedIn B2B, CRO, brand identity, and website development — one studio, zero handoffs. Chennai's AI-powered growth team."
         keywords={[
-          "marketing agency Chennai",
-          "AI marketing agency India",
-          "WhatsApp marketing agency India",
-          "digital marketing services India",
+          "digital marketing services Chennai",
+          "marketing agency services Chennai",
+          "performance marketing agency",
+          "AI-Era SEO Chennai",
+          "social media marketing agency Chennai",
         ]}
         schema={[
           organizationSchema,
@@ -393,10 +306,9 @@ const ServicesPage = () => {
       />
       <Header />
 
-      {/* Hero Section - Minimal */}
       <section
         ref={ref}
-        className="relative pt-[110px] flex justify-center items-center pb-20 px-4 overflow-hidden lg:min-h-screen bg-forest-deep"
+        className="relative pt-[110px] flex flex-col justify-center items-center pb-20 px-4 overflow-hidden lg:min-h-screen bg-forest-deep"
       >
         {/* Rotating 32-pointed star - centered upper area */}
         <motion.div
@@ -425,7 +337,7 @@ const ServicesPage = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full"
             style={{
               backgroundColor: "rgba(226, 254, 165, 0.1)",
               border: "1px solid rgba(226, 254, 165, 0.2)",
@@ -434,7 +346,7 @@ const ServicesPage = () => {
             <span
               className="text-sm font-medium font-bricolage text-primary"
             >
-              Our Services
+              What we do
             </span>
           </motion.div>
 
@@ -446,7 +358,6 @@ const ServicesPage = () => {
           >
             {/* BIG TITLE */}
             <span className="relative flex items-end justify-center text-4xl md:text-6xl lg:text-7xl">
-              GR
               <span className="">
                 <span className="sr-only">O</span>
                 {animationData && (
@@ -455,16 +366,17 @@ const ServicesPage = () => {
                     animationData={animationData}
                     autoPlay={false}
                     loop
-                    className="w-[35px] md:w-[50px] lg:w-[60px] pointer-events-none"
+                    className="w-[38px] md:w-[53px] lg:w-[63px] pointer-events-none"
                   />
                 )}
               </span>
-              WTH
+              NE STUDIO
             </span>
             {" "}
             {/* SUBTITLE – ONE LINE, SMALLER */}
-            <span className="block text-4xl md:text-6xl lg:text-7xl tracking-wide">
-              WITHOUT <WavyUnderline>GUESSWORK</WavyUnderline>
+            <span className="block text-3xl md:text-5xl lg:text-6xl tracking-wide">
+              NINE CAPABILITIES
+              <WavyUnderline>ZERO HANDOFF</WavyUnderline>
             </span>
           </motion.h1>
 
@@ -475,8 +387,15 @@ const ServicesPage = () => {
             className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto font-bricolage leading-relaxed"
             style={{ color: "rgba(248, 255, 232, 0.7)" }}
           >
-            Connected systems that turn strategy into measurable scale.
+            Most companies run 3 to 5 vendors for what we do inside one studio. Strategy, performance, content, SEO, and creative — all connected, all accountable to the same outcome.
           </motion.p>
+        </div>
+        <div className="flex items-center rounded-full relative font-bricolage z-1000 mt-8 justify-center gap-4">
+          <Link to="/booking">
+            <Button className="h-12 px-6 lg:h-14 lg:px-8 text-sm lg:text-base font-semibold rounded-full">
+              Book a free 30-min diagnostic
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -529,56 +448,16 @@ const ServicesPage = () => {
                   className="space-y-6"
                 >
                   <h2
-                    className="text-2xl md:text-3xl lg:text-4xl font-dela leading-tight uppercase text-foreground"
+                    className="text-2xl md:text-4xl lg:text-5xl font-dela leading-tight uppercase text-foreground"
                   >
                     {service.title}
                   </h2>
-
-                  <p
-                    className="text-lg md:text-xl font-semibold font-bricolage text-primary"
-                  >
-                    {service.tagline}
-                  </p>
-
                   <p
                     className="text-sm md:text-base leading-relaxed font-bricolage"
                     style={{ color: "rgba(248, 255, 232, 0.75)" }}
                   >
                     {service.description}
                   </p>
-
-                  {/* Includes List - No heading */}
-                  <div className="pt-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {service.includes.map((item, i) => (
-                        <motion.div
-                          key={i}
-                          initial={{ opacity: 0, x: -15 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: 0.3 + i * 0.05 }}
-                          className="flex items-start gap-3 group"
-                        >
-                          <div
-                            className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 transition-all duration-300 group-hover:scale-110"
-                            style={{
-                              backgroundColor: "rgba(226, 254, 165, 0.15)",
-                            }}
-                          >
-                            <Check
-                              className="w-3.5 h-3.5 text-primary"
-                            />
-                          </div>
-                          <span
-                            className="font-bricolage text-sm md:text-base transition-colors duration-300 group-hover:text-primary"
-                            style={{ color: "rgba(248, 255, 232, 0.85)" }}
-                          >
-                            {item}
-                          </span>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
 
                   {/* CTA Button */}
                   {service.cta && (
@@ -607,66 +486,77 @@ const ServicesPage = () => {
         </section>
       ))}
 
+      {/* How it all connects Section */}
+      <section className="py-24 md:py-32 px-4 relative bg-forest-deep text-center z-10">
+        <div className="max-w-7xl mx-auto">
+          {/* Eyebrow only, as requested by user to not repeat headline */}
+          <div className="mb-16 text-center">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full"
+              style={{
+                backgroundColor: "rgba(226, 254, 165, 0.1)",
+                border: "1px solid rgba(226, 254, 165, 0.2)",
+              }}
+            >
+              <span className="text-sm font-medium font-bricolage text-primary">
+                How it all connects
+              </span>
+            </motion.div>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-dela uppercase text-primary mb-8 leading-tight">
+                These are not nine <WavyUnderline>separate services</WavyUnderline>
+              </h2>
+              <p className="text-lg md:text-xl lg:text-xl font-bricolage leading-relaxed" style={{ color: "rgba(248, 255, 232, 0.85)" }}>
+                They are nine parts of one growth system. Strategy informs creative. <br />Creative feeds performance. Performance data shapes SEO. SEO feeds content. <br /> Content builds the brand. The brand closes the deal.
+              </p>
+              <p className="text-lg md:text-xl lg:text:xl font-bricolage leading-relaxed mt-6 text-primary">
+                When one studio runs all of it, nothing gets lost in translation.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* faqs */}
       <FAQSection faqs={faqs["Services"]} />
 
       {/* CTA Section */}
-      <section
-        className="py-24 md:py-32 px-4 relative overflow-hidden bg-forest-deep"
-      >
-        {/* Background Elements */}
-        {/* <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-primary/5 rounded-full blur-[180px]" />
-        </div> */}
-
-        <div className="max-w-4xl mx-auto text-center relative z-10">
+      <section className="py-20 px-4 relative overflow-hidden bg-forest-deep">
+        <div className="max-w-4xl mx-auto relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            className="text-center"
           >
-            <h2
-              className="text-4xl md:text-5xl lg:text-6xl font-dela mb-6 leading-tight uppercase text-primary"
-            >
-              READY TO BUILD SOMETHING <WavyUnderline>GREAT?</WavyUnderline>
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-dela mb-6 uppercase text-primary">
+              Which service does your marketing{" "}
+              <WavyUnderline>need most?</WavyUnderline>
             </h2>
 
             <p
-              className="text-lg md:text-xl mb-10 font-bricolage max-w-2xl mx-auto"
+              className="text-lg max-w-xl mx-auto mb-10 font-bricolage"
               style={{ color: "rgba(248, 255, 232, 0.7)" }}
             >
-              Let's discuss how our connected services can drive predictable,
-              long-term growth for your brand.
+              30 minutes. No pitch deck. We will tell you exactly where to start.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/booking">
-                <Button
-                  size="lg"
-                  className="group px-10 py-7 text-base md:text-lg font-semibold font-bricolage"
-
-                >
-                  Book a Strategy Call
-                  <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </Link>
-
-              <Link to="/contact-us">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="rounded-full px-10 py-7 text-base md:text-lg font-semibold font-bricolage hover:bg-primary/10 transition-all duration-150"
-                  style={{
-                    backgroundColor: "transparent",
-                    color: "#F8FFE8",
-                    border: "2px solid rgba(248, 255, 232, 0.3)",
-                  }}
-                >
-                  Contact Us
-                </Button>
-              </Link>
-            </div>
+            <Link to="/booking">
+              <Button className="group h-12 md:h-14 px-5 md:px-8 text-sm md:text-base font-semibold w-full sm:w-auto">
+                <span>Book a free 30-min diagnostic</span>
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>
