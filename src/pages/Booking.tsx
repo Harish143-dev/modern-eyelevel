@@ -32,7 +32,7 @@ const Booking = () => {
           className="text-center mb-8 sm:mb-10 md:mb-12"
         >
           <h1
-            className="text-3xl md:text-4xl lg:text-5xl font-dela mb-3 sm:mb-4 uppercase leading-relaxed text-primary"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-dela mb-3 sm:mb-4 uppercase leading-relaxed text-primary break-words break-keep"
           >
             Book Your <WavyUnderline>Free</WavyUnderline> Consultation
           </h1>
