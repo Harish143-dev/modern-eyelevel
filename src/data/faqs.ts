@@ -366,69 +366,24 @@ const faqs = {
   Contact: [
     {
       id: 1,
-      question:
-        "How do I contact EyeLevel's digital marketing agency in Chennai?",
-      answer:
-        "You can contact EyeLevel through: Email — hello@eyelevelstudio.in (responses within 24 hours on business days), Phone/WhatsApp — +91 97890 99499 (Monday-Saturday, 9 AM-7 PM IST), Website contact form at theeyelevelstudio.com/contact-us (responses within 24 hours), LinkedIn — Message EyeLevel Growth Studio company page or Akmal Rahman directly. For the fastest response, WhatsApp is recommended for urgent inquiries. For detailed project briefs, email is preferred.",
+      question: "Is the diagnostic call free?",
+      answer: "Yes. The 30-minute diagnostic is free. There is no pitch, no proposal, and no follow-up pressure. It is a straight conversation about your marketing."
     },
     {
       id: 2,
-      question: "What does an EyeLevel marketing consultation involve?",
-      answer:
-        "An EyeLevel consultation is a 30-minute strategy call (phone, Zoom, or Google Meet) with no obligation and no sales pressure. During the call we: understand your current marketing challenges, clarify your growth goals, review your existing digital presence, identify the top 2-3 opportunities for immediate improvement, and outline what a partnership could look like. After the call, we send a follow-up email with key takeaways and, if there is mutual interest, a formal proposal within 5 business days.",
+      question: "What should I prepare before the call?",
+      answer: "Nothing specific. It helps to have a rough sense of your current marketing setup — which channels you are active on, what your current budget looks like, and what outcomes you are not seeing. We will ask the right questions on the call."
     },
     {
       id: 3,
-      question: "Is the initial marketing consultation with EyeLevel free?",
-      answer:
-        "Yes. EyeLevel's initial 30-minute consultation is completely free — no credit card, no commitment, no hidden follow-ups. We offer free consultations because the best partnerships start with genuine understanding, not sales pitches. If we are a fit, both sides will know after 30 minutes. If we are not a fit, we will tell you honestly and recommend alternative resources.",
+      question: "Do you work with businesses outside Chennai?",
+      answer: "Yes. Most of our client work is remote. We work with companies across India. Discovery calls and account management happen over video. For Chennai-based clients, in-person meetings are available by appointment."
     },
     {
       id: 4,
-      question: "How quickly does EyeLevel respond to inquiries?",
-      answer:
-        "EyeLevel responds to all inquiries within 24 hours on business days (Monday-Saturday). WhatsApp messages receive the fastest responses — typically within 2-4 hours during working hours. Email inquiries receive responses within 24 hours. Website contact form submissions are reviewed daily and responded to by the next business day. For urgent project requirements (last-minute event production or campaign launch), call directly at +91 97890 99499 for immediate assistance.",
-    },
-    {
-      id: 5,
-      question: "What information should I prepare before contacting EyeLevel?",
-      answer:
-        "To make your initial consultation most productive, it helps to have: (1) A clear statement of your goal (e.g., '200 patient inquiries/month' or 'fill 400 engineering seats this admission season'). (2) Your approximate marketing budget (monthly or project). (3) Any existing marketing assets (website URL, current ads, social media). (4) Timeline or deadline (admission season, event date, campaign launch). (5) Previous marketing results if available. You do not need a detailed brief — the consultation helps you clarify and structure your requirements.",
-    },
-    {
-      id: 6,
-      question:
-        "Does EyeLevel offer consultations by video call for clients outside Chennai?",
-      answer:
-        "Yes. EyeLevel offers consultations via Zoom, Google Meet, or Microsoft Teams for clients anywhere in India. Our digital marketing services are location-independent — we manage campaigns for clients across South India and nationally from our Chennai base. For event production requiring on-ground execution, we evaluate travel requirements separately. All initial consultations are conducted remotely regardless of client location.",
-    },
-    {
-      id: 7,
-      question:
-        "What happens after I submit the contact form on EyeLevel's website?",
-      answer:
-        "After submitting the contact form: (1) You receive an automatic email confirmation within 5 minutes. (2) An EyeLevel team member reviews your inquiry within 24 hours. (3) We email or WhatsApp you to schedule a consultation call. (4) The 30-minute consultation call is conducted at your preferred time. (5) Post-call, we send a summary and next steps within 24 hours. (6) If you would like a proposal, we deliver it within 5 business days. (7) You decide whether to proceed — no pressure, no repeated follow-ups if you have said no.",
-    },
-    {
-      id: 8,
-      question: "Does EyeLevel charge a consultation fee or setup fee?",
-      answer:
-        "EyeLevel does not charge consultation fees or setup fees. The initial consultation is free. Onboarding is included in your first month's retainer. There are no hidden charges or surprise invoices. All costs — management fees, ad spend requirements, creative production costs — are clearly outlined in the proposal before you commit. If any cost arises outside the original scope, we discuss it with you before proceeding.",
-    },
-    {
-      id: 9,
-      question:
-        "What should I expect from the first month of working with EyeLevel?",
-      answer:
-        "In the first month: Week 1 — Strategy kick-off call, audit of existing marketing, project brief finalization, team introductions, access to shared project workspace. Week 2 — Campaign strategy presentation (creative direction, media plan, keyword strategy), feedback round. Week 3 — Campaign build (ad accounts setup, landing pages, creative production), final approvals. Week 4 — Campaign launch, first performance data, initial optimizations. By end of Month 1, active campaigns are live and you are receiving weekly performance reports.",
-    },
-    {
-      id: 10,
-      question:
-        "Does EyeLevel work with international sports or educational organizations?",
-      answer:
-        "EyeLevel primarily serves organizations in India. For international organizations looking to market sports leagues, education programs, or healthcare services to Indian audiences — EyeLevel is well-positioned given our deep knowledge of Indian media, consumer behavior, and digital channels. We have experience with Indian diaspora marketing for sports and education contexts. Contact us at hello@eyelevelstudio.in with details about your organization and target market to discuss whether we are the right fit.",
-    },
+      question: "What is the minimum engagement?",
+      answer: "Our retainers start at Rs. 75,000 per month with a 6-month minimum. Project-based engagements are considered case by case. We will discuss what fits your situation on the call."
+    }
   ],
   "Sports Marketing": [
     {

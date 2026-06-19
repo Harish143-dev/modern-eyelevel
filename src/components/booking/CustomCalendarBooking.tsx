@@ -199,7 +199,7 @@ export default function CustomCalendarBooking() {
               </p>
 
               <div
-                className="border rounded-2xl p-4 flex justify-center items-center shadow-sm bg-white"
+                className="border rounded-2xl p-2 sm:p-4 flex justify-center items-center shadow-sm bg-white"
                 style={{
                   borderColor: "rgba(23, 50, 41, 0.08)",
                 }}
@@ -221,16 +221,16 @@ export default function CustomCalendarBooking() {
                     nav_button_previous: "relative left-0",
                     nav_button_next: "relative right-0",
                     table: "w-full border-collapse space-y-1",
-                    head_row: "flex w-full",
-                    head_cell: "text-[#173229]/40 flex-1 text-center font-bold text-xs uppercase pt-2 pb-1",
-                    row: "flex w-full mt-1",
-                    cell: "flex-1 text-center p-0 relative focus-within:relative focus-within:z-20",
-                    day: "mx-auto w-9 h-9 sm:w-10 sm:h-10 p-0 rounded-xl border-2 border-transparent font-medium text-sm text-[#173229] flex items-center justify-center transition-all hover:bg-[#E2FEA5]/30 hover:text-[#173229]",
+                    head_row: "flex w-full justify-center mb-2",
+                    head_cell: "text-[#173229]/50 rounded-md w-8 sm:w-10 font-medium text-[10px] sm:text-xs uppercase font-bricolage tracking-wider text-center",
+                    row: "flex w-full justify-center mt-1 sm:mt-2",
+                    cell: "text-center text-sm p-0 relative [&:has([aria-selected])]:bg-transparent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20 w-8 sm:w-10",
+                    day: "h-8 w-8 sm:h-10 sm:w-10 p-0 font-normal font-bricolage text-[#173229] aria-selected:opacity-100 hover:bg-[#E2FEA5]/30 rounded-xl transition-all",
                     day_selected:
-                      "!bg-[#173229] !text-[#F8FFE8] font-bold shadow-sm hover:!bg-[#173229] hover:!text-[#F8FFE8] hover:opacity-100",
-                    day_today: "bg-[#E2FEA5]/25 text-[#173229] border border-[#E2FEA5] font-bold aria-selected:!bg-[#173229] aria-selected:!text-[#F8FFE8] aria-selected:border-transparent",
-                    day_outside: "text-[#173229]/50 pointer-events-none",
-                    day_disabled: "text-[#173229]/40 pointer-events-none line-through",
+                      "bg-[#E2FEA5] text-[#173229] font-bold hover:bg-[#E2FEA5] hover:text-[#173229] focus:bg-[#E2FEA5] focus:text-[#173229] border border-[#173229]/20 shadow-sm",
+                    day_today: "bg-[#173229]/5 text-[#173229] font-bold border border-[#173229]/10",
+                    day_outside: "text-[#173229]/30 opacity-50",
+                    day_disabled: "text-[#173229]/30 opacity-50 cursor-not-allowed line-through",
                   }}
                 />
               </div>
@@ -581,8 +581,9 @@ export default function CustomCalendarBooking() {
                     boxShadow: "0 4px 0 #0a0a0a",
                   }}
                 >
-                  Continue to Google Booking
-                  <ArrowRight className="w-4 h-4" />
+                  <span className="sm:hidden">Continue</span>
+                  <span className="hidden sm:inline">Continue to Google Booking</span>
+                  <ArrowRight className="w-4 h-4 shrink-0" />
                 </Button>
                 <p className="text-[10px] sm:text-xs text-center text-[#173229]/50 font-bricolage leading-relaxed">
                   Final confirmation will be completed securely through Google Calendar.
