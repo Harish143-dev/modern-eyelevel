@@ -50,9 +50,12 @@ const About = () => {
       <Beliefs />
       <Numbers />
 
-      <FAQSection faqs={faqs["About Us"]} />
-
       <JoinUs />
+
+      <FAQSection
+        faqs={faqs["About Us"]}
+        bgClass="#1a2f28"
+      />
 
       <EnhancedFooter showCTA={false} mascotBgClass="bg-secondary" />
     </div>

@@ -49,13 +49,11 @@ const ServicesPage = () => {
       <ServicesHero />
       <ServicesList />
       <HowItConnects />
-
+      <ServicesCTA />
       <FAQSection
         faqs={faqs["Services"]}
-        bgClass="bg-[#1a2f28]"
+        bgClass="bg-[#forest-green]"
       />
-
-      <ServicesCTA />
 
       <EnhancedFooter mascotBgClass="bg-forest-deep" showCTA={false} />
     </div>

@@ -6,7 +6,7 @@ import WavyUnderline from "@/components/shared/WavyUnderline";
 
 const ServicesCTA = () => {
   return (
-    <section className="py-20 px-4 relative overflow-hidden bg-forest-deep">
+    <section className="py-20 px-4 relative overflow-hidden bg-[#1a2f28]">
       <div className="max-w-4xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
