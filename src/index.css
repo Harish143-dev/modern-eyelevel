@@ -208,7 +208,7 @@
 }
 
 .animate-join-league-marquee {
-  animation: join-league-marquee 40s linear infinite;
+  animation: join-league-marquee 80s linear infinite;
   backface-visibility: hidden;
   will-change: transform;
 }

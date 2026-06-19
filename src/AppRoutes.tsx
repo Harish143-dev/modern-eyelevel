@@ -37,7 +37,7 @@ const AppRoutes = () => (
     <Route path="/work" element={<Works />} />
     <Route path="/how-we-work" element={<Navigate to="/about" replace />} />
     <Route path="/industries" element={<Industries />} />
-    <Route path="/contact-us" element={<Contact />} />
+    <Route path="/contact" element={<Contact />} />
     <Route path="/blog" element={<Blog />} />
     <Route path="/blog/category/:categorySlug" element={<BlogCategory />} />
     <Route path="/blog/:slug" element={<BlogPost />} />
