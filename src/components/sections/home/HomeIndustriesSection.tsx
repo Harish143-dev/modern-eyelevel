@@ -23,7 +23,7 @@ const industries: Industry[] = [
   {
     id: "realestate",
     number: "01",
-    title: "Real Estate",
+    title: "REAL ESTATE",
     description: "High-trust, slow-burn sales. Built for closed deals and site visits, not cheap leads.",
     link: "/industries/real-estate",
     linkText: "Hook: SPR Highliving",
@@ -32,7 +32,7 @@ const industries: Industry[] = [
   {
     id: "it-saas",
     number: "02",
-    title: "IT / SaaS",
+    title: "IT / SAAS",
     description: "Funded product companies and profitable B2B software. Demand gen, LinkedIn brand, and content that produces pipeline.",
     link: "/industries/it-saas",
     linkText: "Hook: FreshToHome",
@@ -41,7 +41,7 @@ const industries: Industry[] = [
   {
     id: "healthcare",
     number: "03",
-    title: "Healthcare",
+    title: "HEALTHCARE",
     description: "Specialty clinics and multi-specialty hospitals. Patient acquisition built on trust architecture, not product marketing.",
     link: "/industries/healthcare",
     linkText: "Hook: active healthcare clients",
@@ -50,7 +50,7 @@ const industries: Industry[] = [
   {
     id: "automotive",
     number: "04",
-    title: "Automotive",
+    title: "AUTOMOTIVE",
     description: "Dealerships and component makers. Showroom footfall, test-drive bookings, OEM mandates.",
     link: "/industries/automotive",
     linkText: "Hook: Hyundai Motors India",
@@ -59,7 +59,7 @@ const industries: Industry[] = [
   {
     id: "manufacturing",
     number: "05",
-    title: "Manufacturing / B2B",
+    title: "MANUFACTURING / B2B",
     description: "Chennai and Coimbatore manufacturers. Your buyers moved online; your marketing needs to catch up.",
     link: "/industries/manufacturing",
     linkText: "Hook: Schwing Stetter",

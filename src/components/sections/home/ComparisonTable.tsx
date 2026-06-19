@@ -53,7 +53,7 @@ const ComparisonTable = () => {
     return checks.filter((c) => c === "yes" || c === "partial").length;
   };
   return (
-    <section className="pb-12 md:pb-16 pt-10 px-4 bg-forest-deep relative overflow-hidden">
+    <section className="pb-12 md:pb-16 pt-10 lg:pt-20 px-4 bg-forest-deep relative overflow-hidden">
       <div className="max-w-4xl mx-auto relative z-10">
         {/* <motion.div
            initial={{ opacity: 0, y: 20 }}

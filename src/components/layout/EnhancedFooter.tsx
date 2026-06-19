@@ -692,7 +692,7 @@ const EnhancedFooter = ({
       <div className="bg-background py-12 px-4 border-t border-white/5">
         <div className="max-w-5xl mx-auto">
           {/* Links Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
             {footerLinks.map((section, index) => (
               <motion.div
                 key={index}
