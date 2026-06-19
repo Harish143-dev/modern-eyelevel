@@ -18,6 +18,9 @@ import Terms from "./pages/Terms";
 import ThankYou from "./pages/ThankYou";
 import Works from "./pages/Works";
 import WhatsappMarketing from "./pages/WhatsappMarketing";
+import PerformanceMarketing from "./pages/PerformanceMarketing";
+import AiEraSeo from "./pages/AiEraSeo";
+import SocialMediaManagement from "./pages/SocialMediaManagement";
 
 const AppRoutes = () => (
   <Routes>
@@ -27,6 +30,9 @@ const AppRoutes = () => (
     <Route path="/careers" element={<Careers />} />
     <Route path="/services" element={<ServicesPage />} />
     <Route path="/services/whatsapp-marketing" element={<WhatsappMarketing />} />
+    <Route path="/services/performance-marketing" element={<PerformanceMarketing />} />
+    <Route path="/services/ai-era-seo" element={<AiEraSeo />} />
+    <Route path="/services/social-media-management" element={<SocialMediaManagement />} />
     <Route path="/works" element={<Navigate to="/work" replace />} />
     <Route path="/work" element={<Works />} />
     <Route path="/how-we-work" element={<Navigate to="/about" replace />} />
