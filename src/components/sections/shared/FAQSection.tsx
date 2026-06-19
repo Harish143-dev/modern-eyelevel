@@ -9,11 +9,18 @@ interface FAQ {
   question: string;
   answer: string;
 }
-const FAQSection = ({ faqs }: { faqs: FAQ[] }) => {
+interface FAQSectionProps {
+  faqs: FAQ[];
+  bgClass?: string;
+}
+const FAQSection = ({
+  faqs,
+  bgClass = "bg-forest-deep",
+}: FAQSectionProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-12 md:py-16 px-4 bg-forest-deep relative overflow-hidden">
+    <section className={`py-12 md:py-16 px-4 ${bgClass} relative overflow-hidden`}>
       {/* Background Elements */}
       {/* <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -bottom-40 -left-40 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px]" />

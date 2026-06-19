@@ -45,13 +45,16 @@ const ServicesPage = () => {
         url="https://theeyelevelstudio.com/services"
       />
       <Header />
-      
+
       <ServicesHero />
       <ServicesList />
       <HowItConnects />
-      
-      <FAQSection faqs={faqs["Services"]} />
-      
+
+      <FAQSection
+        faqs={faqs["Services"]}
+        bgClass="bg-[#1a2f28]"
+      />
+
       <ServicesCTA />
 
       <EnhancedFooter mascotBgClass="bg-forest-deep" showCTA={false} />
