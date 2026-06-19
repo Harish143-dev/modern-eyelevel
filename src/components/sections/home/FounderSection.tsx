@@ -8,14 +8,14 @@ import founder_home_img from "@/assets/people/akmal_home_img.png"
 
 const FounderSection = () => {
   return (
-    <section className="lg:py-10  md:py-32 px-4 bg-background relative overflow-hidden">
+    <section className="pt-16 lg:py-10 md:py-32 px-4 bg-background relative overflow-hidden">
       <div className="max-w-6xl mx-auto relative z-10">
-            <div className="mb-10 text-center ">
-              <GreenButton>The Founder</GreenButton>
-              <h2 className="font-dela text-3xl  md:text-4xl lg:text-5xl text-primary mt-6 leading-[1.1] uppercase break-words">
-                The marketing practitioner who sat on <WavyUnderline>your side</WavyUnderline> of the table
-              </h2>
-            </div>
+        <div className="mb-10 text-center ">
+          <GreenButton>The Founder</GreenButton>
+          <h2 className="font-dela text-3xl  md:text-4xl lg:text-5xl text-primary mt-6 leading-[1.1] uppercase break-words">
+            The marketing practitioner who sat on <WavyUnderline>your side</WavyUnderline> of the table
+          </h2>
+        </div>
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* Left Column: Content */}
@@ -31,7 +31,7 @@ const FounderSection = () => {
               <p className="font-bricolage text-xl text-foreground/80 font-medium">Founder</p>
 
               <p className="font-bricolage text-lg text-foreground/70 leading-relaxed">
-                EyeLevel was built by a marketing head who spent 15 years on the client side. The full story, and the brands, live on akmalrahman.com.
+                Eyelevel was built by a marketing head who spent 15 years on the client side. The full story, and the brands, live on <a href="https://akmalrahman.com" target="_blank" rel="noopener noreferrer">akmalrahman.com</a>
               </p>
             </div>
 
@@ -65,19 +65,17 @@ const FounderSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative"
+            className="relative mb-20 lg:mb-0"
           >
-            <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden group border border-2 border-primary/10">
+            <div className="relative w-4/5 lg:w-[80%] mx-auto aspect-[4/5] rounded-[2rem] overflow-hidden group border border-2 border-primary/10 flex items-end justify-center px-6 pt-6 md:px-0 md:pt-8">
               {/* Background styling for image container */}
-              <div className="absolute inset-0  transition-opacity duration-500 z-10 pointer-events-none" />
+              <div className="absolute inset-0 transition-opacity duration-500 z-10 pointer-events-none" />
 
               <img
                 src={founder_home_img}
                 alt="Akmal Rahman - Chief Growth Architect"
-                className="w-full h-full px-10 pt-10 object-cover object-top  transition-all duration-700"
+                className="w-full md:w-3/4 lg:w-4/5 h-auto object-contain object-bottom transition-all duration-700"
               />
-
-
             </div>
 
             {/* Decorative background element */}

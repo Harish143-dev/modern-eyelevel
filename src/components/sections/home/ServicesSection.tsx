@@ -11,69 +11,71 @@ export interface ServiceItem {
   title: string;
   description: string;
   link: string;
+  subtitle?: string;
 }
 
 const services: ServiceItem[] = [
   {
     id: "performance",
     number: "01",
-    title: "Performance Marketing",
+    title: "PERFORMANCE MARKETING",
     description: "Meta and Google Ads built for revenue, not clicks. Flat fees, full attribution from ad to close.",
     link: "/services/performance-marketing"
   },
   {
     id: "seo",
     number: "02",
-    title: "AI-Era SEO (AEO + GEO)",
+    title: "AI-ERA SEO",
+    subtitle: "( AEO + GEO ) ",
     description: "Traditional SEO plus AEO (AI Overviews, Featured Snippets) and GEO (ChatGPT, Gemini, Perplexity citations).",
     link: "/services/seo"
   },
   {
     id: "social",
     number: "03",
-    title: "Social Media Management",
+    title: "SOCIAL MEDIA MANAGEMENT",
     description: "Content that builds the audience your sales team needs.",
     link: "/services/social-media"
   },
   {
     id: "content",
     number: "04",
-    title: "Content & Creative",
+    title: "CONTENT & CREATIVE",
     description: "AI handles production speed, humans handle strategy and voice. Video, design, copy, brand assets.",
     link: "/services/content-creative"
   },
   {
     id: "linkedin",
     number: "05",
-    title: "LinkedIn B2B Marketing",
+    title: "LINKEDIN B2B MARKETING",
     description: "Profile optimisation, content strategy, and targeted outreach that builds real pipeline.",
     link: "/services/linkedin-b2b"
   },
   {
     id: "cro",
     number: "06",
-    title: "CRO and Funnel Design",
+    title: "CRO AND FUNNEL DESIGN",
     description: "We fix what happens after the click. Landing pages, conversion flows, lead qualification.",
     link: "/services/cro-funnel"
   },
   {
     id: "revenue",
     number: "07",
-    title: "Revenue Attribution Dashboard",
+    title: "REVENUE ATTRIBUTION DASHBOARD",
     description: "Bundled into growth retainers. Every campaign tied to a business outcome.",
     link: "/services/revenue-attribution"
   },
   {
     id: "brand",
     number: "08",
-    title: "Brand & Identity",
+    title: "BRAND & IDENTITY",
     description: "Visual identity, positioning, and brand architecture.",
     link: "/services/brand-identity"
   },
   {
     id: "web",
     number: "09",
-    title: "Website Design and Development",
+    title: "WEBSITE DESIGN & DEVELOPMENT",
     description: "Fast, conversion-optimised sites. A sales tool, not a brochure.",
     link: "/services/website-design"
   },
@@ -93,7 +95,7 @@ const ServicesSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-dela text-3xl md:text-4xl lg:text-5xl text-foreground  leading-[1.1] tracking-wide mt-6 uppercase"
           >
-            <span className="text-primary">What we do</span>
+            <span className="text-primary">What <WavyUnderline className="text-white">we do</WavyUnderline> </span>
           </motion.h2>
         </div>
 
@@ -110,8 +112,9 @@ const ServicesSection = () => {
               <div className="mb-6 flex justify-between items-start">
                 <span className="font-bricolage text-primary text-xl font-bold opacity-80 group-hover:opacity-100 transition-opacity">{service.number}</span>
               </div>
-              <h3 className="font-dela text-2xl text-foreground mb-4 leading-tight group-hover:text-primary transition-colors">
-                {service.title}
+              <h3 className="font-dela text-xl md:text-2xl text-foreground mb-4 leading-tight group-hover:text-primary transition-colors">
+                {service.title}<br />
+                <span className="font-dela text-xl md:text-2xl text-foreground mb-4 leading-tight group-hover:text-primary transition-colors">{service.subtitle}</span>
               </h3>
               <p className="font-bricolage text-foreground/70 mb-8 leading-relaxed flex-grow">
                 {service.description}

@@ -14,7 +14,7 @@ const testimonials = [
   {
     id: 2,
     quote:
-      "Performance marketing across sports categories [CPA metric pending].",
+      "Performance marketing across sports categories.",
     company: "Da One Sports",
   },
   {

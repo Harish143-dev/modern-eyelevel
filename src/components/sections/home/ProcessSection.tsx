@@ -176,13 +176,13 @@ const ProcessSection = () => {
     >
       {/* Sticky container */}
       <div className="sticky top-0 min-h-[100vh] flex items-center overflow-hidden ">
-        <div className="max-w-5xl mx-auto w-full px-4 md:px-8 ">
+        <div className="max-w-5xl mx-auto w-full px-4 md:px-8 pt-24 lg:pt-0">
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center "
+            className="text-center"
           >
             <GreenButton>The EyeLevel Growth System</GreenButton>
             <h2 className="font-dela text-3xl text-primary md:text-4xl lg:text-5xl leading-[1.05] uppercase">

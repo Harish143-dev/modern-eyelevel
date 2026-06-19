@@ -100,14 +100,14 @@ const ClientLogos = () => {
                         {clientLogo.map((client, index) => (
                           <div
                             key={`${groupIndex}-${index}`}
-                            className="flex-shrink-0 w-36 md:w-44 h-20 flex items-center justify-center"
+                            className="flex-shrink-0 w-48 md:w-56 h-28 flex items-center justify-center mx-4"
                           >
                             <img
                               loading="lazy"
                               src={client}
                               alt="Client logo"
                               title="Client logo"
-                              className="h-14 md:h-16 w-36 md:w-40 object-contain"
+                              className="h-20 md:h-24 w-48 md:w-52 object-contain"
                             />
                           </div>
                         ))}
