@@ -166,7 +166,7 @@ const Header = ({ compact = false }: HeaderProps) => {
                   <Link
                     key={link.href}
                     to={link.href}
-                    className="text-brand-black hover:text-forest-dark transition-colors font-medium text-[15px]"
+                    className={`transition-colors font-medium text-[15px] ${location.pathname.startsWith(link.href) ? "text-forest-dark" : "text-brand-black hover:text-forest-dark"}`}
                   >
                     {link.label}
                   </Link>
@@ -261,7 +261,7 @@ const Header = ({ compact = false }: HeaderProps) => {
                         <Link
                           to={link.href}
                           onClick={() => setIsMenuOpen(false)}
-                          className={`font-dela text-xl md:text-2xl lg:text-3xl tracking-[0.08em] transition-all duration-200 text-primary hover:scale-105 block py-3 md:py-2 text-center ${location.pathname === link.href ? "opacity-100" : "opacity-70 hover:opacity-100"}`}
+                          className={`font-dela text-xl md:text-2xl lg:text-3xl tracking-[0.08em] transition-all duration-200 text-primary hover:scale-105 block py-3 md:py-2 text-center ${location.pathname.startsWith(link.href) ? "opacity-100" : "opacity-70 hover:opacity-100"}`}
                         >
                           {link.label.toUpperCase()}
                         </Link>
