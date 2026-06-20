@@ -209,23 +209,23 @@ export default function CustomCalendarBooking() {
                   selected={selectedDate}
                   onSelect={handleDateSelect}
                   disabled={isDateDisabled}
-                  className="font-bricolage border-0 max-w-full"
+                  className="font-bricolage border-0 mx-auto w-full max-w-[320px] sm:max-w-sm"
                   classNames={{
                     months: "flex flex-col space-y-4",
                     month: "space-y-4 w-full",
-                    caption: "flex justify-between pt-1 relative items-center mb-2 px-1",
+                    caption: "flex justify-center pt-1 relative items-center mb-4 w-full",
                     caption_label: "text-base font-bold font-bricolage text-[#173229]",
-                    nav: "space-x-1 flex items-center gap-2",
+                    nav: "space-x-1 flex items-center",
                     nav_button:
-                      "h-9 w-9 bg-white border border-[#173229]/15 text-[#173229] rounded-xl hover:bg-[#E2FEA5]/10 hover:border-[#173229]/30 hover:scale-105 active:scale-95 flex items-center justify-center transition-all",
-                    nav_button_previous: "relative left-0",
-                    nav_button_next: "relative right-0",
-                    table: "w-full border-collapse space-y-1",
-                    head_row: "flex w-full justify-center mb-2",
-                    head_cell: "text-[#173229]/50 rounded-md w-8 sm:w-10 font-medium text-[10px] sm:text-xs uppercase font-bricolage tracking-wider text-center",
-                    row: "flex w-full justify-center mt-1 sm:mt-2",
-                    cell: "text-center text-sm p-0 relative [&:has([aria-selected])]:bg-transparent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20 w-8 sm:w-10",
-                    day: "h-8 w-8 sm:h-10 sm:w-10 p-0 font-normal font-bricolage text-[#173229] aria-selected:opacity-100 hover:bg-[#E2FEA5]/30 rounded-xl transition-all",
+                      "h-8 w-8 sm:h-9 sm:w-9 bg-white border border-[#173229]/15 text-[#173229] rounded-xl hover:bg-[#E2FEA5]/10 hover:border-[#173229]/30 hover:scale-105 active:scale-95 flex items-center justify-center transition-all absolute top-0",
+                    nav_button_previous: "left-0",
+                    nav_button_next: "right-0",
+                    table: "w-full border-collapse mx-auto",
+                    head_row: "grid grid-cols-7 w-full mb-2",
+                    head_cell: "text-[#173229]/50 rounded-md font-medium text-[10px] sm:text-xs uppercase font-bricolage tracking-wider text-center flex items-center justify-center w-full",
+                    row: "grid grid-cols-7 w-full mt-1 sm:mt-2",
+                    cell: "text-center text-sm p-0 relative [&:has([aria-selected])]:bg-transparent focus-within:relative focus-within:z-20 flex items-center justify-center w-full",
+                    day: "h-8 w-8 sm:h-10 sm:w-10 p-0 font-normal font-bricolage text-[#173229] aria-selected:opacity-100 hover:bg-[#E2FEA5]/30 rounded-xl transition-all flex items-center justify-center mx-auto",
                     day_selected:
                       "bg-[#E2FEA5] text-[#173229] font-bold hover:bg-[#E2FEA5] hover:text-[#173229] focus:bg-[#E2FEA5] focus:text-[#173229] border border-[#173229]/20 shadow-sm",
                     day_today: "bg-[#173229]/5 text-[#173229] font-bold border border-[#173229]/10",

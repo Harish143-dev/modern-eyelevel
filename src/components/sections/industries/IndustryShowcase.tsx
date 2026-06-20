@@ -32,7 +32,7 @@ export const industriesPageData: IndustryPageItem[] = [
     shortTagline: "Scale MRR.",
     description: "Pipeline-first marketing for SaaS companies. LinkedIn B2B campaigns, content systems, and GTM execution from seed to Series B.",
     longDescription: "Pipeline-first marketing for SaaS companies. LinkedIn B2B campaigns, content systems, and GTM execution from seed to Series B.",
-    href: "/industries/saas",
+    href: "/industries/it-saas",
     image: industrySaas,
     accentColor: "#E2FEA5",
     stats: [],
@@ -160,7 +160,7 @@ export const industriesPageData: IndustryPageItem[] = [
     shortTagline: "Sell Faster.",
     description: "We help developers, brokers, and property management companies build powerful brands and generate a consistent flow of qualified leads.",
     longDescription: "Leverage high-performance digital systems built specifically to move real estate inventory in competitive markets. From pre-launch to sold-out.",
-    href: "/contact-us",
+    href: "/industries/real-estate",
     image: industryRealestate,
     accentColor: "#E2FEA5",
     stats: [

@@ -9,6 +9,9 @@ import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import Index from "./pages/Index";
 import Industries from "./pages/Industries";
+import RealEstate from "./pages/industries/RealEstate";
+import ITSaaS from "./pages/industries/ITSaaS";
+import Healthcare from "./pages/industries/Healthcare";
 import JobDetails from "./pages/JobDetails";
 import NotFound from "./pages/NotFound";
 import Portfolio from "./pages/Portfolio";
@@ -31,6 +34,9 @@ const AppRoutes = () => (
     <Route path="/work" element={<Works />} />
     <Route path="/how-we-work" element={<Navigate to="/about" replace />} />
     <Route path="/industries" element={<Industries />} />
+    <Route path="/industries/real-estate" element={<RealEstate />} />
+    <Route path="/industries/it-saas" element={<ITSaaS />} />
+    <Route path="/industries/healthcare" element={<Healthcare />} />
     <Route path="/contact" element={<Contact />} />
     <Route path="/blog" element={<Blog />} />
     <Route path="/blog/category/:categorySlug" element={<BlogCategory />} />
