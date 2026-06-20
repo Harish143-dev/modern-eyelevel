@@ -6,37 +6,36 @@ import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import GreenButton from "@/components/shared/GreenButton";
 import WavyUnderline from "@/components/shared/WavyUnderline";
-import problemImage from "@/assets/industries/healthcare_problem_realistic.png";
-
+import problemImage from "@/assets/industries/automotive_problem_realistic.png";
 
 const services = [
-  { title: "AI-Era SEO", description: "appear when patients search symptoms, conditions, and specialist names", slug: "ai-era-seo" },
-  { title: "Social Media", description: "doctor-forward content that builds credibility, not just reach", slug: "social-media" },
-  { title: "Performance Marketing", description: "paid campaigns targeting specific conditions, geographies, and patient demographics", slug: "performance-marketing" },
-  { title: "Content and Creative", description: "patient education content, doctor profiles, and treatment explainers", slug: "content-and-creative" },
-  { title: "CRO and Funnel Design", description: "appointment booking flows that reduce friction and increase conversion", slug: "cro-and-funnel-design" }
+  { title: "Performance Marketing", description: "Meta and Google Ads optimised for showroom visits and test-drive bookings, not just leads", slug: "performance-marketing" },
+  { title: "Social Media", description: "model launches, walk-arounds, and dealership content that builds local trust", slug: "social-media-management" },
+  { title: "CRO and Funnel Design", description: "landing pages built for test-drive conversion, not just enquiry volume", slug: "cro-and-funnel-design" },
+  { title: "Revenue Attribution Dashboard", description: "connecting digital spend to showroom visits and closed deals", slug: "revenue-attribution-dashboard" },
+  { title: "AI-Era SEO", description: "local search dominance for dealership location pages and model-specific queries", slug: "ai-era-seo" }
 ];
 
-const Healthcare = () => {
+const Automotive = () => {
   return (
     <div className="min-h-screen bg-background selection:bg-brand-lime selection:text-black">
       <SEO
-        title="Healthcare Marketing Agency Chennai | Hospital Marketing | EyeLevel Growth Studio"
-        description="Patient acquisition built on trust. SEO, social media, and performance marketing for specialty clinics and hospitals. Not product marketing — trust architecture."
-        keywords={["healthcare marketing agency Chennai", "hospital marketing agency Chennai", "clinic marketing India", "patient acquisition agency", "healthcare digital marketing Chennai", "medical marketing agency India"]}
+        title="Automotive Marketing Agency Chennai | Dealership Marketing | EyeLevel Growth Studio"
+        description="Performance marketing for dealerships and component makers. Showroom footfall, test-drive bookings, and OEM mandate compliance — one studio, full attribution."
+        keywords={["automotive marketing agency Chennai", "car dealership marketing Chennai", "automotive digital marketing India", "dealership lead generation", "OEM marketing India", "automotive advertising agency Chennai"]}
         schema={[
           {
             "@context": "https://schema.org",
             "@type": "Service",
-            name: "Healthcare Marketing",
-            description: "Patient acquisition built on trust. SEO, social media, and performance marketing for specialty clinics and hospitals. Not product marketing — trust architecture.",
+            name: "Automotive Marketing",
+            description: "Performance marketing for dealerships and component makers. Showroom footfall, test-drive bookings, and OEM mandate compliance — one studio, full attribution.",
             provider: {
               "@type": "Organization",
               name: "EyeLevel Growth Studio",
               url: "https://theeyelevelstudio.com"
             },
             areaServed: "India",
-            url: "https://theeyelevelstudio.com/industries/healthcare"
+            url: "https://theeyelevelstudio.com/industries/automotive"
           },
           {
             "@context": "https://schema.org",
@@ -44,12 +43,12 @@ const Healthcare = () => {
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "Home", item: "https://theeyelevelstudio.com/" },
               { "@type": "ListItem", position: 2, name: "Industries", item: "https://theeyelevelstudio.com/industries" },
-              { "@type": "ListItem", position: 3, name: "Healthcare", item: "https://theeyelevelstudio.com/industries/healthcare" }
+              { "@type": "ListItem", position: 3, name: "Automotive", item: "https://theeyelevelstudio.com/industries/automotive" }
             ]
           }
         ]}
-        canonical="https://theeyelevelstudio.com/industries/healthcare"
-        url="https://theeyelevelstudio.com/industries/healthcare"
+        canonical="https://theeyelevelstudio.com/industries/automotive"
+        url="https://theeyelevelstudio.com/industries/automotive"
         image="https://theeyelevelstudio.com/og/industries-1200x630.png"
       />
       <Header />
@@ -58,18 +57,19 @@ const Healthcare = () => {
         {/* Hero */}
         <section className="pt-40 pb-24 px-4 text-center bg-secondary min-h-screen flex flex-col justify-center relative overflow-hidden">
           <div className="max-w-5xl mx-auto relative z-10 w-full">
-            <GreenButton> Industries / Healthcare</GreenButton>
-            <h1 className="font-dela text-3xl md:text-5xl lg:text-6xl mb-8 leading-tight uppercase text-primary">
-              <span className="block mb-4 md:mb-6">Patients don't buy <WavyUnderline>healthcare</WavyUnderline></span>
-              <span className="text-[#E2FEA5] block">They trust it</span>
+              <GreenButton>
+                Industries / Automotive
+              </GreenButton>
+            <h1 className="font-dela text-3xl md:text-5xl lg:text-6xl mb-8 leading-[0.95] uppercase text-primary">
+              Showroom visits don't happen by <WavyUnderline>accident</WavyUnderline>
             </h1>
             <p className="font-bricolage text-sm md:text-lg lg:text-xl max-w-3xl mx-auto mb-12 leading-relaxed text-foreground/80">
-              Patient acquisition built on trust architecture, not product marketing.
+              Dealerships and component makers. Footfall, test-drive bookings, OEM mandates — one team that handles all of it.
             </p>
             <Link to="/booking" className="w-full sm:w-auto block sm:inline-block">
               <Button
                 size="lg"
-                className="group w-full sm:w-auto px-6 py-6 md:px-10 md:py-7 text-sm md:text-lg flex justify-center items-center"
+                className="group w-full sm:w-auto px-6 py-5 md:px-10 md:py-7 text-sm md:text-lg flex justify-center items-center"
               >
                 Book a free 30-min diagnostic
                 <ArrowRight className="ml-2 md:ml-3 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1.5 transition-transform shrink-0" />
@@ -86,16 +86,16 @@ const Healthcare = () => {
                 <GreenButton>The Problem</GreenButton>
               </div>
               <h2 className="font-dela text-3xl md:text-4xl lg:text-5xl mb-8 uppercase text-primary mt-6">
-                The <WavyUnderline>problem</WavyUnderline> with healthcare marketing
+                The <WavyUnderline>problem</WavyUnderline> with automotive marketing
               </h2>
               <p className="font-bricolage text-sm md:text-base lg:text-base leading-relaxed text-foreground/70">
-                Healthcare marketing done wrong looks like FMCG marketing. Promotional posts, discount-driven ads, and content that treats patients like consumers. It erodes trust. Healthcare decisions are high-stakes and slow. The marketing has to earn trust before it earns a booking.
+                Automotive marketing is high-spend and under-measured. Dealerships run Meta ads that generate form fills but no footfall. OEM mandates eat the budget. Digital and offline are tracked in separate spreadsheets. And no one can clearly answer what activity actually drove the customer through the door.
               </p>
             </div>
             <div className="lg:col-span-5 w-full flex justify-center lg:justify-end">
               <img 
                 src={problemImage} 
-                alt="Healthcare Marketing Problem" 
+                alt="Automotive Marketing Problem" 
                 className="w-full h-[300px] lg:h-[400px] xl:h-[450px] object-cover rounded-3xl border-2 border-primary/20 shadow-[0_0_40px_rgba(226,254,165,0.15)] hover:scale-[1.02] transition-transform duration-500"
               />
             </div>
@@ -106,23 +106,24 @@ const Healthcare = () => {
         <section className="py-24 px-4 bg-secondary min-h-screen flex flex-col justify-center">
           <div className="max-w-5xl mx-auto w-full">
             <div className="text-center mb-16">
-              <GreenButton>What we do for the industry</GreenButton>
+              <GreenButton> What we do for this industry</GreenButton>
               <h2 className="font-dela text-3xl md:text-4xl lg:text-5xl uppercase text-primary mt-6">
-                What we do for <WavyUnderline>Healthcare</WavyUnderline>
+                What we do for <WavyUnderline>Automotive</WavyUnderline>
               </h2>
             </div>
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 auto-rows-fr gap-6 justify-items-center md:justify-items-stretch">
               {services.map((service, i) => (
-                <Link key={i} to={`/services/${service.slug}`} className="block group w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
-                  <div
-
-                    className="h-full rounded-3xl p-8 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.03] border-2 border-primary/10 hover:border-primary/40 hover:shadow-[0_8px_30px_rgba(226,254,165,0.12)] !bg-white/5 hover:!bg-white/10"
-                  >
-                    <h3 className="font-dela text-xl mb-4 uppercase flex justify-between items-start text-white group-hover:text-primary transition-colors duration-500">
+                <Link
+                  key={i}
+                  to={`/services/${service.slug}`}
+                  className={`block group w-full h-full max-w-[350px] md:max-w-none lg:col-span-2 ${i === 3 ? "lg:col-start-2" : ""}`}
+                >
+                  <div className="h-full rounded-3xl p-6 md:p-8 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.03] border-2 border-primary/10 hover:border-primary/40 hover:shadow-[0_8px_30px_rgba(226,254,165,0.12)] bg-white/5 hover:bg-white/10 flex flex-col">
+                    <h3 className="font-dela text-lg md:text-xl mb-4 uppercase flex justify-between items-start text-white group-hover:text-primary transition-colors duration-500">
                       {service.title}
                       <ArrowUpRight className="w-5 h-5 opacity-0 -translate-x-3 translate-y-3 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 text-[#E2FEA5] shrink-0 ml-2" />
                     </h3>
-                    <p className="font-bricolage text-sm md:text-base leading-relaxed text-foreground/80">
+                    <p className="font-bricolage text-sm md:text-base leading-relaxed text-foreground/80 mt-auto">
                       {service.description}
                     </p>
                   </div>
@@ -140,15 +141,8 @@ const Healthcare = () => {
               Why <WavyUnderline>EyeLevel</WavyUnderline>
             </h2>
             <p className="font-bricolage text-sm md:text-lg lg:text-xl leading-relaxed text-foreground/70">
-              Right Hospitals, Kilpauk, trusted us to build their patient acquisition system from day one. We understand the difference between healthcare marketing and product marketing.
+              We understand OEM constraints, local market dynamics, and the gap between a digital lead and a walk-in. We measure what matters: footfall, not form fills.
             </p>
-            <div className="mt-10 inline-flex items-center gap-3 px-6 py-3 rounded-full border border-primary/10 bg-secondary/50 font-bricolage text-sm md:text-base text-foreground/80">
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#E2FEA5] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-[#E2FEA5]"></span>
-              </span>
-              Proof: Right Hospitals, Kilpauk, Chennai — Active Retainer Client
-            </div>
           </div>
         </section>
 
@@ -157,7 +151,7 @@ const Healthcare = () => {
           <div className="max-w-4xl mx-auto w-full">
             <GreenButton>CTA band</GreenButton>
             <h2 className="font-dela text-3xl md:text-4xl lg:text-5xl mb-6 uppercase text-primary mt-6">
-              Ready to talk about your <WavyUnderline> healthcare </WavyUnderline> marketing?
+              Ready to talk about your <WavyUnderline> automotive </WavyUnderline> marketing?
             </h2>
             <p className="font-bricolage text-sm md:text-lg lg:text-xl max-w-3xl mx-auto mb-10 text-foreground/80">
               30 minutes. No pitch deck. We will tell you what we see.
@@ -166,7 +160,7 @@ const Healthcare = () => {
               <Link to="/booking" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="group w-full sm:w-auto px-6 py-6 md:px-10 md:py-7 text-sm md:text-lg flex justify-center items-center"
+                  className="group w-full sm:w-auto px-6 py-5 md:px-10 md:py-7 text-sm md:text-lg flex justify-center items-center"
                 >
                   Book a free 30-min diagnostic
                   <ArrowRight className="ml-2 md:ml-3 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1.5 transition-transform shrink-0" />
@@ -189,4 +183,4 @@ const Healthcare = () => {
   );
 };
 
-export default Healthcare;
+export default Automotive;
