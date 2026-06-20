@@ -145,7 +145,7 @@ const Industries = () => {
               animationData={animationData}
               autoPlay={false}
               loop
-              className="absolute right-0 md:right-[100px] lg:right-[160px] -top-[13px] w-[130px] md:-top-[42px] md:w-[180px] lg:-top-[66px] lg:w-[220px] pointer-events-none"
+              className="absolute -right-5 md:right-[100px] lg:right-[190px] -top-[5px] w-[130px] md:-top-[26px] md:w-[180px] lg:-top-[50px] lg:w-[220px] pointer-events-none"
             />
           )}
           <motion.h1
@@ -233,7 +233,7 @@ const Industries = () => {
 
       {/* faqs */}
       <FAQSection faqs={faqs["Industries"]} />
-      <EnhancedFooter mascotBgClass="bg-background" showCTA={false} />
+      <EnhancedFooter mascotBgClass="bg-forest-deep" showCTA={false} />
     </div>
   );
 };
