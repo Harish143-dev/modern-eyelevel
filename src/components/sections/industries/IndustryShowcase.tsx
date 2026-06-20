@@ -170,6 +170,38 @@ export const industriesPageData: IndustryPageItem[] = [
     ],
     capabilities: ["Project Launches", "Virtual Tours", "Lead Generation", "Brand Positioning"],
   },
+  {
+    id: "automotive",
+    number: "10",
+    title: "Automotive Marketing",
+    tagline: "Showroom visits don't happen by accident",
+    shortTagline: "Drive Footfall.",
+    description: "Performance marketing for dealerships and component makers. Showroom footfall, test-drive bookings, and OEM mandate compliance.",
+    longDescription: "Dealerships often rely on generic OEM campaigns or disconnected agency efforts. We build marketing engines that actually move metal by driving hyper-local, high-intent buyers into your showroom.",
+    href: "/industries/automotive",
+    image: industryB2b, // TODO: Replace with automotive specific image
+    accentColor: "#E2FEA5",
+    stats: [
+      { value: "3x", label: "Test Drives" },
+      { value: "100%", label: "OEM Compliance" },
+      { value: "40%", label: "Lower CPL" },
+    ],
+    capabilities: ["Footfall Generation", "Test-Drive Funnels", "OEM Compliance", "Dealership Branding"],
+  },
+  {
+    id: "manufacturing-b2b",
+    number: "11",
+    title: "Manufacturing & B2B",
+    tagline: "Your buyers research online before they ever call you.",
+    shortTagline: "Generate Pipeline.",
+    description: "LinkedIn, SEO, and content for Chennai and Coimbatore manufacturers. We help them find you and choose you before the first call.",
+    longDescription: "LinkedIn, SEO, and content for Chennai and Coimbatore manufacturers. Your buyers moved online — we help them find you and choose you before the first call.",
+    href: "/industries/manufacturing-b2b",
+    image: industryB2b, // TODO: Replace with specific image
+    accentColor: "#C7B6FF",
+    stats: [],
+    capabilities: ["LinkedIn Marketing", "B2B SEO", "Content Creation", "Lead Generation"],
+  },
 ];
 
 import { useRef } from "react";

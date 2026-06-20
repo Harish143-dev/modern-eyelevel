@@ -12,6 +12,8 @@ import Industries from "./pages/Industries";
 import RealEstate from "./pages/industries/RealEstate";
 import ITSaaS from "./pages/industries/ITSaaS";
 import Healthcare from "./pages/industries/Healthcare";
+import Automotive from "./pages/industries/Automotive";
+import ManufacturingB2B from "./pages/industries/ManufacturingB2B";
 import JobDetails from "./pages/JobDetails";
 import NotFound from "./pages/NotFound";
 import Portfolio from "./pages/Portfolio";
@@ -43,6 +45,8 @@ const AppRoutes = () => (
     <Route path="/industries/real-estate" element={<RealEstate />} />
     <Route path="/industries/it-saas" element={<ITSaaS />} />
     <Route path="/industries/healthcare" element={<Healthcare />} />
+    <Route path="/industries/automotive" element={<Automotive />} />
+    <Route path="/industries/manufacturing-b2b" element={<ManufacturingB2B />} />
     <Route path="/contact" element={<Contact />} />
     <Route path="/blog" element={<Blog />} />
     <Route path="/blog/category/:categorySlug" element={<BlogCategory />} />

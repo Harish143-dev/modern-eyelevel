@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import GreenButton from "@/components/shared/GreenButton";
 import WavyUnderline from "@/components/shared/WavyUnderline";
+import problemImage from "@/assets/industries/itsaas_problem_realistic.png";
 
 
 const services = [
@@ -59,10 +60,10 @@ const ITSaaS = () => {
           <div className="max-w-5xl mx-auto relative z-10 w-full">
             <GreenButton>Industries / IT and SaaS</GreenButton>
             <h1 className="font-dela text-3xl md:text-5xl lg:text-6xl mb-8 leading-tight uppercase text-primary">
-              <span className="block mb-4 md:mb-6">Your product solves a real <WavyUnderline>problem</WavyUnderline></span>
-              <span className="text-[#E2FEA5] block">Your marketing should too</span>
+              <span className="block mb-4 md:mb-6">Your product solves a real problem</span>
+              <span className="text-[#E2FEA5] block">Your <WavyUnderline>marketing </WavyUnderline>should too</span>
             </h1>
-            <p className="font-bricolage text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed text-foreground/80">
+            <p className="font-bricolage text-sm md:text-lg lg:text-xl max-w-3xl mx-auto mb-12 leading-relaxed text-foreground/80">
               Demand gen, LinkedIn brand, and content that produces pipeline <span className="whitespace-nowrap">— not just traffic.</span>
             </p>
             <Link to="/booking" className="w-full sm:w-auto block sm:inline-block">
@@ -79,14 +80,25 @@ const ITSaaS = () => {
 
         {/* The Problem */}
         <section className="py-24 px-4 bg-background min-h-screen flex flex-col justify-center">
-          <div className="max-w-4xl mx-auto w-full text-center">
-            <GreenButton>The Reality Check</GreenButton>
-            <h2 className="font-dela text-3xl md:text-4xl lg:text-5xl mb-8 uppercase text-primary mt-6">
-              The <WavyUnderline>problem</WavyUnderline> with it and saas marketing
-            </h2>
-            <p className="font-bricolage text-base md:text-lg lg:text-xl leading-relaxed text-foreground/70">
-              Most B2B software companies have a marketing problem that looks like a sales problem. Traffic without intent. Trial signups that do not convert. A founder who is the only one who can close a deal. And a marketing team producing content that gets clicks but not conversations.
-            </p>
+          <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div className="lg:col-span-7 text-center lg:text-left">
+              <div className="inline-block">
+                <GreenButton>The Problem</GreenButton>
+              </div>
+              <h2 className="font-dela text-3xl md:text-4xl lg:text-5xl mb-8 uppercase text-primary mt-6">
+                The <WavyUnderline>problem</WavyUnderline> with it and saas marketing
+              </h2>
+              <p className="font-bricolage text-sm md:text-base lg:text-base leading-relaxed text-foreground/70">
+                Most B2B software companies have a marketing problem that looks like a sales problem. Traffic without intent. Trial signups that do not convert. A founder who is the only one who can close a deal. And a marketing team producing content that gets clicks but not conversations.
+              </p>
+            </div>
+            <div className="lg:col-span-5 w-full flex justify-center lg:justify-end">
+              <img 
+                src={problemImage} 
+                alt="IT and SaaS Marketing Problem" 
+                className="w-full h-[300px] lg:h-[400px] xl:h-[450px] object-cover rounded-3xl border-2 border-primary/20 shadow-[0_0_40px_rgba(226,254,165,0.15)] hover:scale-[1.02] transition-transform duration-500"
+              />
+            </div>
           </div>
         </section>
 
@@ -94,7 +106,7 @@ const ITSaaS = () => {
         <section className="py-24 px-4 bg-secondary min-h-screen flex flex-col justify-center">
           <div className="max-w-5xl mx-auto w-full">
             <div className="text-center mb-16">
-              <GreenButton>Our Services</GreenButton>
+              <GreenButton>What we do for the industry</GreenButton>
               <h2 className="font-dela text-3xl md:text-4xl lg:text-5xl uppercase text-primary mt-6">
                 What we do for <WavyUnderline>IT and SaaS</WavyUnderline>
               </h2>
@@ -123,11 +135,11 @@ const ITSaaS = () => {
         {/* Why EyeLevel */}
         <section className="py-24 px-4 bg-background min-h-screen flex flex-col justify-center">
           <div className="max-w-4xl mx-auto w-full text-center">
-            <GreenButton>The EyeLevel Difference</GreenButton>
+            <GreenButton>Why EyeLevel</GreenButton>
             <h2 className="font-dela text-3xl md:text-4xl lg:text-5xl mb-8 uppercase text-primary mt-6">
               Why <WavyUnderline>EyeLevel</WavyUnderline>
             </h2>
-            <p className="font-bricolage text-base md:text-lg lg:text-xl leading-relaxed text-foreground/70">
+            <p className="font-bricolage text-sm md:text-lg lg:text-xl leading-relaxed text-foreground/70">
               We run B2B marketing the way a practitioner would. Not a campaign manager. The person building your strategy has sat across the table from enterprise buyers and knows what moves them.
             </p>
           </div>
@@ -136,11 +148,11 @@ const ITSaaS = () => {
         {/* CTA Band */}
         <section className="py-24 px-4 text-center bg-forest-deep min-h-screen flex flex-col justify-center">
           <div className="max-w-4xl mx-auto w-full">
-            <GreenButton>Take Action</GreenButton>
+            <GreenButton>CTA band</GreenButton>
             <h2 className="font-dela text-3xl md:text-4xl lg:text-5xl mb-6 uppercase text-primary mt-6">
               Ready to talk about your <WavyUnderline> it and saas </WavyUnderline> marketing?
             </h2>
-            <p className="font-bricolage text-lg md:text-xl max-w-3xl mx-auto mb-10 text-foreground/80">
+            <p className="font-bricolage text-sm md:text-lg lg:text-xl max-w-3xl mx-auto mb-10 text-foreground/80">
               30 minutes. No pitch deck. We will tell you what we see.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full max-w-[280px] sm:max-w-none mx-auto">
