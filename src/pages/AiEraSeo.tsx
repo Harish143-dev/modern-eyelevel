@@ -216,17 +216,23 @@ const AiEraSeo = () => {
           <motion.div {...scrollAnimProps} className="mb-12">
             <GreenButton>THE OUTCOME</GreenButton>
           </motion.div>
-          <motion.h2
-            {...scrollAnimProps}
-            className="font-dela text-2xl md:text-4xl lg:text-5xl uppercase text-primary max-w-4xl mx-auto leading-[1.1] text-left md:text-center"
-          >
-            "YOU APPEAR AT EVERY POINT WHERE A POTENTIAL BUYER IS LOOKING FOR WHAT YOU DO - ON GOOGLE, IN AI OVERVIEWS, AND INSIDE AI CHAT TOOLS."
-          </motion.h2>
+
+          <div className="relative flex items-center justify-start gap-8">
+            <div className="w-px self-stretch bg-primary" />
+
+            <motion.h2
+              {...scrollAnimProps}
+              className="font-dela text-2xl md:text-4xl lg:text-5xl uppercase text-primary max-w-4xl leading-[1.1] text-left"
+            >
+              YOU APPEAR AT EVERY POINT WHERE A POTENTIAL BUYER IS LOOKING FOR WHAT YOU DO ON
+              GOOGLE, IN AI OVERVIEWS, AND INSIDE AI CHAT TOOLS.
+            </motion.h2>
+          </div>
         </div>
       </section>
 
       {/* Section 5 — Industry verticals */}
-      <section className="px-4 py-20 bg-secondary relative z-10">
+      < section className="px-4 py-20 bg-secondary relative z-10" >
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
           <motion.div {...scrollAnimProps} className="mb-12">
             <GreenButton>INDUSTRY</GreenButton>
@@ -236,7 +242,7 @@ const AiEraSeo = () => {
             {...scrollAnimProps}
             className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-12"
           >
-            <WavyUnderline>INDUSTRY</WavyUnderline>
+            Industries <WavyUnderline className="text-white">We work in</WavyUnderline>
           </motion.h2>
 
           <motion.div {...scrollAnimProps} className="w-full max-w-3xl mx-auto">

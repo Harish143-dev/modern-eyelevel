@@ -26,6 +26,10 @@ import WhatsappMarketing from "./pages/WhatsappMarketing";
 import PerformanceMarketing from "./pages/PerformanceMarketing";
 import AiEraSeo from "./pages/AiEraSeo";
 import SocialMediaManagement from "./pages/SocialMediaManagement";
+import ContentAndCreative from "./pages/ContentAndCreative";
+import LinkedInB2BMarketing from "./pages/LinkedInB2BMarketing";
+import CROAndFunnelDesign from "./pages/CROAndFunnelDesign";
+import RevenueAttributionDashboard from "./pages/RevenueAttributionDashboard";
 
 const AppRoutes = () => (
   <Routes>
@@ -38,6 +42,10 @@ const AppRoutes = () => (
     <Route path="/services/performance-marketing" element={<PerformanceMarketing />} />
     <Route path="/services/ai-era-seo" element={<AiEraSeo />} />
     <Route path="/services/social-media-management" element={<SocialMediaManagement />} />
+    <Route path="/services/content-and-creative" element={<ContentAndCreative />} />
+    <Route path="/services/linkedin-b2b-marketing" element={<LinkedInB2BMarketing />} />
+    <Route path="/services/cro-and-funnel-design" element={<CROAndFunnelDesign />} />
+    <Route path="/services/revenue-attribution-dashboard" element={<RevenueAttributionDashboard />} />
     <Route path="/works" element={<Navigate to="/work" replace />} />
     <Route path="/work" element={<Works />} />
     <Route path="/how-we-work" element={<Navigate to="/about" replace />} />

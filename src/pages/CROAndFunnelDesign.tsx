@@ -1,56 +1,17 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import EnhancedFooter from "@/components/layout/EnhancedFooter";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import GreenButton from "@/components/shared/GreenButton";
+import { Button } from "@/components/ui/button";
 import { Star18 } from "@/components/shared/Star18";
 import SEO from "@/components/utils/SEO";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { CardsParallax, type iCardItem } from "@/components/shared/CardsParallax";
 
-const parallaxItems: iCardItem[] = [
-  {
-    title: "Real Estate",
-    description: "Property reviewers, site visit campaigns, and developer branding.",
-    tag: "Real Estate",
-    src: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1000&auto=format&fit=crop",
-    link: "#",
-    color: "#1a2f28",
-    textColor: "#F8FFE8"
-  },
-  {
-    title: "Healthcare",
-    description: "Patient education, doctor-led content, and trust-building social feeds.",
-    tag: "Healthcare",
-    src: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1000&auto=format&fit=crop",
-    link: "#",
-    color: "#2a4f44",
-    textColor: "#F8FFE8"
-  },
-  {
-    title: "Automotive",
-    description: "High-octane creative, dealership promotions, and test-drive drives.",
-    tag: "Automotive",
-    src: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1000&auto=format&fit=crop",
-    link: "#",
-    color: "#1a2f28",
-    textColor: "#F8FFE8"
-  },
-  {
-    title: "IT / SaaS",
-    description: "B2B thought leadership, founder personal branding, and product updates.",
-    tag: "IT/SaaS",
-    src: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&auto=format&fit=crop",
-    link: "#",
-    color: "#2a4f44",
-    textColor: "#F8FFE8"
-  }
-];
-
-const SocialMediaManagement = () => {
+const CROAndFunnelDesign = () => {
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -63,23 +24,80 @@ const SocialMediaManagement = () => {
     whileInView: { opacity: 1, y: 0 },
     initial: { opacity: 0, y: 30 },
     viewport: { once: true },
-    transition: { duration: 0.6 }
+    transition: { duration: 0.6 },
   };
+
+  const parallaxItems: iCardItem[] = [
+    {
+      title: "Real Estate",
+      description: "Qualified site visit bookings and developer branding.",
+      tag: "Real Estate",
+      src: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1000&auto=format&fit=crop",
+      link: "#",
+      color: "#1a2f28",
+      textColor: "#F8FFE8",
+    },
+    {
+      title: "Healthcare",
+      description: "Patient calls, doctor-led content, and trust-building feeds.",
+      tag: "Healthcare",
+      src: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1000&auto=format&fit=crop",
+      link: "#",
+      color: "#2a4f44",
+      textColor: "#F8FFE8",
+    },
+    {
+      title: "IT / SaaS",
+      description: "B2B thought leadership, founder branding, and product updates.",
+      tag: "IT/SaaS",
+      src: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&auto=format&fit=crop",
+      link: "#",
+      color: "#1a2f28",
+      textColor: "#F8FFE8",
+    },
+  ];
+
+  const includes = [
+    {
+      title: "Landing Page Audits",
+      desc: "Heatmaps, session recordings, and form drop-off analysis",
+    },
+    {
+      title: "Landing Page Redesign & Build",
+      desc: "Conversion-optimised, not brand exercises",
+    },
+    {
+      title: "Lead Qualification Flows",
+      desc: "Structured forms and sequences that separate buyers from browsers",
+    },
+    {
+      title: "Funnel Mapping",
+      desc: "From first click through to closed deal — every step designed to reduce friction",
+    },
+    {
+      title: "A/B Testing Infrastructure",
+      desc: "Systematic testing of page variants, CTA copy, and form fields",
+    },
+    {
+      title: "Ads & Email Integration",
+      desc: "So the funnel works as one connected system, not isolated parts",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Social Media Marketing Agency Chennai | EyeLevel Growth Studio"
-        description="Content that builds the audience your sales team actually needs. Strategy, calendars, creative, and posting — fully managed. Communities that convert."
+        title="CRO Agency Chennai | Conversion Rate Optimization | EyeLevel Growth Studio"
+        description="We fix what happens after the click. Landing pages, conversion flows, and lead qualification systems built to turn visitors into conversations."
         keywords={[
-          "social media marketing agency Chennai",
-          "social media management Chennai",
-          "Instagram marketing Chennai",
-          "Facebook marketing agency",
-          "social media agency India"
+          "CRO agency Chennai",
+          "conversion rate optimization India",
+          "landing page agency Chennai",
+          "funnel design agency",
+          "lead conversion agency Chennai",
         ]}
-        canonical="https://theeyelevelstudio.com/services/social-media-management"
-        url="https://theeyelevelstudio.com/services/social-media-management"
+        canonical="https://theeyelevelstudio.com/services/cro-and-funnel-design"
+        url="https://theeyelevelstudio.com/services/cro-and-funnel-design"
       />
       <Header />
 
@@ -113,7 +131,7 @@ const SocialMediaManagement = () => {
             transition={{ delay: 0.1 }}
             className="mb-8"
           >
-            <GreenButton>SERVICES / SOCIAL MEDIA MANAGEMENT</GreenButton>
+            <GreenButton>Services / CRO and Funnel Design</GreenButton>
           </motion.div>
 
           <motion.h1
@@ -122,30 +140,26 @@ const SocialMediaManagement = () => {
             transition={{ delay: 0.2 }}
             className="font-dela text-3xl md:text-5xl lg:text-6xl uppercase text-primary leading-[1.05] mb-8 tracking-tight"
           >
-            CONTENT THAT BUILDS THE AUDIENCE YOUR SALES TEAM <WavyUnderline>ACTUALLY NEEDS.</WavyUnderline>
+            MOST MARKETING PROBLEMS ARE ACTUALLY{" "}
+            <WavyUnderline>CONVERSION PROBLEMS.</WavyUnderline>
           </motion.h1>
 
           <motion.p
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="font-bricolage text-lg max-w-3xl mx-auto mb-14 leading-relaxed text-foreground"
+            className="font-bricolage text-lg max-w-3xl mx-auto mb-10 leading-relaxed text-foreground"
           >
-            Strategy, calendars, creative, and posting — fully managed. Communities that convert, not just follower counts.
+            We fix what happens after the click. Landing pages, conversion flows, lead qualification systems — built to turn visitors into conversations.
           </motion.p>
 
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="flex items-center justify-center"
-          >
+          <div className="flex items-center rounded-full relative font-bricolage z-1000 justify-center gap-4">
             <Link to="/booking">
               <Button className="h-12 px-6 lg:h-14 lg:px-8 text-sm lg:text-base font-semibold rounded-full">
                 Book a free 30-min diagnostic
               </Button>
             </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -153,24 +167,18 @@ const SocialMediaManagement = () => {
       <section className="px-4 py-20 bg-background relative z-10">
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
           <motion.div {...scrollAnimProps} className="mb-12">
-            <GreenButton>INCLUDES</GreenButton>
+            <GreenButton>What it includes</GreenButton>
           </motion.div>
 
           <motion.h2
             {...scrollAnimProps}
             className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-12"
           >
-            WHAT IT <WavyUnderline>INCLUDES </WavyUnderline>
+            EVERYTHING IN THE RETAINER
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full text-left">
-            {[
-              { title: "Content Calendars", desc: "Monthly content calendars across Instagram, Facebook, LinkedIn, and YouTube Shorts" },
-              { title: "Creation & Posting", desc: "Caption writing, creative direction, and scheduling" },
-              { title: "Community Management", desc: "Comments, DMs, and reputation monitoring" },
-              { title: "Influencer Coordination", desc: "Vertical-specific: doctors for healthcare, property reviewers for real estate" },
-              { title: "Analytics Report", desc: "Monthly analytics report tied to engagement quality, not vanity reach" }
-            ].map((card, idx) => (
+            {includes.map((card, idx) => (
               <motion.div
                 key={idx}
                 {...scrollAnimProps}
@@ -189,61 +197,48 @@ const SocialMediaManagement = () => {
       <section className="px-4 py-20 bg-secondary relative z-10">
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
           <motion.div {...scrollAnimProps} className="mb-12">
-            <GreenButton>WHO IT IS FOR</GreenButton>
+            <GreenButton>Who it's for</GreenButton>
           </motion.div>
 
           <motion.h2
             {...scrollAnimProps}
             className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-12"
           >
-            WHO IT IS <WavyUnderline>FOR</WavyUnderline>
+            BUILT FOR BUSINESSES THAT GET CLICKS BUT NOT{" "}
+            <WavyUnderline>ENQUIRIES</WavyUnderline>
           </motion.h2>
 
           <motion.p
             {...scrollAnimProps}
             className="text-lg font-bricolage text-foreground max-w-3xl mx-auto text-center leading-relaxed"
           >
-            Brands that are posting but not growing. Companies where the social feed looks busy but generates no real business. Teams that need content off their plate so internal people can focus on what they do best.
+            Companies running paid ads that are generating clicks but not enquiries. Businesses with good traffic and low conversion rates. Teams that have built a website but treat it as a brochure rather than a sales tool.
           </motion.p>
         </div>
       </section>
 
-      {/* Section 4 — The outcome */}
+      {/* Section 4 — Pull quote */}
       <section className="px-4 py-20 bg-background relative z-10 flex justify-center items-center">
-        <div className="max-w-5xl mx-auto text-center relative py-8 px-6 md:px-12 w-full flex flex-col items-center">
+        <div className="max-w-5xl mx-auto w-full flex flex-col items-center">
           <motion.div {...scrollAnimProps} className="mb-12">
-            <GreenButton>The outcome</GreenButton>
+            <GreenButton>THE OUTCOME</GreenButton>
           </motion.div>
 
-          <div className="relative flex items-center justify-center gap-8">
-            {/* Vertical Line */}
-            <div className="w-px self-stretch bg-primary" />
+          <div className="flex items-stretch gap-8">
+            <div className="w-px bg-primary" />
 
-            {/* Quote */}
             <motion.h2
               {...scrollAnimProps}
-              className="font-dela text-2xl md:text-4xl lg:text-5xl uppercase text-primary max-w-5xl leading-[1.1] text-left"
+              className="font-dela text-2xl md:text-4xl lg:text-5xl uppercase text-primary max-w-4xl leading-[1.1] text-left"
             >
-              A CONSISTENT SOCIAL
-              <br />
-              PRESENCE THAT
-              <br />
-              FUNCTIONS AS
-              <br />
-              A SALES-SUPPORTING
-              <br />
-              CHANNEL,
-              <br />
-              NOT A DISTRACTION FROM
-              <br />
-              ONE.
+              "MORE OF YOUR EXISTING TRAFFIC CONVERTS. YOUR COST PER LEAD DROPS WITHOUT SPENDING MORE ON ADS."
             </motion.h2>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Section 5 — Industry verticals */}
-      < section className="px-4 py-20 bg-secondary relative z-10" >
+      <section className="px-4 py-20 bg-secondary relative z-10">
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
           <motion.div {...scrollAnimProps} className="mb-12">
             <GreenButton>INDUSTRY</GreenButton>
@@ -256,23 +251,20 @@ const SocialMediaManagement = () => {
             Industries <WavyUnderline className="text-white">We work in</WavyUnderline>
           </motion.h2>
 
-          <motion.div
-            {...scrollAnimProps}
-            className="w-full max-w-3xl mx-auto"
-          >
+          <div className="w-full">
             <CardsParallax items={parallaxItems} />
-          </motion.div>
+          </div>
         </div>
-      </section >
+      </section>
 
       {/* Section 6 — CTA band */}
-      < section className="px-4 py-20 bg-background relative z-10" >
+      <section className="px-4 py-20 bg-background relative z-10">
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
           <motion.h2
             {...scrollAnimProps}
             className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-6"
           >
-            READY TO <WavyUnderline>TALK?</WavyUnderline>
+            READY TO TALK?
           </motion.h2>
 
           <motion.p
@@ -286,12 +278,11 @@ const SocialMediaManagement = () => {
             {...scrollAnimProps}
             className="flex flex-col sm:flex-row items-center gap-6"
           >
-            <a
-              href="/booking"
-              className="inline-flex items-center justify-center gap-2 group px-5 sm:px-10 py-4 bg-primary text-secondary font-bricolage font-medium text-sm md:text-lg rounded-full hover:bg-primary/90 transition-colors w-full sm:w-auto"
-            >
-              Book a free 30-min diagnostic
-            </a>
+            <Link to="/booking">
+              <Button className="h-12 px-6 lg:h-14 lg:px-8 text-sm lg:text-base font-semibold rounded-full">
+                Book a free 30-min diagnostic
+              </Button>
+            </Link>
             <a
               href="/services"
               className="font-bricolage font-medium text-primary hover:text-primary/80 transition-colors flex items-center gap-2"
@@ -300,11 +291,11 @@ const SocialMediaManagement = () => {
             </a>
           </motion.div>
         </div>
-      </section >
+      </section>
 
       <EnhancedFooter mascotBgClass="bg-background" showCTA={false} />
-    </div >
+    </div>
   );
 };
 
-export default SocialMediaManagement;
+export default CROAndFunnelDesign;

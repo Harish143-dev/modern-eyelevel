@@ -34,17 +34,17 @@ const Card: FC<iCardProps> = ({ title, description, color, textColor, i, src }) 
       >
         {/* Background image */}
         <div className="absolute inset-0 z-0">
-          <img className="w-full h-full object-cover opacity-30" src={src} alt={title} />
+          <img className="w-full h-full object-cover opacity-50" src={src} alt={title} />
         </div>
 
         {/* Overlay */}
-        <div
+        {/*<div
           className="absolute inset-0 z-10"
           style={{ background: `linear-gradient(to bottom, ${color}40, ${color}80)` }}
-        />
+        />*/}
 
         {/* Content */}
-        <div className="relative z-20 text-center">
+        <div className="absolute bottom-0 left-0 right-0 z-20 p-8 text-center">
           <span
             className="font-dela text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black tracking-tight block mb-4"
             style={{ color: textColor }}
