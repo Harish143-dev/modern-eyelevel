@@ -149,44 +149,75 @@ const SocialMediaManagement = () => {
       </section>
 
       {/* Section 2 — What it includes (Bento Box) */}
-      <section className="px-4 py-20 bg-background relative z-10">
-        <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
-
-
+      <section className="px-20 py-20 bg-background relative z-10">
+        <div className="w-full flex justify-center text-center">
           <motion.h2
             {...scrollAnimProps}
-            className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-16 max-w-3xl leading-[1.1]"
+            className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-12"
           >
             WHAT IT <WavyUnderline>INCLUDES</WavyUnderline>
           </motion.h2>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 w-full text-left">
-            {[
-              { title: "CONTENT CALENDARS", desc: "Monthly content calendars across Instagram, Facebook, LinkedIn, and YouTube Shorts", icon: <Calendar className="w-10 h-10 text-primary mb-6" /> },
-              { title: "CREATION & POSTING", desc: "Caption writing, creative direction, and scheduling", icon: <Edit3 className="w-10 h-10 text-primary mb-6" /> },
-              { title: "COMMUNITY MANAGEMENT", desc: "Comments, DMs, and reputation monitoring", icon: <Users className="w-10 h-10 text-primary mb-6" /> },
-              { title: "INFLUENCER COORDINATION", desc: "Vertical-specific: doctors for healthcare, property reviewers for real estate", icon: <UserPlus className="w-10 h-10 text-primary mb-6" /> },
-              { title: "ANALYTICS REPORT", desc: "Monthly analytics report tied to engagement quality, not vanity reach", icon: <PieChart className="w-10 h-10 text-primary mb-6" /> }
-            ].map((card, idx) => {
-              const isLarge = idx === 0;
-              return (
-                <motion.div
-                  key={idx}
-                  {...scrollAnimProps}
-                  transition={{ duration: 0.6, delay: idx * 0.1 }}
-                  className={`backdrop-blur-md rounded-3xl p-8 lg:p-10 border group relative overflow-hidden flex flex-col min-h-[280px] ${isLarge
-                    ? "md:col-span-2 md:row-span-1 justify-center bg-primary/5 border-primary/20"
-                    : "md:col-span-1 md:row-span-1 justify-center bg-secondary/30 border-white/5"
-                    }`}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  {card.icon}
-                  <h3 className={`font-dela text-primary mb-3 uppercase ${isLarge ? "text-2xl lg:text-3xl" : "text-2xl"}`}>{card.title}</h3>
-                  <p className="font-bricolage text-lg text-foreground/80">{card.desc}</p>
-                </motion.div>
-              );
-            })}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 w-full">
+          {/* Box 1 (wide) */}
+          <motion.div
+            {...scrollAnimProps}
+            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <Calendar className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl lg:text-3xl text-primary mb-3">CONTENT CALENDARS</h3>
+            <p className="font-bricolage text-lg text-foreground/80 max-w-xl">Monthly content calendars across Instagram, Facebook, LinkedIn, and YouTube Shorts</p>
+          </motion.div>
+
+          {/* Box 2 */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.1 }}
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <Edit3 className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl text-primary mb-3">CREATION & POSTING</h3>
+            <p className="font-bricolage text-lg text-foreground/80">Caption writing, creative direction, and scheduling</p>
+          </motion.div>
+
+          {/* Box 3 */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.2 }}
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <Users className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl text-primary mb-3">COMMUNITY MANAGEMENT</h3>
+            <p className="font-bricolage text-lg text-foreground/80">Comments, DMs, and reputation monitoring</p>
+          </motion.div>
+
+          {/* Box 4 */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.3 }}
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <UserPlus className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl text-primary mb-3">INFLUENCER COORDINATION</h3>
+            <p className="font-bricolage text-lg text-foreground/80">Vertical-specific: doctors for healthcare, property reviewers for real estate</p>
+          </motion.div>
+
+          {/* Box 5 */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.4 }}
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <PieChart className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl text-primary mb-3">ANALYTICS REPORT</h3>
+            <p className="font-bricolage text-lg text-foreground/80">Monthly analytics report tied to engagement quality, not vanity reach</p>
+          </motion.div>
         </div>
       </section>
 

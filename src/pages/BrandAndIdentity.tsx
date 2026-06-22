@@ -152,21 +152,21 @@ const BrandAndIdentity = () => {
             {...scrollAnimProps}
             className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-12"
           >
-            WHAT IT <WavyUnderline>INCLUDES</WavyUnderline>
+            BUILT FOR BUSINESSES THAT NEED <WavyUnderline>RESULTS</WavyUnderline>
           </motion.h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 w-full">
           {/* Box 1 — Brand Strategy (wide) */}
           <motion.div
             {...scrollAnimProps}
-            className="md:col-span-2 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
           >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-colors duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <Layers className="w-10 h-10 text-primary mb-6" />
             <h3 className="font-dela text-2xl lg:text-3xl text-primary mb-3">
               BRAND STRATEGY
             </h3>
-            <p className="font-bricolage text-lg text-foreground/80 max-w-md">
+            <p className="font-bricolage text-lg text-foreground/80 max-w-xl">
               Positioning, messaging architecture, and competitive differentiation — so your brand owns a clear space in the market.
             </p>
           </motion.div>
@@ -210,9 +210,7 @@ const BrandAndIdentity = () => {
             className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="flex gap-4 mb-6">
-              <Sparkles className="w-10 h-10 text-primary" />
-            </div>
+            <Sparkles className="w-10 h-10 text-primary mb-6" />
             <h3 className="font-dela text-2xl lg:text-3xl text-primary mb-3">
               NAMING, TAGLINES & REBRANDING
             </h3>

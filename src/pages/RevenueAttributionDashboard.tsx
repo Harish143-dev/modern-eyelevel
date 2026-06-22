@@ -186,41 +186,87 @@ const RevenueAttributionDashboard = () => {
       </section>
 
       {/* Section 2 — What it includes (Bento Box) */}
-      <section className="px-4 py-20 bg-background relative z-10">
-        <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
-          <motion.div {...scrollAnimProps} className="mb-12">
-            <GreenButton>WHAT IT INCLUDES</GreenButton>
-          </motion.div>
-
+      <section className="px-20 py-20 bg-background relative z-10">
+        <div className="w-full flex justify-center text-center">
           <motion.h2
             {...scrollAnimProps}
-            className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-16 max-w-3xl leading-[1.1]"
+            className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-12"
           >
             WHAT IT <WavyUnderline>INCLUDES</WavyUnderline>
           </motion.h2>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full text-left">
-            {[
-              { title: "CUSTOM DASHBOARD BUILD", desc: "GA4, Meta Ads, Google Ads, and CRM data unified in one view", icon: <LayoutDashboard className="w-10 h-10 text-primary mb-6" /> },
-              { title: "OFFLINE CONVERSION TRACKING", desc: "Connecting ad spend to actual closed deals, not just lead form submissions", icon: <LinkIcon className="w-10 h-10 text-primary mb-6" /> },
-              { title: "COST PER ACQUISITION TRACKING", desc: "Broken down by channel, campaign, and creative — not blended averages", icon: <Coins className="w-10 h-10 text-primary mb-6" /> },
-              { title: "EXECUTIVE-READY REPORTING", desc: "One view per month, not six spreadsheets to reconcile before a board meeting", icon: <FileSpreadsheet className="w-10 h-10 text-primary mb-6" /> },
-              { title: "AUTOMATED ALERTS", desc: "Flagged when campaigns underperform threshold benchmarks — before the month ends", icon: <Bell className="w-10 h-10 text-primary mb-6" /> },
-              { title: "BUNDLED OR STANDALONE", desc: "Included in all growth retainers above Rs. 2L/month, or available as a standalone engagement", icon: <Package className="w-10 h-10 text-primary mb-6" /> }
-            ].map((card, idx) => (
-              <motion.div
-                key={idx}
-                {...scrollAnimProps}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[280px]"
-              >
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                {card.icon}
-                <h3 className="font-dela text-2xl text-primary mb-3 uppercase">{card.title}</h3>
-                <p className="font-bricolage text-lg text-foreground/80">{card.desc}</p>
-              </motion.div>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-6 w-full">
+          {/* Box 1 (wide) */}
+          <motion.div
+            {...scrollAnimProps}
+            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <LayoutDashboard className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl lg:text-3xl text-primary mb-3">CUSTOM DASHBOARD BUILD</h3>
+            <p className="font-bricolage text-lg text-foreground/80 max-w-xl">GA4, Meta Ads, Google Ads, and CRM data unified in one view</p>
+          </motion.div>
+
+          {/* Box 2 */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.1 }}
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <LinkIcon className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl text-primary mb-3">OFFLINE CONVERSION TRACKING</h3>
+            <p className="font-bricolage text-lg text-foreground/80">Connecting ad spend to actual closed deals, not just lead form submissions</p>
+          </motion.div>
+
+          {/* Box 3 */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.2 }}
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <Coins className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl text-primary mb-3">COST PER ACQUISITION TRACKING</h3>
+            <p className="font-bricolage text-lg text-foreground/80">Broken down by channel, campaign, and creative — not blended averages</p>
+          </motion.div>
+
+          {/* Box 4 (wide) */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.3 }}
+            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <FileSpreadsheet className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl lg:text-3xl text-primary mb-3">EXECUTIVE-READY REPORTING</h3>
+            <p className="font-bricolage text-lg text-foreground/80 max-w-xl">One view per month, not six spreadsheets to reconcile before a board meeting</p>
+          </motion.div>
+
+          {/* Box 5 (wide) */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.4 }}
+            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <Bell className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl lg:text-3xl text-primary mb-3">AUTOMATED ALERTS</h3>
+            <p className="font-bricolage text-lg text-foreground/80 max-w-xl">Flagged when campaigns underperform threshold benchmarks — before the month ends</p>
+          </motion.div>
+
+          {/* Box 6 */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.5 }}
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <Package className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl text-primary mb-3">BUNDLED OR STANDALONE</h3>
+            <p className="font-bricolage text-lg text-foreground/80">Included in all growth retainers above Rs. 2L/month, or available as a standalone engagement</p>
+          </motion.div>
         </div>
       </section>
 
