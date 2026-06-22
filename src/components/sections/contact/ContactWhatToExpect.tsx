@@ -43,7 +43,7 @@ const ContactWhatToExpect = () => {
               <h3 className="text-xl md:text-2xl font-dela mb-4 uppercase text-white group-hover:text-primary transition-colors duration-300">
                 {card.title}
               </h3>
-              <p className="text-base md:text-lg font-bricolage text-white/60 leading-relaxed flex-1">
+              <p className="text-sm font-bricolage text-white/60 leading-relaxed flex-1">
                 {card.body}
               </p>
             </motion.div>

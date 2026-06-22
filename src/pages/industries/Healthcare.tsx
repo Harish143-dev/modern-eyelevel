@@ -133,7 +133,7 @@ const Healthcare = () => {
         </section>
 
         {/* Why EyeLevel */}
-        <section className="py-24 px-4 bg-background min-h-screen flex flex-col justify-center">
+        <section className="py-24 px-4 bg-background flex flex-col justify-center">
           <div className="max-w-4xl mx-auto w-full text-center">
             <GreenButton>Why EyeLevel</GreenButton>
             <h2 className="font-dela text-3xl md:text-4xl lg:text-5xl mb-8 uppercase text-primary mt-6">
