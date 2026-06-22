@@ -30,6 +30,8 @@ import ContentAndCreative from "./pages/ContentAndCreative";
 import LinkedInB2BMarketing from "./pages/LinkedInB2BMarketing";
 import CROAndFunnelDesign from "./pages/CROAndFunnelDesign";
 import RevenueAttributionDashboard from "./pages/RevenueAttributionDashboard";
+import BrandAndIdentity from "./pages/BrandAndIdentity";
+import WebsiteDesignAndDevelopment from "./pages/WebsiteDesignAndDevelopment";
 
 const AppRoutes = () => (
   <Routes>
@@ -46,6 +48,8 @@ const AppRoutes = () => (
     <Route path="/services/linkedin-b2b-marketing" element={<LinkedInB2BMarketing />} />
     <Route path="/services/cro-and-funnel-design" element={<CROAndFunnelDesign />} />
     <Route path="/services/revenue-attribution-dashboard" element={<RevenueAttributionDashboard />} />
+    <Route path="/services/brand-and-identity" element={<BrandAndIdentity />} />
+    <Route path="/services/website-design-and-development" element={<WebsiteDesignAndDevelopment />} />
     <Route path="/works" element={<Navigate to="/work" replace />} />
     <Route path="/work" element={<Works />} />
     <Route path="/how-we-work" element={<Navigate to="/about" replace />} />

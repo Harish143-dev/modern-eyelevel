@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import EnhancedFooter from "@/components/layout/EnhancedFooter";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Search, Bot, Cpu, Code, MapPin, BarChart } from "lucide-react";
+import { ArrowRight, Layers, FileText, Sparkles, RefreshCcw, PenTool } from "lucide-react";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import { AnimatedHeroHeading } from "@/components/shared/AnimatedHeroHeading";
 import GreenButton from "@/components/shared/GreenButton";
@@ -12,7 +12,7 @@ import { Star18 } from "@/components/shared/Star18";
 import SEO from "@/components/utils/SEO";
 import { CardsParallax, type iCardItem } from "@/components/shared/CardsParallax";
 
-const AiEraSeo = () => {
+const BrandAndIdentity = () => {
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -25,7 +25,7 @@ const AiEraSeo = () => {
     whileInView: { opacity: 1, y: 0 },
     initial: { opacity: 0, y: 30 },
     viewport: { once: true },
-    transition: { duration: 0.6 }
+    transition: { duration: 0.6 },
   };
 
   const parallaxItems: iCardItem[] = [
@@ -36,25 +36,7 @@ const AiEraSeo = () => {
       src: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1000&auto=format&fit=crop",
       link: "#",
       color: "#1a2f28",
-      textColor: "#F8FFE8"
-    },
-    {
-      title: "Healthcare",
-      description: "Patient calls, doctor-led content, and trust-building feeds.",
-      tag: "Healthcare",
-      src: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1000&auto=format&fit=crop",
-      link: "#",
-      color: "#2a4f44",
-      textColor: "#F8FFE8"
-    },
-    {
-      title: "Automotive",
-      description: "High-octane creative, dealership promotions, and test-drive campaigns.",
-      tag: "Automotive",
-      src: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1000&auto=format&fit=crop",
-      link: "#",
-      color: "#1a2f28",
-      textColor: "#F8FFE8"
+      textColor: "#F8FFE8",
     },
     {
       title: "IT / SaaS",
@@ -63,33 +45,41 @@ const AiEraSeo = () => {
       src: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&auto=format&fit=crop",
       link: "#",
       color: "#2a4f44",
-      textColor: "#F8FFE8"
-    }
+      textColor: "#F8FFE8",
+    },
+    {
+      title: "Healthcare",
+      description: "Patient calls, doctor-led content, and trust-building feeds.",
+      tag: "Healthcare",
+      src: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1000&auto=format&fit=crop",
+      link: "#",
+      color: "#1a2f28",
+      textColor: "#F8FFE8",
+    },
   ];
 
   return (
     <div className="min-h-screen bg-background overflow-clip">
       <SEO
-        title="AI-Era SEO Agency Chennai | AEO & GEO | EyeLevel Growth Studio"
-        description="Traditional SEO plus AEO (AI Overviews, featured snippets) and GEO (ChatGPT, Gemini, Perplexity). We optimise for where buyers find answers now."
+        title="Brand Identity Agency Chennai | Branding Services | EyeLevel Growth Studio"
+        description="Visual identity, positioning, and brand architecture for companies that are growing and need their brand to do the work. Logo, guidelines, tone of voice."
         keywords={[
-          "SEO agency Chennai",
-          "AI SEO agency India",
-          "AEO agency",
-          "GEO optimization India",
-          "Google AI Overview optimization",
-          "local SEO Chennai"
+          "brand identity agency Chennai",
+          "branding agency Chennai",
+          "brand strategy agency India",
+          "logo design agency Chennai",
+          "rebranding agency Chennai",
         ]}
-        canonical="https://theeyelevelstudio.com/services/ai-era-seo"
-        url="https://theeyelevelstudio.com/services/ai-era-seo"
+        canonical="https://theeyelevelstudio.com/services/brand-and-identity"
+        url="https://theeyelevelstudio.com/services/brand-and-identity"
       />
       <Header />
 
       {/* Section 1 — Hero */}
       <section
         ref={heroRef}
-        className="relative min-h-[65vh] lg:min-h-[95vh] flex items-center pt-40 md:pt-38 pb-24 px-4 overflow-hidden bg-secondary">
-        {/* Rotating star background */}
+        className="relative min-h-[65vh] lg:min-h-[95vh] flex items-center pt-40 md:pt-38 pb-24 px-4 overflow-hidden bg-secondary"
+      >
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
@@ -98,7 +88,6 @@ const AiEraSeo = () => {
           <Star18 className="w-full h-full" />
         </motion.div>
 
-        {/* Parallax background elements */}
         <motion.div
           style={{ y: backgroundY }}
           className="absolute inset-0 overflow-hidden pointer-events-none"
@@ -114,13 +103,20 @@ const AiEraSeo = () => {
             transition={{ delay: 0.1 }}
             className="mb-8"
           >
-            <GreenButton>SERVICES / AI-ERA SEO</GreenButton>
+            <GreenButton>SERVICES / BRAND AND IDENTITY</GreenButton>
           </motion.div>
 
           <AnimatedHeroHeading
             words={[
-              "WE", "OPTIMISE", "FOR", "WHERE", "BUYERS",
-              <WavyUnderline key="wavy">FIND ANSWERS NOW</WavyUnderline>
+              "YOUR",
+              "BRAND",
+              "SHOULD",
+              "DO",
+              "THE",
+              "SELLING",
+              "BEFORE",
+              "YOUR",
+              <WavyUnderline key="wavy">SALESPEOPLE DO</WavyUnderline>,
             ]}
           />
 
@@ -130,7 +126,7 @@ const AiEraSeo = () => {
             transition={{ delay: 1 }}
             className="font-bricolage text-lg max-w-3xl mx-auto mb-10 leading-relaxed text-foreground"
           >
-            Google. AI Overviews. ChatGPT. Gemini. Perplexity. Buyers get answers before they click. We make sure yours is the answer they get.
+            Visual identity, positioning, and brand architecture — built to be consistent at every touchpoint.
           </motion.p>
 
           <motion.div
@@ -156,81 +152,73 @@ const AiEraSeo = () => {
             {...scrollAnimProps}
             className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-12"
           >
-            WHAT IT <WavyUnderline>INCLUDES</WavyUnderline>
+            BUILT FOR BUSINESSES THAT NEED <WavyUnderline>RESULTS</WavyUnderline>
           </motion.h2>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-6 w-full">
-          {/* Box 1 (wide) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 w-full">
+          {/* Box 1 — Brand Strategy (wide) */}
           <motion.div
             {...scrollAnimProps}
             className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Search className="w-10 h-10 text-primary mb-6" />
-            <h3 className="font-dela text-2xl lg:text-3xl text-primary mb-3">TRADITIONAL SEO</h3>
-            <p className="font-bricolage text-lg text-foreground/80 max-w-xl">On-page, technical, backlink architecture</p>
+            <Layers className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl lg:text-3xl text-primary mb-3">
+              BRAND STRATEGY
+            </h3>
+            <p className="font-bricolage text-lg text-foreground/80 max-w-xl">
+              Positioning, messaging architecture, and competitive differentiation — so your brand owns a clear space in the market.
+            </p>
           </motion.div>
 
-          {/* Box 2 */}
+          {/* Box 2 — Logo & Visual Identity */}
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.1 }}
             className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Bot className="w-10 h-10 text-primary mb-6" />
-            <h3 className="font-dela text-2xl text-primary mb-3">AEO</h3>
-            <p className="font-bricolage text-lg text-foreground/80">Answer Engine Optimization — structured for AI Overviews and Featured Snippets</p>
+            <PenTool className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl text-primary mb-3">
+              LOGO & VISUAL IDENTITY
+            </h3>
+            <p className="font-bricolage text-lg text-foreground/80">
+              Colour, typography, and grid — built to work at every scale.
+            </p>
           </motion.div>
 
-          {/* Box 3 */}
+          {/* Box 3 — Brand Guidelines */}
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.2 }}
             className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Cpu className="w-10 h-10 text-primary mb-6" />
-            <h3 className="font-dela text-2xl text-primary mb-3">GEO</h3>
-            <p className="font-bricolage text-lg text-foreground/80">Generative Engine Optimization — getting clients cited in ChatGPT, Gemini, and Perplexity</p>
+            <FileText className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl text-primary mb-3">
+              BRAND GUIDELINES
+            </h3>
+            <p className="font-bricolage text-lg text-foreground/80">
+              So every vendor, designer, and team member follows the same rules.
+            </p>
           </motion.div>
 
-          {/* Box 4 (wide) */}
+          {/* Box 4 — Naming & Rebranding (wide, highlighted) */}
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.3 }}
             className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Code className="w-10 h-10 text-primary mb-6" />
-            <h3 className="font-dela text-2xl lg:text-3xl text-primary mb-3">SCHEMA MARKUP</h3>
-            <p className="font-bricolage text-lg text-foreground/80 max-w-xl">Across all pages (Service, FAQ, HowTo, LocalBusiness, Organization)</p>
+            <Sparkles className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl lg:text-3xl text-primary mb-3">
+              NAMING, TAGLINES & REBRANDING
+            </h3>
+            <p className="font-bricolage text-lg text-foreground/80 max-w-xl">
+              Naming and tagline development for new products or sub-brands. Full rebranding engagements — audit, strategy, and rollout handled as one project.
+            </p>
           </motion.div>
 
-          {/* Box 5 (wide) */}
-          <motion.div
-            {...scrollAnimProps}
-            transition={{ delay: 0.4 }}
-            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <MapPin className="w-10 h-10 text-primary mb-6" />
-            <h3 className="font-dela text-2xl lg:text-3xl text-primary mb-3">LOCAL SEO</h3>
-            <p className="font-bricolage text-lg text-foreground/80 max-w-xl">And Google Business Profile management</p>
-          </motion.div>
-
-          {/* Box 6 */}
-          <motion.div
-            {...scrollAnimProps}
-            transition={{ delay: 0.5 }}
-            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
-          >
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <BarChart className="w-10 h-10 text-primary mb-6" />
-            <h3 className="font-dela text-2xl text-primary mb-3">REPORTING</h3>
-            <p className="font-bricolage text-lg text-foreground/80">Monthly keyword ranking, AI citation tracking, and content gap reports</p>
-          </motion.div>
         </div>
       </section>
 
@@ -241,42 +229,39 @@ const AiEraSeo = () => {
             {...scrollAnimProps}
             className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-8"
           >
-            WHO IT'S <WavyUnderline> FOR </WavyUnderline>
+            WHO IT'S <WavyUnderline>FOR</WavyUnderline>
           </motion.h2>
 
           <motion.p
             {...scrollAnimProps}
             className="text-lg font-bricolage text-foreground max-w-3xl mx-auto text-center leading-relaxed"
           >
-            IT and SaaS companies whose competitors are taking Google AI Overview real estate. Healthcare providers who need to appear when patients search symptoms, not just clinic names. Any business where the buyer's first move is a search.
+            Businesses that have grown faster than their brand. Companies where the website, the deck, and the business card all look like three different companies made them. New businesses that want to enter a market with a brand that commands respect on day one.
           </motion.p>
         </div>
       </section>
 
-      {/* Section 4 — The outcome */}
+      {/* Section 4 — Pull quote */}
       <section className="px-4 py-20 bg-background relative z-10 flex justify-center items-center">
         <div className="max-w-5xl mx-auto w-full flex flex-col items-center">
-          {/* Green Button */}
           <motion.div {...scrollAnimProps} className="mb-12">
             <GreenButton>THE OUTCOME</GreenButton>
           </motion.div>
 
-          {/* Quote + Line */}
           <div className="flex items-stretch gap-8">
-            <div className="w-px bg-primary"></div>
-
+            <div className="w-px bg-primary" />
             <motion.h2
               {...scrollAnimProps}
               className="font-dela text-2xl md:text-4xl lg:text-5xl uppercase text-primary max-w-4xl leading-[1.1] text-left"
             >
-              "YOU APPEAR AT EVERY POINT WHERE A POTENTIAL BUYER IS LOOKING FOR WHAT YOU DO ON GOOGLE, IN AI OVERVIEWS, AND INSIDE AI CHAT TOOLS"
+              "A BRAND THAT COMMUNICATES WHAT YOU DO TO A STRANGER IN UNDER TEN SECONDS."
             </motion.h2>
           </div>
         </div>
       </section>
 
       {/* Section 5 — Industry verticals */}
-      < section className="px-4 py-20 bg-secondary relative z-10" >
+      <section className="px-4 py-20 bg-secondary relative z-10">
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
           <motion.div {...scrollAnimProps} className="mb-12">
             <GreenButton>INDUSTRY</GreenButton>
@@ -289,9 +274,9 @@ const AiEraSeo = () => {
             Industries <WavyUnderline className="text-white">We work in</WavyUnderline>
           </motion.h2>
 
-          <motion.div {...scrollAnimProps} className="w-full max-w-3xl mx-auto">
+          <div className="w-full">
             <CardsParallax items={parallaxItems} />
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -329,11 +314,11 @@ const AiEraSeo = () => {
             </a>
           </motion.div>
         </div>
-      </section >
+      </section>
 
       <EnhancedFooter mascotBgClass="bg-background" showCTA={false} />
-    </div >
+    </div>
   );
 };
 
-export default AiEraSeo;
+export default BrandAndIdentity;

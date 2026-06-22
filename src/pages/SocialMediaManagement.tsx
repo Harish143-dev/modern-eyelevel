@@ -2,8 +2,9 @@ import { useRef } from "react";
 import Header from "@/components/layout/Header";
 import EnhancedFooter from "@/components/layout/EnhancedFooter";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar, Edit3, Users, UserPlus, PieChart } from "lucide-react";
 import WavyUnderline from "@/components/shared/WavyUnderline";
+import { AnimatedHeroHeading } from "@/components/shared/AnimatedHeroHeading";
 import GreenButton from "@/components/shared/GreenButton";
 import { Star18 } from "@/components/shared/Star18";
 import SEO from "@/components/utils/SEO";
@@ -67,7 +68,7 @@ const SocialMediaManagement = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-clip">
       <SEO
         title="Social Media Marketing Agency Chennai | EyeLevel Growth Studio"
         description="Content that builds the audience your sales team actually needs. Strategy, calendars, creative, and posting — fully managed. Communities that convert."
@@ -86,8 +87,7 @@ const SocialMediaManagement = () => {
       {/* Section 1 — Hero */}
       <section
         ref={heroRef}
-        className="relative min-h-[65vh] lg:min-h-[95vh] flex items-center justify-center pt-40 md:pt-38 pb-4 px-4 overflow-hidden bg-secondary"
-      >
+        className="relative min-h-[65vh] lg:min-h-[95vh] flex items-center pt-40 md:pt-38 pb-24 px-4 overflow-hidden bg-secondary">
         {/* Rotating star background */}
         <motion.div
           animate={{ rotate: 360 }}
@@ -116,20 +116,18 @@ const SocialMediaManagement = () => {
             <GreenButton>SERVICES / SOCIAL MEDIA MANAGEMENT</GreenButton>
           </motion.div>
 
-          <motion.h1
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="font-dela text-3xl md:text-5xl lg:text-6xl uppercase text-primary leading-[1.05] mb-8 tracking-tight"
-          >
-            CONTENT THAT BUILDS THE AUDIENCE YOUR SALES TEAM <WavyUnderline>ACTUALLY NEEDS.</WavyUnderline>
-          </motion.h1>
+          <AnimatedHeroHeading
+            words={[
+              "CONTENT", "THAT", "BUILDS", "THE", "AUDIENCE", "YOUR", "SALES", "TEAM",
+              <WavyUnderline key="wavy">ACTUALLY NEEDS</WavyUnderline>
+            ]}
+          />
 
           <motion.p
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="font-bricolage text-lg max-w-3xl mx-auto mb-14 leading-relaxed text-foreground"
+            transition={{ delay: 1.1 }}
+            className="font-bricolage text-lg max-w-3xl mx-auto mb-10 leading-relaxed text-foreground"
           >
             Strategy, calendars, creative, and posting — fully managed. Communities that convert, not just follower counts.
           </motion.p>
@@ -137,66 +135,100 @@ const SocialMediaManagement = () => {
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="flex items-center justify-center"
+            transition={{ delay: 1.2 }}
+            className="flex items-center rounded-full relative font-bricolage z-1000 justify-center gap-4"
           >
             <Link to="/booking">
-              <Button className="h-12 px-6 lg:h-14 lg:px-8 text-sm lg:text-base font-semibold rounded-full">
-                Book a free 30-min diagnostic
+              <Button className="h-12 px-6 lg:h-14 lg:px-8 text-sm lg:text-base font-semibold rounded-full group overflow-hidden relative">
+                <span className="relative z-10">Book a free 30-min diagnostic</span>
+                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" />
               </Button>
             </Link>
           </motion.div>
         </div>
       </section>
 
-      {/* Section 2 — What it includes */}
-      <section className="px-4 py-20 bg-background relative z-10">
-        <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
-          <motion.div {...scrollAnimProps} className="mb-12">
-            <GreenButton>INCLUDES</GreenButton>
-          </motion.div>
-
+      {/* Section 2 — What it includes (Bento Box) */}
+      <section className="px-20 py-20 bg-background relative z-10">
+        <div className="w-full flex justify-center text-center">
           <motion.h2
             {...scrollAnimProps}
             className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-12"
           >
-            WHAT IT <WavyUnderline>INCLUDES </WavyUnderline>
+            WHAT IT <WavyUnderline>INCLUDES</WavyUnderline>
           </motion.h2>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full text-left">
-            {[
-              { title: "Content Calendars", desc: "Monthly content calendars across Instagram, Facebook, LinkedIn, and YouTube Shorts" },
-              { title: "Creation & Posting", desc: "Caption writing, creative direction, and scheduling" },
-              { title: "Community Management", desc: "Comments, DMs, and reputation monitoring" },
-              { title: "Influencer Coordination", desc: "Vertical-specific: doctors for healthcare, property reviewers for real estate" },
-              { title: "Analytics Report", desc: "Monthly analytics report tied to engagement quality, not vanity reach" }
-            ].map((card, idx) => (
-              <motion.div
-                key={idx}
-                {...scrollAnimProps}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="bg-secondary/40 rounded-2xl p-6 border border-white/5 flex flex-col gap-2"
-              >
-                <h3 className="font-dela text-xl text-primary">{card.title}</h3>
-                <p className="font-bricolage text-foreground opacity-80">{card.desc}</p>
-              </motion.div>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 w-full">
+          {/* Box 1 (wide) */}
+          <motion.div
+            {...scrollAnimProps}
+            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <Calendar className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl lg:text-3xl text-primary mb-3">CONTENT CALENDARS</h3>
+            <p className="font-bricolage text-lg text-foreground/80 max-w-xl">Monthly content calendars across Instagram, Facebook, LinkedIn, and YouTube Shorts</p>
+          </motion.div>
+
+          {/* Box 2 */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.1 }}
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <Edit3 className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl text-primary mb-3">CREATION & POSTING</h3>
+            <p className="font-bricolage text-lg text-foreground/80">Caption writing, creative direction, and scheduling</p>
+          </motion.div>
+
+          {/* Box 3 */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.2 }}
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <Users className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl text-primary mb-3">COMMUNITY MANAGEMENT</h3>
+            <p className="font-bricolage text-lg text-foreground/80">Comments, DMs, and reputation monitoring</p>
+          </motion.div>
+
+          {/* Box 4 */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.3 }}
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <UserPlus className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl text-primary mb-3">INFLUENCER COORDINATION</h3>
+            <p className="font-bricolage text-lg text-foreground/80">Vertical-specific: doctors for healthcare, property reviewers for real estate</p>
+          </motion.div>
+
+          {/* Box 5 */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.4 }}
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <PieChart className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl text-primary mb-3">ANALYTICS REPORT</h3>
+            <p className="font-bricolage text-lg text-foreground/80">Monthly analytics report tied to engagement quality, not vanity reach</p>
+          </motion.div>
         </div>
       </section>
 
       {/* Section 3 — Who it is for */}
-      <section className="px-4 py-20 bg-secondary relative z-10">
+      <section className="px-4 py-24 bg-secondary relative z-10 overflow-hidden">
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
-          <motion.div {...scrollAnimProps} className="mb-12">
-            <GreenButton>WHO IT IS FOR</GreenButton>
-          </motion.div>
-
           <motion.h2
             {...scrollAnimProps}
-            className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-12"
+            className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-8"
           >
-            WHO IT IS <WavyUnderline>FOR</WavyUnderline>
+            WHO IT'S <WavyUnderline> FOR </WavyUnderline>
           </motion.h2>
 
           <motion.p
@@ -210,37 +242,25 @@ const SocialMediaManagement = () => {
 
       {/* Section 4 — The outcome */}
       <section className="px-4 py-20 bg-background relative z-10 flex justify-center items-center">
-        <div className="max-w-5xl mx-auto text-center relative py-8 px-6 md:px-12 w-full flex flex-col items-center">
+        <div className="max-w-5xl mx-auto w-full flex flex-col items-center">
+          {/* Green Button */}
           <motion.div {...scrollAnimProps} className="mb-12">
-            <GreenButton>The outcome</GreenButton>
+            <GreenButton>THE OUTCOME</GreenButton>
           </motion.div>
 
-          <div className="relative flex items-center justify-center gap-8">
-            {/* Vertical Line */}
-            <div className="w-px self-stretch bg-primary" />
+          {/* Quote + Line */}
+          <div className="flex items-stretch gap-8">
+            <div className="w-px bg-primary"></div>
 
-            {/* Quote */}
             <motion.h2
               {...scrollAnimProps}
-              className="font-dela text-2xl md:text-4xl lg:text-5xl uppercase text-primary max-w-5xl leading-[1.1] text-left"
+              className="font-dela text-2xl md:text-4xl lg:text-5xl uppercase text-primary max-w-4xl leading-[1.1] text-left"
             >
-              A CONSISTENT SOCIAL
-              <br />
-              PRESENCE THAT
-              <br />
-              FUNCTIONS AS
-              <br />
-              A SALES-SUPPORTING
-              <br />
-              CHANNEL,
-              <br />
-              NOT A DISTRACTION FROM
-              <br />
-              ONE.
+              "A CONSISTENT SOCIAL PRESENCE THAT FUNCTIONS AS A SALES-SUPPORTING CHANNEL, NOT A DISTRACTION FROM ONE."
             </motion.h2>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Section 5 — Industry verticals */}
       < section className="px-4 py-20 bg-secondary relative z-10" >

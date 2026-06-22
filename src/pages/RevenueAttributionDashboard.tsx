@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import EnhancedFooter from "@/components/layout/EnhancedFooter";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, LayoutDashboard, Link as LinkIcon, Coins, FileSpreadsheet, Bell, Package } from "lucide-react";
 import WavyUnderline from "@/components/shared/WavyUnderline";
+import { AnimatedHeroHeading } from "@/components/shared/AnimatedHeroHeading";
 import GreenButton from "@/components/shared/GreenButton";
 import { Button } from "@/components/ui/button";
 import { Star18 } from "@/components/shared/Star18";
@@ -103,7 +104,7 @@ const RevenueAttributionDashboard = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-clip">
       <SEO
         title="Revenue Attribution Dashboard | Marketing Analytics Chennai | EyeLevel Growth Studio"
         description="Every campaign tied to a business outcome you can show your board. Custom dashboard bundled into growth retainers. GA4, Meta Ads, Google Ads, and CRM unified."
@@ -149,81 +150,134 @@ const RevenueAttributionDashboard = () => {
             transition={{ delay: 0.1 }}
             className="mb-8"
           >
-            <GreenButton>Services / Revenue Attribution Dashboard</GreenButton>
+            <GreenButton>SERVICES / REVENUE ATTRIBUTION DASHBOARD</GreenButton>
           </motion.div>
 
-          <motion.h1
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="font-dela text-3xl md:text-5xl lg:text-6xl uppercase text-primary leading-[1.05] mb-8 tracking-tight"
-          >
-            EVERY CAMPAIGN TIED TO A BUSINESS OUTCOME YOU CAN{" "}
-            <WavyUnderline>SHOW YOUR BOARD.</WavyUnderline>
-          </motion.h1>
+          <AnimatedHeroHeading
+            words={[
+              "EVERY", "CAMPAIGN", "TIED", "TO", "A", "BUSINESS", "OUTCOME", "YOU", "CAN",
+              <WavyUnderline key="wavy">SHOW YOUR BOARD.</WavyUnderline>
+            ]}
+          />
 
           <motion.p
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 1.2 }}
             className="font-bricolage text-lg max-w-3xl mx-auto mb-10 leading-relaxed text-foreground"
           >
             Not a metric you have to explain away. A number that defends itself.
           </motion.p>
 
-          <div className="flex items-center rounded-full relative font-bricolage z-1000 justify-center gap-4">
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 1.3 }}
+            className="flex items-center rounded-full relative font-bricolage z-1000 justify-center gap-4"
+          >
             <Link to="/booking">
-              <Button className="h-12 px-6 lg:h-14 lg:px-8 text-sm lg:text-base font-semibold rounded-full">
-                Book a free 30-min diagnostic
+              <Button className="h-12 px-6 lg:h-14 lg:px-8 text-sm lg:text-base font-semibold rounded-full group overflow-hidden relative">
+                <span className="relative z-10">Book a free 30-min diagnostic</span>
+                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" />
               </Button>
             </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Section 2 — What it includes */}
-      <section className="px-4 py-20 bg-background relative z-10">
-        <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
-          <motion.div {...scrollAnimProps} className="mb-12">
-            <GreenButton>What it includes</GreenButton>
-          </motion.div>
-
+      {/* Section 2 — What it includes (Bento Box) */}
+      <section className="px-20 py-20 bg-background relative z-10">
+        <div className="w-full flex justify-center text-center">
           <motion.h2
             {...scrollAnimProps}
             className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-12"
           >
-            EVERYTHING IN THE RETAINER
+            WHAT IT <WavyUnderline>INCLUDES</WavyUnderline>
           </motion.h2>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full text-left">
-            {includes.map((card, idx) => (
-              <motion.div
-                key={idx}
-                {...scrollAnimProps}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="bg-secondary/40 rounded-2xl p-6 border border-white/5 flex flex-col gap-2"
-              >
-                <h3 className="font-dela text-xl text-primary">{card.title}</h3>
-                <p className="font-bricolage text-foreground opacity-80">{card.desc}</p>
-              </motion.div>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-6 w-full">
+          {/* Box 1 (wide) */}
+          <motion.div
+            {...scrollAnimProps}
+            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <LayoutDashboard className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl lg:text-3xl text-primary mb-3">CUSTOM DASHBOARD BUILD</h3>
+            <p className="font-bricolage text-lg text-foreground/80 max-w-xl">GA4, Meta Ads, Google Ads, and CRM data unified in one view</p>
+          </motion.div>
+
+          {/* Box 2 */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.1 }}
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <LinkIcon className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl text-primary mb-3">OFFLINE CONVERSION TRACKING</h3>
+            <p className="font-bricolage text-lg text-foreground/80">Connecting ad spend to actual closed deals, not just lead form submissions</p>
+          </motion.div>
+
+          {/* Box 3 */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.2 }}
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <Coins className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl text-primary mb-3">COST PER ACQUISITION TRACKING</h3>
+            <p className="font-bricolage text-lg text-foreground/80">Broken down by channel, campaign, and creative — not blended averages</p>
+          </motion.div>
+
+          {/* Box 4 (wide) */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.3 }}
+            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <FileSpreadsheet className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl lg:text-3xl text-primary mb-3">EXECUTIVE-READY REPORTING</h3>
+            <p className="font-bricolage text-lg text-foreground/80 max-w-xl">One view per month, not six spreadsheets to reconcile before a board meeting</p>
+          </motion.div>
+
+          {/* Box 5 (wide) */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.4 }}
+            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <Bell className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl lg:text-3xl text-primary mb-3">AUTOMATED ALERTS</h3>
+            <p className="font-bricolage text-lg text-foreground/80 max-w-xl">Flagged when campaigns underperform threshold benchmarks — before the month ends</p>
+          </motion.div>
+
+          {/* Box 6 */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.5 }}
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <Package className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl text-primary mb-3">BUNDLED OR STANDALONE</h3>
+            <p className="font-bricolage text-lg text-foreground/80">Included in all growth retainers above Rs. 2L/month, or available as a standalone engagement</p>
+          </motion.div>
         </div>
       </section>
 
       {/* Section 3 — Who it is for */}
-      <section className="px-4 py-20 bg-secondary relative z-10">
+      <section className="px-4 py-24 bg-secondary relative z-10 overflow-hidden">
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
-          <motion.div {...scrollAnimProps} className="mb-12">
-            <GreenButton>Who it's for</GreenButton>
-          </motion.div>
-
           <motion.h2
             {...scrollAnimProps}
-            className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-12"
+            className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-8"
           >
-            BUILT FOR TEAMS THAT CANNOT DEFEND THEIR{" "}
-            <WavyUnderline>MARKETING BUDGET</WavyUnderline>
+            WHO IT'S <WavyUnderline> FOR </WavyUnderline>
           </motion.h2>
 
           <motion.p
@@ -235,21 +289,23 @@ const RevenueAttributionDashboard = () => {
         </div>
       </section>
 
-      {/* Section 4 — Pull quote */}
+      {/* Section 4 — The outcome */}
       <section className="px-4 py-20 bg-background relative z-10 flex justify-center items-center">
         <div className="max-w-5xl mx-auto w-full flex flex-col items-center">
+          {/* Green Button */}
           <motion.div {...scrollAnimProps} className="mb-12">
             <GreenButton>THE OUTCOME</GreenButton>
           </motion.div>
 
+          {/* Quote + Line */}
           <div className="flex items-stretch gap-8">
-            <div className="w-px bg-primary" />
+            <div className="w-px bg-primary"></div>
 
             <motion.h2
               {...scrollAnimProps}
               className="font-dela text-2xl md:text-4xl lg:text-5xl uppercase text-primary max-w-4xl leading-[1.1] text-left"
             >
-              "ONE SOURCE OF TRUTH FOR MARKETING PERFORMANCE. ATTRIBUTE REVENUE, DEFEND BUDGET, AND DECIDE FASTER WHAT TO SCALE AND WHAT TO CUT."
+              "ONE SOURCE OF TRUTH FOR MARKETING PERFORMANCE. YOU CAN ATTRIBUTE REVENUE, DEFEND BUDGET, AND MAKE FASTER DECISIONS ABOUT WHAT TO SCALE AND WHAT TO CUT."
             </motion.h2>
           </div>
         </div>
@@ -282,7 +338,7 @@ const RevenueAttributionDashboard = () => {
             {...scrollAnimProps}
             className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-6"
           >
-            READY TO TALK?
+            READY TO <WavyUnderline> TALK? </WavyUnderline>
           </motion.h2>
 
           <motion.p
