@@ -15,20 +15,20 @@ const ContactDirectDetails = () => {
           Prefer to reach us <WavyUnderline>directly ?</WavyUnderline>
         </motion.h3>
 
-        <div className="border border-white/10 rounded-3xl md:rounded-[2.5rem] py-16 px-6 md:px-12 lg:px-24 mb-16 bg-white/5 backdrop-blur-sm">
-          <div className="grid md:grid-cols-3 gap-16 md:gap-12 lg:gap-24">
+        <div className="border border-white/10 rounded-3xl md:rounded-[2rem] py-6 md:py-10 mb-12 bg-white/5 backdrop-blur-sm">
+          <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
             {/* Email */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="flex flex-col items-center"
+              className="flex flex-col items-center py-6 md:py-0 px-4 md:px-6 lg:px-8"
             >
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                <Mail className="w-5 h-5 text-primary" />
+              <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <Mail className="w-4 h-4 text-primary" />
               </div>
-              <a href="mailto:hello@eyelevelstudio.in" className="text-[11px] sm:text-xs lg:text-lg font-dela text-white hover:text-primary transition-colors">
+              <a href="mailto:hello@eyelevelstudio.in" className="text-[11px] sm:text-xs lg:text-base font-dela text-white hover:text-primary transition-colors">
                 hello@eyelevelstudio.in
               </a>
             </motion.div>
@@ -39,12 +39,12 @@ const ContactDirectDetails = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="flex flex-col items-center"
+              className="flex flex-col items-center py-6 md:py-0 px-4 md:px-6 lg:px-8"
             >
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                <Phone className="w-5 h-5 text-primary" />
+              <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <Phone className="w-4 h-4 text-primary" />
               </div>
-              <a href="tel:+919789099499" className="text-[11px] sm:text-xs lg:text-lg font-dela text-white hover:text-primary transition-colors whitespace-nowrap">
+              <a href="tel:+919789099499" className="text-[11px] sm:text-xs lg:text-base font-dela text-white hover:text-primary transition-colors whitespace-nowrap">
                 +91 97890 99499
               </a>
             </motion.div>
@@ -55,15 +55,20 @@ const ContactDirectDetails = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="flex flex-col items-center"
+              className="flex flex-col items-center py-6 md:py-0 px-4 md:px-6 lg:px-8"
             >
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                <MapPin className="w-5 h-5 text-primary" />
+              <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <MapPin className="w-4 h-4 text-primary" />
               </div>
-              <p className="text-[11px] sm:text-xs lg:text-lg font-dela text-white mb-3 text-center">
+              <a 
+                href="https://www.google.com/maps/place/Chennai,+Tamil+Nadu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] sm:text-xs lg:text-base font-dela text-white hover:text-primary transition-colors mb-2 text-center"
+              >
                 Chennai, Tamil Nadu, India
-              </p>
-              <p className="text-sm font-bricolage text-white/70 max-w-[250px]">
+              </a>
+              <p className="text-xs font-bricolage text-white/70 max-w-[250px] text-center">
                 We work with clients across India. In-person meetings in Chennai by appointment.
               </p>
             </motion.div>
