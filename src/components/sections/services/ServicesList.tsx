@@ -257,12 +257,13 @@ const ServicesList = () => {
                       className="pt-4"
                     >
                       <Link to={service.cta.link}>
-                        <Button
-                          variant="link"
-                          className="p-0 h-auto text-lg font-dela uppercase hover:no-underline flex items-center gap-2 group transition-colors duration-300 text-primary"
-                        >
-                          {service.cta.text.replace("→", "")}
-                          <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                        <Button className="h-12 px-6 lg:h-14 lg:px-8 text-sm lg:text-base font-semibold rounded-full group overflow-hidden relative">
+                          <span className="relative z-10 flex items-center gap-2">
+                            {service.cta.text.replace("→", "")}
+                            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                          </span>
+
+                          <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" />
                         </Button>
                       </Link>
                     </motion.div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import EnhancedFooter from "@/components/layout/EnhancedFooter";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, LayoutDashboard, Link as LinkIcon, Coins, FileSpreadsheet, Bell, Package } from "lucide-react";
+import { ArrowRight, Layers, FileText, Sparkles, RefreshCcw, PenTool } from "lucide-react";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import { AnimatedHeroHeading } from "@/components/shared/AnimatedHeroHeading";
 import GreenButton from "@/components/shared/GreenButton";
@@ -12,7 +12,7 @@ import { Star18 } from "@/components/shared/Star18";
 import SEO from "@/components/utils/SEO";
 import { CardsParallax, type iCardItem } from "@/components/shared/CardsParallax";
 
-const RevenueAttributionDashboard = () => {
+const BrandAndIdentity = () => {
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -39,24 +39,6 @@ const RevenueAttributionDashboard = () => {
       textColor: "#F8FFE8",
     },
     {
-      title: "Healthcare",
-      description: "Patient calls, doctor-led content, and trust-building feeds.",
-      tag: "Healthcare",
-      src: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1000&auto=format&fit=crop",
-      link: "#",
-      color: "#2a4f44",
-      textColor: "#F8FFE8",
-    },
-    {
-      title: "Automotive",
-      description: "High-octane creative, dealership promotions, and test-drive campaigns.",
-      tag: "Automotive",
-      src: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1000&auto=format&fit=crop",
-      link: "#",
-      color: "#1a2f28",
-      textColor: "#F8FFE8",
-    },
-    {
       title: "IT / SaaS",
       description: "B2B thought leadership, founder branding, and product updates.",
       tag: "IT/SaaS",
@@ -66,66 +48,38 @@ const RevenueAttributionDashboard = () => {
       textColor: "#F8FFE8",
     },
     {
-      title: "D2C / Retail",
-      description: "Product storytelling, UGC, and always-on social content.",
-      tag: "D2C / Retail",
-      src: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1000&auto=format&fit=crop",
+      title: "Healthcare",
+      description: "Patient calls, doctor-led content, and trust-building feeds.",
+      tag: "Healthcare",
+      src: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1000&auto=format&fit=crop",
       link: "#",
       color: "#1a2f28",
       textColor: "#F8FFE8",
     },
   ];
 
-  const includes = [
-    {
-      title: "Custom Dashboard Build",
-      desc: "GA4, Meta Ads, Google Ads, and CRM data unified in one view",
-    },
-    {
-      title: "Offline Conversion Tracking",
-      desc: "Connecting ad spend to actual closed deals, not just lead form submissions",
-    },
-    {
-      title: "Cost Per Acquisition Tracking",
-      desc: "Broken down by channel, campaign, and creative — not blended averages",
-    },
-    {
-      title: "Executive-Ready Reporting",
-      desc: "One view per month, not six spreadsheets to reconcile before a board meeting",
-    },
-    {
-      title: "Automated Alerts",
-      desc: "Flagged when campaigns underperform threshold benchmarks — before the month ends",
-    },
-    {
-      title: "Bundled or Standalone",
-      desc: "Included in all growth retainers above Rs. 2L/month, or available as a standalone engagement",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-background overflow-clip">
       <SEO
-        title="Revenue Attribution Dashboard | Marketing Analytics Chennai | EyeLevel Growth Studio"
-        description="Every campaign tied to a business outcome you can show your board. Custom dashboard bundled into growth retainers. GA4, Meta Ads, Google Ads, and CRM unified."
+        title="Brand Identity Agency Chennai | Branding Services | EyeLevel Growth Studio"
+        description="Visual identity, positioning, and brand architecture for companies that are growing and need their brand to do the work. Logo, guidelines, tone of voice."
         keywords={[
-          "marketing analytics agency Chennai",
-          "revenue attribution dashboard India",
-          "marketing ROI tracking",
-          "marketing analytics agency India",
-          "campaign attribution Chennai",
+          "brand identity agency Chennai",
+          "branding agency Chennai",
+          "brand strategy agency India",
+          "logo design agency Chennai",
+          "rebranding agency Chennai",
         ]}
-        canonical="https://theeyelevelstudio.com/services/revenue-attribution-dashboard"
-        url="https://theeyelevelstudio.com/services/revenue-attribution-dashboard"
+        canonical="https://theeyelevelstudio.com/services/brand-and-identity"
+        url="https://theeyelevelstudio.com/services/brand-and-identity"
       />
       <Header />
 
       {/* Section 1 — Hero */}
       <section
         ref={heroRef}
-        className="relative min-h-[65vh] lg:min-h-[95vh] flex items-center justify-center pt-40 md:pt-38 pb-4 px-4 overflow-hidden bg-secondary"
+        className="relative min-h-[65vh] lg:min-h-[95vh] flex items-center pt-40 md:pt-38 pb-24 px-4 overflow-hidden bg-secondary"
       >
-        {/* Rotating star background */}
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
@@ -134,7 +88,6 @@ const RevenueAttributionDashboard = () => {
           <Star18 className="w-full h-full" />
         </motion.div>
 
-        {/* Parallax background elements */}
         <motion.div
           style={{ y: backgroundY }}
           className="absolute inset-0 overflow-hidden pointer-events-none"
@@ -150,29 +103,36 @@ const RevenueAttributionDashboard = () => {
             transition={{ delay: 0.1 }}
             className="mb-8"
           >
-            <GreenButton>SERVICES / REVENUE ATTRIBUTION DASHBOARD</GreenButton>
+            <GreenButton>SERVICES / BRAND AND IDENTITY</GreenButton>
           </motion.div>
 
           <AnimatedHeroHeading
             words={[
-              "EVERY", "CAMPAIGN", "TIED", "TO", "A", "BUSINESS", "OUTCOME", "YOU", "CAN",
-              <WavyUnderline key="wavy">SHOW YOUR BOARD.</WavyUnderline>
+              "YOUR",
+              "BRAND",
+              "SHOULD",
+              "DO",
+              "THE",
+              "SELLING",
+              "BEFORE",
+              "YOUR",
+              <WavyUnderline key="wavy">SALESPEOPLE DO</WavyUnderline>,
             ]}
           />
 
           <motion.p
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1.2 }}
+            transition={{ delay: 1 }}
             className="font-bricolage text-lg max-w-3xl mx-auto mb-10 leading-relaxed text-foreground"
           >
-            Not a metric you have to explain away. A number that defends itself.
+            Visual identity, positioning, and brand architecture — built to be consistent at every touchpoint.
           </motion.p>
 
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1.3 }}
+            transition={{ delay: 1.1 }}
             className="flex items-center rounded-full relative font-bricolage z-1000 justify-center gap-4"
           >
             <Link to="/booking">
@@ -186,41 +146,81 @@ const RevenueAttributionDashboard = () => {
       </section>
 
       {/* Section 2 — What it includes (Bento Box) */}
-      <section className="px-4 py-20 bg-background relative z-10">
-        <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
-          <motion.div {...scrollAnimProps} className="mb-12">
-            <GreenButton>WHAT IT INCLUDES</GreenButton>
-          </motion.div>
-
+      <section className="px-20 py-20 bg-background relative z-10">
+        <div className="w-full flex justify-center text-center">
           <motion.h2
             {...scrollAnimProps}
-            className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-16 max-w-3xl leading-[1.1]"
+            className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-12"
           >
             WHAT IT <WavyUnderline>INCLUDES</WavyUnderline>
           </motion.h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 w-full">
+          {/* Box 1 — Brand Strategy (wide) */}
+          <motion.div
+            {...scrollAnimProps}
+            className="md:col-span-2 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-colors duration-500" />
+            <Layers className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl lg:text-3xl text-primary mb-3">
+              BRAND STRATEGY
+            </h3>
+            <p className="font-bricolage text-lg text-foreground/80 max-w-md">
+              Positioning, messaging architecture, and competitive differentiation — so your brand owns a clear space in the market.
+            </p>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full text-left">
-            {[
-              { title: "CUSTOM DASHBOARD BUILD", desc: "GA4, Meta Ads, Google Ads, and CRM data unified in one view", icon: <LayoutDashboard className="w-10 h-10 text-primary mb-6" /> },
-              { title: "OFFLINE CONVERSION TRACKING", desc: "Connecting ad spend to actual closed deals, not just lead form submissions", icon: <LinkIcon className="w-10 h-10 text-primary mb-6" /> },
-              { title: "COST PER ACQUISITION TRACKING", desc: "Broken down by channel, campaign, and creative — not blended averages", icon: <Coins className="w-10 h-10 text-primary mb-6" /> },
-              { title: "EXECUTIVE-READY REPORTING", desc: "One view per month, not six spreadsheets to reconcile before a board meeting", icon: <FileSpreadsheet className="w-10 h-10 text-primary mb-6" /> },
-              { title: "AUTOMATED ALERTS", desc: "Flagged when campaigns underperform threshold benchmarks — before the month ends", icon: <Bell className="w-10 h-10 text-primary mb-6" /> },
-              { title: "BUNDLED OR STANDALONE", desc: "Included in all growth retainers above Rs. 2L/month, or available as a standalone engagement", icon: <Package className="w-10 h-10 text-primary mb-6" /> }
-            ].map((card, idx) => (
-              <motion.div
-                key={idx}
-                {...scrollAnimProps}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[280px]"
-              >
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                {card.icon}
-                <h3 className="font-dela text-2xl text-primary mb-3 uppercase">{card.title}</h3>
-                <p className="font-bricolage text-lg text-foreground/80">{card.desc}</p>
-              </motion.div>
-            ))}
-          </div>
+          {/* Box 2 — Logo & Visual Identity */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.1 }}
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <PenTool className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl text-primary mb-3">
+              LOGO & VISUAL IDENTITY
+            </h3>
+            <p className="font-bricolage text-lg text-foreground/80">
+              Colour, typography, and grid — built to work at every scale.
+            </p>
+          </motion.div>
+
+          {/* Box 3 — Brand Guidelines */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.2 }}
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <FileText className="w-10 h-10 text-primary mb-6" />
+            <h3 className="font-dela text-2xl text-primary mb-3">
+              BRAND GUIDELINES
+            </h3>
+            <p className="font-bricolage text-lg text-foreground/80">
+              So every vendor, designer, and team member follows the same rules.
+            </p>
+          </motion.div>
+
+          {/* Box 4 — Naming & Rebranding (wide, highlighted) */}
+          <motion.div
+            {...scrollAnimProps}
+            transition={{ delay: 0.3 }}
+            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="flex gap-4 mb-6">
+              <Sparkles className="w-10 h-10 text-primary" />
+            </div>
+            <h3 className="font-dela text-2xl lg:text-3xl text-primary mb-3">
+              NAMING, TAGLINES & REBRANDING
+            </h3>
+            <p className="font-bricolage text-lg text-foreground/80 max-w-xl">
+              Naming and tagline development for new products or sub-brands. Full rebranding engagements — audit, strategy, and rollout handled as one project.
+            </p>
+          </motion.div>
+
         </div>
       </section>
 
@@ -231,35 +231,32 @@ const RevenueAttributionDashboard = () => {
             {...scrollAnimProps}
             className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-8"
           >
-            WHO IT'S <WavyUnderline> FOR </WavyUnderline>
+            WHO IT'S <WavyUnderline>FOR</WavyUnderline>
           </motion.h2>
 
           <motion.p
             {...scrollAnimProps}
             className="text-lg font-bricolage text-foreground max-w-3xl mx-auto text-center leading-relaxed"
           >
-            Companies that have been doing digital marketing for a year and still cannot answer 'what did it cost us to get one customer?' Founders and marketing leads who sit in board reviews and cannot defend the marketing budget with confidence.
+            Businesses that have grown faster than their brand. Companies where the website, the deck, and the business card all look like three different companies made them. New businesses that want to enter a market with a brand that commands respect on day one.
           </motion.p>
         </div>
       </section>
 
-      {/* Section 4 — The outcome */}
+      {/* Section 4 — Pull quote */}
       <section className="px-4 py-20 bg-background relative z-10 flex justify-center items-center">
         <div className="max-w-5xl mx-auto w-full flex flex-col items-center">
-          {/* Green Button */}
           <motion.div {...scrollAnimProps} className="mb-12">
             <GreenButton>THE OUTCOME</GreenButton>
           </motion.div>
 
-          {/* Quote + Line */}
           <div className="flex items-stretch gap-8">
-            <div className="w-px bg-primary"></div>
-
+            <div className="w-px bg-primary" />
             <motion.h2
               {...scrollAnimProps}
               className="font-dela text-2xl md:text-4xl lg:text-5xl uppercase text-primary max-w-4xl leading-[1.1] text-left"
             >
-              "ONE SOURCE OF TRUTH FOR MARKETING PERFORMANCE. YOU CAN ATTRIBUTE REVENUE, DEFEND BUDGET, AND MAKE FASTER DECISIONS ABOUT WHAT TO SCALE AND WHAT TO CUT."
+              "A BRAND THAT COMMUNICATES WHAT YOU DO TO A STRANGER IN UNDER TEN SECONDS."
             </motion.h2>
           </div>
         </div>
@@ -326,4 +323,4 @@ const RevenueAttributionDashboard = () => {
   );
 };
 
-export default RevenueAttributionDashboard;
+export default BrandAndIdentity;
