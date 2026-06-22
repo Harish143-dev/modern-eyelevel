@@ -26,6 +26,10 @@ const navLinks = [
     href: "/blog",
     label: "Blog",
   },
+  {
+    href: "/contact",
+    label: "Contact",
+  },
 ];
 
 // Custom filled social icons
