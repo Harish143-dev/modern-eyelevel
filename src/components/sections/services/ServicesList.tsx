@@ -18,6 +18,9 @@ import poster_3 from "@/assets/services/content/poster_3.webp";
 import social_1 from "@/assets/services/social/google.webp";
 import social_2 from "@/assets/services/social/social-media.webp";
 import social_3 from "@/assets/services/social/linkedin.webp";
+import perf_mark_01 from "@/assets/services/social/peformance_marketing_01.webp";
+import perf_mark_02 from "@/assets/services/social/performance_marketing_02.webp";
+import perf_mark_03 from "@/assets/services/social/performance_marketing_03.webp";
 import performance_1 from "@/assets/services/social/Performance marketing.webp"
 import celebrityEvent from "@/assets/services/content/celebrity.webp";
 import meeting from "@/assets/services/content/meeting.webp";
@@ -35,11 +38,15 @@ const services = [
       "Meta and Google Ads built for revenue, not reach. Full-funnel campaigns with flat fees and complete attribution from ad to close. No black-box reporting, no padded spend.",
     media: [
       {
-        src: performance_1,
+        src: perf_mark_01,
         type: "image" as const,
       },
       {
-        src: social_3,
+        src: perf_mark_02,
+        type: "image" as const,
+      },
+      {
+        src: perf_mark_03,
         type: "image" as const,
       },
     ],
