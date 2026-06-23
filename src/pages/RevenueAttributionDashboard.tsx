@@ -196,7 +196,7 @@ const RevenueAttributionDashboard = () => {
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-6 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
           {/* Box 1 (wide) */}
           <motion.div
             {...scrollAnimProps}

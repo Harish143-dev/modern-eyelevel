@@ -49,7 +49,7 @@ const Card: FC<iCardProps> = ({ title, description, color, textColor, i, src }) 
         {/* Content */}
         <div className="relative z-20 text-center flex flex-col justify-end items-center h-full w-full">
           <span
-            className="font-dela text-xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-tight block mb-3 uppercase"
+            className="font-dela text-xl sm:text-2xl md:text-4xl lg:text-5xl font-black tracking-tight block mb-3 uppercase"
             style={{
               color: "#E2FEA5",
             }}

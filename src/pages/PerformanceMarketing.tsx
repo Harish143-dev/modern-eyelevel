@@ -168,14 +168,14 @@ const PerformanceMarketing = () => {
       </section>
 
       {/* Section 2 — What it includes (Bento Box) */}
-      <section className="px-20 bg-background relative z-10 py-[100px]">
+      <section className="px-4 sm:px-10 md:px-20 bg-background relative z-10 py-20 md:py-[100px]">
         <motion.h2
           {...scrollAnimProps}
           className="font-dela text-center uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-12"
         >
           WHAT IT <WavyUnderline>INCLUDES</WavyUnderline>
         </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
 
           {/* Box 1 */}
           <motion.div
@@ -294,9 +294,6 @@ const PerformanceMarketing = () => {
       {/* Section 5 — Industry verticals */}
       < section className="px-4 py-20 bg-secondary relative z-10" >
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
-          <motion.div {...scrollAnimProps} className="">
-            <GreenButton>INDUSTRY</GreenButton>
-          </motion.div>
 
           <motion.h2
             {...scrollAnimProps}
