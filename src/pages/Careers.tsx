@@ -163,7 +163,7 @@ const Careers = () => {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="px-4 relative py-28 lg:min-h-screen flex flex-col items-center justify-center"
+        className="px-4 relative lg:min-h-screen flex flex-col items-center justify-center py-[100px]"
       >
         {/* Rotating 32-pointed star - centered upper area */}
         <motion.div
@@ -272,7 +272,7 @@ const Careers = () => {
 
       {/* Why Join Us - Join the League style */}
       <section
-        className="py-20 px-4 relative bg-background"
+        className="px-4 relative bg-background py-[100px]"
       >
         <div className="max-w-4xl mx-auto">
           <motion.div
@@ -343,7 +343,7 @@ const Careers = () => {
 
       {/* Open Positions - Restyled with Join the League box style */}
       <section
-        className="py-20 px-4 relative border-t border-b"
+        className="px-4 relative border-t border-b py-[100px]"
         style={{
           backgroundColor: "#253e35",
           borderColor: "rgba(248, 255, 232, 0.15)",
@@ -460,7 +460,7 @@ const Careers = () => {
       <FAQSection faqs={faqs["Careers"]} />
 
       <section
-        className="py-20 px-4 relative overflow-hidden bg-secondary"
+        className="px-4 relative overflow-hidden bg-secondary py-[100px]"
       >
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <motion.div

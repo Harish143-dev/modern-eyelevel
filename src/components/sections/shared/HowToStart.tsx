@@ -26,7 +26,7 @@ const steps = [
 
 const HowToStart = () => {
   return (
-    <section className="py-24 px-4 bg-card text-card-foreground">
+    <section className="px-4 bg-card text-card-foreground py-[100px]">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>

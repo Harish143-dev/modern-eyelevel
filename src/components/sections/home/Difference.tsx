@@ -5,7 +5,7 @@ import GreenButton from "@/components/shared/GreenButton";
 
 const Difference = () => {
   return (
-    <section className="pt-12 md:pt-16 pb-20 md:pb-24 px-4 bg-forest-deep relative overflow-hidden">
+    <section className="px-4 bg-forest-deep relative overflow-hidden py-[100px]">
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Header */}
         <motion.div

@@ -175,7 +175,7 @@ const Portfolio = () => {
       <Header />
 
       <main>
-        <section className="relative min-h-[82vh] overflow-hidden px-4 pb-20 pt-36 md:px-8 md:pb-24 lg:px-12">
+        <section className="relative min-h-[82vh] overflow-hidden px-4 md:px-8 lg:px-12 py-[100px]">
           <motion.img
             style={{ y: heroLift }}
             src={production1}
@@ -227,7 +227,7 @@ const Portfolio = () => {
           </div>
         </section>
 
-        <section className="px-4 py-20 md:px-8 lg:px-12">
+        <section className="px-4 md:px-8 lg:px-12 py-[100px]">
           <div className="mx-auto max-w-7xl">
             <motion.div
               variants={fadeUp}
@@ -286,7 +286,7 @@ const Portfolio = () => {
           </div>
         </section>
 
-        <section className="border-y border-primary/10 py-10">
+        <section className="border-y border-primary/10 py-[100px]">
           <div className="mb-8 px-4 text-center font-bricolage text-xs uppercase tracking-[0.26em] text-foreground/45">
             Creative design support for ambitious brands
           </div>
@@ -309,7 +309,7 @@ const Portfolio = () => {
           </div>
         </section>
 
-        <section className="px-4 py-24 md:px-8 lg:px-12">
+        <section className="px-4 md:px-8 lg:px-12 py-[100px]">
           <div className="mx-auto max-w-7xl">
             <motion.div
               variants={fadeUp}
@@ -367,7 +367,7 @@ const Portfolio = () => {
           </div>
         </section>
 
-        <section className="relative min-h-[78vh] overflow-hidden">
+        <section className="relative min-h-[78vh] overflow-hidden py-[100px]">
           <motion.img
             style={{ y: bannerLift }}
             src={production3}
@@ -396,7 +396,7 @@ const Portfolio = () => {
           </div>
         </section>
 
-        <section className="px-4 py-24 md:px-8 lg:px-12">
+        <section className="px-4 md:px-8 lg:px-12 py-[100px]">
           <div className="mx-auto max-w-7xl">
             <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <div>
@@ -437,7 +437,7 @@ const Portfolio = () => {
           </div>
         </section>
 
-        <section className="px-4 pb-24 md:px-8 lg:px-12">
+        <section className="px-4 md:px-8 lg:px-12 py-[100px]">
           <div className="mx-auto grid max-w-7xl gap-10 border-t border-primary/12 pt-16 lg:grid-cols-[1.1fr_0.9fr]">
             <motion.div
               variants={fadeUp}
@@ -474,7 +474,7 @@ const Portfolio = () => {
           </div>
         </section>
 
-        <section className="px-4 pb-28 md:px-8 lg:px-12">
+        <section className="px-4 md:px-8 lg:px-12 py-[100px]">
           <motion.div
             variants={fadeUp}
             initial="hidden"

@@ -83,7 +83,7 @@ const services: ServiceItem[] = [
 
 const ServicesSection = () => {
   return (
-    <section className="mb-20 bg-background relative overflow-hidden">
+    <section className="bg-background relative overflow-hidden py-[100px]">
       <div className="max-w-[1200px] mx-auto px-4 relative z-10">
         <div className="text-center mb-16 md:mb-24">
           <GreenButton>Services</GreenButton>
@@ -93,7 +93,7 @@ const ServicesSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-dela text-3xl md:text-4xl lg:text-5xl text-foreground  leading-[1.1] tracking-wide mt-6 uppercase"
+            className="font-dela text-3xl md:text-4xl lg:text-5xl text-foreground  leading-[1.1] tracking-wide uppercase"
           >
             <span className="text-primary">What <WavyUnderline className="text-white">we do</WavyUnderline> </span>
           </motion.h2>
@@ -138,7 +138,7 @@ const ServicesSection = () => {
           <Link to="/services">
             <Button
               size="lg"
-              className="group px-5 sm:px-10 py-4 mt-5 text-sm md:text-lg w-full sm:w-auto mb-5"
+              className="group px-5 sm:px-10 py-4 mt-5 text-sm md:text-lg w-full sm:w-auto"
             >
               Explore all services
               <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1.5 transition-transform" />

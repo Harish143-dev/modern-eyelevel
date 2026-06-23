@@ -45,7 +45,7 @@ const Services = () => {
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
 
   return (
-    <section id="services" ref={ref} className="py-24 px-4 relative overflow-hidden">
+    <section id="services" ref={ref} className="px-4 relative overflow-hidden py-[100px]">
       {/* Parallax background */}
       <motion.div 
         style={{ y: backgroundY }}

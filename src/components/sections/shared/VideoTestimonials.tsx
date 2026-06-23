@@ -83,7 +83,7 @@ const VideoTestimonials = () => {
   const [selectedVideo, setSelectedVideo] = useState<typeof testimonials[0] | null>(null);
 
   return (
-    <section className="py-12 md:py-16 px-4 bg-forest-deep relative overflow-hidden">
+    <section className="px-4 bg-forest-deep relative overflow-hidden py-[100px]">
       {/* Background elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]" />

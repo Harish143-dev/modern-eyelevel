@@ -54,7 +54,7 @@ const Roadmap = () => {
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["5%", "-5%"]);
 
   return (
-    <section ref={ref} className="py-24 px-4 bg-background relative overflow-hidden">
+    <section ref={ref} className="px-4 bg-background relative overflow-hidden py-[100px]">
       {/* Parallax background */}
       <motion.div 
         style={{ y: backgroundY }}

@@ -14,7 +14,7 @@ const WhyEyeLevelExists = () => {
   return (
     <section
       id="about"
-      className="py-20 px-4 md:px-6 overflow-hidden relative md:py-[28px] bg-secondary"
+      className="px-4 md:px-6 overflow-hidden relative ] bg-secondary py-[100px]"
     >
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Main Headline */}
@@ -26,7 +26,7 @@ const WhyEyeLevelExists = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-dela text-3xl md:text-4xl lg:text-5xl leading-[1.2] tracking-tight mb-6 mt-6 uppercase"
+            className="font-dela text-3xl md:text-4xl lg:text-5xl leading-[1.2] tracking-tight mb-6 uppercase"
           >
  
             <span className="text-primary">Eyelevel is built to <WavyUnderline className=" text-primary">grow</WavyUnderline></span>

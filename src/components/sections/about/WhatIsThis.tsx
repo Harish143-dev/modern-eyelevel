@@ -12,7 +12,7 @@ const WhatIsThis = () => {
   return (
     <section 
       id="about"
-      className="py-20 md:py-32 px-4 md:px-6 overflow-hidden relative bg-background"
+      className="px-4 md:px-6 overflow-hidden relative bg-background py-[100px]"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

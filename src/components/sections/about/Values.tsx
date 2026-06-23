@@ -37,7 +37,7 @@ const values = [
 const Values = () => {
   return (
     <section
-      className="py-20 px-4 relative border-t border-b overflow-hidden"
+      className="px-4 relative border-t border-b overflow-hidden py-[100px]"
       style={{
         backgroundColor: "#253e35",
         borderColor: "rgba(248, 255, 232, 0.15)",

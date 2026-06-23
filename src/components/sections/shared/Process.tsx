@@ -12,7 +12,7 @@ const items = ["OUR PROCESS", "OUR PROCESS", "OUR PROCESS", "OUR PROCESS", "OUR 
 
 const Process = () => {
   return (
-    <section className="py-24 px-4 bg-card">
+    <section className="px-4 bg-card py-[100px]">
       <div className="max-w-7xl mx-auto">
         {/* Marquee */}
         <div className="overflow-hidden mb-12">

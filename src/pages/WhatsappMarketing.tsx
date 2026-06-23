@@ -115,7 +115,7 @@ function WhatsAppMarketingPage() {
         canonical="https://theeyelevelstudio.com/services/whatsapp-marketing"
         url="https://theeyelevelstudio.com/services/whatsapp-marketing"
       />
-      <main className="bg-background text-foreground font-bricolage min-h-screen relative overflow-x-hidden">
+      <main className="bg-background text-foreground font-bricolage min-h-screen relative overflow-x-hidden py-[100px]">
 
         <Header />
 

@@ -3,10 +3,10 @@ import WavyUnderline from "@/components/shared/WavyUnderline";
 
 const HowItConnects = () => {
   return (
-    <section className="py-24 md:py-32 px-4 relative bg-forest-deep text-center z-10">
+    <section className="px-4 relative bg-forest-deep text-center z-10 py-[100px]">
       <div className="max-w-7xl mx-auto">
         {/* Eyebrow only, as requested by user to not repeat headline */}
-        <div className="mb-16 text-center">
+        <div className="mb-6 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}

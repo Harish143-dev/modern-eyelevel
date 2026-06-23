@@ -6,7 +6,7 @@ import WavyUnderline from "@/components/shared/WavyUnderline";
 
 const JoinUs = () => {
   return (
-    <section className="py-20 px-4 relative overflow-hidden bg-[#1a2f28]">
+    <section className="px-4 relative overflow-hidden bg-[#1a2f28] py-[100px]">
       <div className="max-w-4xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

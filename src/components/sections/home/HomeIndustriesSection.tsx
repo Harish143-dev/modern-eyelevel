@@ -69,7 +69,7 @@ const industries: Industry[] = [
 
 const HomeIndustriesSection = () => {
   return (
-    <section className="py-20 md:py-32 bg-background relative overflow-hidden">
+    <section className="bg-background relative overflow-hidden py-[100px]">
       {/* Container for the text (centered) */}
       <div className="max-w-[1200px] mx-auto px-4 text-center mb-16 el-reveal">
         <GreenButton>INDUSTRIES</GreenButton>
@@ -79,7 +79,7 @@ const HomeIndustriesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-dela text-3xl uppercase md:text-4xl lg:text-5xl text-primary text-foreground mb-6 leading-[1.1] tracking-wide mt-6"
+          className="font-dela text-3xl uppercase md:text-4xl lg:text-5xl text-primary text-foreground mb-6 leading-[1.1] tracking-wide"
         >
                  Industries <WavyUnderline className="text-white">We work in</WavyUnderline>
         </motion.h2>

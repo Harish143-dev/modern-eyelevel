@@ -34,7 +34,7 @@ export default function WhatsappMarketingOfferSection() {
   const [openService, setOpenService] = useState<number | null>(0);
 
   return (
-    <section className="max-w-5xl mx-auto px-6 md:px-12 py-16 md:py-24 relative z-[1]" aria-labelledby="offer-h">
+    <section className="max-w-5xl mx-auto px-6 md:px-12 relative z-[1] py-[100px]" aria-labelledby="offer-h">
       <WhatsappMarketingSectionHeader title="What We Offer" tag="Capabilities" id="offer-h" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 el-reveal font-bricolage">
         {services.map((s, i) => {

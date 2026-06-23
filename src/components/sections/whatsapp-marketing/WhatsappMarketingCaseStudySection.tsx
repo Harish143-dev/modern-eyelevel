@@ -292,7 +292,7 @@ export default function WhatsappMarketingCaseStudySection({ scrollTo }: Whatsapp
   }, [messages, isTyping]);
 
   return (
-    <section ref={sectionRef} className="max-w-[1200px] mx-auto px-6 md:px-12 py-16 md:py-24 relative z-[1]" aria-labelledby="case-h" id="use-cases">
+    <section ref={sectionRef} className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-[1] py-[100px]" aria-labelledby="case-h" id="use-cases">
       <WhatsappMarketingSectionHeader title="See It In Action" tag="Case Study" id="case-h" />
 
       <div className="grid grid-cols-1 lg:grid-cols-[45%_55%] gap-12 lg:gap-16 items-start el-reveal font-bricolage">

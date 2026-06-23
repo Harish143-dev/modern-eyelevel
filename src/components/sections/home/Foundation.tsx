@@ -32,7 +32,7 @@ const Foundation = () => {
   const y = useTransform(scrollYProgress, [0, 1], ["5%", "-5%"]);
 
   return (
-    <section id="about" ref={ref} className="py-24 px-4 bg-card relative overflow-hidden">
+    <section id="about" ref={ref} className="px-4 bg-card relative overflow-hidden py-[100px]">
       {/* Parallax background */}
       <motion.div 
         style={{ y }}
