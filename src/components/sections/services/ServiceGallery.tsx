@@ -200,14 +200,14 @@ const ServiceGallery = ({
                 }}
                 className="w-20 h-20 rounded-full flex items-center justify-center backdrop-blur-md"
                 style={{
-                  backgroundColor: "rgba(226, 254, 165, 0.3)",
-                  border: "2px solid rgba(226, 254, 165, 0.5)",
+                  backgroundColor: "rgba(226, 254, 165, 0.4)",
+                  border: "2px solid rgba(226, 254, 165, 0.6)",
                 }}
               >
                 {isVideoPlaying ? (
-                  <Pause className="w-8 h-8 text-primary" />
+                  <Pause className="w-8 h-8 text-[#0D1F1A]" />
                 ) : (
-                  <Play className="w-8 h-8 ml-1 text-primary" />
+                  <Play className="w-8 h-8 ml-1 text-[#0D1F1A]" />
                 )}
               </motion.button>
             </div>
@@ -223,14 +223,14 @@ const ServiceGallery = ({
               }}
               className="absolute bottom-4 left-4 w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-md z-10"
               style={{
-                backgroundColor: "rgba(226, 254, 165, 0.2)",
-                border: "1px solid rgba(226, 254, 165, 0.3)",
+                backgroundColor: "rgba(226, 254, 165, 0.4)",
+                border: "1px solid rgba(226, 254, 165, 0.6)",
               }}
             >
               {isMuted ? (
-                <VolumeX className="w-5 h-5 text-primary" />
+                <VolumeX className="w-5 h-5 text-[#0D1F1A]" />
               ) : (
-                <Volume2 className="w-5 h-5 text-primary" />
+                <Volume2 className="w-5 h-5 text-[#0D1F1A]" />
               )}
             </motion.button>
           </div>
@@ -266,11 +266,11 @@ const ServiceGallery = ({
             className="absolute left-4 top-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center backdrop-blur-md transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 z-10"
             style={{
               y: "-50%",
-              backgroundColor: "rgba(226, 254, 165, 0.2)",
-              border: "1px solid rgba(226, 254, 165, 0.3)",
+              backgroundColor: "rgba(226, 254, 165, 0.4)",
+              border: "1px solid rgba(226, 254, 165, 0.6)",
             }}
           >
-            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-[#0D1F1A]" />
           </motion.button>
 
           {/* Right Arrow */}
@@ -286,11 +286,11 @@ const ServiceGallery = ({
             className="absolute right-4 top-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center backdrop-blur-md transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 z-10"
             style={{
               y: "-50%",
-              backgroundColor: "rgba(226, 254, 165, 0.2)",
-              border: "1px solid rgba(226, 254, 165, 0.3)",
+              backgroundColor: "rgba(226, 254, 165, 0.4)",
+              border: "1px solid rgba(226, 254, 165, 0.6)",
             }}
           >
-            <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+            <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-[#0D1F1A]" />
           </motion.button>
 
           {/* Dot Indicators */}
