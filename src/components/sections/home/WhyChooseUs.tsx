@@ -58,7 +58,7 @@ const WhyChooseUs = () => {
             </span>
           </motion.div>
           <h2 className="font-dela text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-6">
-            <span className="text-white">Why EyeLevel is</span>
+            <span className="text-white">Why Eyelevel is</span>
             <br />
             <span className="relative inline-block">
               <span className="text-primary">Different</span>

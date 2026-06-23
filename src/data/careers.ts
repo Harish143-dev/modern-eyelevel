@@ -92,7 +92,7 @@ const rawJobListings: Record<string, JobListing> = {
     experience: "Fresher / 0-1 Years",
     shortDescription:
       "Work on real client accounts and learn social media marketing from the inside.",
-    aboutCompany: `Growth is a climb. We don't do guesswork. EyeLevel Growth Studio isn't a traditional "stiff" agency. We are a high-performance growth engine. We unite strategy, design, AI, and performance to help brands rise.
+    aboutCompany: `Growth is a climb. We don't do guesswork. Eyelevel Growth Studio isn't a traditional "stiff" agency. We are a high-performance growth engine. We unite strategy, design, AI, and performance to help brands rise.
 Our promise is simple: Serious attention. Clear timelines. No confusion. We don't care about vanity metrics. We care about leads, sales, and real business outcomes. We are the "smart, busy friend" clients trust to get it done.
 `,
     responsibilities: [
@@ -124,7 +124,7 @@ Our promise is simple: Serious attention. Clear timelines. No confusion. We don'
     whatYouGet: [
       "Paid internship from Day 1",
       "Work on real client accounts - sports leagues, wellness brands, events, and more",
-      "Direct mentorship from EyeLevel's founding team",
+      "Direct mentorship from Eyelevel's founding team",
       "A full-time permanent role at the end of 3 months - no guesswork, no maybe",
       "Fast-paced environment where your work actually matters",
     ],
@@ -145,7 +145,7 @@ Our promise is simple: Serious attention. Clear timelines. No confusion. We don'
     experience: "5+ years",
     shortDescription:
       "Build lasting client relationships and deliver consistent closures.",
-    aboutCompany: `Growth is a climb. We don't do guesswork. EyeLevel Growth Studio isn't a traditional "stiff" agency. We are a high-performance growth engine. We unite strategy, design, AI, and performance to help brands rise.
+    aboutCompany: `Growth is a climb. We don't do guesswork. Eyelevel Growth Studio isn't a traditional "stiff" agency. We are a high-performance growth engine. We unite strategy, design, AI, and performance to help brands rise.
 Our promise is simple: Serious attention. Clear timelines. No confusion. We don't care about vanity metrics. We care about leads, sales, and real business outcomes. We are the "smart, busy friend" clients trust to get it done.
 `,
     responsibilities: [
@@ -191,11 +191,11 @@ Our promise is simple: Serious attention. Clear timelines. No confusion. We don'
     experience: "5+ years",
     shortDescription:
       "Lead ideas, shape strategy, and turn creativity into growth.",
-    aboutCompany: `Growth is a climb. We don't do guesswork. EyeLevel Growth Studio isn't a traditional "stiff" agency. We are a high-performance growth engine. We unite strategy, design, AI, and performance to help brands rise.
+    aboutCompany: `Growth is a climb. We don't do guesswork. Eyelevel Growth Studio isn't a traditional "stiff" agency. We are a high-performance growth engine. We unite strategy, design, AI, and performance to help brands rise.
 Our promise is simple: Serious attention. Clear timelines. No confusion. We don't care about vanity metrics. We care about leads, sales, and real business outcomes. We are the "smart, busy friend" clients trust to get it done.
 `,
     responsibilities: [
-      "Own the creative vision and strategic direction across all EyeLevel projects",
+      "Own the creative vision and strategic direction across all Eyelevel projects",
       "Lead, mentor, and push the creative squad - designers, editors, and creators",
       "Translate business problems into clear, conversion-focused creative strategies",
       "Build campaign roadmaps that drive revenue, not just aesthetics",
@@ -238,7 +238,7 @@ Our promise is simple: Serious attention. Clear timelines. No confusion. We don'
     experience: "5+ years",
     shortDescription:
       "Turn ideas into visuals that perform across brands and campaigns.",
-    aboutCompany: `Growth is a climb. We don't do guesswork. EyeLevel Growth Studio isn't a traditional "stiff" agency. We are a high-performance growth engine. We unite strategy, design, AI, and performance to help brands rise.
+    aboutCompany: `Growth is a climb. We don't do guesswork. Eyelevel Growth Studio isn't a traditional "stiff" agency. We are a high-performance growth engine. We unite strategy, design, AI, and performance to help brands rise.
 Our promise is simple: Serious attention. Clear timelines. No confusion. We don't care about vanity metrics. We care about leads, sales, and real business outcomes. We are the "smart, busy friend" clients trust to get it done.
 `,
     responsibilities: [
@@ -283,7 +283,7 @@ Our promise is simple: Serious attention. Clear timelines. No confusion. We don'
     experience: "4–6 years",
     shortDescription:
       "Own client relationships and creative quality across all active projects.",
-    aboutCompany: `EyeLevel is a full-service growth studio based in Chennai. We work with brands across sports, healthcare, education, and luxury — handling everything from brand strategy and creative campaigns to events, digital marketing, and performance advertising.
+    aboutCompany: `Eyelevel is a full-service growth studio based in Chennai. We work with brands across sports, healthcare, education, and luxury — handling everything from brand strategy and creative campaigns to events, digital marketing, and performance advertising.
 
 We are not a large agency. We are a tight, ambitious team that moves fast, thinks big, and genuinely cares about client outcomes. We have worked with clients like Chennai Superchamps, Bengaluru Jawans, Joyalukkas, and leading healthcare and education brands across South India.`,
     responsibilities: [
@@ -323,7 +323,7 @@ We are not a large agency. We are a tight, ambitious team that moves fast, think
       "Salary of Rs 55,000 – 65,000/month based on experience",
       "Work on high-visibility clients in sports, healthcare, and luxury",
       "Direct access to the Founder — steep learning curve, fast growth",
-      "Clear path to grow into the Studio Manager role as EyeLevel scales",
+      "Clear path to grow into the Studio Manager role as Eyelevel scales",
       "A team that values ownership, not just execution",
     ],
     benefits: [
@@ -342,7 +342,7 @@ We are not a large agency. We are a tight, ambitious team that moves fast, think
     datePosted: "23/01/2026",
     experience: "3+ years",
     shortDescription: "Build backend systems that stay up and scale.",
-    aboutCompany: `Growth is a climb. We don't do guesswork. EyeLevel Growth Studio isn't a traditional "stiff" agency. We are a high-performance growth engine. We unite strategy, design, AI, and performance to help brands rise.
+    aboutCompany: `Growth is a climb. We don't do guesswork. Eyelevel Growth Studio isn't a traditional "stiff" agency. We are a high-performance growth engine. We unite strategy, design, AI, and performance to help brands rise.
 Our promise is simple: Serious attention. Clear timelines. No confusion. We don't care about vanity metrics. We care about leads, sales, and real business outcomes. We are the "smart, busy friend" clients trust to get it done.
 `,
     responsibilities: [
@@ -387,9 +387,9 @@ Our promise is simple: Serious attention. Clear timelines. No confusion. We don'
     experience: "Various",
     shortDescription:
       "We're always looking for exceptional talent. Send us your resume and tell us how you can contribute to our growth story.",
-    aboutCompany: `Founded in 2020, EyeLevel Growth Studio is a digital growth partner for leading brands and hyper-scaling startups in India. With a team of digital experts across Bengaluru, Mumbai, NCR, and Chennai, we are one of India's fastest-growing independent digital marketing solutions companies.
+    aboutCompany: `Founded in 2020, Eyelevel Growth Studio is a digital growth partner for leading brands and hyper-scaling startups in India. With a team of digital experts across Bengaluru, Mumbai, NCR, and Chennai, we are one of India's fastest-growing independent digital marketing solutions companies.
 
-EyeLevel is a Google Premier Partner, Facebook Business Partner, and works closely with ecosystem partners like Hotstar, Amazon & LinkedIn.`,
+Eyelevel is a Google Premier Partner, Facebook Business Partner, and works closely with ecosystem partners like Hotstar, Amazon & LinkedIn.`,
     responsibilities: [
       "Responsibilities will vary based on the role and your expertise.",
       "Collaborate with cross-functional teams to deliver exceptional results.",
@@ -403,7 +403,7 @@ EyeLevel is a Google Premier Partner, Facebook Business Partner, and works close
       "Ability to work in a fast-paced environment.",
     ],
     qualities: [
-      "Someone who embraces the EyeLevel Mindset.",
+      "Someone who embraces the Eyelevel Mindset.",
       "Creative and data-driven approach.",
       "Positive attitude and eagerness to learn.",
       "Team player with strong work ethic.",

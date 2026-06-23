@@ -12,12 +12,12 @@ const stats = [
 
 const testimonials = [
   {
-    quote: "Working with EyeLevel has been a game-changer for our business. Their strategic approach and relentless focus on results have helped us achieve unprecedented growth.",
+    quote: "Working with Eyelevel has been a game-changer for our business. Their strategic approach and relentless focus on results have helped us achieve unprecedented growth.",
     author: "CEO",
     company: "Leading EdTech Company"
   },
   {
-    quote: "The team at EyeLevel is a true partner. They took the time to understand our business and developed a custom strategy that has exceeded all our expectations.",
+    quote: "The team at Eyelevel is a true partner. They took the time to understand our business and developed a custom strategy that has exceeded all our expectations.",
     author: "Marketing Director",
     company: "Enterprise B2B Company"
   },

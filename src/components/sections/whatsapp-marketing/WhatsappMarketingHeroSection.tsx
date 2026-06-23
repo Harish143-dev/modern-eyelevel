@@ -71,7 +71,7 @@ export default function WhatsappMarketingHeroSection({ scrollTo }: WhatsappMarke
             Email open rates average 20%. WhatsApp open rates average 95%. If your competitors are still relying on email nurture and you haven't set up WhatsApp — this is the gap.
           </p>
           <p>
-            EyeLevel manages end-to-end WhatsApp marketing for D2C brands, healthcare providers, schools, and SaaS companies across India. We handle everything from API setup to campaign execution.
+            Eyelevel manages end-to-end WhatsApp marketing for D2C brands, healthcare providers, schools, and SaaS companies across India. We handle everything from API setup to campaign execution.
           </p>
         </motion.div>
 

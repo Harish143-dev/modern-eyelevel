@@ -20,7 +20,7 @@ const Automotive = () => {
   return (
     <div className="min-h-screen bg-background selection:bg-brand-lime selection:text-black">
       <SEO
-        title="Automotive Marketing Agency Chennai | Dealership Marketing | EyeLevel Growth Studio"
+        title="Automotive Marketing Agency Chennai | Dealership Marketing | Eyelevel Growth Studio"
         description="Performance marketing for dealerships and component makers. Showroom footfall, test-drive bookings, and OEM mandate compliance — one studio, full attribution."
         keywords={["automotive marketing agency Chennai", "car dealership marketing Chennai", "automotive digital marketing India", "dealership lead generation", "OEM marketing India", "automotive advertising agency Chennai"]}
         schema={[
@@ -31,7 +31,7 @@ const Automotive = () => {
             description: "Performance marketing for dealerships and component makers. Showroom footfall, test-drive bookings, and OEM mandate compliance — one studio, full attribution.",
             provider: {
               "@type": "Organization",
-              name: "EyeLevel Growth Studio",
+              name: "Eyelevel Growth Studio",
               url: "https://theeyelevelstudio.com"
             },
             areaServed: "India",

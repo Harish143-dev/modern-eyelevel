@@ -20,7 +20,7 @@ const ManufacturingB2B = () => {
   return (
     <div className="min-h-screen bg-background selection:bg-brand-lime selection:text-black">
       <SEO
-        title="Manufacturing Marketing Agency Chennai | B2B Marketing | EyeLevel Growth Studio"
+        title="Manufacturing Marketing Agency Chennai | B2B Marketing | Eyelevel Growth Studio"
         description="LinkedIn, SEO, and content for Chennai and Coimbatore manufacturers. Your buyers moved online — we help them find you and choose you before the first call."
         keywords={["manufacturing marketing agency Chennai", "B2B marketing agency Chennai", "manufacturing digital marketing India", "industrial marketing agency", "Coimbatore B2B marketing", "manufacturing SEO India"]}
         schema={[
@@ -31,7 +31,7 @@ const ManufacturingB2B = () => {
             description: "LinkedIn, SEO, and content for Chennai and Coimbatore manufacturers. Your buyers moved online — we help them find you and choose you before the first call.",
             provider: {
               "@type": "Organization",
-              name: "EyeLevel Growth Studio",
+              name: "Eyelevel Growth Studio",
               url: "https://theeyelevelstudio.com"
             },
             areaServed: "India",

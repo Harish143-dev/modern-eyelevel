@@ -4,7 +4,7 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": ["Organization", "LocalBusiness"],
   "@id": ORG_ID,
-  name: "EyeLevel Growth Studio",
+  name: "Eyelevel Growth Studio",
   url: "https://theeyelevelstudio.com",
   logo: "https://theeyelevelstudio.com/logo.png",
   email: "hello@eyelevelstudio.in",
@@ -43,7 +43,7 @@ export const websiteSchema = {
   "@type": "WebSite",
   "@id": "https://theeyelevelstudio.com/#website",
   url: "https://theeyelevelstudio.com/",
-  name: "EyeLevel Growth Studio",
+  name: "Eyelevel Growth Studio",
   publisher: { "@id": ORG_ID },
   inLanguage: "en",
 };
@@ -94,14 +94,14 @@ export const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
   url: "https://theeyelevelstudio.com/contact-us",
-  name: "Contact EyeLevel Growth Studio",
+  name: "Contact Eyelevel Growth Studio",
 };
 
 export const aboutPageSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
   url: "https://theeyelevelstudio.com/about-us",
-  name: "About EyeLevel Growth Studio",
+  name: "About Eyelevel Growth Studio",
   about: {
     "@id": ORG_ID,
   },
@@ -130,7 +130,7 @@ export const bookingPageSchema = {
 export const blogPageSchema = {
   "@context": "https://schema.org",
   "@type": "Blog",
-  name: "EyeLevel Blog",
+  name: "Eyelevel Blog",
   url: "https://theeyelevelstudio.com/blog",
 };
 
@@ -214,7 +214,7 @@ export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": ORG_ID,
-  name: "EyeLevel Growth Studio",
+  name: "Eyelevel Growth Studio",
   address: {
     "@type": "PostalAddress",
     streetAddress: "43, 2nd Cross Street, 2nd Main Road Navarathna Garden",

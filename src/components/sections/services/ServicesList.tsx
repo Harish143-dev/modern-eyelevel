@@ -236,7 +236,7 @@ const ServicesList = () => {
                   className="space-y-6"
                 >
                   <h2
-                    className="text-2xl md:text-4xl lg:text-5xl font-dela leading-tight uppercase text-foreground"
+                    className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-dela leading-tight uppercase text-foreground"
                   >
                     {service.title}
                   </h2>

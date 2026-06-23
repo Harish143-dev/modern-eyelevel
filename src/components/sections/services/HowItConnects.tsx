@@ -29,13 +29,13 @@ const HowItConnects = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-dela uppercase text-primary mb-8 leading-tight">
+            <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-dela uppercase text-primary mb-8 leading-tight">
               These are not nine <WavyUnderline>separate services</WavyUnderline>
             </h2>
-            <p className="text-lg md:text-xl lg:text-xl font-bricolage leading-relaxed" style={{ color: "rgba(248, 255, 232, 0.85)" }}>
-              They are nine parts of one growth system. Strategy informs creative. <br />Creative feeds performance. Performance data shapes SEO. SEO feeds content. <br /> Content builds the brand. The brand closes the deal.
+            <p className="text-base sm:text-lg md:text-xl font-bricolage leading-relaxed" style={{ color: "rgba(248, 255, 232, 0.85)" }}>
+              They are nine parts of one growth system. Strategy informs creative. <br className="hidden md:inline" />Creative feeds performance. Performance data shapes SEO. SEO feeds content. <br className="hidden md:inline" /> Content builds the brand. The brand closes the deal.
             </p>
-            <p className="text-lg md:text-xl lg:text-xl font-bricolage leading-relaxed mt-6 text-primary">
+            <p className="text-base sm:text-lg md:text-xl font-bricolage leading-relaxed mt-6 text-primary">
               When one studio runs all of it, nothing gets lost in translation.
             </p>
           </motion.div>

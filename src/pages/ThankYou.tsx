@@ -63,7 +63,7 @@ const thankYouContent: Record<
     title: "Thank You!",
     subtitle: "We've Received Your Submission",
     description:
-      "Our team will review your submission and get back to you shortly. We appreciate your interest in EyeLevel Growth Studio.",
+      "Our team will review your submission and get back to you shortly. We appreciate your interest in Eyelevel Growth Studio.",
     icon: <CheckCircle className="w-8 h-8" />,
     primaryAction: {
       label: "Explore Our Work",
@@ -88,8 +88,8 @@ const ThankYou = () => {
       className="min-h-screen overflow-hidden bg-secondary"
     >
       <SEO
-        title="Thank You | EyeLevel Growth Studio"
-        description="Your submission has been received by EyeLevel Growth Studio."
+        title="Thank You | Eyelevel Growth Studio"
+        description="Your submission has been received by Eyelevel Growth Studio."
         keywords={[
           "thank you page",
           "submission received",
@@ -137,7 +137,7 @@ const ThankYou = () => {
           {/* Mascot */}
           <motion.img
             src={mascotTrophy}
-            alt="EyeLevel Mascot"
+            alt="Eyelevel Mascot"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}

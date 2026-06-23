@@ -128,7 +128,7 @@ const ServicesHero = () => {
           className="font-dela uppercase text-center leading-[1.05] mb-5 text-primary"
         >
           {/* BIG TITLE */}
-          <span className="relative flex items-end justify-center text-4xl md:text-6xl lg:text-7xl">
+          <span className="relative flex items-end justify-center text-3xl sm:text-4xl md:text-6xl lg:text-7xl">
             <span className="">
               <span className="sr-only">O</span>
               {animationData && (
@@ -137,7 +137,7 @@ const ServicesHero = () => {
                   animationData={animationData}
                   autoPlay={false}
                   loop
-                  className="w-[38px] md:w-[53px] lg:w-[63px] pointer-events-none"
+                  className="w-[30px] sm:w-[38px] md:w-[53px] lg:w-[63px] pointer-events-none"
                 />
               )}
             </span>
@@ -145,9 +145,11 @@ const ServicesHero = () => {
           </span>
           {" "}
           {/* SUBTITLE – ONE LINE, SMALLER */}
-          <span className="block text-3xl md:text-5xl lg:text-6xl tracking-wide">
-            NINE CAPABILITIES
-            <WavyUnderline>ZERO HANDOFF</WavyUnderline>
+          <span className="block text-xl sm:text-2xl md:text-4xl lg:text-5xl tracking-wide mt-3">
+            NINE CAPABILITIES{" "}
+            <span className="block sm:inline mt-2 sm:mt-0">
+              <WavyUnderline>ZERO HANDOFF</WavyUnderline>
+            </span>
           </span>
         </motion.h1>
 

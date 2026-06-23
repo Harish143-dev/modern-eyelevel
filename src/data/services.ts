@@ -1,6 +1,6 @@
 /**
  * Core Marketing Services Data Model
- * 5 primary services offered by EyeLevel Studio
+ * 5 primary services offered by Eyelevel Studio
  */
 
 export interface Service {
@@ -29,7 +29,7 @@ export const coreServices: Service[] = [
     id: "growth-strategy",
     slug: "growth-strategy",
     name: "Growth Strategy",
-    seoTitle: "Growth Strategy Services | Growth Audit & Planning | EyeLevel",
+    seoTitle: "Growth Strategy Services | Growth Audit & Planning | Eyelevel",
     seoDescription:
       "Strategic growth planning for brands. Custom growth audits, competitive analysis, and roadmaps designed to accelerate revenue and market share.",
     shortDescription:
@@ -88,7 +88,7 @@ export const coreServices: Service[] = [
     id: "performance-marketing",
     slug: "performance-marketing",
     name: "Performance Marketing",
-    seoTitle: "Performance Marketing Agency | Google Ads & Digital Advertising | EyeLevel",
+    seoTitle: "Performance Marketing Agency | Google Ads & Digital Advertising | Eyelevel",
     seoDescription:
       "Data-driven performance marketing. Google Ads, Facebook/Instagram, LinkedIn campaigns optimized for ROI, leads, and sales.",
     shortDescription:
@@ -148,7 +148,7 @@ export const coreServices: Service[] = [
     id: "ai-automation",
     slug: "ai-automation",
     name: "AI & Automation",
-    seoTitle: "AI & Marketing Automation | Business Process Automation | EyeLevel",
+    seoTitle: "AI & Marketing Automation | Business Process Automation | Eyelevel",
     seoDescription:
       "AI-powered marketing automation and business process optimization. Reduce manual work, improve efficiency, and scale without adding headcount.",
     shortDescription:
@@ -208,7 +208,7 @@ export const coreServices: Service[] = [
     id: "creative-branding",
     slug: "creative-branding",
     name: "Creative Branding",
-    seoTitle: "Branding Agency | Brand Identity & Design | EyeLevel",
+    seoTitle: "Branding Agency | Brand Identity & Design | Eyelevel",
     seoDescription:
       "Creative branding services: brand strategy, logo design, brand guidelines, and visual identity design that makes brands memorable.",
     shortDescription: "Brand strategy and design that makes brands unforgettable.",
@@ -267,7 +267,7 @@ export const coreServices: Service[] = [
     id: "web3-marketing",
     slug: "web3-marketing",
     name: "Web3 Marketing",
-    seoTitle: "Web3 Marketing Agency | Crypto & Blockchain Marketing | EyeLevel",
+    seoTitle: "Web3 Marketing Agency | Crypto & Blockchain Marketing | Eyelevel",
     seoDescription:
       "Web3 and crypto marketing expertise. Community building, token launch marketing, NFT marketing, and blockchain brand positioning.",
     shortDescription:
@@ -351,7 +351,7 @@ export const getServiceSchema = (service: Service, baseUrl = "https://theeyeleve
     image: service.image,
     provider: {
       "@type": "Organization",
-      name: "EyeLevel Growth Studio",
+      name: "Eyelevel Growth Studio",
       url: baseUrl,
     },
     areaServed: { "@type": "Place", name: "Global" },

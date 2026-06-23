@@ -39,7 +39,7 @@ const FounderSection = () => {
             <div className="relative pt-6">
               <Quote className="absolute top-0 left-0 w-8 h-8 text-primary/20 -scale-x-100" />
               <p className="font-dela text-lg md:text-xl text-foreground/90 italic leading-relaxed pl-10">
-                I have been the person deciding which agency gets the budget and which one gets fired. I built EyeLevel because I knew exactly what was always missing.
+                I have been the person deciding which agency gets the budget and which one gets fired. I built Eyelevel because I knew exactly what was always missing.
               </p>
             </div>
 

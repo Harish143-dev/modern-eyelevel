@@ -8,7 +8,7 @@ const testimonials = [
   {
     id: 1,
     quote:
-      "Professional, proactive, and perfectly aligned with our brand. EyeLevel's celebrity connect delivered measurable buzz and real results.",
+      "Professional, proactive, and perfectly aligned with our brand. Eyelevel's celebrity connect delivered measurable buzz and real results.",
     company: "Joyalukkas",
   },
   {

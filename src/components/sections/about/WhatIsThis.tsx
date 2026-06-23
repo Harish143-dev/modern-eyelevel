@@ -44,7 +44,7 @@ const WhatIsThis = () => {
             >
               <Sparkles className="w-4 h-4 text-primary" />
             </motion.div>
-            <span className="text-sm font-medium text-primary">The EyeLevel Difference</span>
+            <span className="text-sm font-medium text-primary">The Eyelevel Difference</span>
           </motion.div>
 
           <motion.h2
@@ -183,7 +183,7 @@ const WhatIsThis = () => {
                 <p className="text-xs text-muted-foreground">Magic tricks & guesswork</p>
               </motion.div>
 
-              {/* EyeLevel Card */}
+              {/* Eyelevel Card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -192,7 +192,7 @@ const WhatIsThis = () => {
                 className="p-5 rounded-2xl bg-primary/10 border border-primary/30 relative overflow-hidden"
               >
                 <div className="absolute top-3 right-3 text-primary/20 text-4xl font-bold">✓</div>
-                <h4 className="text-sm font-semibold text-primary mb-2">EyeLevel</h4>
+                <h4 className="text-sm font-semibold text-primary mb-2">Eyelevel</h4>
                 <p className="text-xs text-muted-foreground">Engineering & precision</p>
               </motion.div>
             </div>
@@ -209,7 +209,7 @@ const WhatIsThis = () => {
                 We find the whole "marketing wizard" charade <span className="text-primary font-semibold">exhausting</span>, and we know you do too.
               </p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                EyeLevel doesn't do magic tricks; we do <span className="text-foreground font-medium">engineering</span>. With the focus of a single, unblinking eye, we see the missed opportunities others ignore. We are the filter for the industry's nonsense, turning your confused operations into a <span className="text-primary font-medium">growth engine</span> that actually runs.
+                Eyelevel doesn't do magic tricks; we do <span className="text-foreground font-medium">engineering</span>. With the focus of a single, unblinking eye, we see the missed opportunities others ignore. We are the filter for the industry's nonsense, turning your confused operations into a <span className="text-primary font-medium">growth engine</span> that actually runs.
               </p>
             </motion.div>
 

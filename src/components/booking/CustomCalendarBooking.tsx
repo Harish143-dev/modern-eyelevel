@@ -513,7 +513,7 @@ export default function CustomCalendarBooking() {
                           Meeting Account
                         </p>
                         <p className="text-sm font-bold text-[#173229]">
-                          EyeLevel Growth Studio
+                          Eyelevel Growth Studio
                         </p>
                       </div>
                     </div>

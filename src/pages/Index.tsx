@@ -28,8 +28,8 @@ const Index = () => {
   return (
     <>
       <SEO
-        title="Digital Marketing Agency Chennai | EyeLevel Growth Studio"
-        description="EyeLevel Growth Studio is a full-service AI-powered marketing agency in Chennai. Real Estate, Healthcare, IT/SaaS, Automotive, Manufacturing. Book a free 30-min diagnostic."
+        title="Digital Marketing Agency Chennai | Eyelevel Growth Studio"
+        description="Eyelevel Growth Studio is a full-service AI-powered marketing agency in Chennai. Real Estate, Healthcare, IT/SaaS, Automotive, Manufacturing. Book a free 30-min diagnostic."
         keywords={[
           "digital marketing agency Chennai",
           "AI-powered marketing agency",

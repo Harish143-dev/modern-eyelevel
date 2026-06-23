@@ -19,7 +19,7 @@ const WhyEyeLevelExists = () => {
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Main Headline */}
         <div className="text-center mb-16 md:mb-24">
-          <GreenButton>Why EyeLevel exists</GreenButton>
+          <GreenButton>Why Eyelevel exists</GreenButton>
 
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -29,7 +29,7 @@ const WhyEyeLevelExists = () => {
             className="font-dela text-3xl md:text-4xl lg:text-5xl leading-[1.2] tracking-tight mb-6 uppercase"
           >
  
-            <span className="text-primary">EyeLevel is built to <WavyUnderline className=" text-primary">grow</WavyUnderline></span>
+            <span className="text-primary">Eyelevel is built to <WavyUnderline className=" text-primary">grow</WavyUnderline></span>
           </motion.h2>
         </div>
 
@@ -109,13 +109,13 @@ const WhyEyeLevelExists = () => {
               transition={{ delay: 0.2 }}
             >
               <p className="text-lg md:text-xl font-bricolage leading-relaxed text-foreground">
-                EyeLevel Growth Studio is a digital marketing agency in Chennai that runs strategy, performance, content, and AI as one connected system. Not three vendors. Not three invoices. One studio.
+                Eyelevel Growth Studio is a digital marketing agency in Chennai that runs strategy, performance, content, and AI as one connected system. Not three vendors. Not three invoices. One studio.
               </p> <br />
               <p className="text-lg md:text-xl font-bricolage leading-relaxed text-foreground">
                 Every retainer pads. Every report obscures. Every campaign looks busier than it works. That is not a few bad agencies. That is how the industry is structured.
               </p> <br />
               <p className="text-lg md:text-xl font-bricolage leading-relaxed text-foreground">
-                EyeLevel was built by a marketing head who spent 15 years on the client side, being the one pitched to. It is the team he always wished he could plug in.
+                Eyelevel was built by a marketing head who spent 15 years on the client side, being the one pitched to. It is the team he always wished he could plug in.
               </p>
             </motion.div>
 

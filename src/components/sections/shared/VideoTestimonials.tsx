@@ -18,7 +18,7 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 const testimonials = [
   {
     id: 1,
-    quote: "We were burning cash on ads that went nowhere. EyeLevel didn't just 'tweak' our campaign; they rebuilt the engine. We stopped guessing and started printing revenue.",
+    quote: "We were burning cash on ads that went nowhere. Eyelevel didn't just 'tweak' our campaign; they rebuilt the engine. We stopped guessing and started printing revenue.",
     author: "Sarah Mitchell",
     role: "CEO",
     company: "TechFlow Solutions",
@@ -28,7 +28,7 @@ const testimonials = [
   },
   {
     id: 2,
-    quote: "I was tired of agencies sending me reports I couldn't understand. EyeLevel showed me exactly where the money was going. No jargon, just a straight line to growth.",
+    quote: "I was tired of agencies sending me reports I couldn't understand. Eyelevel showed me exactly where the money was going. No jargon, just a straight line to growth.",
     author: "Marcus Chen",
     role: "Marketing Director",
     company: "Velocity Brands",
@@ -48,7 +48,7 @@ const testimonials = [
   },
   {
     id: 4,
-    quote: "Other agencies gave us vanity metrics. EyeLevel gave us customers. Real ones. The kind that pay and stay.",
+    quote: "Other agencies gave us vanity metrics. Eyelevel gave us customers. Real ones. The kind that pay and stay.",
     author: "David Romano",
     role: "VP Sales",
     company: "PropTech Inc",
@@ -58,7 +58,7 @@ const testimonials = [
   },
   {
     id: 5,
-    quote: "We thought we knew marketing. EyeLevel showed us we were leaving money on the table. Now we're scaling faster than ever.",
+    quote: "We thought we knew marketing. Eyelevel showed us we were leaving money on the table. Now we're scaling faster than ever.",
     author: "Amanda Foster",
     role: "CMO",
     company: "HealthTech Pro",

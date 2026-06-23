@@ -263,14 +263,14 @@ const ServiceGallery = ({
               e.stopPropagation();
               prevSlide();
             }}
-            className="absolute left-4 top-1/2 w-12 h-12 rounded-full flex items-center justify-center backdrop-blur-md transition-all duration-300 opacity-0 group-hover:opacity-100 z-10"
+            className="absolute left-4 top-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center backdrop-blur-md transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 z-10"
             style={{
               y: "-50%",
               backgroundColor: "rgba(226, 254, 165, 0.2)",
               border: "1px solid rgba(226, 254, 165, 0.3)",
             }}
           >
-            <ChevronLeft className="w-6 h-6 text-primary" />
+            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-primary" />
           </motion.button>
 
           {/* Right Arrow */}
@@ -283,14 +283,14 @@ const ServiceGallery = ({
               e.stopPropagation();
               handleNextClick();
             }}
-            className="absolute right-4 top-1/2 w-12 h-12 rounded-full flex items-center justify-center backdrop-blur-md transition-all duration-300 opacity-0 group-hover:opacity-100 z-10"
+            className="absolute right-4 top-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center backdrop-blur-md transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 z-10"
             style={{
               y: "-50%",
               backgroundColor: "rgba(226, 254, 165, 0.2)",
               border: "1px solid rgba(226, 254, 165, 0.3)",
             }}
           >
-            <ChevronRight className="w-6 h-6 text-primary" />
+            <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-primary" />
           </motion.button>
 
           {/* Dot Indicators */}

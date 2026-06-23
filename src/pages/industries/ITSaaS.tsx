@@ -21,7 +21,7 @@ const ITSaaS = () => {
   return (
     <div className="min-h-screen bg-background selection:bg-brand-lime selection:text-black">
       <SEO
-        title="IT & SaaS Marketing Agency India | EyeLevel Growth Studio"
+        title="IT & SaaS Marketing Agency India | Eyelevel Growth Studio"
         description="Demand gen, LinkedIn brand, and content that produces pipeline for B2B software companies. Performance marketing and SEO for IT and SaaS across India."
         keywords={["IT marketing agency India", "SaaS marketing agency India", "B2B software marketing", "LinkedIn marketing for SaaS", "demand generation agency Chennai", "IT company marketing India"]}
         schema={[
@@ -32,7 +32,7 @@ const ITSaaS = () => {
             description: "Demand gen, LinkedIn brand, and content that produces pipeline for B2B software companies. Performance marketing and SEO for IT and SaaS across India.",
             provider: {
               "@type": "Organization",
-              name: "EyeLevel Growth Studio",
+              name: "Eyelevel Growth Studio",
               url: "https://theeyelevelstudio.com"
             },
             areaServed: "India",

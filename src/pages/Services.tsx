@@ -20,7 +20,7 @@ const ServicesPage = () => {
   return (
     <div className="min-h-screen bg-forest-deep">
       <SEO
-        title="Digital Marketing Services Chennai | EyeLevel Growth Studio"
+        title="Digital Marketing Services Chennai | Eyelevel Growth Studio"
         description="Performance marketing, SEO, social media, content, LinkedIn B2B, CRO, brand identity, and website development — one studio, zero handoffs. Chennai's AI-powered growth team."
         keywords={[
           "digital marketing services Chennai",
@@ -52,7 +52,7 @@ const ServicesPage = () => {
       <ServicesCTA />
       <FAQSection
         faqs={faqs["Services"]}
-        bgClass="bg-[#forest-green]"
+        bgClass="bg-forest-deep"
       />
 
       <EnhancedFooter mascotBgClass="bg-forest-deep" showCTA={false} />

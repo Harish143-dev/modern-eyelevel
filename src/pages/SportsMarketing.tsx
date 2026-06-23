@@ -189,7 +189,7 @@ const SportsMarketing = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={vertical?.seoTitle || "Sports League Marketing Agency | Fan Engagement & Sponsorship | EyeLevel"}
+        title={vertical?.seoTitle || "Sports League Marketing Agency | Fan Engagement & Sponsorship | Eyelevel"}
         description={vertical?.seoDescription || "Sports marketing agency specializing in league promotion, fan engagement, sponsorship activation, and sports event marketing."}
         keywords={vertical?.keywords || ["sports marketing", "sports league marketing", "sports event marketing"]}
         schema={[
@@ -601,7 +601,7 @@ const SportsMarketing = () => {
         testimonials={[
           {
             quote:
-              "EyeLevel turned our social media into a revenue machine. Merchandise sales are up 300% and ticket sales have never been better.",
+              "Eyelevel turned our social media into a revenue machine. Merchandise sales are up 300% and ticket sales have never been better.",
             author: "Vikram Singh",
             role: "Commercial Director",
             company: "Premier Cricket League",
@@ -723,7 +723,7 @@ const SportsMarketing = () => {
         {/* Mascot */}
         {/* <motion.img
           src={mascotTrophy}
-          alt="EyeLevel Mascot"
+          alt="Eyelevel Mascot"
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}

@@ -7,8 +7,8 @@ const Privacy = () => {
   return (
     <div className="min-h-screen bg-secondary">
       <SEO
-        title="Privacy Policy | EyeLevel Growth Studio"
-        description="Privacy policy for EyeLevel Growth Studio. Learn how we collect, use, and protect your personal information when you use our website and services."
+        title="Privacy Policy | Eyelevel Growth Studio"
+        description="Privacy policy for Eyelevel Growth Studio. Learn how we collect, use, and protect your personal information when you use our website and services."
         keywords={[
           "privacy policy",
           "data privacy",
@@ -51,7 +51,7 @@ const Privacy = () => {
                   1. Introduction
                 </h2>
                 <p>
-                  EyeLevel Growth Studio ("we," "our," or "us") is committed to
+                  Eyelevel Growth Studio ("we," "our," or "us") is committed to
                   protecting your privacy. This Privacy Policy explains how we
                   collect, use, disclose, and safeguard your information when
                   you visit our website or use our services.

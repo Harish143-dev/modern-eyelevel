@@ -289,8 +289,8 @@ const Apply = () => {
   return (
     <div className="min-h-screen bg-secondary py-10">
       <SEO
-        title="Apply for Careers | EyeLevel Growth Studio"
-        description="Submit your application to join EyeLevel Growth Studio team."
+        title="Apply for Careers | Eyelevel Growth Studio"
+        description="Submit your application to join Eyelevel Growth Studio team."
         keywords={[
           "apply for marketing job",
           "career application",

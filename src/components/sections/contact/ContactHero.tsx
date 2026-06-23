@@ -12,7 +12,7 @@ const ContactHero = () => {
           className="text-center flex flex-col items-center"
         >
           <div className="inline-block px-4 py-2 rounded-full border border-primary/20 bg-primary/10 text-primary font-bricolage text-sm font-medium mb-14">
-            Talk to EyeLevel
+            Talk to Eyelevel
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-dela mb-6 text-primary uppercase leading-tight max-w-4xl text-center mx-auto">
             <span className="block"> Book your</span>

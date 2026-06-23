@@ -37,7 +37,7 @@ const FAQSection = ({
           {/* Interrogation badge */}
           <GreenButton>Common questions</GreenButton>
 
-          <h2 className="font-dela text-3xl md:text-4xl lg:text-5xl text-primary mb-6 leading-tight uppercase">
+          <h2 className="font-dela text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary mb-6 leading-tight uppercase">
             Here’s what people <WavyUnderline> want to know</WavyUnderline>
           </h2>
           <p className="font-bricolage text-lg">

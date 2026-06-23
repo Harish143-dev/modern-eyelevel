@@ -61,7 +61,7 @@ const BrandAndIdentity = () => {
   return (
     <div className="min-h-screen bg-background overflow-clip">
       <SEO
-        title="Brand Identity Agency Chennai | Branding Services | EyeLevel Growth Studio"
+        title="Brand Identity Agency Chennai | Branding Services | Eyelevel Growth Studio"
         description="Visual identity, positioning, and brand architecture for companies that are growing and need their brand to do the work. Logo, guidelines, tone of voice."
         keywords={[
           "brand identity agency Chennai",
@@ -159,14 +159,14 @@ const BrandAndIdentity = () => {
           {/* Box 1 — Brand Strategy (wide) */}
           <motion.div
             {...scrollAnimProps}
-            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Layers className="w-10 h-10 text-primary mb-6" />
-            <h3 className="font-dela text-2xl lg:text-3xl text-primary mb-3">
+            <Layers className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <h3 className="font-dela text-xl md:text-2xl lg:text-3xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">
               BRAND STRATEGY
             </h3>
-            <p className="font-bricolage text-lg text-foreground/80 max-w-xl">
+            <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80 max-w-xl">
               Positioning, messaging architecture, and competitive differentiation — so your brand owns a clear space in the market.
             </p>
           </motion.div>
@@ -175,14 +175,14 @@ const BrandAndIdentity = () => {
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.1 }}
-            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <PenTool className="w-10 h-10 text-primary mb-6" />
-            <h3 className="font-dela text-2xl text-primary mb-3">
+            <PenTool className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">
               LOGO & VISUAL IDENTITY
             </h3>
-            <p className="font-bricolage text-lg text-foreground/80">
+            <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80">
               Colour, typography, and grid — built to work at every scale.
             </p>
           </motion.div>
@@ -191,14 +191,14 @@ const BrandAndIdentity = () => {
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.2 }}
-            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <FileText className="w-10 h-10 text-primary mb-6" />
-            <h3 className="font-dela text-2xl text-primary mb-3">
+            <FileText className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">
               BRAND GUIDELINES
             </h3>
-            <p className="font-bricolage text-lg text-foreground/80">
+            <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80">
               So every vendor, designer, and team member follows the same rules.
             </p>
           </motion.div>
@@ -207,18 +207,17 @@ const BrandAndIdentity = () => {
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.3 }}
-            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Sparkles className="w-10 h-10 text-primary mb-6" />
-            <h3 className="font-dela text-2xl lg:text-3xl text-primary mb-3">
+            <Sparkles className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <h3 className="font-dela text-xl md:text-2xl lg:text-3xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">
               NAMING, TAGLINES & REBRANDING
             </h3>
-            <p className="font-bricolage text-lg text-foreground/80 max-w-xl">
+            <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80 max-w-xl">
               Naming and tagline development for new products or sub-brands. Full rebranding engagements — audit, strategy, and rollout handled as one project.
             </p>
           </motion.div>
-
         </div>
       </section>
 
@@ -244,15 +243,18 @@ const BrandAndIdentity = () => {
       {/* Section 4 — Pull quote */}
       <section className="px-4 bg-background relative z-10 flex justify-center items-center py-[100px]">
         <div className="max-w-5xl mx-auto w-full flex flex-col items-center">
-          <motion.div {...scrollAnimProps} className="">
-            <GreenButton>THE OUTCOME</GreenButton>
-          </motion.div>
+          <motion.h2
+            {...scrollAnimProps}
+            className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-12"
+          >
+            THE <WavyUnderline> OUTCOME </WavyUnderline>
+          </motion.h2>
 
           <div className="flex items-stretch gap-8">
             <div className="w-px bg-primary" />
             <motion.h2
               {...scrollAnimProps}
-              className="font-dela text-2xl md:text-4xl lg:text-5xl uppercase text-primary max-w-4xl leading-[1.1] text-left"
+              className="font-dela text-lg md:text-2xl lg:text-3xl uppercase text-primary max-w-3xl leading-[1.2] text-left"
             >
               "A BRAND THAT COMMUNICATES WHAT YOU DO TO A STRANGER IN UNDER TEN SECONDS."
             </motion.h2>
@@ -263,9 +265,7 @@ const BrandAndIdentity = () => {
       {/* Section 5 — Industry verticals */}
       <section className="px-4 bg-secondary relative z-10 py-[100px]">
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
-          <motion.div {...scrollAnimProps} className="">
-            <GreenButton>INDUSTRY</GreenButton>
-          </motion.div>
+
 
           <motion.h2
             {...scrollAnimProps}

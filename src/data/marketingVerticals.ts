@@ -26,7 +26,7 @@ export const marketingVerticals: MarketingVertical[] = [
     id: "edu-marketing",
     slug: "edu-marketing",
     name: "Education Marketing",
-    seoTitle: "Education Marketing Agency | Student Enrollment Solutions | EyeLevel",
+    seoTitle: "Education Marketing Agency | Student Enrollment Solutions | Eyelevel",
     seoDescription:
       "Specialized education marketing agency helping schools, colleges & institutions boost student enrollment through targeted digital strategies, SEO, and lead generation.",
     shortDescription:
@@ -77,7 +77,7 @@ export const marketingVerticals: MarketingVertical[] = [
     id: "sports-marketing",
     slug: "sports-marketing",
     name: "Sports Marketing",
-    seoTitle: "Sports League Marketing Agency | Fan Engagement & Sponsorship | EyeLevel",
+    seoTitle: "Sports League Marketing Agency | Fan Engagement & Sponsorship | Eyelevel",
     seoDescription:
       "Sports marketing agency specializing in league promotion, fan engagement, sponsorship activation, and sports event marketing for leagues, teams, and sporting brands.",
     shortDescription:
@@ -129,7 +129,7 @@ export const marketingVerticals: MarketingVertical[] = [
     id: "real-estate-marketing",
     slug: "real-estate-marketing",
     name: "Real Estate Marketing",
-    seoTitle: "Real Estate Marketing Agency | Property Sales & Lead Generation | EyeLevel",
+    seoTitle: "Real Estate Marketing Agency | Property Sales & Lead Generation | Eyelevel",
     seoDescription:
       "Real estate marketing expertise for developers, brokers, and agents. Drive property sales through targeted digital strategies, virtual tours, and qualified buyer generation.",
     shortDescription:
@@ -181,7 +181,7 @@ export const marketingVerticals: MarketingVertical[] = [
     id: "b2b-marketing",
     slug: "b2b-marketing",
     name: "B2B Marketing",
-    seoTitle: "B2B Marketing Agency | Enterprise Sales Growth | EyeLevel",
+    seoTitle: "B2B Marketing Agency | Enterprise Sales Growth | Eyelevel",
     seoDescription:
       "B2B marketing agency specializing in enterprise sales growth, lead generation, account-based marketing, and marketing automation for SaaS and technology companies.",
     shortDescription:
@@ -257,7 +257,7 @@ export const getVerticalSchema = (vertical: MarketingVertical, baseUrl = "https:
     image: vertical.image,
     provider: {
       "@type": "Organization",
-      name: "EyeLevel Growth Studio",
+      name: "Eyelevel Growth Studio",
       url: baseUrl,
     },
     areaServed: { "@type": "Place", name: "Global" },

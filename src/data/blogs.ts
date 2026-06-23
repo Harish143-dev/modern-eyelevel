@@ -105,7 +105,7 @@ const rawBlogPosts: BlogPost[] = [
       btnLink: "/services",
     },
 
-    seoTitle: "How AI is Transforming Marketing in 2026: What Agencies Are Actually Doing | EyeLevel",
+    seoTitle: "How AI is Transforming Marketing in 2026: What Agencies Are Actually Doing | Eyelevel",
     seoDescription:
       "AI in marketing isn't a trend — it's the production layer. How forward-thinking agencies use AI for content, ads, research, and automation in 2026.",
     content: [
@@ -429,7 +429,7 @@ const rawBlogPosts: BlogPost[] = [
       btnText: "Explore Sports Marketing Strategies",
       btnLink: "/services",
     },
-    seoTitle: "Why Your Sports League Needs a Marketing Partner, Not Just an Event Manager | EyeLevel",
+    seoTitle: "Why Your Sports League Needs a Marketing Partner, Not Just an Event Manager | Eyelevel",
     seoDescription:
       "Most sports leagues hire event managers and forget marketing. Here's why that's the gap that kills long-term league growth — and how a marketing partner fixes it.",
     content: [
@@ -455,7 +455,7 @@ const rawBlogPosts: BlogPost[] = [
       "The most immediate commercial pain point for emerging sports leagues in India is sponsorship. And the most common reason leagues fail to close sponsorships isn't the size of their audience — it's the absence of a credible story backed by documented evidence.",
       "Sponsors don't just buy reach. They buy proof. They want to know: who is watching your league? What are their demographics? What kind of brand association does your league offer? What is logo placement at your venue actually worth? Can you show us what you delivered for sponsors last season?",
       "An event manager cannot answer these questions because collecting this data isn't their function. A sports marketing agency can — because they've spent months before sponsor meetings building the data, the content archive, the audience numbers, and the narrative that make a sponsorship proposal credible.",
-      "The difference between a sponsorship deck that closes and one that gets shelved is almost always the marketing intelligence behind it. When EyeLevel worked with Tamil Nadu Premier League on their sponsorship strategy, the shift wasn't in the sport — it was in the story we built around it.",
+      "The difference between a sponsorship deck that closes and one that gets shelved is almost always the marketing intelligence behind it. When Eyelevel worked with Tamil Nadu Premier League on their sponsorship strategy, the shift wasn't in the sport — it was in the story we built around it.",
       "## Signs Your League Has the Gap",
       "Here are the indicators that your league has an event management function but lacks the Eyelevel expertise:",
       "- Your events run well, but sponsors don't renew from one season to the next.",
@@ -471,7 +471,7 @@ const rawBlogPosts: BlogPost[] = [
       "The right sports marketing partner becomes your league's commercial engine — running twelve months a year, not just on event days.",
       "## Conclusion",
       "If you want your league to grow beyond your next event, start treating marketing as infrastructure, not an afterthought. Your event manager will make sure your league runs well. Your sports marketing partner will make sure it grows — season over season, sponsor after sponsor, fan by fan.",
-      "EyeLevel is a sports marketing agency based in Chennai with deep experience in event production, sponsorship strategy, match-day content, and league brand development. If you're building a sports league and want to understand what a marketing partnership looks like in practice, schedule a consultation with our team at theeyelevelstudio.com or call +91 97890 99499.",
+      "Eyelevel is a sports marketing agency based in Chennai with deep experience in event production, sponsorship strategy, match-day content, and league brand development. If you're building a sports league and want to understand what a marketing partnership looks like in practice, schedule a consultation with our team at theeyelevelstudio.com or call +91 97890 99499.",
     ],
     tags: [
       "Sports Marketing",
@@ -512,7 +512,7 @@ const rawBlogPosts: BlogPost[] = [
       btnText: "Explore Sports Marketing Insights",
       btnLink: "/services",
     },
-    seoTitle: "Sports League Marketing in India 2026: What Works and What Doesn't | EyeLevel",
+    seoTitle: "Sports League Marketing in India 2026: What Works and What Doesn't | Eyelevel",
     seoDescription:
       "An analysis of what India's emerging sports leagues do right — and the marketing mistakes that cost them sponsors, fans, and longevity.",
     content: [
@@ -548,7 +548,7 @@ const rawBlogPosts: BlogPost[] = [
       "The first mover advantage in Indian emerging sports marketing is real and substantial. The league that builds its marketing infrastructure first in its sport and geography becomes the default destination for sponsors in that space.",
       "## Conclusion",
       "The state of sports league marketing in India in 2026 is one of enormous potential poorly captured. The audiences exist. The corporate interest exists. The sport is improving. What's missing is the marketing sophistication to connect these elements into sustainable commercial growth.",
-      "EyeLevel works with emerging sports leagues, associations, and franchise teams across India to build the marketing infrastructure that converts great sport into sustainable commercial success. If your league is ready to move beyond event management into genuine marketing strategy, connect with our team at theeyelevelstudio.com.",
+      "Eyelevel works with emerging sports leagues, associations, and franchise teams across India to build the marketing infrastructure that converts great sport into sustainable commercial success. If your league is ready to move beyond event management into genuine marketing strategy, connect with our team at theeyelevelstudio.com.",
     ],
     tags: [
       "Sports Marketing",
@@ -588,9 +588,9 @@ const rawBlogPosts: BlogPost[] = [
       btnText: "Explore Sponsorship Strategies",
       btnLink: "/services",
     },
-    seoTitle: "How to Build a Sponsorship Deck That Closes Deals | EyeLevel Growth Studio",
+    seoTitle: "How to Build a Sponsorship Deck That Closes Deals | Eyelevel Growth Studio",
     seoDescription:
-      "Most sponsorship decks describe the event. The ones that close deals explain what the sponsor gets. Here's the framework EyeLevel uses.",
+      "Most sponsorship decks describe the event. The ones that close deals explain what the sponsor gets. Here's the framework Eyelevel uses.",
     content: [
       "Most sports sponsorship decks share the same fatal flaw: they're designed to impress rather than to persuade. They're full of beautiful photographs, league logos, and impressive-sounding statistics — but they fail to answer the one question every sponsor is actually asking: why should I spend my money here instead of somewhere else?",
       "The difference between a sponsorship deck that gets a meeting and one that gets a polite rejection isn't design. It's structure — specifically, whether the deck is built around the sponsor's commercial logic rather than the league's promotional agenda. Sponsors are not buying charity. They're buying marketing ROI. Your deck needs to speak that language from the first slide to the last.",
@@ -632,7 +632,7 @@ const rawBlogPosts: BlogPost[] = [
       "The follow-up plan matters as much as the deck itself. Build a five-touch follow-up sequence: Day 1 — send deck with personal note, Day 3 — follow up with one additional data point, Day 7 — request a call, Day 14 — share a recent positive development (new athlete signing, media coverage), Day 21 — final check-in. Most sponsorship deals close after the third or fourth touchpoint, not the first.",
       "## Conclusion",
       "A sponsorship deck is not a brochure. It's a business proposal. Build it like one — with a commercial thesis, documented audience data, quantified value propositions, and a clear ROI frame. Sponsors who say yes to well-constructed decks are making business decisions, not taking risks.",
-      "EyeLevel has built sponsorship decks for sports leagues across Tamil Nadu and helped close partnerships with regional and national brands. If you're building a deck or going into a sponsorship conversation and want a professional strategy review, contact us at theeyelevelstudio.com or call +91 97890 99499.",
+      "Eyelevel has built sponsorship decks for sports leagues across Tamil Nadu and helped close partnerships with regional and national brands. If you're building a deck or going into a sponsorship conversation and want a professional strategy review, contact us at theeyelevelstudio.com or call +91 97890 99499.",
     ],
     tags: [
       "Sponsorship",
@@ -671,7 +671,7 @@ const rawBlogPosts: BlogPost[] = [
       btnText: "Explore Admission Marketing Strategies",
       btnLink: "/services",
     },
-    seoTitle: "Admission Season Marketing Playbook for Colleges | EyeLevel",
+    seoTitle: "Admission Season Marketing Playbook for Colleges | Eyelevel",
     seoDescription:
       "A step-by-step marketing playbook for colleges and coaching institutes to maximize enrollments during admission season — from Google Ads to landing pages to follow-up.",
     content: [
@@ -709,7 +709,7 @@ const rawBlogPosts: BlogPost[] = [
       "**Return on ad spend (ROAS):** Total tuition revenue from students acquired through marketing divided by total marketing spend. For educational institutions with fee structures of ₹1-5 lakh per student, even modest ROAS numbers represent significant returns.",
       "## Conclusion",
       "Admission season marketing is not a one-week sprint of boosted social media posts. It's a structured, four-phase operation that begins months before applications open and runs through the final enrollment day. Institutions that treat it as a system — with proper tracking, phased campaigns, and systematic follow-up — consistently outperform those that rely on reputation alone.",
-      "EyeLevel Growth Studio is an admissions marketing agency for colleges, engineering institutes, medical colleges, and coaching institutions across India. We manage complete admission season campaigns — from landing page development and Google Ads to WhatsApp nurture and enrollment tracking. To discuss your institution's admission marketing strategy, schedule a consultation at theeyelevelstudio.com.",
+      "Eyelevel Growth Studio is an admissions marketing agency for colleges, engineering institutes, medical colleges, and coaching institutions across India. We manage complete admission season campaigns — from landing page development and Google Ads to WhatsApp nurture and enrollment tracking. To discuss your institution's admission marketing strategy, schedule a consultation at theeyelevelstudio.com.",
     ],
     tags: [
       "Education Marketing",
@@ -746,7 +746,7 @@ const rawBlogPosts: BlogPost[] = [
       btnText: "Explore Preschool Marketing Strategies",
       btnLink: "/services",
     },
-    seoTitle: "Preschool & Daycare Admissions Marketing India | EyeLevel",
+    seoTitle: "Preschool & Daycare Admissions Marketing India | Eyelevel",
     seoDescription:
       "Most preschools with empty seats don't have a capacity problem — they have a marketing problem. Here's how to fix preschool admissions with the right digital strategy.",
     content: [
@@ -781,7 +781,7 @@ const rawBlogPosts: BlogPost[] = [
       "Supplement referrals with a Google review campaign. After positive parent interactions — parent-teacher meetings, milestone events, sports days — send a simple WhatsApp message to parents asking if they'd be willing to share their experience on Google. A school with 40+ positive Google reviews commands significant trust with parents who discover it through search.",
       "## Conclusion",
       "If your preschool or daycare has empty seats, resist the instinct to invest in infrastructure first. Build your digital presence, optimize your Google Business Profile, create a consistent Instagram content rhythm, and set up a hyper-local Google Ads campaign. Then make sure your WhatsApp response time is under 15 minutes and your admissions team is trained to convert warm inquiries into tours.",
-      "EyeLevel Growth Studio works with preschool chains, daycare operators, and educational institutions across India on enrollment marketing strategy and execution. To discuss how we can help fill your seats this admission season, schedule a consultation at theeyelevelstudio.com.",
+      "Eyelevel Growth Studio works with preschool chains, daycare operators, and educational institutions across India on enrollment marketing strategy and execution. To discuss how we can help fill your seats this admission season, schedule a consultation at theeyelevelstudio.com.",
     ],
     tags: ["Education Marketing", "Preschool", "Admissions", "Local Marketing"],
   },
@@ -813,7 +813,7 @@ const rawBlogPosts: BlogPost[] = [
       btnText: "Explore College Admission Marketing",
       btnLink: "/services",
     },
-    seoTitle: "Engineering College Admissions Marketing Blueprint | EyeLevel",
+    seoTitle: "Engineering College Admissions Marketing Blueprint | Eyelevel",
     seoDescription:
       "A complete admissions marketing guide for engineering colleges in India — covering Google Ads, student lead generation, parent targeting, and seat fill strategies.",
     content: [
@@ -850,7 +850,7 @@ const rawBlogPosts: BlogPost[] = [
       "Target this audience specifically with messaging around lateral entry offers, scholarship announcements, and program-specific placement highlights for the branch they're trying to enter. Urgency and specific benefit — not generic promotional messaging — is what converts late-season students.",
       "## Conclusion",
       "Engineering college admissions marketing is a multi-channel, multi-month operation that requires both strategic architecture and consistent execution. The colleges that fill their seats year after year have built systems — not just campaigns. They have dedicated landing pages, structured follow-up sequences, counseling playbooks, and measurement frameworks that let them improve every cycle.",
-      "EyeLevel Growth Studio is a higher education marketing agency with deep experience in engineering college admissions campaigns across South India. If your institution is preparing for the next admission season and wants a systematic approach to enrollment growth, schedule a consultation at theeyelevelstudio.com or call +91 97890 99499.",
+      "Eyelevel Growth Studio is a higher education marketing agency with deep experience in engineering college admissions campaigns across South India. If your institution is preparing for the next admission season and wants a systematic approach to enrollment growth, schedule a consultation at theeyelevelstudio.com or call +91 97890 99499.",
     ],
     tags: [
       "Education Marketing",
@@ -889,7 +889,7 @@ const rawBlogPosts: BlogPost[] = [
       btnLink: "/services",
     },
     seoTitle:
-      "What Real Estate Brands Get Wrong About Digital Marketing | EyeLevel",
+      "What Real Estate Brands Get Wrong About Digital Marketing | Eyelevel",
     seoDescription:
       "Real estate digital marketing is broken for most developers. Here are the most common mistakes — and what actually works for generating quality property leads in India.",
     content: [
@@ -922,7 +922,7 @@ const rawBlogPosts: BlogPost[] = [
       "Effective real estate digital marketing in India in 2026 is a system with these components: project-specific landing pages for every configuration and campaign variant, Google Search campaigns targeting high-intent keywords with geographic precision, Meta awareness campaigns targeting the right buyer demographics, YouTube video content building project familiarity, a CRM integration that delivers instant lead notification to the sales team, a structured follow-up protocol with speed and persistence standards, retargeting campaigns keeping the project visible to interested visitors, and monthly performance analysis that optimizes spend toward the channels and creatives producing the best qualified lead rate — not the best raw lead count.",
       "## Conclusion",
       "Real estate brands don't have a digital marketing budget problem. They have a digital marketing structure problem. The same budget, applied through a more disciplined system with better-designed landing pages, more rigorous lead qualification, faster follow-up, and smarter channel allocation, produces dramatically better outcomes.",
-      "EyeLevel Growth Studio builds performance marketing systems for real estate developers and related businesses. If you want to evaluate your current marketing structure and understand where your budget is being wasted, schedule a consultation with our team at theeyelevelstudio.com.",
+      "Eyelevel Growth Studio builds performance marketing systems for real estate developers and related businesses. If you want to evaluate your current marketing structure and understand where your budget is being wasted, schedule a consultation with our team at theeyelevelstudio.com.",
     ],
     tags: [
       "Real Estate Marketing",
@@ -960,7 +960,7 @@ const rawBlogPosts: BlogPost[] = [
       btnText: "Explore Lead Conversion Strategies",
       btnLink: "/services",
     },
-    seoTitle: "The Leaky Bucket Problem in Real Estate Marketing | EyeLevel",
+    seoTitle: "The Leaky Bucket Problem in Real Estate Marketing | Eyelevel",
     seoDescription:
       "You're generating real estate leads but they're not converting. The problem is your funnel — not your ads. Here's how to find and fix every leak in your lead pipeline.",
     content: [
@@ -992,7 +992,7 @@ const rawBlogPosts: BlogPost[] = [
       "Different retargeting messages for different funnel stages: visitors who didn't submit a lead form see your project's most compelling visual. Leads who didn't schedule a site visit see a virtual tour invitation. Site visitors who didn't book see a limited-time incentive or a booking urgency message.",
       "## Conclusion",
       "The leaky bucket problem is real, but it's fixable. Every hole in your real estate marketing funnel has a specific, implementable solution. The developers who are filling their inventory while others struggle aren't spending more — they're spending on better infrastructure, plugging each leak systematically, and building a funnel that converts leads into site visits and site visits into bookings.",
-      "EyeLevel Growth Studio builds performance marketing systems for businesses across industries including real estate. If you want to audit your current funnel and identify where your leads are dropping, schedule a strategy consultation at theeyelevelstudio.com or call +91 97890 99499.",
+      "Eyelevel Growth Studio builds performance marketing systems for businesses across industries including real estate. If you want to audit your current funnel and identify where your leads are dropping, schedule a strategy consultation at theeyelevelstudio.com or call +91 97890 99499.",
     ],
     tags: [
       "Real Estate Marketing",
@@ -1032,7 +1032,7 @@ const rawBlogPosts: BlogPost[] = [
       btnText: "Explore Landing Page Strategies",
       btnLink: "/services",
     },
-    seoTitle: "Why Social Media Campaigns Need Landing Pages | EyeLevel",
+    seoTitle: "Why Social Media Campaigns Need Landing Pages | Eyelevel",
     seoDescription:
       "Running social media ads without landing pages is like pouring water into a broken glass. Here's why landing pages are essential for every campaign — and what to include.",
     content: [
@@ -1075,7 +1075,7 @@ const rawBlogPosts: BlogPost[] = [
       "The most effective digital marketing operations are not set-and-forget campaigns — they're iterative systems where every week's data informs the next week's decisions. Landing pages are the primary lever for conversion rate improvement in any such system.",
       "## Conclusion",
       "Social media campaigns generate clicks. Landing pages convert them into business. Running campaigns without landing pages is the equivalent of spending money to bring customers to a door that doesn't open. The investment in well-built, tracked, and tested landing pages pays for itself in the first month through improved conversion rates and reduced cost per lead.",
-      "EyeLevel Growth Studio designs and optimizes landing pages for sports, healthcare, education, and business clients across India. If you're running campaigns and not getting the conversions you expect, landing page architecture is usually where the problem lies. Schedule a consultation at theeyelevelstudio.com.",
+      "Eyelevel Growth Studio designs and optimizes landing pages for sports, healthcare, education, and business clients across India. If you're running campaigns and not getting the conversions you expect, landing page architecture is usually where the problem lies. Schedule a consultation at theeyelevelstudio.com.",
     ],
     tags: [
       "Digital Marketing",
@@ -1116,7 +1116,7 @@ const rawBlogPosts: BlogPost[] = [
       btnText: "Explore Medical Tourism Marketing Strategies",
       btnLink: "/services",
     },
-    seoTitle: "Medical Tourism Marketing: How Indian Hospitals Attract International Patients | EyeLevel",
+    seoTitle: "Medical Tourism Marketing: How Indian Hospitals Attract International Patients | Eyelevel",
     seoDescription:
       "Indian hospitals have a world-class cost and quality advantage. The gap is marketing. Here's what a digital-first medical tourism strategy looks like in 2026.",
     content: [
@@ -1153,7 +1153,7 @@ const rawBlogPosts: BlogPost[] = [
       "Medical tourism marketplace platforms (Practo International, Vaidam Health, MediBid) offer referral network access. Maintaining a complete, positive-reviewed presence on these platforms generates a stream of inquiries from patients who are already past the trust barrier of 'should I consider India for treatment.'",
       "## Conclusion",
       "India's medical tourism opportunity is real, growing, and unevenly captured. Hospitals with clinical excellence but insufficient marketing infrastructure are invisible to the international patients who would choose them if they knew they existed. Building the right digital presence — international patient pages, procedure-specific content, trust-building video testimonials, WhatsApp-first communication infrastructure, and targeted digital advertising — is the difference between capturing this market and watching it flow to competitors who market more effectively.",
-      "EyeLevel Growth Studio is a healthcare marketing agency that helps hospitals, clinics, and healthcare institutions build patient acquisition systems. If your hospital is looking to develop or expand its international patient program, schedule a consultation with our team at theeyelevelstudio.com or call +91 97890 99499.",
+      "Eyelevel Growth Studio is a healthcare marketing agency that helps hospitals, clinics, and healthcare institutions build patient acquisition systems. If your hospital is looking to develop or expand its international patient program, schedule a consultation with our team at theeyelevelstudio.com or call +91 97890 99499.",
     ],
     tags: [
       "Healthcare Marketing",
@@ -1185,13 +1185,13 @@ const rawBlogPosts: BlogPost[] = [
       "WhatsApp broadcast campaign",
     ],
     cta: {
-      heading: "EyeLevel manages WhatsApp marketing end-to-end for D2C brands",
+      heading: "Eyelevel manages WhatsApp marketing end-to-end for D2C brands",
       description:
         "Switch your primary nurture channel to WhatsApp and start recovering carts, building loyalty, and lowering your CAC with automated conversational marketing.",
       btnText: "Explore WhatsApp Marketing",
       btnLink: "/services/whatsapp-marketing",
     },
-    seoTitle: "WhatsApp Marketing for D2C Brands India: The Complete Guide | EyeLevel",
+    seoTitle: "WhatsApp Marketing for D2C Brands India: The Complete Guide | Eyelevel",
     seoDescription:
       "How D2C brands in India use WhatsApp to reduce CAC, recover carts, and build loyal customer bases. Covers API setup, campaign types, and real client examples.",
     content: [
@@ -1209,7 +1209,7 @@ const rawBlogPosts: BlogPost[] = [
       "## WhatsApp Business API vs WhatsApp Business App",
       "The free WhatsApp Business App has a 256-contact broadcast limit and no automation. For any D2C brand with more than a few hundred customers, it is not scalable. The WhatsApp Business API removes the contact limit, enables CRM integration, automation, and chatbot deployment. Platforms in India: Gupshup, WATI, and Twixor.",
       "## Real Example: How a Preschool Uses WhatsApp Marketing",
-      "EyeLevel runs WhatsApp marketing for a preschool. Every inbound inquiry enters a sequence: welcome message, weekly parenting content, webinar invites, open house announcements, and an admission timeline nudge. Prospects stay warm for 4\u20138 weeks with zero manual follow-up. The same model applies directly to D2C \u2014 replace open house with a product launch, parenting content with category-relevant value content.",
+      "Eyelevel runs WhatsApp marketing for a preschool. Every inbound inquiry enters a sequence: welcome message, weekly parenting content, webinar invites, open house announcements, and an admission timeline nudge. Prospects stay warm for 4\u20138 weeks with zero manual follow-up. The same model applies directly to D2C \u2014 replace open house with a product launch, parenting content with category-relevant value content.",
       "## How to Get Started",
       "Step 1: Get WhatsApp Business API access via Gupshup, WATI, or Twixor",
       "Step 2: Import opted-in customer list and segment by purchase behaviour",
@@ -1247,13 +1247,13 @@ const rawBlogPosts: BlogPost[] = [
       "sports marketing agency India",
     ],
     cta: {
-      heading: "EyeLevel has produced two national pickleball leagues end-to-end",
+      heading: "Eyelevel has produced two national pickleball leagues end-to-end",
       description:
         "Looking for a marketing partner for your next pickleball tournament? From branding and sponsorships to digital marketing, we've got you covered.",
       btnText: "Explore Sports Marketing",
       btnLink: "/services/sports-marketing",
     },
-    seoTitle: "How to Market a Pickleball Tournament in India | EyeLevel Growth Studio",
+    seoTitle: "How to Market a Pickleball Tournament in India | Eyelevel Growth Studio",
     seoDescription:
       "Step-by-step marketing guide for pickleball tournaments and leagues in India \u2014 brand identity, sponsorship, social media, and post-event community building.",
     content: [
@@ -1308,13 +1308,13 @@ const rawBlogPosts: BlogPost[] = [
       "AI blog writing India",
     ],
     cta: {
-      heading: "EyeLevel manages AI content production end-to-end",
+      heading: "Eyelevel manages AI content production end-to-end",
       description:
         "Scale your content output without sacrificing brand voice. We manage AI content production for SaaS, D2C, and offshore clients.",
       btnText: "Explore AI Marketing",
       btnLink: "/services/ai-marketing",
     },
-    seoTitle: "AI Content Creation for Marketing: What Actually Works in 2026 | EyeLevel",
+    seoTitle: "AI Content Creation for Marketing: What Actually Works in 2026 | Eyelevel",
     seoDescription:
       "The real state of AI content creation for marketing in 2026 \u2014 what it replaces, what it can't, and how Indian agencies produce 3x more content at half the cost.",
     content: [
@@ -1331,7 +1331,7 @@ const rawBlogPosts: BlogPost[] = [
       "**Brand voice** \u2014 AI defaults to generic. Without a trained voice guide and human editing, all AI content sounds the same",
       "**Original insight** \u2014 AI recombines existing content. It cannot generate a genuinely new perspective",
       "**Fact accuracy** \u2014 AI confidently states incorrect statistics. Every factual claim requires human verification",
-      "## The EyeLevel AI Content Workflow",
+      "## The Eyelevel AI Content Workflow",
       "Step 1: Human strategist defines topic, target keyword, and content angle",
       "Step 2: AI generates structured first draft and keyword research",
       "Step 3: Human editor rewrites for brand voice, removes hallucinated facts, adds original proof points",
@@ -1372,13 +1372,13 @@ const rawBlogPosts: BlogPost[] = [
       "B2B lead generation India",
     ],
     cta: {
-      heading: "EyeLevel manages full LinkedIn B2B marketing",
+      heading: "Eyelevel manages full LinkedIn B2B marketing",
       description:
         "Ready to build a B2B pipeline on LinkedIn? We manage organic content, founder branding, and lead generation campaigns for SaaS companies and B2B founders.",
       btnText: "Explore B2B Marketing",
       btnLink: "/services/linkedin-b2b",
     },
-    seoTitle: "LinkedIn B2B Marketing India: What Actually Drives Pipeline | EyeLevel",
+    seoTitle: "LinkedIn B2B Marketing India: What Actually Drives Pipeline | Eyelevel",
     seoDescription:
       "The practical guide to LinkedIn B2B marketing for Indian companies \u2014 organic strategy, paid ads, founder branding, and Sales Navigator outreach that generates real pipeline.",
     content: [
@@ -1389,7 +1389,7 @@ const rawBlogPosts: BlogPost[] = [
       "**Paid Advertising** \u2014 Sponsored Content, Lead Gen Forms, and Message Ads. The most precise B2B ad targeting available.",
       "**Sales Navigator Outreach** \u2014 Identifying and directly messaging ideal prospects. Converts significantly better when combined with organic content the prospect has already seen.",
       "## Founder Personal Branding: The Most Underused B2B Growth Lever",
-      "B2B buyers buy from people before they buy from companies. A founder with an active, well-positioned LinkedIn profile consistently drives more inbound than a company page with the same follower count. EyeLevel manages this for founders who don't have time to post consistently but understand the value of doing it.",
+      "B2B buyers buy from people before they buy from companies. A founder with an active, well-positioned LinkedIn profile consistently drives more inbound than a company page with the same follower count. Eyelevel manages this for founders who don't have time to post consistently but understand the value of doing it.",
       "## LinkedIn Organic: What Actually Gets Reach",
       "Text-only posts with a strong first line consistently outperform image posts in reach",
       "Posts sharing a non-obvious observation get significantly more comments than tip lists",
@@ -1434,13 +1434,13 @@ const rawBlogPosts: BlogPost[] = [
       "sports sponsorship India",
     ],
     cta: {
-      heading: "Talk to EyeLevel about pickleball sponsorship",
+      heading: "Talk to Eyelevel about pickleball sponsorship",
       description:
         "We have built sponsorship decks, managed sponsor relationships, and designed activation formats for national pickleball leagues. Let's work together.",
       btnText: "Explore Pickleball Marketing",
       btnLink: "/pickleball-marketing-agency",
     },
-    seoTitle: "Pickleball Sponsorship India 2026: What Brands Need to Know | EyeLevel",
+    seoTitle: "Pickleball Sponsorship India 2026: What Brands Need to Know | Eyelevel",
     seoDescription:
       "Why 2026 is the right year for Indian brands to enter pickleball sponsorship \u2014 what to expect, what to budget, and how to activate for maximum commercial return.",
     content: [
@@ -1465,8 +1465,8 @@ const rawBlogPosts: BlogPost[] = [
       "What broadcast or live streaming reach does the event have?",
       "## What to Budget for Pickleball Sponsorship in India",
       "Pickleball sponsorship currently ranges from \u20b91 lakh for associate-level partnerships to \u20b920\u201350 lakh for title sponsorship of a national-level league. These numbers will increase as the sport grows. Brands entering in 2026 are getting rates that will be significantly higher by 2027\u201328.",
-      "## How EyeLevel Helps Brands and Leagues",
-      "EyeLevel has produced two national pickleball leagues \u2014 TNPPL and WPPL \u2014 and has built sponsorship decks, managed sponsor relationships, and designed activation formats for both. We work on both sides: helping leagues attract brands, and helping brands evaluate and activate sports partnerships.",
+      "## How Eyelevel Helps Brands and Leagues",
+      "Eyelevel has produced two national pickleball leagues \u2014 TNPPL and WPPL \u2014 and has built sponsorship decks, managed sponsor relationships, and designed activation formats for both. We work on both sides: helping leagues attract brands, and helping brands evaluate and activate sports partnerships.",
     ],
     tags: [
       "Pickleball",
@@ -1498,13 +1498,13 @@ const rawBlogPosts: BlogPost[] = [
       "D2C marketing India",
     ],
     cta: {
-      heading: "EyeLevel sets up and manages WhatsApp marketing for D2C brands",
+      heading: "Eyelevel sets up and manages WhatsApp marketing for D2C brands",
       description:
         "Switch your primary nurture channel to WhatsApp and start recovering carts, building loyalty, and lowering your CAC with automated conversational marketing.",
       btnText: "Explore WhatsApp Marketing",
       btnLink: "/services/whatsapp-marketing",
     },
-    seoTitle: "WhatsApp vs Email Marketing in India: The Numbers Don't Lie | EyeLevel",
+    seoTitle: "WhatsApp vs Email Marketing in India: The Numbers Don't Lie | Eyelevel",
     seoDescription:
       "Open rates, click-through rates, and conversion data comparing WhatsApp and email for Indian D2C and B2C brands. The case for switching your primary nurture channel.",
     content: [
@@ -1559,13 +1559,13 @@ const rawBlogPosts: BlogPost[] = [
       "offshore marketing team India",
     ],
     cta: {
-      heading: "Talk to EyeLevel about offshore marketing",
+      heading: "Talk to Eyelevel about offshore marketing",
       description:
         "We manage marketing for clients in the US and UAE. Fully remote, async-first, with weekly reporting that meets US leadership team standards.",
       btnText: "Explore Offshore Marketing",
       btnLink: "/industries/offshore",
     },
-    seoTitle: "Why US Startups Are Hiring Indian Marketing Agencies in 2026 | EyeLevel",
+    seoTitle: "Why US Startups Are Hiring Indian Marketing Agencies in 2026 | Eyelevel",
     seoDescription:
       "Cost, quality, and AI capabilities have made Indian marketing agencies a serious option for US startups. What to look for, what to avoid, and what to expect.",
     content: [
@@ -1588,8 +1588,8 @@ const rawBlogPosts: BlogPost[] = [
       "Agencies that promise guaranteed rankings or guaranteed ROAS \u2014 red flags regardless of geography",
       "Agencies where the founder pitches but juniors execute \u2014 ask who specifically will be on your account",
       "Agencies without verifiable testimonials or named clients",
-      "## EyeLevel's Offshore Client Setup",
-      "EyeLevel currently manages marketing for clients in the US and UAE. Fully remote, async-first, with weekly reporting that meets US leadership team standards. We specialise in SaaS marketing, AI content production, and performance marketing for offshore clients.",
+      "## Eyelevel's Offshore Client Setup",
+      "Eyelevel currently manages marketing for clients in the US and UAE. Fully remote, async-first, with weekly reporting that meets US leadership team standards. We specialise in SaaS marketing, AI content production, and performance marketing for offshore clients.",
     ],
     tags: [
       "Offshore Marketing",
@@ -1621,13 +1621,13 @@ const rawBlogPosts: BlogPost[] = [
       "reduce SaaS CAC India",
     ],
     cta: {
-      heading: "EyeLevel builds SaaS marketing systems for seed to Series A companies",
+      heading: "Eyelevel builds SaaS marketing systems for seed to Series A companies",
       description:
         "Ready to build inbound pipeline? We manage GTM strategy, content, and LinkedIn marketing for B2B SaaS startups.",
       btnText: "Explore SaaS Marketing",
       btnLink: "/industries/saas",
     },
-    seoTitle: "SaaS Marketing India: Building Pipeline Without a Sales Team | EyeLevel",
+    seoTitle: "SaaS Marketing India: Building Pipeline Without a Sales Team | Eyelevel",
     seoDescription:
       "How Indian SaaS companies at seed to Series A build consistent marketing pipeline without a large sales team \u2014 LinkedIn, content, AI agents, and GTM frameworks.",
     content: [
@@ -1640,7 +1640,7 @@ const rawBlogPosts: BlogPost[] = [
       "## Go-to-Market Strategy for Indian SaaS",
       "A go-to-market strategy for seed-stage SaaS has four components: ICP definition, positioning, channel prioritisation, and a 90-day execution plan. Most founders skip one or more and jump straight to running ads. The result is wasted budget on audiences that were never going to buy.",
       "## AI Agents for SaaS Lead Qualification",
-      "One of the highest-leverage investments a SaaS company can make in 2026 is an AI lead qualification agent. Every inbound inquiry flows into an automated system that scores the lead against your ICP and routes only sales-ready leads to your team. EyeLevel builds these agents using Make.com and n8n for SaaS clients.",
+      "One of the highest-leverage investments a SaaS company can make in 2026 is an AI lead qualification agent. Every inbound inquiry flows into an automated system that scores the lead against your ICP and routes only sales-ready leads to your team. Eyelevel builds these agents using Make.com and n8n for SaaS clients.",
       "## Reducing SaaS CAC in India",
       "Prioritise inbound over outbound \u2014 inbound CAC is consistently 40\u201370% lower than outbound",
       "Invest in SEO early \u2014 organic traffic has near-zero CAC once content is ranking",
@@ -1678,13 +1678,13 @@ const rawBlogPosts: BlogPost[] = [
       "growth marketing agency India",
     ],
     cta: {
-      heading: "EyeLevel builds go-to-market strategies for SaaS and D2C companies",
+      heading: "Eyelevel builds go-to-market strategies for SaaS and D2C companies",
       description:
         "Need a systematic way to acquire customers? Let's build a GTM strategy that actually works.",
       btnText: "Explore Our Services",
       btnLink: "/services",
     },
-    seoTitle: "What is Go-to-Market Strategy? A Founder's Guide for Indian Startups | EyeLevel",
+    seoTitle: "What is Go-to-Market Strategy? A Founder's Guide for Indian Startups | Eyelevel",
     seoDescription:
       "A practical explanation of go-to-market strategy for Indian startup founders \u2014 what it is, what it includes, and how to build one that drives pipeline and revenue.",
     content: [
@@ -1736,13 +1736,13 @@ const rawBlogPosts: BlogPost[] = [
       "pickleball India 2026",
     ],
     cta: {
-      heading: "Talk to EyeLevel about pickleball community and brand activation",
+      heading: "Talk to Eyelevel about pickleball community and brand activation",
       description:
         "We build marketing infrastructure for national pickleball leagues, including digital community management and sponsorship activation.",
       btnText: "Explore Pickleball Marketing",
       btnLink: "/pickleball-marketing-agency",
     },
-    seoTitle: "How to Build a Pickleball Community in India: Brand Activation Guide | EyeLevel",
+    seoTitle: "How to Build a Pickleball Community in India: Brand Activation Guide | Eyelevel",
     seoDescription:
       "Step-by-step guide for brands and organisations that want to build a pickleball community in India \u2014 digital community, live events, and brand activation formats.",
     content: [
@@ -1765,8 +1765,8 @@ const rawBlogPosts: BlogPost[] = [
       "Celebrity participation \u2014 one celebrity post about pickleball reaches more new people than months of organic content",
       "## Brand Activation Formats in Pickleball",
       "For brands wanting to enter pickleball through activation rather than sponsorship: co-branded tournaments with your brand in the event title, product sampling at club events, branded gear partnerships with local clubs, and digital content co-creation with pickleball players who have active social followings.",
-      "## How EyeLevel Builds Pickleball Communities",
-      "EyeLevel has built the marketing infrastructure for two national pickleball leagues \u2014 TNPPL and WPPL \u2014 including digital community management, live event content, sponsorship activation, and post-event retention.",
+      "## How Eyelevel Builds Pickleball Communities",
+      "Eyelevel has built the marketing infrastructure for two national pickleball leagues \u2014 TNPPL and WPPL \u2014 including digital community management, live event content, sponsorship activation, and post-event retention.",
     ],
     tags: [
       "Pickleball",
@@ -1798,13 +1798,13 @@ const rawBlogPosts: BlogPost[] = [
       "AI search results India",
     ],
     cta: {
-      heading: "EyeLevel builds GEO and AEO-optimised content",
+      heading: "Eyelevel builds GEO and AEO-optimised content",
       description:
         "Is your brand visible in AI search? We optimise content for SaaS, D2C, and sports brands to rank in ChatGPT, Perplexity, and AI Overviews.",
       btnText: "Explore AI Marketing",
       btnLink: "/services/ai-marketing",
     },
-    seoTitle: "What is GEO? How to Rank in ChatGPT, Perplexity & AI Search | EyeLevel",
+    seoTitle: "What is GEO? How to Rank in ChatGPT, Perplexity & AI Search | Eyelevel",
     seoDescription:
       "Generative Engine Optimization (GEO) is how brands get cited in AI answers on ChatGPT, Perplexity, and Gemini. What it is, how it differs from SEO, and how to do it.",
     content: [
@@ -1859,13 +1859,13 @@ const rawBlogPosts: BlogPost[] = [
       "Gupshup WATI Twixor India",
     ],
     cta: {
-      heading: "EyeLevel sets up and manages WhatsApp Business API",
+      heading: "Eyelevel sets up and manages WhatsApp Business API",
       description:
         "Ready to implement WhatsApp API for your business? We manage everything from Meta verification to automated flow setup and broadcast management.",
       btnText: "Explore WhatsApp Marketing",
       btnLink: "/services/whatsapp-marketing",
     },
-    seoTitle: "WhatsApp Business API Setup India: Step-by-Step Guide | EyeLevel",
+    seoTitle: "WhatsApp Business API Setup India: Step-by-Step Guide | Eyelevel",
     seoDescription:
       "How to set up WhatsApp Business API in India for small and mid-size businesses. Covers Meta verification, platform selection (WATI, Gupshup, Twixor), and first campaign setup.",
     content: [
@@ -1925,13 +1925,13 @@ const rawBlogPosts: BlogPost[] = [
       "D2C marketing India",
     ],
     cta: {
-      heading: "EyeLevel builds marketing systems for Indian D2C brands",
+      heading: "Eyelevel builds marketing systems for Indian D2C brands",
       description:
         "Ready to scale beyond your plateau? Let's talk about WhatsApp, retention, and community building.",
       btnText: "Explore D2C Marketing",
       btnLink: "/industries/d2c",
     },
-    seoTitle: "D2C Brand Building in India: What Top Brands Do Differently | EyeLevel",
+    seoTitle: "D2C Brand Building in India: What Top Brands Do Differently | Eyelevel",
     seoDescription:
       "The strategies that separate India's fastest-growing D2C brands from those that plateau. Community, WhatsApp, content, and retention \u2014 what actually works.",
     content: [
@@ -1982,13 +1982,13 @@ const rawBlogPosts: BlogPost[] = [
       "HubSpot agency India",
     ],
     cta: {
-      heading: "Talk to EyeLevel about marketing automation for your business",
+      heading: "Talk to Eyelevel about marketing automation for your business",
       description:
         "Stop doing repetitive marketing tasks manually. Let us build custom automation workflows using Make.com, Zapier, and n8n.",
       btnText: "Explore AI & Automation",
       btnLink: "/services/ai-marketing",
     },
-    seoTitle: "What is Marketing Automation? A Practical Guide for Indian Businesses | EyeLevel",
+    seoTitle: "What is Marketing Automation? A Practical Guide for Indian Businesses | Eyelevel",
     seoDescription:
       "Marketing automation explained for Indian businesses \u2014 what it is, what it automates, which tools to use (Make.com, Zapier, HubSpot), and how to start without a large tech team.",
     content: [
@@ -2011,8 +2011,8 @@ const rawBlogPosts: BlogPost[] = [
       "**Lead response sequence** \u2014 WhatsApp or email within 5 minutes of a form fill. Businesses that respond within 5 minutes convert at 9x the rate of those that take 30+ minutes.",
       "**CRM auto-update** \u2014 every form fill, ad click, and call outcome automatically logged without manual entry",
       "**Weekly performance report** \u2014 automated dashboard delivered every Monday with previous week's ad spend, leads, and revenue attributed",
-      "## How EyeLevel Builds Marketing Automation",
-      "EyeLevel builds custom automation workflows using Make.com, Zapier, and n8n. We also build AI agents that sit on top of these workflows \u2014 qualifying leads, scoring ICP fit, and routing warm leads to the right team member.",
+      "## How Eyelevel Builds Marketing Automation",
+      "Eyelevel builds custom automation workflows using Make.com, Zapier, and n8n. We also build AI agents that sit on top of these workflows \u2014 qualifying leads, scoring ICP fit, and routing warm leads to the right team member.",
     ],
     tags: [
       "Marketing Automation",
@@ -2044,13 +2044,13 @@ const rawBlogPosts: BlogPost[] = [
       "LinkedIn lead generation for SaaS India",
     ],
     cta: {
-      heading: "EyeLevel builds SaaS marketing and lead qualification systems that reduce CAC",
+      heading: "Eyelevel builds SaaS marketing and lead qualification systems that reduce CAC",
       description:
         "Is your SaaS CAC too high? Let's fix your channel mix and automate lead qualification.",
       btnText: "Explore SaaS Marketing",
       btnLink: "/industries/saas",
     },
-    seoTitle: "How to Reduce CAC for Your SaaS Product in India | EyeLevel",
+    seoTitle: "How to Reduce CAC for Your SaaS Product in India | Eyelevel",
     seoDescription:
       "Practical strategies for Indian SaaS companies to reduce customer acquisition cost \u2014 from channel mix optimisation to AI-powered lead qualification and content-led inbound.",
     content: [
@@ -2062,7 +2062,7 @@ const rawBlogPosts: BlogPost[] = [
       "**Referral programmes** \u2014 Existing customers referring new customers is the lowest CAC channel available. Most Indian SaaS companies don't have a structured referral programme.",
       "**Free trial or freemium** \u2014 Removing the purchase barrier reduces the sales cycle and cost per conversion.",
       "## AI-Powered Lead Qualification: The Fastest Way to Reduce Effective CAC",
-      "Most SaaS companies spend significant sales team time on leads that were never going to convert. An AI lead qualification agent that scores every inbound lead against your ICP \u2014 checking company size, role, industry, and intent signals \u2014 routes only sales-ready leads to your team. EyeLevel builds these agents using Make.com and n8n for SaaS clients.",
+      "Most SaaS companies spend significant sales team time on leads that were never going to convert. An AI lead qualification agent that scores every inbound lead against your ICP \u2014 checking company size, role, industry, and intent signals \u2014 routes only sales-ready leads to your team. Eyelevel builds these agents using Make.com and n8n for SaaS clients.",
       "## Reducing CAC on LinkedIn",
       "Run organic content before paid \u2014 brands with active content have higher ad conversion rates",
       "Use Lead Gen Forms \u2014 they convert 2\u20133x better on mobile than driving traffic to a website",
@@ -2101,13 +2101,13 @@ const rawBlogPosts: BlogPost[] = [
       "GMB for hospitals India",
     ],
     cta: {
-      heading: "EyeLevel manages digital marketing for hospitals and healthcare brands",
+      heading: "Eyelevel manages digital marketing for hospitals and healthcare brands",
       description:
         "Want to acquire more patients online? We manage GMB, search ads, and WhatsApp communication for healthcare clients.",
       btnText: "Explore Healthcare Marketing",
       btnLink: "/industries/healthcare",
     },
-    seoTitle: "Healthcare Digital Marketing India: How Hospitals Get Patients Online | EyeLevel",
+    seoTitle: "Healthcare Digital Marketing India: How Hospitals Get Patients Online | Eyelevel",
     seoDescription:
       "How Indian hospitals and clinics use digital marketing to attract new patients \u2014 from Google Business Profile to paid ads, content, and WhatsApp appointment flows.",
     content: [
@@ -2130,8 +2130,8 @@ const rawBlogPosts: BlogPost[] = [
       "**Patient feedback** \u2014 a WhatsApp message requesting a Google review after a positive visit",
       "## Content Marketing for Healthcare",
       "Healthcare content that ranks in Google answers real patient questions: 'What is the recovery time for knee replacement surgery?' 'What are the signs of diabetic neuropathy?' These questions have search volume. A hospital that answers them authoritatively becomes a trusted resource before the patient ever steps through the door.",
-      "## EyeLevel's Healthcare Marketing Experience",
-      "EyeLevel manages digital marketing for Right Hospitals (Kilpauk, Chennai) and Heart Team India, covering GMB management, patient acquisition campaigns, WhatsApp communication, and content production.",
+      "## Eyelevel's Healthcare Marketing Experience",
+      "Eyelevel manages digital marketing for Right Hospitals (Kilpauk, Chennai) and Heart Team India, covering GMB management, patient acquisition campaigns, WhatsApp communication, and content production.",
     ],
     tags: [
       "Healthcare",
@@ -2145,7 +2145,7 @@ const rawBlogPosts: BlogPost[] = [
     slug: "influencer-marketing-south-india-guide",
     title: "Influencer Marketing in South India: A Brand's Complete Guide",
     excerpt:
-      "How brands enter the South Indian market through influencer and celebrity partnerships \u2014 Kollywood connects to micro-influencer campaigns. A practical guide by EyeLevel.",
+      "How brands enter the South Indian market through influencer and celebrity partnerships \u2014 Kollywood connects to micro-influencer campaigns. A practical guide by Eyelevel.",
     category: "Influencer Marketing",
     image: blogImage33,
     date: "May 25, 2026",
@@ -2163,20 +2163,20 @@ const rawBlogPosts: BlogPost[] = [
       "South Indian celebrity endorsement",
     ],
     cta: {
-      heading: "Talk to EyeLevel about influencer and celebrity marketing",
+      heading: "Talk to Eyelevel about influencer and celebrity marketing",
       description:
         "Entering the South Indian market? We manage influencer identification, negotiation, and campaign execution.",
       btnText: "Explore Influencer Marketing",
       btnLink: "/services/influencer-marketing",
     },
-    seoTitle: "Influencer Marketing in South India: A Brand's Complete Guide | EyeLevel",
+    seoTitle: "Influencer Marketing in South India: A Brand's Complete Guide | Eyelevel",
     seoDescription:
-      "How brands enter the South Indian market through influencer and celebrity partnerships \u2014 Kollywood connects to micro-influencer campaigns. A practical guide by EyeLevel.",
+      "How brands enter the South Indian market through influencer and celebrity partnerships \u2014 Kollywood connects to micro-influencer campaigns. A practical guide by Eyelevel.",
     content: [
       "## Why South India Requires a Different Influencer Strategy",
       "South India is not a single market. Tamil, Telugu, Kannada, and Malayalam audiences have distinct cultural sensibilities, different celebrity ecosystems, and different platform preferences. Brands that treat South India as a single market almost always underperform. The ones that win have category-specific, language-aware, culturally calibrated influencer strategies.",
       "## The South Indian Celebrity Landscape for Brands",
-      "EyeLevel has worked with Samantha, Prabhu, Atlee, Dulkar Salman, Regina Cassandra, and Kalyani Priyadarshan on brand campaigns. The process involves: identifying the right celebrity for your brand's positioning (not just the biggest name), negotiating usage rights and exclusivity, and designing an activation that works for both the brand and the celebrity's audience.",
+      "Eyelevel has worked with Samantha, Prabhu, Atlee, Dulkar Salman, Regina Cassandra, and Kalyani Priyadarshan on brand campaigns. The process involves: identifying the right celebrity for your brand's positioning (not just the biggest name), negotiating usage rights and exclusivity, and designing an activation that works for both the brand and the celebrity's audience.",
       "## Celebrity Endorsement vs Influencer Partnership: When to Use Which",
       "**Celebrity endorsement** \u2014 high reach, high cost, category credibility. Best for FMCG, jewellery, and lifestyle brands launching in South India.",
       "**Macro influencer** \u2014 100K\u20131M followers. High engagement, topic authority, more affordable than celebrity.",
@@ -2188,8 +2188,8 @@ const rawBlogPosts: BlogPost[] = [
       "**Previous partnerships** \u2014 has the influencer worked with competitors or conflicting brands?",
       "## Campaign Planning: Beyond the Post",
       "A single Instagram post generates buzz for 48\u201372 hours and then disappears. Brands that get lasting return from influencer partnerships plan for amplification: paid boost on the organic post, content repurposing, PR angles that extend the news peg, and follow-up content over 2\u20134 weeks.",
-      "## EyeLevel's Celebrity Connect Process",
-      "EyeLevel manages celebrity and influencer partnerships for brands entering South India \u2014 identification, brief creation, negotiation, contracting, creative coordination, and post-campaign reporting. Our existing relationships with South Indian talent reduce lead time and negotiation friction.",
+      "## Eyelevel's Celebrity Connect Process",
+      "Eyelevel manages celebrity and influencer partnerships for brands entering South India \u2014 identification, brief creation, negotiation, contracting, creative coordination, and post-campaign reporting. Our existing relationships with South Indian talent reduce lead time and negotiation friction.",
     ],
     tags: [
       "Influencer Marketing",
@@ -2221,13 +2221,13 @@ const rawBlogPosts: BlogPost[] = [
       "digital marketing agency Chennai",
     ],
     cta: {
-      heading: "EyeLevel welcomes all eight questions",
+      heading: "Eyelevel welcomes all eight questions",
       description:
         "Looking for an agency that can actually answer these questions? Book a discovery call with us.",
       btnText: "Book a Discovery Call",
       btnLink: "/contact-us",
     },
-    seoTitle: "How to Choose a Marketing Agency in India: 8 Questions to Ask | EyeLevel",
+    seoTitle: "How to Choose a Marketing Agency in India: 8 Questions to Ask | Eyelevel",
     seoDescription:
       "Eight questions every founder should ask before hiring a marketing agency in India \u2014 covering account management, reporting, AI capability, and how to spot red flags early.",
     content: [
@@ -2280,13 +2280,13 @@ const rawBlogPosts: BlogPost[] = [
       "marketing automation tools India",
     ],
     cta: {
-      heading: "EyeLevel builds Make.com and Zapier automation workflows",
+      heading: "Eyelevel builds Make.com and Zapier automation workflows",
       description:
         "Need help deciding or building automations? We implement complex marketing workflows for growth teams.",
       btnText: "Explore AI & Automation",
       btnLink: "/services/ai-marketing",
     },
-    seoTitle: "Make.com vs Zapier: Which Automation Tool is Right for Your Marketing Team? | EyeLevel",
+    seoTitle: "Make.com vs Zapier: Which Automation Tool is Right for Your Marketing Team? | Eyelevel",
     seoDescription:
       "A practical comparison of Make.com and Zapier for Indian marketing teams \u2014 pricing, complexity, use cases, and which to choose based on your automation goals.",
     content: [
@@ -2309,8 +2309,8 @@ const rawBlogPosts: BlogPost[] = [
       "**Multi-step sales follow-up with branching based on response:** Make.com \u2014 significantly better.",
       "**Simple Shopify \u2192 email notification:** Zapier \u2014 faster and cheaper for simple e-commerce triggers.",
       "**AI agent integration (GPT, Claude):** Make.com \u2014 better native AI module support and more flexible API handling.",
-      "## EyeLevel's Recommendation",
-      "EyeLevel uses Make.com as the primary automation platform for client work and internal operations. The flexibility, cost at scale, and AI integration capability make it the right choice for marketing teams serious about automation. We use Zapier when a client already has it or when the use case is genuinely simple enough that Make.com's flexibility is unnecessary overhead.",
+      "## Eyelevel's Recommendation",
+      "Eyelevel uses Make.com as the primary automation platform for client work and internal operations. The flexibility, cost at scale, and AI integration capability make it the right choice for marketing teams serious about automation. We use Zapier when a client already has it or when the use case is genuinely simple enough that Make.com's flexibility is unnecessary overhead.",
     ],
     tags: [
       "Marketing Automation",
@@ -2342,13 +2342,13 @@ const rawBlogPosts: BlogPost[] = [
       "Google ads India ROAS",
     ],
     cta: {
-      heading: "EyeLevel manages full-funnel performance marketing",
+      heading: "Eyelevel manages full-funnel performance marketing",
       description:
         "Is your ROAS dropping? We build full-funnel paid acquisition systems for SaaS, D2C, and B2B brands.",
       btnText: "Explore Our Services",
       btnLink: "/services",
     },
-    seoTitle: "Performance Marketing India: How to Maximise ROAS in 2026 | EyeLevel",
+    seoTitle: "Performance Marketing India: How to Maximise ROAS in 2026 | Eyelevel",
     seoDescription:
       "Practical performance marketing strategies for Indian brands in 2026 \u2014 Meta, Google, LinkedIn ad optimisation, creative testing, and full-funnel approaches that maximise ROAS.",
     content: [
@@ -2420,9 +2420,9 @@ export const getBlogPostsByCategory = (category: string) =>
 export const getBlogCategorySeo = (category: string) => {
   if (category === ALL_BLOGS_CATEGORY) {
     return {
-      title: "Sports, Healthcare & Education Marketing Blog | EyeLevel",
+      title: "Sports, Healthcare & Education Marketing Blog | Eyelevel",
       description:
-        "EyeLevel's marketing blog: sports sponsorship, healthcare patient discovery, education admission marketing & growth strategy insights. Subscription free.",
+        "Eyelevel's marketing blog: sports sponsorship, healthcare patient discovery, education admission marketing & growth strategy insights. Subscription free.",
       keywords: [
         "sports marketing blog India",
         "healthcare marketing insights",
@@ -2443,11 +2443,11 @@ export const getBlogCategorySeo = (category: string) => {
   );
 
   return {
-    title: `${category} Blogs | EyeLevel Growth Studio`,
+    title: `${category} Blogs | Eyelevel Growth Studio`,
     description:
       previewTopics.length > 0
-        ? `Explore ${category.toLowerCase()} insights from EyeLevel Growth Studio covering ${previewTopics.join(", ")}.`
-        : `Explore ${category.toLowerCase()} insights and articles from EyeLevel Growth Studio.`,
+        ? `Explore ${category.toLowerCase()} insights from Eyelevel Growth Studio covering ${previewTopics.join(", ")}.`
+        : `Explore ${category.toLowerCase()} insights and articles from Eyelevel Growth Studio.`,
     keywords: [`${category} blog`, `${category} insights`, ...previewTopics],
     canonical: `https://theeyelevelstudio.com${getBlogCategoryUrl(category)}`,
     url: `https://theeyelevelstudio.com${getBlogCategoryUrl(category)}`,

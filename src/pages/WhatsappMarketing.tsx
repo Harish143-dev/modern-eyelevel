@@ -43,7 +43,7 @@ const faqLd = {
       name: "How do I set up WhatsApp marketing for my brand?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You need a Meta Business account, verified phone number, and an API platform. EyeLevel handles full setup \u2014 typically within 5\u20137 business days.",
+        text: "You need a Meta Business account, verified phone number, and an API platform. Eyelevel handles full setup \u2014 typically within 5\u20137 business days.",
       },
     },
   ],
@@ -103,8 +103,8 @@ function WhatsAppMarketingPage() {
   return (
     <>
       <SEO
-        title="WhatsApp Marketing Agency India — EyeLevel Growth Studio"
-        description="Full-service WhatsApp marketing: broadcasts, drip sequences, chatbots, and Business API setup. EyeLevel runs WhatsApp campaigns for D2C brands, hospitals, schools, and SaaS companies across India."
+        title="WhatsApp Marketing Agency India — Eyelevel Growth Studio"
+        description="Full-service WhatsApp marketing: broadcasts, drip sequences, chatbots, and Business API setup. Eyelevel runs WhatsApp campaigns for D2C brands, hospitals, schools, and SaaS companies across India."
         keywords={[
           "WhatsApp marketing agency India",
           "WhatsApp Business API India",

@@ -21,7 +21,7 @@ const Healthcare = () => {
   return (
     <div className="min-h-screen bg-background selection:bg-brand-lime selection:text-black">
       <SEO
-        title="Healthcare Marketing Agency Chennai | Hospital Marketing | EyeLevel Growth Studio"
+        title="Healthcare Marketing Agency Chennai | Hospital Marketing | Eyelevel Growth Studio"
         description="Patient acquisition built on trust. SEO, social media, and performance marketing for specialty clinics and hospitals. Not product marketing — trust architecture."
         keywords={["healthcare marketing agency Chennai", "hospital marketing agency Chennai", "clinic marketing India", "patient acquisition agency", "healthcare digital marketing Chennai", "medical marketing agency India"]}
         schema={[
@@ -32,7 +32,7 @@ const Healthcare = () => {
             description: "Patient acquisition built on trust. SEO, social media, and performance marketing for specialty clinics and hospitals. Not product marketing — trust architecture.",
             provider: {
               "@type": "Organization",
-              name: "EyeLevel Growth Studio",
+              name: "Eyelevel Growth Studio",
               url: "https://theeyelevelstudio.com"
             },
             areaServed: "India",

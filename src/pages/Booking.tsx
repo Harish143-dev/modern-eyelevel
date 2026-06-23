@@ -9,7 +9,7 @@ const Booking = () => {
   return (
     <div className="min-h-screen bg-secondary">
       <SEO
-        title="Book a Marketing Consultation | EyeLevel Growth Studio"
+        title="Book a Marketing Consultation | Eyelevel Growth Studio"
         description="Schedule a consultation with our marketing experts to unlock growth through strategy, performance marketing, AI, and branding."
         keywords={[
           "book marketing consultation",

@@ -20,7 +20,7 @@ const RealEstate = () => {
   return (
     <div className="min-h-screen bg-background selection:bg-brand-lime selection:text-black">
       <SEO
-        title="Real Estate Marketing Agency Chennai | EyeLevel Growth Studio"
+        title="Real Estate Marketing Agency Chennai | Eyelevel Growth Studio"
         description="Performance marketing, SEO, and content for real estate developers. Qualified site visits and bookings - not cheap form fills. Chennai's real estate marketing specialists."
         keywords={["real estate marketing agency Chennai", "property marketing agency Chennai", "real estate digital marketing India", "real estate lead generation Chennai", "real estate SEO India"]}
         schema={[
@@ -31,7 +31,7 @@ const RealEstate = () => {
             description: "Performance marketing, SEO, and content for real estate developers. Qualified site visits and bookings - not cheap form fills. Chennai's real estate marketing specialists.",
             provider: {
               "@type": "Organization",
-              name: "EyeLevel Growth Studio",
+              name: "Eyelevel Growth Studio",
               url: "https://theeyelevelstudio.com"
             },
             areaServed: "India",

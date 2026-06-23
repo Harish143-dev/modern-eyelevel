@@ -28,7 +28,7 @@ const JobDetails = () => {
     return (
       <div className="min-h-screen bg-secondary">
         <SEO
-          title="Job Not Found | EyeLevel Growth Studio"
+          title="Job Not Found | Eyelevel Growth Studio"
           description="The requested career listing could not be found."
           keywords={["job not found", "career listing", "marketing jobs"]}
           canonical={`${baseUrl}/careers`}
@@ -64,7 +64,7 @@ const JobDetails = () => {
 
     if (navigator.share) {
       await navigator.share({
-        title: `${job.title} at EyeLevel Growth Studio`,
+        title: `${job.title} at Eyelevel Growth Studio`,
         text: job.shortDescription,
         url: window.location.href,
       });
@@ -79,7 +79,7 @@ const JobDetails = () => {
       className="min-h-screen overflow-hidden bg-secondary"
     >
       <SEO
-        title={`${job.title} | Careers at EyeLevel Growth Studio`}
+        title={`${job.title} | Careers at Eyelevel Growth Studio`}
         description={job.shortDescription}
         keywords={[
           job.title,
@@ -114,7 +114,7 @@ const JobDetails = () => {
               <span
                 className="text-xs px-3 py-1 rounded-full font-medium font-bricolage bg-primary text-secondary"
               >
-                EyeLevel Growth Studio
+                Eyelevel Growth Studio
               </span>
               <span
                 className="text-xs px-3 py-1 rounded-full font-medium font-bricolage bg-background text-foreground"
@@ -200,7 +200,7 @@ const JobDetails = () => {
               <h2
                 className="font-dela text-2xl mb-4 uppercase text-primary"
               >
-                About EyeLevel Growth Studio
+                About Eyelevel Growth Studio
               </h2>
               <p
                 className="font-bricolage whitespace-pre-line"
@@ -340,7 +340,7 @@ const JobDetails = () => {
                 className="font-bricolage mb-4"
                 style={{ color: "rgba(248, 255, 232, 0.8)" }}
               >
-                Our team is our most valuable resource! At EyeLevel, each one of
+                Our team is our most valuable resource! At Eyelevel, each one of
                 us is a dynamic superstar. We have carefully bred an ecosystem
                 which hires nothing but incredibly and exceptionally talented
                 people who can dream, collaborate, experiment and break new
