@@ -80,7 +80,7 @@ const PerformanceMarketing = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background overflow-clip">
+    <div className="min-h-[65vh] lg:min-h-[95vh] bg-background overflow-clip">
       <SEO
         title="Performance Marketing Agency Chennai | Eyelevel Growth Studio"
         description="Meta and Google Ads built for revenue, not reach. Full-funnel campaigns with complete attribution from ad to close. No black-box reporting."
@@ -99,7 +99,7 @@ const PerformanceMarketing = () => {
       {/* Section 1 — Hero */}
       <section
         ref={heroRef}
-        className="relative min-h-[65vh] lg:min-h-[95vh] flex items-center px-4 overflow-hidden bg-secondary ] pt-40 pb-[100px]"
+        className="relative min-h-[65vh] lg:min-h-[95vh]  flex items-center px-4 overflow-hidden bg-secondary pt-40 pb-[100px]"
       >
         {/* Rotating star background */}
         <motion.div
@@ -124,7 +124,7 @@ const PerformanceMarketing = () => {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="mb-8"
+            className="mb-0"
           >
             <GreenButton>SERVICES / PERFORMANCE MARKETING</GreenButton>
           </motion.div>
@@ -155,7 +155,7 @@ const PerformanceMarketing = () => {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1.1 }}
-            className="flex items-center rounded-full relative font-bricolage z-1000 justify-center gap-4"
+            className="flex items-center rounded-full relative font-bricolage z-1000 justify-start gap-4"
           >
             <Link to="/booking">
               <Button className="h-12 px-6 lg:h-14 lg:px-8 text-sm lg:text-base font-semibold rounded-full group overflow-hidden relative">
@@ -180,7 +180,7 @@ const PerformanceMarketing = () => {
           {/* Box 1 */}
           <motion.div
             {...scrollAnimProps}
-            className="md:col-span-2 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px] transition-all duration-300 hover:border-primary/30"
+            className="md:col-span-2 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[65vh] lg:min-h-[95vh] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-colors duration-500" />
 
@@ -197,7 +197,7 @@ const PerformanceMarketing = () => {
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.1 }}
-            className="md:col-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px] transition-all duration-300 hover:border-primary/30"
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[65vh] lg:min-h-[95vh] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -214,7 +214,7 @@ const PerformanceMarketing = () => {
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.2 }}
-            className="md:col-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px] transition-all duration-300 hover:border-primary/30"
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[65vh] lg:min-h-[95vh] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -231,7 +231,7 @@ const PerformanceMarketing = () => {
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.3 }}
-            className="md:col-span-2 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px] transition-all duration-300 hover:border-primary/30"
+            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-start min-h-[65vh] lg:min-h-[95vh] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -267,7 +267,7 @@ const PerformanceMarketing = () => {
       </section>
 
       {/* Section 4 — Pull quote */}
-      <section className="px-4 bg-background relative z-10 flex justify-center items-center py-[100px]">
+      <section className="px-4 bg-background relative z-10 flex justify-start items-center py-[100px]">
         <div className="max-w-5xl mx-auto w-full flex flex-col items-center">
           <motion.h2
             {...scrollAnimProps}

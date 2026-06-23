@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import { useEffect, useRef, useState } from "react";
 import ClientLottie, { type ClientLottieRef } from "@/components/shared/ClientLottie";
+import GreenButton from "@/components/shared/GreenButton";
 
 // 18-pointed star SVG component
 const Star18 = ({ className }: { className?: string }) => {
@@ -87,7 +88,7 @@ const AboutHero = () => {
     return (
         <section
             ref={ref}
-            className="px-4 relative md:min-h-screen flex items-center justify-center flex-col overflow-hidden pt-40 pb-[100px]"
+            className="px-4 relative min-h-[65vh] lg:min-h-[95vh] flex items-start justify-start flex-col overflow-hidden pt-40 pb-[100px]"
         >
             {/* Rotating 18-pointed star - centered upper area */}
             <motion.div
@@ -106,25 +107,13 @@ const AboutHero = () => {
             </div>
 
             <div className="relative max-w-7xl mx-auto text-center z-10">
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-6"
-                    style={{
-                        backgroundColor: "rgba(226, 254, 165, 0.1)",
-                        border: "1px solid rgba(226, 254, 165, 0.2)",
-                    }}
-                >
-                    <span className="text-sm font-medium font-bricolage text-primary">
-                        About Eyelevel
-                    </span>
-                </motion.div>
+                <GreenButton>About Eyelevel</GreenButton>
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
-                    className="flex items-center justify-center gap-4 mb-10 relative"
+                    className="-mt-2 md:-mt-4 flex items-start justify-start gap-4 mb-10 relative"
                 >
                     {animationData && (
                         <ClientLottie
@@ -132,11 +121,11 @@ const AboutHero = () => {
                             animationData={animationData}
                             autoPlay={false}
                             loop
-                            className="absolute -top-[46px] md:-top-[92px] lg:-top-[125px] w-[280px] sm:w-[450px] md:w-[520px] lg:w-[700px] pointer-events-none"
+                            className="absolute -top-[16px] md:-top-[62px] lg:-top-[95px] w-[280px] sm:w-[450px] md:w-[520px] md:-right-[-120px] lg:w-[700px] pointer-events-none"
                         />
                     )}
 
-                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-dela uppercase text-primary">
+                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-dela uppercase mt-8 text-primary">
                         BUILT FROM <WavyUnderline>THE CLIENT</WavyUnderline>
                     </h1>
                 </motion.div>

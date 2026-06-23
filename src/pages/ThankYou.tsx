@@ -102,7 +102,7 @@ const ThankYou = () => {
       />
       <Header />
 
-      <main className="px-4 relative ] pt-32 pb-[100px]">
+      <main className="px-4 relative pt-32 pb-[100px]">
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div

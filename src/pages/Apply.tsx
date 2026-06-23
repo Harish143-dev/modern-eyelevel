@@ -287,7 +287,7 @@ const Apply = () => {
   };
 
   return (
-    <div className="min-h-screen bg-secondary py-10">
+    <div className="min-h-[65vh] lg:min-h-[95vh] bg-secondary py-10">
       <SEO
         title="Apply for Careers | Eyelevel Growth Studio"
         description="Submit your application to join Eyelevel Growth Studio team."
@@ -303,7 +303,7 @@ const Apply = () => {
       />
       <Header />
 
-      <main className="] pt-32 pb-[100px]">
+      <main className="pt-40 pb-[100px]">
         <div className="container mx-auto px-4">
           {/* Back Button */}
           <motion.button
@@ -360,7 +360,7 @@ const Apply = () => {
                     className="hidden"
                   />
                   {resumeFile ? (
-                    <div className="flex items-center justify-center gap-3">
+                    <div className="flex items-start justify-start gap-3">
                       <FileText className="w-6 h-6 text-primary" />
                       <span className="text-primary font-medium font-bricolage">
                         {resumeFile.name}
@@ -1013,7 +1013,7 @@ const Apply = () => {
                         <button
                           type="button"
                           onClick={() => removeSocialLink(socialLink.id)}
-                          className="h-10 w-10 rounded-lg border border-red-400/30 text-red-400 hover:text-red-300 hover:border-red-300 transition-colors flex items-center justify-center"
+                          className="h-10 w-10 rounded-lg border border-red-400/30 text-red-400 hover:text-red-300 hover:border-red-300 transition-colors flex items-start justify-start"
                           aria-label="Remove social link"
                         >
                           <Trash2 className="w-4 h-4" />
@@ -1044,7 +1044,7 @@ const Apply = () => {
               </div>
 
               {/* Submit Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+              <div className="flex flex-col sm:flex-row gap-4 justify-start pt-6">
                 <Button
                   type="button"
                   variant="outline"

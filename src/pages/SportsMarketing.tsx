@@ -187,7 +187,7 @@ const SportsMarketing = () => {
   const vertical = getVerticalBySlug("sports-marketing");
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-[65vh] lg:min-h-[95vh] bg-background">
       <SEO
         title={vertical?.seoTitle || "Sports League Marketing Agency | Fan Engagement & Sponsorship | Eyelevel"}
         description={vertical?.seoDescription || "Sports marketing agency specializing in league promotion, fan engagement, sponsorship activation, and sports event marketing."}
@@ -214,7 +214,7 @@ const SportsMarketing = () => {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden bg-secondary ] pt-32 pb-[100px]"
+        className="relative min-h-[65vh] lg:min-h-[95vh] flex flex-col items-center justify-center px-4 overflow-hidden bg-secondary pt-40 pb-[100px]"
       >
         {/* Rotating star background */}
         <motion.div
@@ -303,7 +303,7 @@ const SportsMarketing = () => {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 rounded-full border-2 flex items-start justify-center p-2"
+            className="w-6 h-10 rounded-full border-2 flex items-start justify-start p-2"
             style={{ borderColor: "rgba(248, 255, 232, 0.3)" }}
           >
             <motion.div
@@ -360,7 +360,7 @@ const SportsMarketing = () => {
 
                   <div className="relative z-10">
                     <div
-                      className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
+                      className="w-14 h-14 rounded-2xl flex items-start justify-start mb-6 transition-transform duration-300 group-hover:scale-110"
                       style={{
                         backgroundColor: `${challenge.color}20`,
                         border: `1px solid ${challenge.color}40`,
@@ -459,7 +459,7 @@ const SportsMarketing = () => {
 
                   <div className="pt-4">
                     <div
-                      className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
+                      className="w-14 h-14 rounded-2xl flex items-start justify-start mb-6"
                       style={{
                         backgroundColor: "rgba(255, 180, 180, 0.15)",
                         border: "1px solid rgba(255, 180, 180, 0.3)",
@@ -536,7 +536,7 @@ const SportsMarketing = () => {
                   }}
                 >
                   <div
-                    className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110"
+                    className="w-14 h-14 rounded-2xl flex items-start justify-start mb-6 transition-all duration-300 group-hover:scale-110"
                     style={{
                       backgroundColor: "rgba(255, 180, 180, 0.15)",
                     }}

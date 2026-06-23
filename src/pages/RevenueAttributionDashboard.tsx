@@ -104,7 +104,7 @@ const RevenueAttributionDashboard = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background overflow-clip">
+    <div className="min-h-[65vh] lg:min-h-[95vh] bg-background overflow-clip">
       <SEO
         title="Revenue Attribution Dashboard | Marketing Analytics Chennai | Eyelevel Growth Studio"
         description="Every campaign tied to a business outcome you can show your board. Custom dashboard bundled into growth retainers. GA4, Meta Ads, Google Ads, and CRM unified."
@@ -123,7 +123,7 @@ const RevenueAttributionDashboard = () => {
       {/* Section 1 — Hero */}
       <section
         ref={heroRef}
-        className="relative min-h-[65vh] lg:min-h-[95vh] flex items-center justify-center px-4 overflow-hidden bg-secondary ] pt-40 pb-[100px]"
+        className="relative min-h-[65vh] lg:min-h-[95vh]  flex flex-col items-center justify-center px-4 overflow-hidden bg-secondary pt-40 pb-[100px]"
       >
         {/* Rotating star background */}
         <motion.div
@@ -148,7 +148,7 @@ const RevenueAttributionDashboard = () => {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="mb-8"
+            className="mb-0"
           >
             <GreenButton>SERVICES / REVENUE ATTRIBUTION DASHBOARD</GreenButton>
           </motion.div>
@@ -173,7 +173,7 @@ const RevenueAttributionDashboard = () => {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1.3 }}
-            className="flex items-center rounded-full relative font-bricolage z-1000 justify-center gap-4"
+            className="flex items-center rounded-full relative font-bricolage z-1000 justify-start gap-4"
           >
             <Link to="/booking">
               <Button className="h-12 px-6 lg:h-14 lg:px-8 text-sm lg:text-base font-semibold rounded-full group overflow-hidden relative">
@@ -186,8 +186,8 @@ const RevenueAttributionDashboard = () => {
       </section>
 
       {/* Section 2 — What it includes (Bento Box) */}
-      <section className="px-4 sm:px-10 md:px-20 bg-background relative z-10 py-20 md:py-[100px]">
-        <div className="w-full flex justify-center text-center">
+      <section className="px-20 bg-background relative z-10 py-[100px]">
+        <div className="w-full flex justify-start text-center">
           <motion.h2
             {...scrollAnimProps}
             className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-12"
@@ -200,7 +200,7 @@ const RevenueAttributionDashboard = () => {
           {/* Box 1 (wide) */}
           <motion.div
             {...scrollAnimProps}
-            className="md:col-span-2 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px] transition-all duration-300 hover:border-primary/30"
+            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-start min-h-[65vh] lg:min-h-[95vh] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <LayoutDashboard className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
@@ -212,7 +212,7 @@ const RevenueAttributionDashboard = () => {
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.1 }}
-            className="md:col-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px] transition-all duration-300 hover:border-primary/30"
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[65vh] lg:min-h-[95vh] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <LinkIcon className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
@@ -224,7 +224,7 @@ const RevenueAttributionDashboard = () => {
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.2 }}
-            className="md:col-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px] transition-all duration-300 hover:border-primary/30"
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[65vh] lg:min-h-[95vh] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <Coins className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
@@ -236,7 +236,7 @@ const RevenueAttributionDashboard = () => {
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.3 }}
-            className="md:col-span-2 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px] transition-all duration-300 hover:border-primary/30"
+            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-start min-h-[65vh] lg:min-h-[95vh] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <FileSpreadsheet className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
@@ -248,7 +248,7 @@ const RevenueAttributionDashboard = () => {
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.4 }}
-            className="md:col-span-2 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px] transition-all duration-300 hover:border-primary/30"
+            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-start min-h-[65vh] lg:min-h-[95vh] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <Bell className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
@@ -260,7 +260,7 @@ const RevenueAttributionDashboard = () => {
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.5 }}
-            className="md:col-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px] transition-all duration-300 hover:border-primary/30"
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[65vh] lg:min-h-[95vh] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <Package className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
@@ -290,7 +290,7 @@ const RevenueAttributionDashboard = () => {
       </section>
 
       {/* Section 4 — The outcome */}
-      <section className="px-4 bg-background relative z-10 flex justify-center items-center py-[100px]">
+      <section className="px-4 bg-background relative z-10 flex justify-start items-center py-[100px]">
         <div className="max-w-5xl mx-auto w-full flex flex-col items-center">
           <motion.h2
             {...scrollAnimProps}
