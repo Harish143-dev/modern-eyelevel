@@ -90,7 +90,7 @@ const Hero = () => {
   return (
     <section
       ref={ref}
-      className="relative min-h-[65vh] lg:min-h-[95vh] flex items-center justify-center px-4 overflow-hidden bg-secondary pt-40 pb-[100px]"
+      className="relative min-h-[65vh] lg:min-h-[95vh]  flex flex-col items-center justify-center px-4 overflow-hidden bg-secondary pt-40 pb-[100px]"
     >
       {/* Rotating 32-pointed star - centered upper area */}
       <motion.div
@@ -121,7 +121,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-dela mb-8 leading-[1.05] tracking-tight text-center overflow-visible text-primary"
           >
-            <span className="relative inline-flex items-center px-4 gap-2 md:gap-4">
+            <span className="relative inline-flex items-center px-4 gap-2 md:gap-4 ">
               <span className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem]">
                 FIRE
               </span>

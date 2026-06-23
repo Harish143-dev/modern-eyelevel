@@ -157,7 +157,7 @@ const BlogArchive = ({
       ];
 
   return (
-    <div className="min-h-screen bg-secondary">
+    <div className="min-h-[65vh] lg:min-h-[95vh] bg-secondary">
       <SEO
         title={title}
         description={description}
@@ -172,7 +172,7 @@ const BlogArchive = ({
 
       <section
         ref={ref}
-        className="px-4 relative md:min-h-screen overflow-hidden flex flex-col items-center justify-center ] pt-32 pb-[100px]"
+        className="px-4 relative min-h-[65vh] lg:min-h-[95vh] overflow-hidden flex flex-col items-center justify-center pt-40 pb-[100px]"
       >
         <motion.div
           animate={{ rotate: 360 }}
@@ -194,7 +194,7 @@ const BlogArchive = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl relative lg:text-6xl font-dela mb-6 uppercase text-primary"
+            className="-mt-2 md:-mt-4 text-3xl md:text-5xl relative lg:text-6xl font-dela mb-6 uppercase pt-10 text-primary"
           >
             {heroTitle.includes("Blog") ? (
               <>
@@ -214,7 +214,7 @@ const BlogArchive = ({
               animationData={animationData}
               autoPlay={false}
               loop
-              className="absolute -top-0 right-[50%] w-[70px] md:-top-[48px] md:left-[20%] md:w-[120px] lg:left-[20%] lg:-top-[56px] lg:w-[150px] pointer-events-none"
+              className="absolute -top-[-45px] right-[50%] w-[70px] md:-top-[5px] md:left-[20%] md:w-[120px] lg:left-[20%] lg:-top-[33px] lg:w-[150px] pointer-events-none"
             />
           )}
 
@@ -237,7 +237,7 @@ const BlogArchive = ({
           </motion.div>
         </div>
 
-        <section className="px-4 relative z-10 py-[100px]">
+        <section className="w-full px-4 relative z-10 py-[100px]">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

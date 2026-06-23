@@ -36,7 +36,7 @@ interface WhatsappMarketingHeroSectionProps {
 
 export default function WhatsappMarketingHeroSection({ scrollTo }: WhatsappMarketingHeroSectionProps) {
   return (
-    <section className="relative px-4 md:px-12 flex justify-center items-center bg-secondary overflow-hidden min-h-[90vh] z-[1] pt-40 pb-[100px]" aria-labelledby="hero-h1">
+    <section className="relative px-4 md:px-12 flex justify-start items-center bg-secondary overflow-hidden min-h-[65vh] lg:min-h-[95vh] z-[1pt-40 pb-[100px]" aria-labelledby="hero-h1">
       {/* Rotating 32-pointed star - centered upper area */}
       <motion.div
         animate={{ rotate: 360 }}
@@ -54,7 +54,7 @@ export default function WhatsappMarketingHeroSection({ scrollTo }: WhatsappMarke
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}
-          className="font-dela uppercase text-center mb-5 text-primary text-2xl md:text-3xl lg:text-5xl tracking-wide"
+          className="-mt-2 md:-mt-4 font-dela uppercase text-center mb-5 text-primary text-2xl md:text-3xl lg:text-5xl tracking-wide"
           style={{ lineHeight: "1.2" }}
         >
           WHERE YOUR CUSTOMERS<br className="hidden md:inline" />
@@ -79,7 +79,7 @@ export default function WhatsappMarketingHeroSection({ scrollTo }: WhatsappMarke
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mt-10 w-full"
+          className="flex flex-col sm:flex-row gap-4 justify-start mt-10 w-full"
         >
           <Button
             onClick={(e: MouseEvent<HTMLButtonElement>) => {
