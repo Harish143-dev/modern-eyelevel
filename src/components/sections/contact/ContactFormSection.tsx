@@ -97,15 +97,15 @@ const ContactFormSection = () => {
           >
             <div className="mb-8 md:mb-10 w-full">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-dela text-primary leading-[1.2] uppercase text-center lg:text-left break-words">
-                <span className="block mb-1">30 MINUTES.</span>
-                <span className="block mb-1">NO PITCH DECK.</span>
+                <span className="block mb-1">30 MINUTES</span>
+                <span className="block mb-1">NO PITCH DECK</span>
                 <span className="block mb-1">WE WILL TELL YOU</span>
                 <span className="block mt-2"><WavyUnderline>WHAT WE SEE</WavyUnderline></span>
               </h2>
             </div>
 
             <div className="flex flex-col items-center justify-center lg:items-start gap-4">
-              <Button 
+              <Button
               >
                 <Link to="/booking" className="flex items-center justify-center">
                   Book a free 30-min diagnostic
