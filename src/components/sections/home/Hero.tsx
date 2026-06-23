@@ -90,7 +90,7 @@ const Hero = () => {
   return (
     <section
       ref={ref}
-      className="relative min-h-[65vh] lg:min-h-[95vh] flex items-center justify-center px-4 overflow-hidden bg-secondary ] pt-40 pb-[80px]"
+      className="relative min-h-[65vh] lg:min-h-[95vh] flex items-center justify-center px-4 overflow-hidden bg-secondary pt-40 pb-[100px]"
     >
       {/* Rotating 32-pointed star - centered upper area */}
       <motion.div
