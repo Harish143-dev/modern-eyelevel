@@ -101,7 +101,7 @@ const ComparisonTable = () => {
                 {comp.name}
               </div>
             ))}
-            {/* EyeLevel Header - Highlighted */}
+            {/* Eyelevel Header - Highlighted */}
             <div
               className="p-6 text-center border-l border-[#d0e999]/30 relative bg-primary"
             >
@@ -111,7 +111,7 @@ const ComparisonTable = () => {
                 <Trophy className="w-4 h-4" />
               </div>
               <span className="font-dela text-forest-dark text-sm">
-                Your Extended Marketing Team (EyeLevel)
+                Your Extended Marketing Team (Eyelevel)
               </span>
             </div>
           </div>
@@ -140,7 +140,7 @@ const ComparisonTable = () => {
                   />
                 </div>
               ))}
-              {/* EyeLevel Column - Always Checked */}
+              {/* Eyelevel Column - Always Checked */}
               <div
                 className="p-5 flex items-center justify-center border-t border-l"
                 style={{
@@ -198,7 +198,7 @@ const ComparisonTable = () => {
 
         {/* Mobile Cards */}
         <div className="lg:hidden space-y-6">
-          {/* EyeLevel Card - Featured */}
+          {/* Eyelevel Card - Featured */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -212,7 +212,7 @@ const ComparisonTable = () => {
               </div>
             </div>
             <h3 className="font-dela text-xl text-forest-dark mb-4">
-              Your Extended Marketing Team (EyeLevel)
+              Your Extended Marketing Team (Eyelevel)
             </h3>
             <div className="grid grid-cols-2 gap-3">
               {criteria.map((criterion, i) => (

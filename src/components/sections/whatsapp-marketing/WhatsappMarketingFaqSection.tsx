@@ -15,7 +15,7 @@ const whatsappFaqs = [
   },
   {
     question: "How do I set up WhatsApp marketing for my brand?",
-    answer: "You need a Meta Business account, verified phone number, and an API platform. EyeLevel handles full setup — typically within 5–7 business days.",
+    answer: "You need a Meta Business account, verified phone number, and an API platform. Eyelevel handles full setup — typically within 5–7 business days.",
   },
 ];
 

@@ -20,12 +20,14 @@ const About = () => {
   return (
     <div className="min-h-screen overflow-hidden bg-secondary">
       <SEO
-        title="About EyeLevel Growth Studio — AI Marketing Agency, Chennai"
-        description="Meet the team behind EyeLevel Growth Studio. 50+ clients, 2 national pickleball leagues produced, and AI-powered marketing from Chennai."
+        title="About Eyelevel Growth Studio — AI Marketing Agency, Chennai"
+        description="Eyelevel is the extended marketing team built by a marketing head with 15 years client-side. Fractional CMO across India. Book a free 30-min diagnostic."
         keywords={[
-          "marketing agency Chennai",
-          "digital marketing agency India",
-          "AI marketing agency India",
+          "fractional CMO India",
+          "extended marketing team",
+          "digital marketing agency Chennai",
+          "client-side marketing leadership",
+          "AI-powered growth studio Chennai",
         ]}
         schema={[
           organizationSchema,

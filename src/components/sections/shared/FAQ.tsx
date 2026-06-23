@@ -15,8 +15,8 @@ const faqs = [
     answer: "A Growth Studio is a modern alternative to a traditional marketing agency. We don't just execute marketing tasks; we partner with you to build a comprehensive growth system that integrates strategy, creative, technology, and performance marketing to achieve your business goals."
   },
   {
-    question: "How is EyeLevel different from a marketing agency?",
-    answer: "While marketing agencies focus on executing specific services (like SEO or social media), EyeLevel focuses on the entire growth funnel. We start with a deep-dive diagnosis of your business, develop a custom growth strategy, and then execute with a focus on measurable ROI."
+    question: "How is Eyelevel different from a marketing agency?",
+    answer: "While marketing agencies focus on executing specific services (like SEO or social media), Eyelevel focuses on the entire growth funnel. We start with a deep-dive diagnosis of your business, develop a custom growth strategy, and then execute with a focus on measurable ROI."
   },
   {
     question: "What kind of results can I expect?",
@@ -27,7 +27,7 @@ const faqs = [
     answer: "We have deep expertise in four key verticals: Edu-Marketing, Sports Marketing, Real Estate, and B2B. However, our growth framework is adaptable to any industry where strategic growth is a priority."
   },
   {
-    question: "How much does it cost to work with EyeLevel?",
+    question: "How much does it cost to work with Eyelevel?",
     answer: "Our pricing is tailored to the specific needs and goals of each client. We offer a range of engagement models, from project-based fees for strategy work to monthly retainers for ongoing execution. We always start with a free Growth Audit to determine the best approach for you."
   }
 ];

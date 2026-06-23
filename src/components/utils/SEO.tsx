@@ -19,7 +19,7 @@ interface SeoTypes {
 }
 
 const SEO = ({
-  title = "EyeLevel Growth Studio - Digital Marketing & Creative Studio",
+  title = "Eyelevel Growth Studio - Digital Marketing & Creative Studio",
   description = "Chennai-based growth studio for digital marketing, branding, events, photography and video production. Helping startups, luxury & tech brands scale globally.",
   keywords,
   schema,
@@ -28,8 +28,8 @@ const SEO = ({
   imageAlt,
   url,
   type = "website",
-  siteName = "EyeLevel Growth Studio",
-  twitterSite = "@EyeLevelstudio",
+  siteName = "Eyelevel Growth Studio",
+  twitterSite = "@Eyelevelstudio",
   twitterCreator,
   noindex = false,
 }: SeoTypes) => {

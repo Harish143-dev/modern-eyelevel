@@ -158,8 +158,8 @@ const Header = ({ compact = false }: HeaderProps) => {
             <Link to="/" className="relative z-50 flex items-center">
               <img loading="lazy"
                 src={eyelevelLogo}
-                alt="EyeLevel Studio"
-                title="EyeLevel Studio"
+                alt="Eyelevel Studio"
+                title="Eyelevel Studio"
                 className="h-[35px] md:h-[45px] w-auto z-50"
               />
             </Link>
@@ -276,8 +276,8 @@ const Header = ({ compact = false }: HeaderProps) => {
                   {/* Mascot inside bottom right corner */}
                   <img loading="lazy"
                     src={mascotGrowth}
-                    alt="EyeLevel Mascot"
-                    title="EyeLevel Mascot"
+                    alt="Eyelevel Mascot"
+                    title="Eyelevel Mascot"
                     className="absolute -right-4 -bottom-4 md:right-0 md:bottom-0 w-32 md:w-48 lg:w-64 object-contain pointer-events-none opacity-40 md:opacity-100 translate-x-2 md:translate-x-8 translate-y-2 md:translate-y-8"
                   />
                 </div>

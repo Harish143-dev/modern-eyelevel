@@ -7,8 +7,8 @@ const Terms = () => {
   return (
     <div className="min-h-screen bg-secondary">
       <SEO
-        title="Terms & Conditions | EyeLevel Growth Studio"
-        description="Learn how EyeLevel Growth Studio collects, uses, and protects your personal data across our website and services."
+        title="Terms & Conditions | Eyelevel Growth Studio"
+        description="Learn how Eyelevel Growth Studio collects, uses, and protects your personal data across our website and services."
         keywords={[
           "terms and conditions",
           "website terms",
@@ -52,7 +52,7 @@ const Terms = () => {
                   1. Acceptance of Terms
                 </h2>
                 <p>
-                  By accessing and using EyeLevel Growth Studio's website and
+                  By accessing and using Eyelevel Growth Studio's website and
                   services, you accept and agree to be bound by the terms and
                   provisions of this agreement. If you do not agree to abide by
                   these terms, please do not use our services.
@@ -66,7 +66,7 @@ const Terms = () => {
                   2. Services Description
                 </h2>
                 <p>
-                  EyeLevel Growth Studio provides growth marketing, strategy
+                  Eyelevel Growth Studio provides growth marketing, strategy
                   consulting, performance marketing, AI automation, and creative
                   branding services. The specific services provided will be
                   outlined in individual service agreements with clients.
@@ -109,7 +109,7 @@ const Terms = () => {
                 </h2>
                 <p>
                   Upon full payment, clients will own the rights to final
-                  deliverables created specifically for them. EyeLevel Growth
+                  deliverables created specifically for them. Eyelevel Growth
                   Studio retains the right to use work samples in portfolios
                   unless otherwise agreed.
                 </p>
@@ -135,7 +135,7 @@ const Terms = () => {
                   7. Limitation of Liability
                 </h2>
                 <p>
-                  EyeLevel Growth Studio's liability is limited to the amount
+                  Eyelevel Growth Studio's liability is limited to the amount
                   paid for services. We are not liable for indirect, incidental,
                   or consequential damages arising from the use of our services.
                 </p>

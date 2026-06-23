@@ -20,7 +20,7 @@ const RealEstate = () => {
   return (
     <div className="min-h-screen bg-background selection:bg-brand-lime selection:text-black">
       <SEO
-        title="Real Estate Marketing Agency Chennai | EyeLevel Growth Studio"
+        title="Real Estate Marketing Agency Chennai | Eyelevel Growth Studio"
         description="Performance marketing, SEO, and content for real estate developers. Qualified site visits and bookings - not cheap form fills. Chennai's real estate marketing specialists."
         keywords={["real estate marketing agency Chennai", "property marketing agency Chennai", "real estate digital marketing India", "real estate lead generation Chennai", "real estate SEO India"]}
         schema={[
@@ -31,7 +31,7 @@ const RealEstate = () => {
             description: "Performance marketing, SEO, and content for real estate developers. Qualified site visits and bookings - not cheap form fills. Chennai's real estate marketing specialists.",
             provider: {
               "@type": "Organization",
-              name: "EyeLevel Growth Studio",
+              name: "Eyelevel Growth Studio",
               url: "https://theeyelevelstudio.com"
             },
             areaServed: "India",
@@ -132,12 +132,12 @@ const RealEstate = () => {
           </div>
         </section>
 
-        {/* Why EyeLevel */}
+        {/* Why Eyelevel */}
         <section className="py-24 px-4 bg-background flex flex-col justify-center">
           <div className="max-w-4xl mx-auto w-full text-center">
-            <GreenButton>Why EyeLevel</GreenButton>
+            <GreenButton>Why Eyelevel</GreenButton>
             <h2 className="font-dela text-3xl md:text-4xl lg:text-5xl mb-8 uppercase text-primary mt-6">
-              Why <WavyUnderline>EyeLevel</WavyUnderline>
+              Why <WavyUnderline>Eyelevel</WavyUnderline>
             </h2>
             <p className="font-bricolage text-sm md:text-lg lg:text-xl leading-relaxed text-foreground/70">
               We know the sales cycle, the site visit conversation, and what a qualified lead actually looks like. We do not optimise for the metric that looks good in a report. We optimise for the one that shows up in your booking sheet.

@@ -97,7 +97,7 @@ const BlogPost = () => {
     return (
       <div className="min-h-screen bg-secondary">
         <SEO
-          title="Post Not Found | EyeLevel Growth Studio"
+          title="Post Not Found | Eyelevel Growth Studio"
           description="The requested blog article could not be found."
           keywords={[
             "blog post not found",
@@ -191,7 +191,7 @@ const BlogPost = () => {
         ]}
         canonical={postUrl}
         url={postUrl}
-        twitterCreator="@EyeLevelstudio"
+        twitterCreator="@Eyelevelstudio"
       />
       <Header />
 

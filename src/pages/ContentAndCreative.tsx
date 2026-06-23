@@ -102,7 +102,7 @@ const ContentAndCreative = () => {
   return (
     <div className="min-h-screen bg-background overflow-clip">
       <SEO
-        title="Content Marketing Agency Chennai | Creative Services | EyeLevel Growth Studio"
+        title="Content Marketing Agency Chennai | Creative Services | Eyelevel Growth Studio"
         description="AI handles production speed. Humans handle strategy and voice. Video, design, copy, and brand assets built with your brief, delivered with your tone."
         keywords={[
           "content marketing agency Chennai",
@@ -181,7 +181,7 @@ const ContentAndCreative = () => {
       </section>
 
       {/* Section 2 — What it includes (Bento Box) */}
-      <section className="px-20 py-20 bg-background relative z-10">
+      <section className="px-4 sm:px-10 md:px-20 py-20 bg-background relative z-10">
         <div className="w-full flex justify-center text-center">
           <motion.h2
             {...scrollAnimProps}
@@ -195,60 +195,60 @@ const ContentAndCreative = () => {
           {/* Box 1 */}
           <motion.div
             {...scrollAnimProps}
-            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <FileText className="w-10 h-10 text-primary mb-6" />
-            <h3 className="font-dela text-2xl text-primary mb-3">LONG-FORM CONTENT</h3>
-            <p className="font-bricolage text-lg text-foreground/80">Blog articles, white papers, LinkedIn articles, and case studies</p>
+            <FileText className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">LONG-FORM CONTENT</h3>
+            <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80">Blog articles, white papers, LinkedIn articles, and case studies</p>
           </motion.div>
 
           {/* Box 2 */}
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.1 }}
-            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <MessageSquare className="w-10 h-10 text-primary mb-6" />
-            <h3 className="font-dela text-2xl text-primary mb-3">SHORT-FORM CONTENT</h3>
-            <p className="font-bricolage text-lg text-foreground/80">Social captions, ad copy, email sequences, and WhatsApp broadcasts</p>
+            <MessageSquare className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">SHORT-FORM CONTENT</h3>
+            <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80">Social captions, ad copy, email sequences, and WhatsApp broadcasts</p>
           </motion.div>
 
           {/* Box 3 */}
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.2 }}
-            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Video className="w-10 h-10 text-primary mb-6" />
-            <h3 className="font-dela text-2xl text-primary mb-3">VIDEO</h3>
-            <p className="font-bricolage text-lg text-foreground/80">Scripts, shoots, and editing — end to end</p>
+            <Video className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">VIDEO</h3>
+            <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80">Scripts, shoots, and editing — end to end</p>
           </motion.div>
 
           {/* Box 4 */}
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.3 }}
-            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-center min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Image className="w-10 h-10 text-primary mb-6" />
-            <h3 className="font-dela text-2xl text-primary mb-3">DESIGN & VISUAL ASSETS</h3>
-            <p className="font-bricolage text-lg text-foreground/80">Social creatives, brochures, presentation decks, and campaign visuals</p>
+            <Image className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">DESIGN & VISUAL ASSETS</h3>
+            <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80">Social creatives, brochures, presentation decks, and campaign visuals</p>
           </motion.div>
 
           {/* Box 5 (wide) */}
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.4 }}
-            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-center min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <BookOpen className="w-10 h-10 text-primary mb-6" />
-            <h3 className="font-dela text-2xl lg:text-3xl text-primary mb-3">BRAND VOICE DOCUMENTATION</h3>
-            <p className="font-bricolage text-lg text-foreground/80 max-w-xl">So every content piece sounds like the same company</p>
+            <BookOpen className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <h3 className="font-dela text-xl md:text-2xl lg:text-3xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">BRAND VOICE DOCUMENTATION</h3>
+            <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80 max-w-xl">So every content piece sounds like the same company</p>
           </motion.div>
         </div>
       </section>
@@ -275,10 +275,12 @@ const ContentAndCreative = () => {
       {/* Section 4 — The outcome */}
       <section className="px-4 py-20 bg-background relative z-10 flex justify-center items-center">
         <div className="max-w-5xl mx-auto w-full flex flex-col items-center">
-          {/* Green Button */}
-          <motion.div {...scrollAnimProps} className="mb-12">
-            <GreenButton>THE OUTCOME</GreenButton>
-          </motion.div>
+          <motion.h2
+            {...scrollAnimProps}
+            className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-12"
+          >
+            THE <WavyUnderline> OUTCOME </WavyUnderline>
+          </motion.h2>
 
           {/* Quote + Line */}
           <div className="flex items-stretch gap-8">
@@ -286,9 +288,9 @@ const ContentAndCreative = () => {
 
             <motion.h2
               {...scrollAnimProps}
-              className="font-dela text-2xl md:text-4xl lg:text-5xl uppercase text-primary max-w-4xl leading-[1.1] text-left"
+              className="font-dela text-lg md:text-2xl lg:text-3xl uppercase text-primary max-w-3xl leading-[1.2] text-left"
             >
-              "A CONTENT SYSTEM THAT RUNS WITHOUT THE FOUNDER APPROVING EVERY POST — AND TIES EVERY PIECE TO A CAMPAIGN GOAL."
+              "A CONTENT SYSTEM THAT RUNS WITHOUT THE FOUNDER APPROVING EVERY POST — AND THAT TIES EVERY PIECE TO A CAMPAIGN GOAL."
             </motion.h2>
           </div>
         </div>
@@ -297,9 +299,7 @@ const ContentAndCreative = () => {
       {/* Section 5 — Industry verticals */}
       <section className="px-4 py-20 bg-secondary relative z-10">
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
-          <motion.div {...scrollAnimProps} className="mb-12">
-            <GreenButton>INDUSTRY</GreenButton>
-          </motion.div>
+
 
           <motion.h2
             {...scrollAnimProps}

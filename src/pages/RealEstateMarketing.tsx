@@ -192,7 +192,7 @@ const RealEstateMarketing = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={vertical?.seoTitle || "Real Estate Marketing Agency | Property Sales & Lead Generation | EyeLevel"}
+        title={vertical?.seoTitle || "Real Estate Marketing Agency | Property Sales & Lead Generation | Eyelevel"}
         description={vertical?.seoDescription || "Real estate marketing expertise for developers, brokers, and agents. Drive property sales through targeted digital strategies."}
         keywords={vertical?.keywords || ["real estate marketing", "property marketing", "real estate leads"]}
         schema={[
@@ -610,7 +610,7 @@ const RealEstateMarketing = () => {
         testimonials={[
           {
             quote:
-              "EyeLevel's pre-launch strategy had us 80% sold before we even broke ground. Their lead quality is unmatched.",
+              "Eyelevel's pre-launch strategy had us 80% sold before we even broke ground. Their lead quality is unmatched.",
             author: "Arun Mehta",
             role: "Director",
             company: "Premium Developers",

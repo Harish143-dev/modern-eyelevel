@@ -21,7 +21,7 @@ const Healthcare = () => {
   return (
     <div className="min-h-screen bg-background selection:bg-brand-lime selection:text-black">
       <SEO
-        title="Healthcare Marketing Agency Chennai | Hospital Marketing | EyeLevel Growth Studio"
+        title="Healthcare Marketing Agency Chennai | Hospital Marketing | Eyelevel Growth Studio"
         description="Patient acquisition built on trust. SEO, social media, and performance marketing for specialty clinics and hospitals. Not product marketing — trust architecture."
         keywords={["healthcare marketing agency Chennai", "hospital marketing agency Chennai", "clinic marketing India", "patient acquisition agency", "healthcare digital marketing Chennai", "medical marketing agency India"]}
         schema={[
@@ -32,7 +32,7 @@ const Healthcare = () => {
             description: "Patient acquisition built on trust. SEO, social media, and performance marketing for specialty clinics and hospitals. Not product marketing — trust architecture.",
             provider: {
               "@type": "Organization",
-              name: "EyeLevel Growth Studio",
+              name: "Eyelevel Growth Studio",
               url: "https://theeyelevelstudio.com"
             },
             areaServed: "India",
@@ -132,12 +132,12 @@ const Healthcare = () => {
           </div>
         </section>
 
-        {/* Why EyeLevel */}
+        {/* Why Eyelevel */}
         <section className="py-24 px-4 bg-background flex flex-col justify-center">
           <div className="max-w-4xl mx-auto w-full text-center">
-            <GreenButton>Why EyeLevel</GreenButton>
+            <GreenButton>Why Eyelevel</GreenButton>
             <h2 className="font-dela text-3xl md:text-4xl lg:text-5xl mb-8 uppercase text-primary mt-6">
-              Why <WavyUnderline>EyeLevel</WavyUnderline>
+              Why <WavyUnderline>Eyelevel</WavyUnderline>
             </h2>
             <p className="font-bricolage text-sm md:text-lg lg:text-xl leading-relaxed text-foreground/70">
               Right Hospitals, Kilpauk, trusted us to build their patient acquisition system from day one. We understand the difference between healthcare marketing and product marketing.

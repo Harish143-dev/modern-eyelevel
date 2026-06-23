@@ -1,13 +1,13 @@
-# EyeLevel Studio Brand Guidelines
+# Eyelevel Studio Brand Guidelines
 
-Welcome to the definitive guide for EyeLevel Studio's visual identity. This document outlines the core principles, colors, typography, and UI patterns that define our premium, growth-focused digital presence.
+Welcome to the definitive guide for Eyelevel Studio's visual identity. This document outlines the core principles, colors, typography, and UI patterns that define our premium, growth-focused digital presence.
 
 ---
 
 ## 1. Brand Identity & Vibe
 
 **Vibe:** Premium, modern, energetic, and highly intentional.
-EyeLevel Studio blends two distinct design paradigms into a cohesive aesthetic:
+Eyelevel Studio blends two distinct design paradigms into a cohesive aesthetic:
 - **Neo-Brutalism:** High-contrast borders, solid shadows, and bold geometry that commands attention.
 - **Organic Glassmorphism:** Subtle blur effects combined with a distinct fractal noise texture to soften the harshness of brutalism and add a tactical, premium feel.
 

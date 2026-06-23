@@ -134,7 +134,7 @@ const ApplicationFormDialog = ({ isOpen, onClose, positionTitle }: ApplicationFo
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="message" className="text-foreground/80">Why do you want to join EyeLevel? *</Label>
+                <Label htmlFor="message" className="text-foreground/80">Why do you want to join Eyelevel? *</Label>
                 <Textarea
                   id="message"
                   name="message"

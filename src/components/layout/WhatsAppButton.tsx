@@ -9,7 +9,7 @@ const WhatsAppIcon = () => (
 const WhatsAppButton = () => {
   const phoneNumber = "919789099499";
   const message =
-    "Hi! I'm interested in learning more about EyeLevel Studio's services.";
+    "Hi! I'm interested in learning more about Eyelevel Studio's services.";
 
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message,

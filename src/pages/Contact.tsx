@@ -18,13 +18,13 @@ const Contact = () => {
   return (
     <>
       <SEO
-        title="Contact EyeLevel Growth Studio | Book a Free Marketing Diagnostic"
-        description="Book a 30-minute diagnostic with EyeLevel Growth Studio. No pitch deck. A direct conversation about what is and is not working in your marketing."
+        title="Contact Eyelevel Growth Studio | Book a Free Marketing Diagnostic"
+        description="Book a 30-minute diagnostic with Eyelevel Growth Studio. No pitch deck. A direct conversation about what is and is not working in your marketing."
         keywords={[
           "digital marketing agency contact Chennai",
           "book marketing diagnostic India",
           "marketing agency Chennai contact",
-          "EyeLevel Growth Studio contact",
+          "Eyelevel Growth Studio contact",
           "hire marketing agency Chennai",
         ]}
         image="https://theeyelevelstudio.com/og/contact-1200x630.png"
@@ -32,14 +32,14 @@ const Contact = () => {
           {
             "@context": "https://schema.org",
             "@type": "ContactPage",
-            name: "Contact EyeLevel Growth Studio",
-            description: "Book a 30-minute diagnostic with EyeLevel Growth Studio.",
+            name: "Contact Eyelevel Growth Studio",
+            description: "Book a 30-minute diagnostic with Eyelevel Growth Studio.",
             url: "https://theeyelevelstudio.com/contact"
           },
           {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            name: "EyeLevel Growth Studio",
+            name: "Eyelevel Growth Studio",
             url: "https://theeyelevelstudio.com",
             telephone: "+919789099499",
             email: "hello@eyelevelstudio.in",

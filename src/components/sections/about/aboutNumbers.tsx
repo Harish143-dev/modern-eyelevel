@@ -36,12 +36,7 @@ const Numbers = () => {
           </h2>
         </motion.div>
 
-        <div
-          className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x rounded-2xl overflow-hidden"
-          style={{
-            border: "2px solid rgba(226, 254, 165, 0.15)",
-          }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {stats.map((item, index) => (
             <motion.div
               key={item.stat}
@@ -49,7 +44,11 @@ const Numbers = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="flex flex-col items-center justify-center text-center px-4 md:px-8 py-10 md:py-12 gap-2"
+              className="flex flex-col items-center justify-center text-center px-4 md:px-8 py-10 md:py-12 gap-2 rounded-2xl"
+              style={{
+                border: "2px solid rgba(226, 254, 165, 0.15)",
+                backgroundColor: "rgba(226, 254, 165, 0.03)",
+              }}
             >
               <span className="text-4xl md:text-6xl lg:text-7xl font-dela text-primary leading-none">
                 {item.stat}

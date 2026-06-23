@@ -139,8 +139,8 @@ const Careers = () => {
       className="min-h-screen overflow-hidden bg-secondary"
     >
       <SEO
-        title="Digital Marketing Jobs in Chennai | EyeLevel Careers"
-        description="EyeLevel is hiring digital marketing specialists, videographers & designers in Chennai. Work with Sports, Healthcare & Education sectors. Apply now."
+        title="Digital Marketing Jobs in Chennai | Eyelevel Careers"
+        description="Eyelevel is hiring digital marketing specialists, videographers & designers in Chennai. Work with Sports, Healthcare & Education sectors. Apply now."
         keywords={[
           "marketing agency jobs Chennai",
           "creative agency hiring Chennai",

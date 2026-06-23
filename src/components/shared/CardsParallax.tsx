@@ -29,7 +29,7 @@ const Card: FC<iCardProps> = ({ title, description, color, textColor, i, src }) 
       style={{ top: `${STICK_OFFSET + i * 24}px` }}
     >
       <div
-        className="relative flex flex-col min-h-[280px] md:h-[380px] w-full max-w-[700px] rounded-2xl overflow-hidden items-center justify-center mx-auto px-10 py-12"
+        className="relative flex flex-col min-h-[250px] md:h-[380px] w-full max-w-[700px] rounded-2xl overflow-hidden items-center justify-center mx-auto px-6 py-8 md:px-10 md:py-12"
         style={{ backgroundColor: color }}
       >
         {/* Background image */}
@@ -38,22 +38,27 @@ const Card: FC<iCardProps> = ({ title, description, color, textColor, i, src }) 
         </div>
 
         {/* Overlay */}
-        {/*<div
+        <div
           className="absolute inset-0 z-10"
-          style={{ background: `linear-gradient(to bottom, ${color}40, ${color}80)` }}
-        />*/}
+          style={{
+            background:
+              "linear-gradient(to top, #000 0%, #000 30%, rgba(0,0,0,0.8) 55%, rgba(0,0,0,0.2) 80%, transparent 100%)",
+          }}
+        />
 
         {/* Content */}
-        <div className="absolute bottom-0 left-0 right-0 z-20 p-8 text-center">
+        <div className="relative z-20 text-center flex flex-col justify-end items-center h-full w-full">
           <span
-            className="font-dela text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black tracking-tight block mb-4"
-            style={{ color: textColor }}
+            className="font-dela text-xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-tight block mb-3 uppercase"
+            style={{
+              color: "#E2FEA5",
+            }}
           >
             {title}
           </span>
           <p
-            className="font-bricolage text-sm sm:text-base md:text-lg font-medium text-center lowercase tracking-wide"
-            style={{ color: textColor, opacity: 0.85, lineHeight: 1.4 }}
+            className="font-bricolage text-xs sm:text-sm md:text-base font-medium text-center tracking-wide max-w-lg"
+            style={{ color: "#F8FFE8", opacity: 0.85, lineHeight: 1.4 }}
           >
             {description}
           </p>

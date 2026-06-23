@@ -184,7 +184,7 @@ const ProcessSection = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            <GreenButton>The EyeLevel Growth System</GreenButton>
+            <GreenButton>The Eyelevel Growth System</GreenButton>
             <h2 className="font-dela text-3xl text-primary md:text-4xl lg:text-5xl leading-[1.05] uppercase">
               HOW WE <span></span>
               <WavyUnderline>WORK</WavyUnderline>

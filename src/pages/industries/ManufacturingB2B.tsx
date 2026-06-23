@@ -20,7 +20,7 @@ const ManufacturingB2B = () => {
   return (
     <div className="min-h-screen bg-background selection:bg-brand-lime selection:text-black">
       <SEO
-        title="Manufacturing Marketing Agency Chennai | B2B Marketing | EyeLevel Growth Studio"
+        title="Manufacturing Marketing Agency Chennai | B2B Marketing | Eyelevel Growth Studio"
         description="LinkedIn, SEO, and content for Chennai and Coimbatore manufacturers. Your buyers moved online — we help them find you and choose you before the first call."
         keywords={["manufacturing marketing agency Chennai", "B2B marketing agency Chennai", "manufacturing digital marketing India", "industrial marketing agency", "Coimbatore B2B marketing", "manufacturing SEO India"]}
         schema={[
@@ -31,7 +31,7 @@ const ManufacturingB2B = () => {
             description: "LinkedIn, SEO, and content for Chennai and Coimbatore manufacturers. Your buyers moved online — we help them find you and choose you before the first call.",
             provider: {
               "@type": "Organization",
-              name: "EyeLevel Growth Studio",
+              name: "Eyelevel Growth Studio",
               url: "https://theeyelevelstudio.com"
             },
             areaServed: "India",
@@ -129,12 +129,12 @@ const ManufacturingB2B = () => {
           </div>
         </section>
 
-        {/* Why EyeLevel */}
+        {/* Why Eyelevel */}
         <section className="py-24 px-4 bg-background flex flex-col justify-center">
           <div className="max-w-4xl mx-auto w-full text-center">
-            <GreenButton>Why EyeLevel</GreenButton>
+            <GreenButton>Why Eyelevel</GreenButton>
             <h2 className="font-dela text-2xl md:text-4xl lg:text-5xl mb-8 uppercase text-primary mt-6">
-              Why <WavyUnderline>EyeLevel</WavyUnderline>
+              Why <WavyUnderline>Eyelevel</WavyUnderline>
             </h2>
             <p className="font-bricolage text-sm md:text-lg lg:text-xl leading-relaxed text-foreground/70">
               We translate complex products into clear value propositions that buyers can act on. No fluff. No generic content. Copy and strategy that reflects how your buyers actually evaluate vendors.

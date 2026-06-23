@@ -188,7 +188,7 @@ const B2BMarketing = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={vertical?.seoTitle || "B2B Marketing Agency | Enterprise Sales Growth | EyeLevel"}
+        title={vertical?.seoTitle || "B2B Marketing Agency | Enterprise Sales Growth | Eyelevel"}
         description={vertical?.seoDescription || "B2B marketing agency specializing in enterprise sales growth, lead generation, account-based marketing, and marketing automation for SaaS and technology companies."}
         keywords={vertical?.keywords || ["B2B marketing", "enterprise marketing", "SaaS marketing"]}
         schema={[
@@ -610,7 +610,7 @@ const B2BMarketing = () => {
           },
           {
             quote:
-              "EyeLevel aligned our sales and marketing teams for the first time. Pipeline velocity increased 40%.",
+              "Eyelevel aligned our sales and marketing teams for the first time. Pipeline velocity increased 40%.",
             author: "Meera Krishnan",
             role: "CMO",
             company: "Enterprise Systems",

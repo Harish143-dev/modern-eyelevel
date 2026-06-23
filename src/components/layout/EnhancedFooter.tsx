@@ -641,7 +641,7 @@ const EnhancedFooter = ({
                   {/* Form Footer */}
                   <p className="text-white/30 text-xs text-center mt-6 font-bricolage">
                     By submitting, you agree to receive communications from
-                    EyeLevel. We respect your privacy.
+                    Eyelevel. We respect your privacy.
                   </p>
                 </form>
               </motion.div>
@@ -765,14 +765,14 @@ const EnhancedFooter = ({
               <img
                 loading="lazy"
                 src={eyelevelLogoColor}
-                alt="EyeLevel"
-                title="EyeLevel"
+                alt="Eyelevel"
+                title="Eyelevel"
                 className="h-8 w-auto mb-1"
               />
               <span className="text-white/50 text-xs font-bricolage tracking-wide">Built by a marketing head, for marketing heads. Chennai's full-service AI-powered growth studio.</span>
             </div>
             <p className="text-white/40 text-xs md:text-sm font-bricolage">
-              (c) 2026, EyeLevel Growth Studio. All Rights Reserved.
+              (c) 2026, Eyelevel Growth Studio. All Rights Reserved.
             </p>
             <div className="flex gap-6">
               <Link

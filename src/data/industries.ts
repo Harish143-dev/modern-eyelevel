@@ -1,6 +1,6 @@
 /**
  * Industries/Verticals Data Model
- * 5 primary industries EyeLevel specializes in
+ * 5 primary industries Eyelevel specializes in
  */
 
 export interface Industry {
@@ -27,7 +27,7 @@ export const industries: Industry[] = [
     slug: "sports-marketing-agency",
     name: "Sports Marketing",
     seoTitle:
-      "Sports League Marketing Agency | Fan Engagement & Sponsorship | EyeLevel",
+      "Sports League Marketing Agency | Fan Engagement & Sponsorship | Eyelevel",
     seoDescription:
       "Sports marketing agency specializing in league promotion, fan engagement, sponsorship activation, and sports event marketing for leagues, teams, and sporting brands.",
     shortDescription:
@@ -81,7 +81,7 @@ export const industries: Industry[] = [
     slug: "healthcare-marketing-agency",
     name: "Healthcare Marketing",
     seoTitle:
-      "Healthcare Marketing Agency | Patient Acquisition & Reputation | EyeLevel",
+      "Healthcare Marketing Agency | Patient Acquisition & Reputation | Eyelevel",
     seoDescription:
       "Healthcare marketing for hospitals, clinics, practitioners, and medical brands. Patient acquisition, reputation management, and compliant digital marketing.",
     shortDescription:
@@ -135,7 +135,7 @@ export const industries: Industry[] = [
     slug: "education-marketing-agency",
     name: "Education Marketing",
     seoTitle:
-      "Education Marketing Agency | Student Enrollment Solutions | EyeLevel",
+      "Education Marketing Agency | Student Enrollment Solutions | Eyelevel",
     seoDescription:
       "Specialized education marketing agency helping schools, colleges & institutions boost student enrollment through targeted digital strategies, SEO, and lead generation.",
     shortDescription:
@@ -189,7 +189,7 @@ export const industries: Industry[] = [
     slug: "real-estate-marketing-agency",
     name: "Real Estate Marketing",
     seoTitle:
-      "Real Estate Marketing Agency | Property Sales & Lead Generation | EyeLevel",
+      "Real Estate Marketing Agency | Property Sales & Lead Generation | Eyelevel",
     seoDescription:
       "Real estate marketing expertise for developers, brokers, and agents. Drive property sales through targeted digital strategies, virtual tours, and qualified buyer generation.",
     shortDescription:
@@ -242,7 +242,7 @@ export const industries: Industry[] = [
     id: "b2b-marketing",
     slug: "b2b-marketing-agency",
     name: "B2B Marketing",
-    seoTitle: "B2B Marketing Agency | Enterprise Sales Growth | EyeLevel",
+    seoTitle: "B2B Marketing Agency | Enterprise Sales Growth | Eyelevel",
     seoDescription:
       "B2B marketing agency specializing in enterprise sales growth, lead generation, account-based marketing, and marketing automation for SaaS and technology companies.",
     shortDescription:
@@ -322,7 +322,7 @@ export const getIndustrySchema = (
     image: industry.image,
     provider: {
       "@type": "Organization",
-      name: "EyeLevel Growth Studio",
+      name: "Eyelevel Growth Studio",
       url: baseUrl,
     },
     areaServed: { "@type": "Place", name: "Global" },

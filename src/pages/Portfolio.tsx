@@ -147,8 +147,8 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen overflow-hidden bg-secondary text-foreground">
       <SEO
-        title="Creative Design Works | EyeLevel Growth Studio"
-        description="Selected EyeLevel creative design work across branding, campaign creatives, motion design, posters, social media visuals, and premium marketing assets."
+        title="Creative Design Works | Eyelevel Growth Studio"
+        description="Selected Eyelevel creative design work across branding, campaign creatives, motion design, posters, social media visuals, and premium marketing assets."
         keywords={[
           "creative design works",
           "branding design",
@@ -157,7 +157,7 @@ const Portfolio = () => {
           "social media creatives",
           "poster design",
           "premium marketing visuals",
-          "EyeLevel creative work",
+          "Eyelevel creative work",
         ]}
         schema={[
           organizationSchema,
@@ -179,7 +179,7 @@ const Portfolio = () => {
           <motion.img
             style={{ y: heroLift }}
             src={production1}
-            alt="EyeLevel creative design work"
+            alt="Eyelevel creative design work"
             className="absolute inset-0 h-[112%] w-full object-cover"
             loading="eager"
           />
@@ -208,7 +208,7 @@ const Portfolio = () => {
               >
                 A focused collection of branding, campaign creatives, social
                 media designs, motion visuals, posters, and premium marketing
-                assets crafted by EyeLevel.
+                assets crafted by Eyelevel.
               </motion.p>
               <motion.div
                 variants={fadeUp}

@@ -33,7 +33,7 @@ const Difference = () => {
               <Star className="w-5 h-5 text-primary fill-primary" />
             </div>
             <h3 className="font-dela text-xl md:text-2xl text-white mb-4 uppercase">Built from the client side</h3>
-            <p className="font-bricolage text-white/60">EyeLevel was built by a marketing head who spent 15 years being pitched to, deciding which agency got the budget and which got fired. (The full career story and the brands live on the founder's personal site.)</p>
+            <p className="font-bricolage text-white/60">Eyelevel was built by a marketing head who spent 15 years being pitched to, deciding which agency got the budget and which got fired. (The full career story and the brands live on the founder's personal site.)</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
