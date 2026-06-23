@@ -2,7 +2,7 @@ const items = ["STRATEGY", "DESIGN", "GROWTH", "CONTENT", "ANALYTICS", "MEDIA"];
 
 const ServicesMarquee = () => {
   return (
-    <section className="py-12 bg-forest-light overflow-hidden">
+    <section className="bg-forest-light overflow-hidden py-[100px]">
       <div className="relative">
         <div className="flex animate-marquee-reverse">
           {[...items, ...items, ...items].map((item, index) => (

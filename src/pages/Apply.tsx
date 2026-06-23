@@ -303,7 +303,7 @@ const Apply = () => {
       />
       <Header />
 
-      <main className="pt-32 pb-20">
+      <main className="] pt-32 pb-[100px]">
         <div className="container mx-auto px-4">
           {/* Back Button */}
           <motion.button

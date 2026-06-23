@@ -36,7 +36,7 @@ interface WhatsappMarketingHeroSectionProps {
 
 export default function WhatsappMarketingHeroSection({ scrollTo }: WhatsappMarketingHeroSectionProps) {
   return (
-    <section className="relative pt-[110px] px-4 pb-[100px] md:px-12 flex justify-center items-center bg-secondary overflow-hidden min-h-[90vh] z-[1]" aria-labelledby="hero-h1">
+    <section className="relative ] px-4 ] md:px-12 flex justify-center items-center bg-secondary overflow-hidden min-h-[90vh] z-[1] py-[80px]" aria-labelledby="hero-h1">
       {/* Rotating 32-pointed star - centered upper area */}
       <motion.div
         animate={{ rotate: 360 }}

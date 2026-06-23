@@ -20,7 +20,7 @@ const Privacy = () => {
       />
       <Header />
 
-      <main className="pt-32 pb-20 px-4">
+      <main className="px-4 ] pt-32 pb-[100px]">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -44,7 +44,7 @@ const Privacy = () => {
                 Last updated: January 2026
               </p>
 
-              <section className="space-y-4">
+              <section className="space-y-4 py-[100px]">
                 <h2
                   className="text-xl font-semibold uppercase text-foreground"
                 >
@@ -58,7 +58,7 @@ const Privacy = () => {
                 </p>
               </section>
 
-              <section className="space-y-4">
+              <section className="space-y-4 py-[100px]">
                 <h2
                   className="text-xl font-semibold uppercase text-foreground"
                 >
@@ -83,7 +83,7 @@ const Privacy = () => {
                 </ul>
               </section>
 
-              <section className="space-y-4">
+              <section className="space-y-4 py-[100px]">
                 <h2
                   className="text-xl font-semibold uppercase text-foreground"
                 >
@@ -102,7 +102,7 @@ const Privacy = () => {
                 </ul>
               </section>
 
-              <section className="space-y-4">
+              <section className="space-y-4 py-[100px]">
                 <h2
                   className="text-xl font-semibold uppercase text-foreground"
                 >
@@ -119,7 +119,7 @@ const Privacy = () => {
                 </ul>
               </section>
 
-              <section className="space-y-4">
+              <section className="space-y-4 py-[100px]">
                 <h2
                   className="text-xl font-semibold uppercase text-foreground"
                 >
@@ -133,7 +133,7 @@ const Privacy = () => {
                 </p>
               </section>
 
-              <section className="space-y-4">
+              <section className="space-y-4 py-[100px]">
                 <h2
                   className="text-xl font-semibold uppercase text-foreground"
                 >
@@ -146,7 +146,7 @@ const Privacy = () => {
                 </p>
               </section>
 
-              <section className="space-y-4">
+              <section className="space-y-4 py-[100px]">
                 <h2
                   className="text-xl font-semibold uppercase text-foreground"
                 >
@@ -162,7 +162,7 @@ const Privacy = () => {
                 </ul>
               </section>
 
-              <section className="space-y-4">
+              <section className="space-y-4 py-[100px]">
                 <h2
                   className="text-xl font-semibold uppercase text-foreground"
                 >
@@ -175,7 +175,7 @@ const Privacy = () => {
                 </p>
               </section>
 
-              <section className="space-y-4">
+              <section className="space-y-4 py-[100px]">
                 <h2
                   className="text-xl font-semibold uppercase text-foreground"
                 >
@@ -188,7 +188,7 @@ const Privacy = () => {
                 </p>
               </section>
 
-              <section className="space-y-4">
+              <section className="space-y-4 py-[100px]">
                 <h2
                   className="text-xl font-semibold uppercase text-foreground"
                 >
@@ -201,7 +201,7 @@ const Privacy = () => {
                 </p>
               </section>
 
-              <section className="space-y-4">
+              <section className="space-y-4 py-[100px]">
                 <h2
                   className="text-xl font-semibold uppercase text-foreground"
                 >

@@ -84,7 +84,7 @@ const ContactFormSection = () => {
   };
 
   return (
-    <section className="pt-16 pb-16 lg:pb-24 px-4">
+    <section className="px-4 py-[100px]">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-stretch">
 
@@ -105,13 +105,7 @@ const ContactFormSection = () => {
             </div>
 
             <div className="flex flex-col items-center justify-center lg:items-start gap-4">
-              <Button asChild className="group text-center rounded-full font-semibold font-bricolage py-4 md:py-7 px-6 md:px-8 text-base md:text-lg hover:translate-y-1 hover:shadow-none transition-all duration-150 inline-flex w-full sm:w-auto"
-                style={{
-                  backgroundColor: "#F8FFE8",
-                  color: "#173229",
-                  border: "3px solid #0a0a0a",
-                  boxShadow: "0 4px 0 #0a0a0a",
-                }}
+              <Button 
               >
                 <Link to="/booking" className="flex items-center justify-center">
                   Book a free 30-min diagnostic

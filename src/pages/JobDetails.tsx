@@ -93,7 +93,7 @@ const JobDetails = () => {
       />
       <Header />
 
-      <main className="pt-32 pb-20 px-4">
+      <main className="px-4 ] pt-32 pb-[100px]">
         <div className="max-w-4xl mx-auto">
           <motion.button
             initial={{ opacity: 0, x: -20 }}

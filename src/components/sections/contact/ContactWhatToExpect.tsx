@@ -3,7 +3,7 @@ import WavyUnderline from "@/components/shared/WavyUnderline";
 
 const ContactWhatToExpect = () => {
   return (
-    <section className="py-20 md:py-32 px-4 border-t border-white/5">
+    <section className="px-4 border-t border-white/5 py-[100px]">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

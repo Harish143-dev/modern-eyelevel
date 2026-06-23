@@ -4,7 +4,7 @@ import WavyUnderline from "@/components/shared/WavyUnderline";
 
 const ContactDirectDetails = () => {
   return (
-    <section className="py-16 md:py-24 px-4" style={{ backgroundColor: "#2A5040" }}>
+    <section className="px-4 py-[100px]" style={{ backgroundColor: "#2A5040" }}>
       <div className="max-w-7xl mx-auto text-center">
         <motion.h3
           initial={{ opacity: 0, y: 20 }}

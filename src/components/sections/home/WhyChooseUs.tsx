@@ -31,7 +31,7 @@ const principles = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-24 md:py-32 px-4 relative overflow-hidden bg-secondary">
+    <section className="px-4 relative overflow-hidden bg-secondary py-[100px]">
       {/* Background elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]" />

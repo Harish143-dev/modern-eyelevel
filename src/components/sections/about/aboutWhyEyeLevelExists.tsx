@@ -3,7 +3,7 @@ import WavyUnderline from "@/components/shared/WavyUnderline";
 
 const WhyEyeLevelExists = () => {
   return (
-    <section className="py-20 px-4 relative bg-background">
+    <section className="px-4 relative bg-background py-[100px]">
       <div className="max-w-5xl mx-auto">
         {/* Eyebrow */}
         <motion.div

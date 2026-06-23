@@ -86,7 +86,7 @@ const ServicesHero = () => {
   return (
     <section
       ref={ref}
-      className="relative pt-[110px] flex flex-col justify-center items-center pb-20 px-4 overflow-hidden lg:min-h-screen bg-forest-deep"
+      className="relative ] flex flex-col justify-center items-center px-4 overflow-hidden lg:min-h-screen bg-forest-deep py-[80px]"
     >
       {/* Rotating 32-pointed star - centered upper area */}
       <motion.div

@@ -9,7 +9,7 @@ const stats = [
 
 const Numbers = () => {
   return (
-    <section className="py-20 px-4 relative bg-secondary">
+    <section className="px-4 relative bg-secondary py-[100px]">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

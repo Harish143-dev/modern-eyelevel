@@ -214,7 +214,7 @@ const SportsMarketing = () => {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-4 overflow-hidden bg-secondary"
+        className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden bg-secondary ] pt-32 pb-[100px]"
       >
         {/* Rotating star background */}
         <motion.div
@@ -317,7 +317,7 @@ const SportsMarketing = () => {
 
       {/* Reality Check - Challenges Section */}
       <section
-        className="py-24 md:py-32 px-4 relative overflow-hidden bg-background"
+        className="px-4 relative overflow-hidden bg-background py-[100px]"
       >
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -400,7 +400,7 @@ const SportsMarketing = () => {
 
       {/* The Fix - Solutions Section */}
       <section
-        className="py-24 md:py-32 px-4 relative overflow-hidden bg-secondary"
+        className="px-4 relative overflow-hidden bg-secondary py-[100px]"
       >
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
@@ -491,7 +491,7 @@ const SportsMarketing = () => {
 
       {/* Services Section */}
       <section
-        className="py-24 md:py-32 px-4 bg-secondary"
+        className="px-4 bg-secondary py-[100px]"
       >
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -625,7 +625,7 @@ const SportsMarketing = () => {
 
       {/* FAQ Section */}
       <section
-        className="py-24 md:py-32 px-4 bg-background"
+        className="px-4 bg-background py-[100px]"
       >
         <div className="max-w-4xl mx-auto">
           <motion.div
@@ -718,7 +718,7 @@ const SportsMarketing = () => {
 
       {/* Final CTA Section with Mascot */}
       <section
-        className="py-24 md:py-32 px-4 relative overflow-hidden bg-secondary"
+        className="px-4 relative overflow-hidden bg-secondary py-[100px]"
       >
         {/* Mascot */}
         {/* <motion.img

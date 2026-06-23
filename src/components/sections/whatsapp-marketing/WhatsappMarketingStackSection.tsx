@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const WhatsappMarketingStackSection = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section ref={ref} id="final-cta" className="max-w-[1200px] mx-auto px-6 md:px-12 py-16 md:py-24 relative z-[1]" aria-labelledby="tools-h">
+    <section ref={ref} id="final-cta" className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-[1] py-[100px]" aria-labelledby="tools-h">
       {/* Soft background glow behind the card */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-primary/10 rounded-full blur-[100px] pointer-events-none z-0" />
 
