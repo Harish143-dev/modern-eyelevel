@@ -78,7 +78,7 @@ const BrandAndIdentity = () => {
       {/* Section 1 — Hero */}
       <section
         ref={heroRef}
-        className="relative min-h-[65vh] lg:min-h-[95vh] flex items-center pt-40 md:pt-38 pb-24 px-4 overflow-hidden bg-secondary"
+        className="relative min-h-[65vh] lg:min-h-[95vh] flex items-center px-4 overflow-hidden bg-secondary ] pt-40 pb-[100px]"
       >
         <motion.div
           animate={{ rotate: 360 }}
@@ -146,7 +146,7 @@ const BrandAndIdentity = () => {
       </section>
 
       {/* Section 2 — What it includes (Bento Box) */}
-      <section className="px-20 py-20 bg-background relative z-10">
+      <section className="px-20 bg-background relative z-10 py-[100px]">
         <div className="w-full flex justify-center text-center">
           <motion.h2
             {...scrollAnimProps}
@@ -223,7 +223,7 @@ const BrandAndIdentity = () => {
       </section>
 
       {/* Section 3 — Who it is for */}
-      <section className="px-4 py-24 bg-secondary relative z-10 overflow-hidden">
+      <section className="px-4 bg-secondary relative z-10 overflow-hidden py-[100px]">
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
           <motion.h2
             {...scrollAnimProps}
@@ -242,9 +242,9 @@ const BrandAndIdentity = () => {
       </section>
 
       {/* Section 4 — Pull quote */}
-      <section className="px-4 py-20 bg-background relative z-10 flex justify-center items-center">
+      <section className="px-4 bg-background relative z-10 flex justify-center items-center py-[100px]">
         <div className="max-w-5xl mx-auto w-full flex flex-col items-center">
-          <motion.div {...scrollAnimProps} className="mb-12">
+          <motion.div {...scrollAnimProps} className="">
             <GreenButton>THE OUTCOME</GreenButton>
           </motion.div>
 
@@ -261,9 +261,9 @@ const BrandAndIdentity = () => {
       </section>
 
       {/* Section 5 — Industry verticals */}
-      <section className="px-4 py-20 bg-secondary relative z-10">
+      <section className="px-4 bg-secondary relative z-10 py-[100px]">
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
-          <motion.div {...scrollAnimProps} className="mb-12">
+          <motion.div {...scrollAnimProps} className="">
             <GreenButton>INDUSTRY</GreenButton>
           </motion.div>
 
@@ -281,7 +281,7 @@ const BrandAndIdentity = () => {
       </section>
 
       {/* Section 6 — CTA band */}
-      <section className="px-4 py-20 bg-background relative z-10">
+      <section className="px-4 bg-background relative z-10 py-[100px]">
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
           <motion.h2
             {...scrollAnimProps}

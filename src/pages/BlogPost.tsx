@@ -109,7 +109,7 @@ const BlogPost = () => {
           noindex
         />
         <Header />
-        <main className="pt-32 pb-20">
+        <main className="] pt-32 pb-[100px]">
           <div className="container mx-auto px-4 text-center">
             <h1 className="font-dela text-4xl text-foreground mb-4">
               Post Not Found
@@ -195,7 +195,7 @@ const BlogPost = () => {
       />
       <Header />
 
-      <section className="pt-24 relative">
+      <section className="relative py-[100px]">
         <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-[#253e35]/50 via-transparent to-[#253e35]" />
           <img
@@ -227,7 +227,7 @@ const BlogPost = () => {
         </div>
       </section>
 
-      <section className="py-8 px-4 border-b border-[rgba(226,254,165,0.1)]">
+      <section className="px-4 border-b border-[rgba(226,254,165,0.1)] py-[100px]">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
             <motion.button
@@ -483,7 +483,7 @@ const BlogPost = () => {
       </article>
 
       {relatedPosts.length > 0 && (
-        <section className="py-20 px-4 bg-background">
+        <section className="px-4 bg-background py-[100px]">
           <div className="container mx-auto">
             <div className="max-w-6xl mx-auto">
               <motion.div
@@ -559,7 +559,7 @@ const BlogPost = () => {
         </section>
       )}
 
-      <section className="py-20 px-4 bg-secondary">
+      <section className="px-4 bg-secondary py-[100px]">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div

@@ -33,7 +33,7 @@ const SocialProof = () => {
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
   return (
-    <section ref={ref} className="py-32 md:py-40 px-4 bg-background relative overflow-hidden">
+    <section ref={ref} className="px-4 bg-background relative overflow-hidden py-[100px]">
       {/* Parallax background */}
       <motion.div
         style={{ y: backgroundY }}

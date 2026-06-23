@@ -317,7 +317,7 @@ export const IndustryShowcase = ({ industry, index }: IndustryShowcaseProps) => 
     <section
       id={industry.id}
       ref={ref}
-      className="relative min-h-screen flex items-center py-20 md:py-32 overflow-hidden"
+      className="relative min-h-screen flex items-center overflow-hidden py-[100px]"
       style={{
         backgroundColor: isEven ? "#173229" : "#1e3c30",
       }}

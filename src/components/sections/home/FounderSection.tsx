@@ -8,11 +8,11 @@ import founder_home_img from "@/assets/people/akmal_home_img.png"
 
 const FounderSection = () => {
   return (
-    <section className="pt-16 lg:py-10 md:py-32 px-4 bg-background relative overflow-hidden">
+    <section className="px-4 bg-background relative overflow-hidden py-[100px]">
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="mb-10 text-center ">
           <GreenButton>The Founder</GreenButton>
-          <h2 className="font-dela text-3xl  md:text-4xl lg:text-5xl text-primary mt-6 leading-[1.1] uppercase break-words">
+          <h2 className="font-dela text-3xl  md:text-4xl lg:text-5xl text-primary leading-[1.1] uppercase break-words">
             The marketing practitioner who sat on <WavyUnderline>your side</WavyUnderline> of the table
           </h2>
         </div>
@@ -65,7 +65,7 @@ const FounderSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative mb-20 lg:mb-0"
+            className="relative"
           >
             <div className="relative w-4/5 lg:w-[80%] mx-auto aspect-[4/5] rounded-[2rem] overflow-hidden group border border-2 border-primary/10 flex items-end justify-center px-6 pt-6 md:px-0 md:pt-8">
               {/* Background styling for image container */}

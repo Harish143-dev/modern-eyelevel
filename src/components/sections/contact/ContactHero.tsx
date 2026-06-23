@@ -3,7 +3,7 @@ import WavyUnderline from "@/components/shared/WavyUnderline";
 
 const ContactHero = () => {
   return (
-    <section className="pt-32 pb-20 px-4 min-h-[70vh] md:min-h-screen flex flex-col justify-center" style={{ backgroundColor: "#1F3D2E" }}>
+    <section className="px-4 min-h-[70vh] md:min-h-screen flex flex-col justify-center ] pt-32 pb-[80px]" style={{ backgroundColor: "#1F3D2E" }}>
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

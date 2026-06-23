@@ -41,7 +41,7 @@ const ClientLogos = () => {
       style={{
         backgroundColor: "#253e35",
       }}
-      className="relative pb-2 md:pb-20 px-4 overflow-hidden py-[21px] pt-10"
+      className="relative px-4 overflow-hidden ] py-[100px]"
     >
       <div className="max-w-4xl mx-auto">
         {/* Pill-shaped container */}

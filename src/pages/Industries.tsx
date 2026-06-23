@@ -117,7 +117,7 @@ const Industries = () => {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="relative min-h-[80vh] lg:min-h-[85vh] flex items-center justify-center pt-32 md:pt-40 pb-20 px-4 overflow-hidden bg-secondary"
+        className="relative min-h-[80vh] lg:min-h-[85vh] flex items-center justify-center px-4 overflow-hidden bg-secondary ] pt-32 pb-[100px]"
       >
         {/* Rotating star background */}
         <motion.div

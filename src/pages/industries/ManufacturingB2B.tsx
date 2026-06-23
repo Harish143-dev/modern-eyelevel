@@ -55,7 +55,7 @@ const ManufacturingB2B = () => {
 
       <main>
         {/* Hero */}
-        <section className="pt-40 pb-24 px-4 text-center bg-secondary min-h-screen flex flex-col justify-center relative overflow-hidden">
+        <section className="px-4 text-center bg-secondary min-h-screen flex flex-col justify-center relative overflow-hidden ] pt-40 pb-[100px]">
           <div className="max-w-5xl mx-auto relative z-10 w-full">
               <GreenButton>
                 Industries / Manufacturing and B2B
@@ -79,13 +79,13 @@ const ManufacturingB2B = () => {
         </section>
 
         {/* The Problem */}
-        <section className="py-24 px-4 bg-background min-h-screen flex flex-col justify-center">
+        <section className="px-4 bg-background min-h-screen flex flex-col justify-center py-[100px]">
           <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-7 text-center lg:text-left">
               <div className="inline-block">
                 <GreenButton>The Reality Check</GreenButton>
               </div>
-              <h2 className="font-dela text-3xl md:text-4xl lg:text-5xl mb-8 uppercase text-primary mt-6">
+              <h2 className="font-dela text-3xl md:text-4xl lg:text-5xl mb-8 uppercase text-primary">
                 The <WavyUnderline>problem</WavyUnderline> with manufacturing marketing
               </h2>
               <p className="font-bricolage text-sm md:text-base lg:text-base leading-relaxed text-foreground/70">
@@ -103,11 +103,11 @@ const ManufacturingB2B = () => {
         </section>
 
         {/* What We Do */}
-        <section className="py-24 px-4 bg-secondary min-h-screen flex flex-col justify-center">
+        <section className="px-4 bg-secondary min-h-screen flex flex-col justify-center py-[100px]">
           <div className="max-w-5xl mx-auto w-full">
             <div className="text-center mb-16">
               <GreenButton>What we do for this industry</GreenButton>
-              <h2 className="font-dela text-2xl md:text-4xl lg:text-5xl uppercase text-primary mt-6">
+              <h2 className="font-dela text-2xl md:text-4xl lg:text-5xl uppercase text-primary">
                 What we do for <WavyUnderline>Manufacturing and B2B</WavyUnderline>
               </h2>
             </div>
@@ -130,10 +130,10 @@ const ManufacturingB2B = () => {
         </section>
 
         {/* Why EyeLevel */}
-        <section className="py-24 px-4 bg-background flex flex-col justify-center">
+        <section className="px-4 bg-background flex flex-col justify-center py-[100px]">
           <div className="max-w-4xl mx-auto w-full text-center">
             <GreenButton>Why EyeLevel</GreenButton>
-            <h2 className="font-dela text-2xl md:text-4xl lg:text-5xl mb-8 uppercase text-primary mt-6">
+            <h2 className="font-dela text-2xl md:text-4xl lg:text-5xl mb-8 uppercase text-primary">
               Why <WavyUnderline>EyeLevel</WavyUnderline>
             </h2>
             <p className="font-bricolage text-sm md:text-lg lg:text-xl leading-relaxed text-foreground/70">
@@ -143,10 +143,10 @@ const ManufacturingB2B = () => {
         </section>
 
         {/* CTA Band */}
-        <section className="py-24 px-4 text-center bg-forest-deep min-h-screen flex flex-col justify-center">
+        <section className="px-4 text-center bg-forest-deep min-h-screen flex flex-col justify-center py-[100px]">
           <div className="max-w-4xl mx-auto w-full">
             <GreenButton>CTA band</GreenButton>
-            <h2 className="font-dela text-2xl md:text-4xl lg:text-5xl mb-6 uppercase text-primary mt-6">
+            <h2 className="font-dela text-2xl md:text-4xl lg:text-5xl mb-6 uppercase text-primary">
               Ready to talk about your <WavyUnderline> manufacturing and b2b </WavyUnderline> marketing?
             </h2>
             <p className="font-bricolage text-sm md:text-lg max-w-3xl mx-auto mb-10 text-foreground/80">

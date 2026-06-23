@@ -192,7 +192,7 @@ const ServicesList = () => {
         <section
           key={service.id}
           id={`service-${service.id}`}
-          className="py-20 md:py-28 px-4 relative overflow-hidden"
+          className="px-4 relative overflow-hidden py-[100px]"
           style={{ backgroundColor: service.bgColor }}
         >
           {/* Subtle Background Accent */}

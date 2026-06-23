@@ -26,7 +26,7 @@ const authors = [
 const Leadership = () => {
   return (
     <section
-      className="py-20 max-w-5xl px-4 mx-auto relative overflow-hidden border-t border-b"
+      className="max-w-5xl px-4 mx-auto relative overflow-hidden border-t border-b py-[100px]"
       style={{
         backgroundColor: "#253e35",
         borderColor: "rgba(248, 255, 232, 0.15)",

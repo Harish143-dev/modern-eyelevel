@@ -45,7 +45,7 @@ const industries = [
 
 export default function WhatsappMarketingIndustriesSection() {
   return (
-    <section className="max-w-[1200px] mx-auto px-6 md:px-12 py-16 md:py-24 relative z-[1]" aria-labelledby="who-h">
+    <section className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-[1] py-[100px]" aria-labelledby="who-h">
       <WhatsappMarketingSectionHeader title="Who This Is For" tag="Industries" id="who-h" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mt-10 el-reveal font-bricolage">
         {industries.map(({ image, name, uses }) => (

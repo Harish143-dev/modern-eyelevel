@@ -172,7 +172,7 @@ const BlogArchive = ({
 
       <section
         ref={ref}
-        className="pt-32 pb-16 px-4 relative md:min-h-screen overflow-hidden flex flex-col items-center justify-center"
+        className="px-4 relative md:min-h-screen overflow-hidden flex flex-col items-center justify-center ] pt-32 pb-[100px]"
       >
         <motion.div
           animate={{ rotate: 360 }}
@@ -214,7 +214,7 @@ const BlogArchive = ({
               animationData={animationData}
               autoPlay={false}
               loop
-              className="absolute -top-0 right-[50%] w-[70px] md:-top-[48px] md:left-[20%] md:w-[120px] lg:left-[20%] lg:-top-[76px] lg:w-[150px] pointer-events-none"
+              className="absolute -top-0 right-[50%] w-[70px] md:-top-[48px] md:left-[20%] md:w-[120px] lg:left-[20%] lg:-top-[56px] lg:w-[150px] pointer-events-none"
             />
           )}
 
@@ -237,7 +237,7 @@ const BlogArchive = ({
           </motion.div>
         </div>
 
-        <section className="py-8 px-4 relative z-10">
+        <section className="px-4 relative z-10 py-[100px]">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -278,7 +278,7 @@ const BlogArchive = ({
         </section>
       </section>
 
-      <section className="py-16 px-4 bg-background">
+      <section className="px-4 bg-background py-[100px]">
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
             {filteredPosts.map((post, index) => (
@@ -288,14 +288,14 @@ const BlogArchive = ({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group"
+                className="group h-full flex flex-col"
               >
                 <Link
                   to={`/blog/${post.slug}`}
-                  className="block rounded-3xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E2FEA5]/40 focus-visible:ring-offset-0"
+                  className="flex flex-col h-full rounded-3xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E2FEA5]/40 focus-visible:ring-offset-0"
                 >
-                  <div className="rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-brand-hover bg-[rgba(248,255,232,0.03)] border border-primary/15 hover:border-primary/30">
-                    <div className="relative aspect-[16/10] overflow-hidden">
+                  <div className="flex flex-col h-full rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-brand-hover bg-[rgba(248,255,232,0.03)] border border-primary/15 hover:border-primary/30">
+                    <div className="relative aspect-[16/10] overflow-hidden shrink-0">
                       <img
                         loading="lazy"
                         src={post.image}
@@ -310,7 +310,7 @@ const BlogArchive = ({
                         {post.category}
                       </span>
                     </div>
-                    <div className="p-6">
+                    <div className="p-6 flex flex-col flex-grow">
                       <div
                         className="flex items-center gap-3 text-sm mb-3 font-bricolage"
                         style={{ color: "rgba(248, 255, 232, 0.5)" }}
@@ -325,12 +325,12 @@ const BlogArchive = ({
                         {post.title}
                       </h3>
                       <p
-                        className="leading-relaxed font-bricolage mb-4 line-clamp-3"
+                        className="leading-relaxed font-bricolage mb-4 line-clamp-3 flex-grow"
                         style={{ color: "rgba(248, 255, 232, 0.7)" }}
                       >
                         {post.excerpt}
                       </p>
-                      <div className="flex items-center gap-2 font-semibold font-bricolage text-primary group-hover:gap-3 transition-all">
+                      <div className="flex items-center gap-2 font-semibold font-bricolage text-primary group-hover:gap-3 transition-all mt-auto">
                         Read Article
                         <ArrowRight className="w-4 h-4" />
                       </div>
@@ -356,7 +356,7 @@ const BlogArchive = ({
 
       {/* faqs  */}
       <FAQSection faqs={faqs["Blog"]} />
-      <section className="py-20 px-4 bg-secondary">
+      <section className="px-4 bg-forest-deep py-[100px]">
         <div className="max-w-3xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -367,7 +367,7 @@ const BlogArchive = ({
             <span className="text-primary">
               Stay in the loop - Be the first to
             </span>{" "}
-            <WavyUnderline>know.</WavyUnderline>
+            <WavyUnderline>know</WavyUnderline>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -410,7 +410,7 @@ const BlogArchive = ({
         </div>
       </section>
 
-      <EnhancedFooter showCTA={false} mascotBgClass="bg-background" />
+      <EnhancedFooter showCTA={false} mascotBgClass="bg-forest-deep" />
     </div>
   );
 };

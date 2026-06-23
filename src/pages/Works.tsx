@@ -225,7 +225,7 @@ const Works = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <main className="pt-32 pb-24 px-4 md:px-8">
+      <main className="px-4 md:px-8 ] pt-32 pb-[100px]">
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <div className="max-w-4xl mx-auto text-center relative z-10">
