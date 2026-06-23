@@ -180,7 +180,7 @@ const PerformanceMarketing = () => {
           {/* Box 1 */}
           <motion.div
             {...scrollAnimProps}
-            className="md:col-span-2 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[65vh] lg:min-h-[95vh] transition-all duration-300 hover:border-primary/30"
+            className="md:col-span-2 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-colors duration-500" />
 
@@ -197,7 +197,7 @@ const PerformanceMarketing = () => {
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.1 }}
-            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[65vh] lg:min-h-[95vh] transition-all duration-300 hover:border-primary/30"
+            className="md:col-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -214,7 +214,7 @@ const PerformanceMarketing = () => {
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.2 }}
-            className="md:col-span-1 md:row-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[65vh] lg:min-h-[95vh] transition-all duration-300 hover:border-primary/30"
+            className="md:col-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -231,7 +231,7 @@ const PerformanceMarketing = () => {
           <motion.div
             {...scrollAnimProps}
             transition={{ delay: 0.3 }}
-            className="md:col-span-2 md:row-span-1 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-start min-h-[65vh] lg:min-h-[95vh] transition-all duration-300 hover:border-primary/30"
+            className="md:col-span-2 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -254,7 +254,7 @@ const PerformanceMarketing = () => {
             {...scrollAnimProps}
             className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-8"
           >
-            WHO IT'S <WavyUnderline> FOR </WavyUnderline>
+            WHO IT IS <WavyUnderline> FOR </WavyUnderline>
           </motion.h2>
 
           <motion.p
