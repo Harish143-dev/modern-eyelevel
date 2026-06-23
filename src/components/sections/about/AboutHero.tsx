@@ -87,7 +87,7 @@ const AboutHero = () => {
     return (
         <section
             ref={ref}
-            className="px-4 relative md:min-h-screen flex items-center justify-center flex-col overflow-hidden ] pt-32 pb-[80px]"
+            className="px-4 relative md:min-h-screen flex items-center justify-center flex-col overflow-hidden pt-40 pb-[100px]"
         >
             {/* Rotating 18-pointed star - centered upper area */}
             <motion.div
