@@ -83,9 +83,9 @@ const Industries = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-[65vh] lg:min-h-[95vh] bg-background">
       <SEO
-        title="Industries � Eyelevel Growth Studio | SaaS, D2C, Sports, Healthcare, Offshore"
+        title="Industries Eyelevel Growth Studio | SaaS, D2C, Sports, Healthcare, Offshore"
         description="Eyelevel serves SaaS companies, D2C brands, sports leagues, healthcare brands, and offshore clients. Specialised marketing for each vertical."
         keywords={[
           "marketing agency for SaaS India",
@@ -117,7 +117,7 @@ const Industries = () => {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="relative min-h-[80vh] lg:min-h-[85vh] flex items-center justify-center px-4 overflow-hidden bg-secondary ] pt-32 pb-[100px]"
+        className="relative min-h-[65vh] lg:min-h-[95vh]  flex flex-col items-center justify-center px-4 overflow-hidden bg-secondary pt-40 pb-[100px]"
       >
         {/* Rotating star background */}
         <motion.div
@@ -145,14 +145,14 @@ const Industries = () => {
               animationData={animationData}
               autoPlay={false}
               loop
-              className="absolute -right-5 md:right-[100px] lg:right-[190px] -top-[5px] w-[130px] md:-top-[26px] md:w-[180px] lg:-top-[50px] lg:w-[220px] pointer-events-none"
+              className="absolute sm: -top-[-19px] -right-[0px] md:right-[100px] lg:right-[190px] -top-[5px] w-[130px] md:-top-[10px] md:w-[180px] lg:-top-[35px] lg:w-[220px] pointer-events-none"
             />
           )}
           <motion.h1
             initial={{ y: 30 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-dela text-4xl md:text-6xl lg:text-7xl uppercase mb-8 leading-[1.05] text-primary"
+            className="-mt-2 md:-mt-4 font-dela text-4xl md:text-6xl lg:text-7xl uppercase mb-8 leading-[1.05] text-primary pt-8"
           >
             INDUSTRIES <WavyUnderline>WE GROW</WavyUnderline>
           </motion.h1>

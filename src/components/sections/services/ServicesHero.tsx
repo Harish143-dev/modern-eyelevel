@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import ClientLottie, { type ClientLottieRef } from "@/components/shared/ClientLottie";
 import { useEffect, useRef, useState } from "react";
+import GreenButton from "@/components/shared/GreenButton";
 
 const Star18 = ({ className }: { className?: string }) => {
   const points = 18;
@@ -86,7 +87,7 @@ const ServicesHero = () => {
   return (
     <section
       ref={ref}
-      className="relative flex flex-col justify-center items-center px-4 overflow-hidden lg:min-h-screen bg-forest-deep pt-40 pb-[100px]"
+      className="relative flex flex-col justify-start items-center px-4 overflow-hidden min-h-[65vh] lg:min-h-[95vh] bg-forest-deep pt-40 pb-[100px]"
     >
       {/* Rotating 32-pointed star - centered upper area */}
       <motion.div
@@ -106,26 +107,13 @@ const ServicesHero = () => {
       </div>
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full"
-          style={{
-            backgroundColor: "rgba(226, 254, 165, 0.1)",
-            border: "1px solid rgba(226, 254, 165, 0.2)",
-          }}
-        >
-          <span className="text-sm font-medium font-bricolage text-primary">
-            What we do
-          </span>
-        </motion.div>
+        <GreenButton>What we do</GreenButton>
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}
-          className="font-dela uppercase text-center leading-[1.05] mb-5 text-primary"
+          className="-mt-2 md:-mt-4 font-dela uppercase text-center leading-[1.05] mb-5 text-primary"
         >
           {/* BIG TITLE */}
           <span className="relative flex items-end justify-center text-3xl sm:text-4xl md:text-6xl lg:text-7xl">
@@ -163,7 +151,7 @@ const ServicesHero = () => {
           Most companies run 3 to 5 vendors for what we do inside one studio. Strategy, performance, content, SEO, and creative — all connected, all accountable to the same outcome.
         </motion.p>
       </div>
-      <div className="flex items-center rounded-full relative font-bricolage z-1000 mt-8 justify-center gap-4">
+      <div className="flex items-center rounded-full relative font-bricolage z-1000 mt-8 justify-start gap-4">
         <Link to="/booking">
           <Button className="h-12 px-6 lg:h-14 lg:px-8 text-sm lg:text-base font-semibold rounded-full">
             Book a free 30-min diagnostic

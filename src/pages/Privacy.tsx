@@ -20,7 +20,7 @@ const Privacy = () => {
       />
       <Header />
 
-      <main className="px-4 ] pt-32 pb-[100px]">
+      <main className="px-4 pt-32 pb-[100px]">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
