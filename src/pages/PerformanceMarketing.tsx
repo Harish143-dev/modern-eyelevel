@@ -181,7 +181,7 @@ const PerformanceMarketing = () => {
       <section className="px-4 sm:px-10 md:px-20 bg-background relative z-10 py-20 md:py-[100px]">
         <motion.h2
           {...scrollAnimProps}
-          className="font-dela text-center uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-12"
+          className="font-dela uppercase text-primary text-2xl md:text-4xl lg:text-5xl mb-12"
         >
           WHAT IT <WavyUnderline>INCLUDES</WavyUnderline>
         </motion.h2>
@@ -294,10 +294,9 @@ const PerformanceMarketing = () => {
 
             {/* Left Side: Eyebrow */}
             <div className="md:w-1/4 shrink-0 flex flex-col items-start relative z-10 pt-2">
-              <h3 className="text-white font-bricolage text-xs sm:text-sm tracking-[0.25em] uppercase font-semibold mb-4">
-                THE OUTCOME
+              <h3 className="text-primary font-bricolage text-sm md:text-2xl tracking-[0.25em] uppercase font-semibold mb-4">
+                THE <WavyUnderline> OUTCOME </WavyUnderline>
               </h3>
-              <div className="w-8 h-[2px] bg-primary"></div>
             </div>
 
             {/* Vertical Divider (Desktop only) */}
