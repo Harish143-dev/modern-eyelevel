@@ -157,6 +157,8 @@ const Industries = () => {
             INDUSTRIES <WavyUnderline>WE GROW</WavyUnderline>
           </motion.h1>
 
+           <div className="w-20 h-1 opacity-50 bg-primary my-8 rounded-full mx-auto"></div>
+
           <motion.p
             initial={{ y: 20 }}
             animate={{ y: 0 }}

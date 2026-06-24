@@ -253,6 +253,7 @@ const Works = () => {
             >
               WORK WE'RE <WavyUnderline>PROUD OF</WavyUnderline>
             </motion.h1>
+             <div className="w-20 h-1 opacity-50 bg-primary my-8 rounded-full mx-auto"></div>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ArrowUp } from "lucide-react";
@@ -69,6 +69,8 @@ const Header = ({ compact = false }: HeaderProps) => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const location = useLocation();
+  const headerRef = useRef<HTMLElement>(null);
+
   useEffect(() => {
     // Skip scroll behavior for compact mode or if window doesn't exist
     if (compact || typeof window === "undefined") {
@@ -91,6 +93,8 @@ const Header = ({ compact = false }: HeaderProps) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [compact]);
+
+  // We'll use a fixed fullscreen overlay instead of document listeners to ensure it works flawlessly on iOS mobile devices.
 
   // Close menu when route changes
   useEffect(() => {
@@ -132,8 +136,22 @@ const Header = ({ compact = false }: HeaderProps) => {
 
   return (
     <>
+      {/* Invisible Fullscreen Backdrop to catch outside clicks reliably on iOS/Mobile */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsMenuOpen(false)}
+            className="fixed inset-0 z-40 bg-transparent"
+          />
+        )}
+      </AnimatePresence>
+
       {/* Main Header - fades out after hero */}
       <motion.header
+        ref={headerRef}
         initial={{
           opacity: 1,
           y: 0,
@@ -165,16 +183,29 @@ const Header = ({ compact = false }: HeaderProps) => {
             </Link>
 
             {!compact && (
-              <div className="hidden lg:flex items-center space-x-8 font-bricolage z-50">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    to={link.href}
-                    className={`transition-colors font-medium text-[15px] ${location.pathname.startsWith(link.href) ? "text-forest-dark" : "text-brand-black hover:text-forest-dark"}`}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+              <div className="hidden lg:flex items-center space-x-6 font-bricolage z-50">
+                {navLinks.map((link) => {
+                  const isActive = location.pathname.startsWith(link.href);
+                  return (
+                    <Link
+                      key={link.href}
+                      to={link.href}
+                      className={`relative transition-colors text-[15px] ${isActive
+                        ? "text-brand-black font-bold"
+                        : "text-brand-black/70 hover:text-brand-black font-medium"
+                        }`}
+                    >
+                      {link.label}
+                      {isActive && (
+                        <motion.div
+                          layoutId="header-active-indicator"
+                          className="absolute -bottom-[4px] left-0 right-0 h-[1.5px] bg-brand-black rounded-full"
+                          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                        />
+                      )}
+                    </Link>
+                  );
+                })}
               </div>
             )}
 
@@ -278,7 +309,7 @@ const Header = ({ compact = false }: HeaderProps) => {
                     src={mascotGrowth}
                     alt="Eyelevel Mascot"
                     title="Eyelevel Mascot"
-                    className="absolute -right-4 -bottom-4 md:right-0 md:bottom-0 w-32 md:w-48 lg:w-64 object-contain pointer-events-none opacity-40 md:opacity-100 translate-x-2 md:translate-x-8 translate-y-2 md:translate-y-8"
+                    className="absolute -right-2.5 md:-right-3 bottom-2 md:bottom-4 w-28 md:w-36 lg:w-48 object-contain pointer-events-none opacity-40 md:opacity-100"
                   />
                 </div>
               </div>
@@ -314,7 +345,7 @@ const Header = ({ compact = false }: HeaderProps) => {
               className="fixed right-6 bottom-8 z-50 flex flex-col gap-3"
             >
               {/* Menu Button */}
-              <motion.button
+              {/* <motion.button
                 onClick={openMenuAndScrollTop}
                 whileHover={{
                   scale: 1.1,
@@ -326,7 +357,7 @@ const Header = ({ compact = false }: HeaderProps) => {
               >
                 <Menu className="w-5 h-5 text-black relative z-10" />
 
-              </motion.button>
+              </motion.button> */}
 
               {/* Back to Top Button */}
               <motion.button

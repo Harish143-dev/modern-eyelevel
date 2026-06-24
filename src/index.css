@@ -92,6 +92,14 @@
     @apply border-border;
   }
 
+  section {
+    @apply border-b border-white/5;
+  }
+
+  section:has(+ footer) {
+    @apply border-b-0;
+  }
+
   html {
     scroll-behavior: smooth;
   }

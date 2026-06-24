@@ -207,6 +207,7 @@ const BlogArchive = ({
             ) : (
               heroTitle
             )}
+            <div className="w-20 h-1 opacity-50 bg-primary my-8 rounded-full mx-auto"></div>
           </motion.h1>
           {animationData && (
             <ClientLottie

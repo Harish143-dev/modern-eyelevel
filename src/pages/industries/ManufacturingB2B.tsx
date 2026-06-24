@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import GreenButton from "@/components/shared/GreenButton";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import problemImage from "@/assets/industries/manufacturing_problem_realistic_v2.png";
+import { motion } from "framer-motion";
 import { manufacturingB2BIndustrySchema, breadcrumbSchema } from "@/hooks/schemas";
 
 const services = [
@@ -45,9 +46,15 @@ const ManufacturingB2B = () => {
               <GreenButton>
                 Industries / Manufacturing and B2B
               </GreenButton>
-            <h1 className="font-dela text-3xl md:text-5xl lg:text-6xl mb-8 leading-[0.95] uppercase text-primary">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="font-dela text-3xl md:text-5xl lg:text-6xl mb-8 leading-[0.95] uppercase text-primary"
+            >
               Your buyers research online before they ever <WavyUnderline>call you</WavyUnderline>
-            </h1>
+              <div className="w-20 h-1 opacity-50 bg-primary my-8 rounded-full mx-auto"></div>
+            </motion.h1>
             <p className="font-bricolage text-sm md:text-base lg:text-base max-w-3xl mx-auto mb-12 leading-relaxed text-foreground/80">
               Chennai and Coimbatore manufacturers. Your market moved online. Your marketing needs to catch up.
             </p>
@@ -78,7 +85,11 @@ const ManufacturingB2B = () => {
               </p>
             </div>
             <div className="lg:col-span-5 w-full flex justify-start lg:justify-end">
-              <img 
+              <motion.img 
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
                 src={problemImage} 
                 alt="Manufacturing Marketing Problem" 
                 className="w-full h-[300px] lg:h-[400px] xl:h-[450px] object-cover rounded-3xl border-2 border-primary/20 shadow-[0_0_40px_rgba(226,254,165,0.15)] hover:scale-[1.02] transition-transform duration-500"
@@ -103,7 +114,13 @@ const ManufacturingB2B = () => {
                   to={`/services/${service.slug}`}
                   className={`block group w-full h-full max-w-[350px] md:max-w-none lg:col-span-2 ${i === 3 ? "lg:col-start-2" : ""}`}
                 >
-                  <div className="h-full rounded-3xl p-6 md:p-8 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.03] border-2 border-primary/10 hover:border-primary/40 hover:shadow-[0_8px_30px_rgba(226,254,165,0.12)] bg-white/5 hover:bg-white/10 flex flex-col">
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                    viewport={{ once: true }}
+                    className="h-full rounded-3xl p-6 md:p-8 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.03] border-2 border-primary/10 hover:border-primary/40 hover:shadow-[0_8px_30px_rgba(226,254,165,0.12)] bg-white/5 hover:bg-white/10 flex flex-col"
+                  >
                     <h3 className="font-dela text-lg md:text-xl mb-4 uppercase flex justify-between items-start text-white group-hover:text-primary transition-colors duration-500">
                       {service.title}
                       <ArrowUpRight className="w-5 h-5 opacity-0 -translate-x-3 translate-y-3 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 text-[#E2FEA5] shrink-0 ml-2" />
@@ -111,7 +128,7 @@ const ManufacturingB2B = () => {
                     <p className="font-bricolage text-sm md:text-base leading-relaxed text-foreground/80 mt-auto">
                       {service.description}
                     </p>
-                  </div>
+                  </motion.div>
                 </Link>
               ))}
             </div>
