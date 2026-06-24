@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import EnhancedFooter from "@/components/layout/EnhancedFooter";
 import SEO from "@/components/utils/SEO";
-import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import GreenButton from "@/components/shared/GreenButton";
