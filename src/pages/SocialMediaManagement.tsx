@@ -11,6 +11,7 @@ import SEO from "@/components/utils/SEO";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CardsParallax, type iCardItem } from "@/components/shared/CardsParallax";
+import { socialMediaManagementSchema, breadcrumbSchema } from "@/hooks/schemas";
 
 const parallaxItems: iCardItem[] = [
   {
@@ -77,7 +78,16 @@ const SocialMediaManagement = () => {
           "social media management Chennai",
           "Instagram marketing Chennai",
           "Facebook marketing agency",
-          "social media agency India"
+          "social media agency India",
+        ]}
+        image="https://theeyelevelstudio.com/og/services-1200x630.png"
+        schema={[
+          socialMediaManagementSchema,
+          breadcrumbSchema([
+            { name: "Home", url: "https://theeyelevelstudio.com/" },
+            { name: "Services", url: "https://theeyelevelstudio.com/services" },
+            { name: "Social Media Management", url: "https://theeyelevelstudio.com/services/social-media-management" },
+          ]),
         ]}
         canonical="https://theeyelevelstudio.com/services/social-media-management"
         url="https://theeyelevelstudio.com/services/social-media-management"

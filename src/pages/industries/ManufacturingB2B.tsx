@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import GreenButton from "@/components/shared/GreenButton";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import problemImage from "@/assets/industries/manufacturing_problem_realistic_v2.png";
+import { manufacturingB2BIndustrySchema, breadcrumbSchema } from "@/hooks/schemas";
 
 const services = [
   { title: "LinkedIn B2B Marketing", description: "build the brand and founder visibility that gets you into the conversation early", slug: "linkedin-b2b-marketing" },
@@ -23,33 +24,17 @@ const ManufacturingB2B = () => {
         title="Manufacturing Marketing Agency Chennai | B2B Marketing | Eyelevel Growth Studio"
         description="LinkedIn, SEO, and content for Chennai and Coimbatore manufacturers. Your buyers moved online — we help them find you and choose you before the first call."
         keywords={["manufacturing marketing agency Chennai", "B2B marketing agency Chennai", "manufacturing digital marketing India", "industrial marketing agency", "Coimbatore B2B marketing", "manufacturing SEO India"]}
+        image="https://theeyelevelstudio.com/og/industries-1200x630.png"
         schema={[
-          {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            name: "Manufacturing and B2B Marketing",
-            description: "LinkedIn, SEO, and content for Chennai and Coimbatore manufacturers. Your buyers moved online — we help them find you and choose you before the first call.",
-            provider: {
-              "@type": "Organization",
-              name: "Eyelevel Growth Studio",
-              url: "https://theeyelevelstudio.com"
-            },
-            areaServed: "India",
-            url: "https://theeyelevelstudio.com/industries/manufacturing-b2b"
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://theeyelevelstudio.com/" },
-              { "@type": "ListItem", position: 2, name: "Industries", item: "https://theeyelevelstudio.com/industries" },
-              { "@type": "ListItem", position: 3, name: "Manufacturing and B2B", item: "https://theeyelevelstudio.com/industries/manufacturing-b2b" }
-            ]
-          }
+          manufacturingB2BIndustrySchema,
+          breadcrumbSchema([
+            { name: "Home", url: "https://theeyelevelstudio.com/" },
+            { name: "Industries", url: "https://theeyelevelstudio.com/industries" },
+            { name: "Manufacturing and B2B", url: "https://theeyelevelstudio.com/industries/manufacturing-b2b" },
+          ]),
         ]}
         canonical="https://theeyelevelstudio.com/industries/manufacturing-b2b"
         url="https://theeyelevelstudio.com/industries/manufacturing-b2b"
-        image="https://theeyelevelstudio.com/og/industries-1200x630.png"
       />
       <Header />
 

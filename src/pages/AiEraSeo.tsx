@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Star18 } from "@/components/shared/Star18";
 import SEO from "@/components/utils/SEO";
 import { CardsParallax, type iCardItem } from "@/components/shared/CardsParallax";
+import { aiEraSeoSchema, breadcrumbSchema } from "@/hooks/schemas";
 
 const AiEraSeo = () => {
   const heroRef = useRef(null);
@@ -78,7 +79,16 @@ const AiEraSeo = () => {
           "AEO agency",
           "GEO optimization India",
           "Google AI Overview optimization",
-          "local SEO Chennai"
+          "local SEO Chennai",
+        ]}
+        image="https://theeyelevelstudio.com/og/services-1200x630.png"
+        schema={[
+          aiEraSeoSchema,
+          breadcrumbSchema([
+            { name: "Home", url: "https://theeyelevelstudio.com/" },
+            { name: "Services", url: "https://theeyelevelstudio.com/services" },
+            { name: "AI-Era SEO", url: "https://theeyelevelstudio.com/services/ai-era-seo" },
+          ]),
         ]}
         canonical="https://theeyelevelstudio.com/services/ai-era-seo"
         url="https://theeyelevelstudio.com/services/ai-era-seo"

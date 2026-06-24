@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Star18 } from "@/components/shared/Star18";
 import SEO from "@/components/utils/SEO";
 import { CardsParallax, type iCardItem } from "@/components/shared/CardsParallax";
+import { websiteDesignAndDevelopmentSchema, breadcrumbSchema } from "@/hooks/schemas";
 
 const WebsiteDesignAndDevelopment = () => {
   const heroRef = useRef(null);
@@ -78,6 +79,15 @@ const WebsiteDesignAndDevelopment = () => {
           "website design company Chennai",
           "Webflow agency Chennai",
           "WordPress agency Chennai",
+        ]}
+        image="https://theeyelevelstudio.com/og/services-1200x630.png"
+        schema={[
+          websiteDesignAndDevelopmentSchema,
+          breadcrumbSchema([
+            { name: "Home", url: "https://theeyelevelstudio.com/" },
+            { name: "Services", url: "https://theeyelevelstudio.com/services" },
+            { name: "Website Design and Development", url: "https://theeyelevelstudio.com/services/website-design-and-development" },
+          ]),
         ]}
         canonical="https://theeyelevelstudio.com/services/website-design-and-development"
         url="https://theeyelevelstudio.com/services/website-design-and-development"
