@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Star18 } from "@/components/shared/Star18";
 import SEO from "@/components/utils/SEO";
 import { CardsParallax, type iCardItem } from "@/components/shared/CardsParallax";
+import { contentAndCreativeSchema, breadcrumbSchema } from "@/hooks/schemas";
 
 const ContentAndCreative = () => {
   const heroRef = useRef(null);
@@ -110,6 +111,15 @@ const ContentAndCreative = () => {
           "video production Chennai",
           "copywriting agency India",
           "brand content agency Chennai",
+        ]}
+        image="https://theeyelevelstudio.com/og/services-1200x630.png"
+        schema={[
+          contentAndCreativeSchema,
+          breadcrumbSchema([
+            { name: "Home", url: "https://theeyelevelstudio.com/" },
+            { name: "Services", url: "https://theeyelevelstudio.com/services" },
+            { name: "Content and Creative", url: "https://theeyelevelstudio.com/services/content-and-creative" },
+          ]),
         ]}
         canonical="https://theeyelevelstudio.com/services/content-and-creative"
         url="https://theeyelevelstudio.com/services/content-and-creative"

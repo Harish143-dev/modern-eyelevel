@@ -42,7 +42,7 @@ const Card: FC<iCardProps> = ({ title, description, color, textColor, i, src }) 
           className="absolute inset-0 z-10"
           style={{
             background:
-              "linear-gradient(to top, #000 0%, #000 30%, rgba(0,0,0,0.8) 55%, rgba(0,0,0,0.2) 80%, transparent 100%)",
+              "linear-gradient(to top, #000 0%, #000 10%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.2) 60%, transparent 100%)",
           }}
         />
 

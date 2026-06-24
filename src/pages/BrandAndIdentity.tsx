@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Star18 } from "@/components/shared/Star18";
 import SEO from "@/components/utils/SEO";
 import { CardsParallax, type iCardItem } from "@/components/shared/CardsParallax";
+import { brandAndIdentitySchema, breadcrumbSchema } from "@/hooks/schemas";
 
 const BrandAndIdentity = () => {
   const heroRef = useRef(null);
@@ -69,6 +70,15 @@ const BrandAndIdentity = () => {
           "brand strategy agency India",
           "logo design agency Chennai",
           "rebranding agency Chennai",
+        ]}
+        image="https://theeyelevelstudio.com/og/services-1200x630.png"
+        schema={[
+          brandAndIdentitySchema,
+          breadcrumbSchema([
+            { name: "Home", url: "https://theeyelevelstudio.com/" },
+            { name: "Services", url: "https://theeyelevelstudio.com/services" },
+            { name: "Brand and Identity", url: "https://theeyelevelstudio.com/services/brand-and-identity" },
+          ]),
         ]}
         canonical="https://theeyelevelstudio.com/services/brand-and-identity"
         url="https://theeyelevelstudio.com/services/brand-and-identity"

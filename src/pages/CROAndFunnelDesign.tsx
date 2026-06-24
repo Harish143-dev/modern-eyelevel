@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Star18 } from "@/components/shared/Star18";
 import SEO from "@/components/utils/SEO";
 import { CardsParallax, type iCardItem } from "@/components/shared/CardsParallax";
+import { croAndFunnelDesignSchema, breadcrumbSchema } from "@/hooks/schemas";
 
 const CROAndFunnelDesign = () => {
   const heroRef = useRef(null);
@@ -96,6 +97,15 @@ const CROAndFunnelDesign = () => {
           "landing page agency Chennai",
           "funnel design agency",
           "lead conversion agency Chennai",
+        ]}
+        image="https://theeyelevelstudio.com/og/services-1200x630.png"
+        schema={[
+          croAndFunnelDesignSchema,
+          breadcrumbSchema([
+            { name: "Home", url: "https://theeyelevelstudio.com/" },
+            { name: "Services", url: "https://theeyelevelstudio.com/services" },
+            { name: "CRO and Funnel Design", url: "https://theeyelevelstudio.com/services/cro-and-funnel-design" },
+          ]),
         ]}
         canonical="https://theeyelevelstudio.com/services/cro-and-funnel-design"
         url="https://theeyelevelstudio.com/services/cro-and-funnel-design"

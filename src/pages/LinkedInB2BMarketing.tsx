@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Star18 } from "@/components/shared/Star18";
 import SEO from "@/components/utils/SEO";
 import { CardsParallax, type iCardItem } from "@/components/shared/CardsParallax";
+import { linkedInB2BMarketingSchema, breadcrumbSchema } from "@/hooks/schemas";
 
 const LinkedInB2BMarketing = () => {
   const heroRef = useRef(null);
@@ -96,6 +97,15 @@ const LinkedInB2BMarketing = () => {
           "LinkedIn content strategy India",
           "LinkedIn ads agency",
           "B2B marketing agency Chennai",
+        ]}
+        image="https://theeyelevelstudio.com/og/services-1200x630.png"
+        schema={[
+          linkedInB2BMarketingSchema,
+          breadcrumbSchema([
+            { name: "Home", url: "https://theeyelevelstudio.com/" },
+            { name: "Services", url: "https://theeyelevelstudio.com/services" },
+            { name: "LinkedIn B2B Marketing", url: "https://theeyelevelstudio.com/services/linkedin-b2b-marketing" },
+          ]),
         ]}
         canonical="https://theeyelevelstudio.com/services/linkedin-b2b-marketing"
         url="https://theeyelevelstudio.com/services/linkedin-b2b-marketing"

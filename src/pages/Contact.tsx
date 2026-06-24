@@ -4,7 +4,8 @@ import SEO from "@/components/utils/SEO";
 import {
   contactPageSchema,
   faqPageSchema,
-  localBusinessSchema,
+  contactLocalBusinessSchema,
+  breadcrumbSchema,
 } from "@/hooks/schemas";
 import faqs from "@/data/faqs";
 import FAQSection from "@/components/sections/shared/FAQSection";
@@ -29,37 +30,12 @@ const Contact = () => {
         ]}
         image="https://theeyelevelstudio.com/og/contact-1200x630.png"
         schema={[
-          {
-            "@context": "https://schema.org",
-            "@type": "ContactPage",
-            name: "Contact Eyelevel Growth Studio",
-            description: "Book a 30-minute diagnostic with Eyelevel Growth Studio.",
-            url: "https://theeyelevelstudio.com/contact"
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "Eyelevel Growth Studio",
-            url: "https://theeyelevelstudio.com",
-            telephone: "+919789099499",
-            email: "hello@eyelevelstudio.in",
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: "Chennai",
-              addressRegion: "Tamil Nadu",
-              addressCountry: "IN"
-            },
-            areaServed: "Chennai",
-            serviceType: "Digital Marketing Agency"
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://theeyelevelstudio.com/" },
-              { "@type": "ListItem", position: 2, name: "Contact", item: "https://theeyelevelstudio.com/contact" }
-            ]
-          },
+          contactPageSchema,
+          contactLocalBusinessSchema,
+          breadcrumbSchema([
+            { name: "Home", url: "https://theeyelevelstudio.com/" },
+            { name: "Contact", url: "https://theeyelevelstudio.com/contact" }
+          ]),
           faqPageSchema(faqs["Contact"], {
             url: "https://theeyelevelstudio.com/contact",
           }),

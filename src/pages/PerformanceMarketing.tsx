@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Star18 } from "@/components/shared/Star18";
 import SEO from "@/components/utils/SEO";
 import { CardsParallax } from "@/components/shared/CardsParallax";
+import { performanceMarketingSchema, breadcrumbSchema } from "@/hooks/schemas";
 
 interface iCardItem {
   title: string;
@@ -89,7 +90,16 @@ const PerformanceMarketing = () => {
           "Meta Ads agency Chennai",
           "Google Ads agency Chennai",
           "digital advertising Chennai",
-          "performance marketing India"
+          "performance marketing India",
+        ]}
+        image="https://theeyelevelstudio.com/og/services-1200x630.png"
+        schema={[
+          performanceMarketingSchema,
+          breadcrumbSchema([
+            { name: "Home", url: "https://theeyelevelstudio.com/" },
+            { name: "Services", url: "https://theeyelevelstudio.com/services" },
+            { name: "Performance Marketing", url: "https://theeyelevelstudio.com/services/performance-marketing" },
+          ]),
         ]}
         canonical="https://theeyelevelstudio.com/services/performance-marketing"
         url="https://theeyelevelstudio.com/services/performance-marketing"

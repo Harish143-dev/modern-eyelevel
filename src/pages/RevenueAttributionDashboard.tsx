@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Star18 } from "@/components/shared/Star18";
 import SEO from "@/components/utils/SEO";
 import { CardsParallax, type iCardItem } from "@/components/shared/CardsParallax";
+import { revenueAttributionDashboardSchema, breadcrumbSchema } from "@/hooks/schemas";
 
 const RevenueAttributionDashboard = () => {
   const heroRef = useRef(null);
@@ -114,6 +115,15 @@ const RevenueAttributionDashboard = () => {
           "marketing ROI tracking",
           "marketing analytics agency India",
           "campaign attribution Chennai",
+        ]}
+        image="https://theeyelevelstudio.com/og/services-1200x630.png"
+        schema={[
+          revenueAttributionDashboardSchema,
+          breadcrumbSchema([
+            { name: "Home", url: "https://theeyelevelstudio.com/" },
+            { name: "Services", url: "https://theeyelevelstudio.com/services" },
+            { name: "Revenue Attribution Dashboard", url: "https://theeyelevelstudio.com/services/revenue-attribution-dashboard" },
+          ]),
         ]}
         canonical="https://theeyelevelstudio.com/services/revenue-attribution-dashboard"
         url="https://theeyelevelstudio.com/services/revenue-attribution-dashboard"

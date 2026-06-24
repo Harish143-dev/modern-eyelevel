@@ -4,7 +4,7 @@ import SEO from "@/components/utils/SEO";
 import {
   faqPageSchema,
   organizationSchema,
-  servicesSchema,
+  servicesListSchema,
   websiteSchema,
   breadcrumbSchema,
 } from "@/hooks/schemas";
@@ -29,10 +29,11 @@ const ServicesPage = () => {
           "AI-Era SEO Chennai",
           "social media marketing agency Chennai",
         ]}
+        image="https://theeyelevelstudio.com/og/services-1200x630.png"
         schema={[
           organizationSchema,
           websiteSchema,
-          servicesSchema,
+          servicesListSchema,
           breadcrumbSchema([
             { name: "Home", url: "https://theeyelevelstudio.com/" },
             { name: "Services", url: "https://theeyelevelstudio.com/services" },

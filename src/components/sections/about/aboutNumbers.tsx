@@ -1,11 +1,60 @@
-import { motion } from "framer-motion";
+import { motion, animate, useInView } from "framer-motion";
 import WavyUnderline from "@/components/shared/WavyUnderline";
+import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { stat: "15+", label: "Years client-side" },
-  { stat: "5", label: "Industries, hands-on" },
-  { stat: "0", label: "Account Managers between you and the person accountable" },
+  {
+    stat: "15+",
+    title: "Years client-side",
+    subtitle: "Deep experience on your side, not someone else's.",
+  },
+  {
+    stat: "5",
+    title: "Industries, hands-on",
+    subtitle: "Property, SaaS, B2B, eCommerce and more.",
+  },
+  {
+    stat: "0",
+    title: "Account Managers",
+    subtitle: "You work with the people doing the work.",
+  },
 ];
+
+const AnimatedCounter = ({ value, duration = 1.5 }: { value: string; duration?: number }) => {
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+  const [displayValue, setDisplayValue] = useState("0");
+
+  useEffect(() => {
+    if (!inView) return;
+
+    // Parse the number and optional suffix
+    const numericMatch = value.match(/^(\d+)(.*)$/);
+    if (!numericMatch) {
+      setDisplayValue(value);
+      return;
+    }
+
+    const targetNumber = parseInt(numericMatch[1], 10);
+    const suffix = numericMatch[2] || "";
+
+    // For "0", count down from 10 to 0 for a playful effect.
+    // Otherwise, count up from 0 to target.
+    const startValue = targetNumber === 0 ? 10 : 0;
+
+    const controls = animate(startValue, targetNumber, {
+      duration: duration,
+      ease: "easeOut",
+      onUpdate: (latest) => {
+        setDisplayValue(Math.round(latest) + suffix);
+      },
+    });
+
+    return () => controls.stop();
+  }, [inView, value, duration]);
+
+  return <span ref={ref}>{displayValue}</span>;
+};
 
 const Numbers = () => {
   return (
@@ -31,12 +80,17 @@ const Numbers = () => {
             </div>
           </div>
 
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-dela uppercase text-primary text-center">
-            Built on experience, <WavyUnderline>not layers</WavyUnderline>
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-dela uppercase text-center leading-tight">
+            <span className="text-primary block md:inline">Built on experience, </span>
+            <span className="text-white block md:inline"><WavyUnderline>not layers</WavyUnderline></span>
           </h2>
+
+          <p className="text-base md:text-lg max-w-2xl mx-auto font-bricolage text-[#d1d7d5]/80 mt-6 text-center">
+            Real results. Hands-on expertise. Zero account managers in between.
+          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-0 relative pt-[-10]">
           {stats.map((item, index) => (
             <motion.div
               key={item.stat}
@@ -44,22 +98,29 @@ const Numbers = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="flex flex-col items-center justify-center text-center px-4 md:px-8 py-10 md:py-12 gap-2 rounded-2xl"
-              style={{
-                border: "2px solid rgba(226, 254, 165, 0.15)",
-                backgroundColor: "rgba(226, 254, 165, 0.03)",
-              }}
+              className="relative flex flex-col items-center justify-start text-center px-4 md:px-8 py-8 md:py-4 min-h-[100px]"
             >
-              <span className="text-4xl md:text-6xl lg:text-7xl font-dela text-primary leading-none">
-                {item.stat}
+              {/* Vertical divider line for desktop */}
+              {index > 0 && (
+                <div className="hidden md:block absolute left-0 top-4 bottom-4 w-[1px] bg-primary/10" />
+              )}
+
+              {/* Horizontal divider line for mobile */}
+              {index > 0 && (
+                <div className="block md:hidden w-1/2 h-[1px] bg-primary/10 mb-8 mx-auto" />
+              )}
+
+              <span className="text-4xl md:text-6xl font-bricolage text-primary leading-none mb-4"
+              >
+                <AnimatedCounter value={item.stat} />
               </span>
 
-              <span
-                className="text-xs md:text-sm font-bricolage leading-relaxed max-w-[120px] md:max-w-[160px] min-h-[72px] flex items-center"
-                style={{ color: "rgba(248, 255, 232, 0.6)" }}
-              >
-                {item.label}
-              </span>
+              {/* Short green line below number */}
+              <div className="w-8 h-[2px] bg-primary/30 mb-5" />
+
+              <h3 className="text-lg md:text-xl font-bricolage font-semibold text-white">
+                {item.title}
+              </h3>
             </motion.div>
           ))}
         </div>
