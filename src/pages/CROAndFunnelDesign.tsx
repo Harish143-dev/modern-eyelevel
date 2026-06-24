@@ -195,7 +195,7 @@ const CROAndFunnelDesign = () => {
             className="md:col-span-2 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Eye className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <Eye className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl lg:text-3xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">LANDING PAGE AUDITS</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80 max-w-xl">Heatmaps, session recordings, and form drop-off analysis</p>
           </motion.div>
@@ -207,7 +207,7 @@ const CROAndFunnelDesign = () => {
             className="md:col-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <LayoutTemplate className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <LayoutTemplate className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">LANDING PAGE REDESIGN & BUILD</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80">Conversion-optimised, not brand exercises</p>
           </motion.div>
@@ -219,7 +219,7 @@ const CROAndFunnelDesign = () => {
             className="md:col-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Filter className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <Filter className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">LEAD QUALIFICATION FLOWS</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80">Structured forms and sequences that separate buyers from browsers</p>
           </motion.div>
@@ -231,7 +231,7 @@ const CROAndFunnelDesign = () => {
             className="md:col-span-2 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <GitMerge className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <GitMerge className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl lg:text-3xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">FUNNEL MAPPING</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80 max-w-xl">From first click through to closed deal — every step designed to reduce friction</p>
           </motion.div>
@@ -243,7 +243,7 @@ const CROAndFunnelDesign = () => {
             className="md:col-span-2 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Split className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <Split className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl lg:text-3xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">A/B TESTING INFRASTRUCTURE</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80 max-w-xl">Systematic testing of page variants, CTA copy, and form fields</p>
           </motion.div>
@@ -255,7 +255,7 @@ const CROAndFunnelDesign = () => {
             className="md:col-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Mail className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <Mail className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">ADS & EMAIL INTEGRATION</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80">So the funnel works as one connected system, not isolated parts</p>
           </motion.div>
