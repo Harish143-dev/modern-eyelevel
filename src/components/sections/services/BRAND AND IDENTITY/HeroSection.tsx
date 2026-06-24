@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import { useRef } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import EnhancedFooter from "@/components/layout/EnhancedFooter";

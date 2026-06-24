@@ -47,7 +47,7 @@ const WebsiteDesignAndDevelopment = () => {
       />
       <Header />
 
-            <HeroSection />
+      <HeroSection />
       <IncludesSection />
       <WhoIsItForSection />
       <QuoteSection />

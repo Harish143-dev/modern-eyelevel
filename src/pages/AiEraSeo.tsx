@@ -48,7 +48,7 @@ const AiEraSeo = () => {
       />
       <Header />
 
-            <HeroSection />
+      <HeroSection />
       <IncludesSection />
       <WhoIsItForSection />
       <QuoteSection />

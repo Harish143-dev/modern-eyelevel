@@ -47,7 +47,7 @@ const RevenueAttributionDashboard = () => {
       />
       <Header />
 
-            <HeroSection />
+      <HeroSection />
       <IncludesSection />
       <WhoIsItForSection />
       <QuoteSection />

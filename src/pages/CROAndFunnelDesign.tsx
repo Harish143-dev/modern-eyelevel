@@ -47,7 +47,7 @@ const CROAndFunnelDesign = () => {
       />
       <Header />
 
-            <HeroSection />
+      <HeroSection />
       <IncludesSection />
       <WhoIsItForSection />
       <QuoteSection />

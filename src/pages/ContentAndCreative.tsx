@@ -47,7 +47,7 @@ const ContentAndCreative = () => {
       />
       <Header />
 
-            <HeroSection />
+      <HeroSection />
       <IncludesSection />
       <WhoIsItForSection />
       <QuoteSection />

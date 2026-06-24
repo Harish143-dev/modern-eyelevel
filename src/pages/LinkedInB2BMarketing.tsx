@@ -47,7 +47,7 @@ const LinkedInB2BMarketing = () => {
       />
       <Header />
 
-            <HeroSection />
+      <HeroSection />
       <IncludesSection />
       <WhoIsItForSection />
       <QuoteSection />

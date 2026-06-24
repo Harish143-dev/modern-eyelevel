@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import { useRef } from "react";
 import Header from "@/components/layout/Header";
 import EnhancedFooter from "@/components/layout/EnhancedFooter";
 import { motion, useScroll, useTransform } from "framer-motion";
