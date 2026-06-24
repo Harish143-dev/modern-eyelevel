@@ -140,7 +140,7 @@ const Hero = () => {
               YOUR <WavyUnderline>AD AGENCY</WavyUnderline>
             </span>
           </motion.h1>
-
+           <div className="w-20 h-1 opacity-50 bg-primary my-8 rounded-full mx-auto"></div>
           {/* Subheadline */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}

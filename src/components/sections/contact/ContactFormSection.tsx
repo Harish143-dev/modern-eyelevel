@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, Calendar, Mail, Send, ShieldCheck, Underline } from "lucide-react";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 
 const contactSchema = z.object({
@@ -84,38 +84,53 @@ const ContactFormSection = () => {
   };
 
   return (
-    <section className="px-4 py-[100px]">
+    <section className="px-4 py-[100px] bg-forest-deep">
       <div className="max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-stretch">
+        <div className="grid lg:grid-cols-12 gap-10 items-start">
 
           {/* Left side - CTA text block */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="flex flex-col justify-start h-full lg:pr-8 text-center lg:text-left pt-0 lg:pt-4"
+            className="flex flex-col justify-start h-full text-center lg:text-left pt-0 lg:pt-4 w-full lg:col-span-7"
           >
-            <div className="mb-8 md:mb-10 w-full">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-dela text-primary leading-[1.2] uppercase text-center lg:text-left break-words">
-                <span className="block mb-1">30 MINUTES</span>
-                <span className="block mb-1">NO PITCH DECK</span>
-                <span className="block mb-1">WE WILL TELL YOU</span>
-                <span className="block mt-2"><WavyUnderline>WHAT WE SEE</WavyUnderline></span>
+
+            <div className="mb-6 w-full flex justify-center lg:justify-start">
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-dela leading-[1.2] uppercase text-center lg:text-left break-words">
+                <span className="block mb-1 text-primary">30 MINUTES</span>
+                <span className="block mb-1 text-primary">NO PITCH DECK</span>
+                <span className="block mb-1 text-primary">WE WILL TELL YOU</span>
+                <span className="block mt-1"><WavyUnderline>WHAT WE SEE</WavyUnderline></span>
               </h2>
             </div>
 
-            <div className="flex flex-col items-center justify-center lg:items-start gap-4">
-              <Button
-              >
-                <Link to="/booking" className="flex items-center justify-center">
-                  Book a free 30-min diagnostic
-                  <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
+            <p className="text-white/80 font-bricolage text-sm sm:text-base md:text-lg mb-10 max-w-md mx-auto lg:mx-0 text-center lg:text-left px-2 sm:px-0">
+              A direct conversation about what's working, what's not, and what we would do differently.
+            </p>
 
-              <p className="font-bricolage text-white/80 mt-2 font-medium text-base md:text-lg text-center lg:text-left">
-                Or email <a href="mailto:hello@eyelevelstudio.in" className="underline hover:text-primary transition-colors">hello@eyelevelstudio.in</a>
-              </p>
+            <div className="flex flex-col items-center lg:items-start w-full max-w-md mx-auto lg:mx-0 px-2 sm:px-0 mt-4">
+              <Link to="/booking" className="w-full">
+                <Button className="w-full flex items-center justify-center gap-1 sm:gap-3 text-[12px] min-[380px]:text-[13px] sm:text-base px-1 sm:px-6 py-4 h-auto whitespace-normal rounded-full font-semibold transition-transform hover:translate-y-1 hover:shadow-none text-forest-dark"
+                >
+                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
+                  <span className="text-center leading-tight">Book a free 30-min diagnostic</span>
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
+
+              <div className="flex items-center w-full my-6 opacity-50">
+                <div className="flex-1 h-[1px] bg-white/20"></div>
+                <span className="px-4 text-white font-bricolage text-xs sm:text-sm uppercase tracking-widest">OR</span>
+                <div className="flex-1 h-[1px] bg-white/20"></div>
+              </div>
+
+              <a href="mailto:hello@eyelevelstudio.in" className="w-full">
+                <Button variant="outline" className="w-full rounded-xl h-auto min-h-[3.5rem] py-3 border border-white/20 hover:bg-white/10 text-white bg-transparent font-medium text-[12px] sm:text-base flex items-center justify-center gap-1 sm:gap-3 whitespace-normal px-2">
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
+                  <span className="text-center">Or email hello@eyelevelstudio.in</span>
+                </Button>
+              </a>
             </div>
           </motion.div>
 
@@ -124,17 +139,16 @@ const ContactFormSection = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col h-full mt-12 lg:mt-0"
+            className="flex flex-col h-full mt-12 lg:mt-0 w-full lg:col-span-5"
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-dela mb-6 text-primary uppercase whitespace-normal text-center lg:text-left break-words">
-              Or send us a <WavyUnderline>message</WavyUnderline>
+
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-dela mb-8 text-primary uppercase whitespace-normal text-center lg:text-left break-words">
+              OR SEND US <br className="hidden lg:block" /> <WavyUnderline>MESSAGE</WavyUnderline>
             </h2>
             <div
-              className="rounded-3xl md:rounded-4xl p-6 md:p-10 flex-1 flex flex-col justify-center"
+              className="rounded-3xl p-6 md:p-8 flex-1 flex flex-col justify-center border border-white/10"
               style={{
-                backgroundColor: "#F8FFE8",
-                border: "3px solid #0a0a0a",
-                boxShadow: "0 6px 0 #0a0a0a",
+                backgroundColor: "rgba(255, 255, 255, 0.03)",
               }}
             >
               {isSubmitted ? (
@@ -147,33 +161,28 @@ const ContactFormSection = () => {
                     />
                   </div>
                   <h3
-                    className="text-2xl font-dela mb-4 text-forest-dark"
+                    className="text-2xl font-dela mb-4 text-white"
                   >
                     Got it.
                   </h3>
                   <p
-                    className="mb-6 font-bricolage"
-                    style={{ color: "rgba(23, 50, 41, 0.7)" }}
+                    className="mb-6 font-bricolage text-white/70"
                   >
                     We will be in touch within one business day.
                   </p>
                   <Button
                     onClick={() => setIsSubmitted(false)}
-                    className="rounded-full font-bricolage"
-                    style={{
-                      backgroundColor: "#173229",
-                      color: "#F8FFE8",
-                    }}
+                    className="rounded-full font-bricolage bg-primary text-forest-dark hover:bg-primary/90"
                   >
                     Send Another Message
                   </Button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 text-left">
                   <div>
                     <Label
                       htmlFor="name"
-                      className="font-medium font-bricolage text-forest-dark"
+                      className="font-medium font-bricolage text-white/90"
                     >
                       Your Name *
                     </Label>
@@ -181,15 +190,10 @@ const ContactFormSection = () => {
                       id="name"
                       {...register("name")}
                       placeholder="John Doe"
-                      className="mt-2 rounded-xl font-bricolage placeholder:text-forest-light/80"
-                      style={{
-                        backgroundColor: "rgba(23, 50, 41, 0.05)",
-                        borderColor: "rgba(23, 50, 41, 0.2)",
-                        color: "#173229",
-                      }}
+                      className="mt-2 rounded-xl font-bricolage placeholder:text-white/30 border-white/10 text-white bg-white/5 h-12 focus-visible:ring-primary"
                     />
                     {errors.name && (
-                      <p className="text-red-600 text-sm mt-1">
+                      <p className="text-red-400 text-sm mt-1">
                         {errors.name.message}
                       </p>
                     )}
@@ -198,7 +202,7 @@ const ContactFormSection = () => {
                   <div>
                     <Label
                       htmlFor="company"
-                      className="font-medium font-bricolage text-forest-dark"
+                      className="font-medium font-bricolage text-white/90"
                     >
                       Company Name *
                     </Label>
@@ -206,15 +210,10 @@ const ContactFormSection = () => {
                       id="company"
                       {...register("company")}
                       placeholder="Acme Inc."
-                      className="mt-2 rounded-xl font-bricolage placeholder:text-forest-light/80"
-                      style={{
-                        backgroundColor: "rgba(23, 50, 41, 0.05)",
-                        borderColor: "rgba(23, 50, 41, 0.2)",
-                        color: "#173229",
-                      }}
+                      className="mt-2 rounded-xl font-bricolage placeholder:text-white/30 border-white/10 text-white bg-white/5 h-12 focus-visible:ring-primary"
                     />
                     {errors.company && (
-                      <p className="text-red-600 text-sm mt-1">
+                      <p className="text-red-400 text-sm mt-1">
                         {errors.company.message}
                       </p>
                     )}
@@ -223,7 +222,7 @@ const ContactFormSection = () => {
                   <div>
                     <Label
                       htmlFor="phone"
-                      className="font-medium font-bricolage text-forest-dark"
+                      className="font-medium font-bricolage text-white/90"
                     >
                       Phone Number *
                     </Label>
@@ -232,15 +231,10 @@ const ContactFormSection = () => {
                       type="tel"
                       {...register("phone")}
                       placeholder="+91 98765 43210"
-                      className="mt-2 rounded-xl font-bricolage placeholder:text-forest-light/80"
-                      style={{
-                        backgroundColor: "rgba(23, 50, 41, 0.05)",
-                        borderColor: "rgba(23, 50, 41, 0.2)",
-                        color: "#173229",
-                      }}
+                      className="mt-2 rounded-xl font-bricolage placeholder:text-white/30 border-white/10 text-white bg-white/5 h-12 focus-visible:ring-primary"
                     />
                     {errors.phone && (
-                      <p className="text-red-600 text-sm mt-1">
+                      <p className="text-red-400 text-sm mt-1">
                         {errors.phone.message}
                       </p>
                     )}
@@ -249,7 +243,7 @@ const ContactFormSection = () => {
                   <div>
                     <Label
                       htmlFor="message"
-                      className="font-medium font-bricolage text-forest-dark"
+                      className="font-medium font-bricolage text-white/90"
                     >
                       What does your marketing look like today and what are you trying to fix? *
                     </Label>
@@ -257,16 +251,11 @@ const ContactFormSection = () => {
                       id="message"
                       {...register("message")}
                       placeholder="Brief message..."
-                      rows={5}
-                      className="mt-2 rounded-xl resize-none font-bricolage placeholder:text-forest-light/80"
-                      style={{
-                        backgroundColor: "rgba(23, 50, 41, 0.05)",
-                        borderColor: "rgba(23, 50, 41, 0.2)",
-                        color: "#173229",
-                      }}
+                      rows={4}
+                      className="mt-2 rounded-xl resize-none font-bricolage placeholder:text-white/30 border-white/10 text-white bg-white/5 focus-visible:ring-primary"
                     />
                     {errors.message && (
-                      <p className="text-red-600 text-sm mt-1">
+                      <p className="text-red-400 text-sm mt-1">
                         {errors.message.message}
                       </p>
                     )}
@@ -275,24 +264,19 @@ const ContactFormSection = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full group rounded-full font-semibold font-bricolage hover:translate-y-1 hover:shadow-none transition-all duration-150"
+                    className="group w-full flex items-center justify-center gap-3 h-14 whitespace-normal rounded-full font-semibold text-base md:text-lg transition-all hover:translate-y-1 hover:translate-x-1 hover:shadow-none  text-forest-dark border-[3px] border-[#0a0a0a] shadow-[4px_4px_0px_#0a0a0a]"
                     disabled={isSubmitting}
-                    style={{
-                      backgroundColor: "#173229",
-                      color: "#F8FFE8",
-                      border: "3px solid #0a0a0a",
-                      boxShadow: "0 4px 0 #0a0a0a",
-                    }}
                   >
                     {isSubmitting ? "Sending..." : "Send message"}
+                    {!isSubmitting && <Send className="w-5 h-5 shrink-0 transition-transform group-hover:translate-x-1" />}
                   </Button>
 
-                  <p
-                    className="text-sm text-center font-bricolage"
-                    style={{ color: "rgba(23, 50, 41, 0.6)" }}
-                  >
-                    We respond within one business day. If it is urgent, call <span className="whitespace-nowrap">+91 97890 99499</span> directly.
-                  </p>
+                  <div className="flex items-start justify-center gap-2 sm:gap-3 mt-4 text-white/60 font-bricolage text-xs sm:text-sm text-center">
+                    <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 shrink-0 text-primary mt-0.5 sm:mt-0" />
+                    <p>
+                      We respond within one business day. If it is urgent, <br className="hidden xl:block" /> call <span className="whitespace-nowrap text-white/80">+91 97890 99499</span> directly.
+                    </p>
+                  </div>
                 </form>
               )}
             </div>

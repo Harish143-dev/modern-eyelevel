@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import GreenButton from "@/components/shared/GreenButton";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import problemImage from "@/assets/industries/automotive_problem_realistic.png";
+import { motion } from "framer-motion";
 
 const services = [
   { title: "Performance Marketing", description: "Meta and Google Ads optimised for showroom visits and test-drive bookings, not just leads", slug: "performance-marketing" },
@@ -60,12 +61,23 @@ const Automotive = () => {
               <GreenButton>
                 Industries / Automotive
               </GreenButton>
-            <h1 className="font-dela text-3xl md:text-5xl lg:text-6xl mb-8 leading-[0.95] uppercase text-primary">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="font-dela text-3xl md:text-5xl lg:text-6xl mb-8 leading-[0.95] uppercase text-primary"
+            >
               Showroom visits don't happen by <WavyUnderline>accident</WavyUnderline>
-            </h1>
-            <p className="font-bricolage text-sm md:text-lg lg:text-xl max-w-3xl mx-auto mb-12 leading-relaxed text-foreground/80">
+            </motion.h1>
+            <div className="w-20 h-1 opacity-50 bg-primary my-8 rounded-full mx-auto"></div>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              className="font-bricolage text-sm md:text-lg lg:text-xl max-w-3xl mx-auto mb-12 leading-relaxed text-foreground/80"
+            >
               Dealerships and component makers. Footfall, test-drive bookings, OEM mandates — one team that handles all of it.
-            </p>
+            </motion.p>
             <Link to="/booking" className="w-full sm:w-auto block sm:inline-block">
               <Button
                 size="lg"
@@ -93,7 +105,11 @@ const Automotive = () => {
               </p>
             </div>
             <div className="lg:col-span-5 w-full flex justify-start lg:justify-end">
-              <img 
+              <motion.img 
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
                 src={problemImage} 
                 alt="Automotive Marketing Problem" 
                 className="w-full h-[300px] lg:h-[400px] xl:h-[450px] object-cover rounded-3xl border-2 border-primary/20 shadow-[0_0_40px_rgba(226,254,165,0.15)] hover:scale-[1.02] transition-transform duration-500"

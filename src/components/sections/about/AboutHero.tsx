@@ -128,8 +128,11 @@ const AboutHero = () => {
                     <h1 className="text-3xl md:text-5xl lg:text-6xl font-dela uppercase mt-8 text-primary">
                         BUILT FROM <WavyUnderline>THE CLIENT</WavyUnderline>
                     </h1>
+                    
                 </motion.div>
 
+                <div className="w-20 h-1 opacity-50 bg-primary my-8 rounded-full mx-auto"></div>
+                
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
