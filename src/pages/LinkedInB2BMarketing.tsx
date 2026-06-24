@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Star18 } from "@/components/shared/Star18";
 import SEO from "@/components/utils/SEO";
 import { CardsParallax, type iCardItem } from "@/components/shared/CardsParallax";
+import { linkedInB2BMarketingSchema, breadcrumbSchema } from "@/hooks/schemas";
 
 const LinkedInB2BMarketing = () => {
   const heroRef = useRef(null);
@@ -96,6 +97,15 @@ const LinkedInB2BMarketing = () => {
           "LinkedIn content strategy India",
           "LinkedIn ads agency",
           "B2B marketing agency Chennai",
+        ]}
+        image="https://theeyelevelstudio.com/og/services-1200x630.png"
+        schema={[
+          linkedInB2BMarketingSchema,
+          breadcrumbSchema([
+            { name: "Home", url: "https://theeyelevelstudio.com/" },
+            { name: "Services", url: "https://theeyelevelstudio.com/services" },
+            { name: "LinkedIn B2B Marketing", url: "https://theeyelevelstudio.com/services/linkedin-b2b-marketing" },
+          ]),
         ]}
         canonical="https://theeyelevelstudio.com/services/linkedin-b2b-marketing"
         url="https://theeyelevelstudio.com/services/linkedin-b2b-marketing"
@@ -184,7 +194,7 @@ const LinkedInB2BMarketing = () => {
             className="md:col-span-2 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <UserCheck className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <UserCheck className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl lg:text-3xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">PROFILE OPTIMISATION</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80 max-w-xl">Founder and leadership profile — headline, About, Featured section, and banner</p>
           </motion.div>
@@ -196,7 +206,7 @@ const LinkedInB2BMarketing = () => {
             className="md:col-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Building2 className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <Building2 className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">COMPANY PAGE</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80">Full page build and an always-on content calendar</p>
           </motion.div>
@@ -208,7 +218,7 @@ const LinkedInB2BMarketing = () => {
             className="md:col-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <FileText className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <FileText className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">LINKEDIN CONTENT STRATEGY</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80">Posts, carousels, and newsletters built around your positioning</p>
           </motion.div>
@@ -220,7 +230,7 @@ const LinkedInB2BMarketing = () => {
             className="md:col-span-2 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <UserPlus className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <UserPlus className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl lg:text-3xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">PROSPECTING & OUTREACH</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80 max-w-xl">Sales Navigator-assisted connection strategy and sequenced outreach</p>
           </motion.div>
@@ -232,7 +242,7 @@ const LinkedInB2BMarketing = () => {
             className="md:col-span-2 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Megaphone className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <Megaphone className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl lg:text-3xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">LINKEDIN ADS</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80 max-w-xl">Sponsored content, message ads, and lead gen forms</p>
           </motion.div>
@@ -244,7 +254,7 @@ const LinkedInB2BMarketing = () => {
             className="md:col-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <LineChart className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <LineChart className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">PIPELINE ATTRIBUTION</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80">Monthly reporting that ties LinkedIn activity to real pipeline</p>
           </motion.div>

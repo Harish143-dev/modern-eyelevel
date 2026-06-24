@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Star18 } from "@/components/shared/Star18";
 import SEO from "@/components/utils/SEO";
 import { CardsParallax, type iCardItem } from "@/components/shared/CardsParallax";
+import { contentAndCreativeSchema, breadcrumbSchema } from "@/hooks/schemas";
 
 const ContentAndCreative = () => {
   const heroRef = useRef(null);
@@ -111,6 +112,15 @@ const ContentAndCreative = () => {
           "copywriting agency India",
           "brand content agency Chennai",
         ]}
+        image="https://theeyelevelstudio.com/og/services-1200x630.png"
+        schema={[
+          contentAndCreativeSchema,
+          breadcrumbSchema([
+            { name: "Home", url: "https://theeyelevelstudio.com/" },
+            { name: "Services", url: "https://theeyelevelstudio.com/services" },
+            { name: "Content and Creative", url: "https://theeyelevelstudio.com/services/content-and-creative" },
+          ]),
+        ]}
         canonical="https://theeyelevelstudio.com/services/content-and-creative"
         url="https://theeyelevelstudio.com/services/content-and-creative"
       />
@@ -198,7 +208,7 @@ const ContentAndCreative = () => {
             className="md:col-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <FileText className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <FileText className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">LONG-FORM CONTENT</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80">Blog articles, white papers, LinkedIn articles, and case studies</p>
           </motion.div>
@@ -210,7 +220,7 @@ const ContentAndCreative = () => {
             className="md:col-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <MessageSquare className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <MessageSquare className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">SHORT-FORM CONTENT</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80">Social captions, ad copy, email sequences, and WhatsApp broadcasts</p>
           </motion.div>
@@ -222,7 +232,7 @@ const ContentAndCreative = () => {
             className="md:col-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Video className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <Video className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">VIDEO</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80">Scripts, shoots, and editing — end to end</p>
           </motion.div>
@@ -234,7 +244,7 @@ const ContentAndCreative = () => {
             className="md:col-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Image className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <Image className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">DESIGN & VISUAL ASSETS</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80">Social creatives, brochures, presentation decks, and campaign visuals</p>
           </motion.div>
@@ -246,7 +256,7 @@ const ContentAndCreative = () => {
             className="md:col-span-2 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <BookOpen className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <BookOpen className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl lg:text-3xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">BRAND VOICE DOCUMENTATION</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80 max-w-xl">So every content piece sounds like the same company</p>
           </motion.div>

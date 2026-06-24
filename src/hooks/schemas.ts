@@ -76,11 +76,22 @@ export const homeServicesSchema = {
   },
 };
 
-export const servicesSchema = {
+export const servicesListSchema = {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  name: "Marketing Services",
-  url: "https://theeyelevelstudio.com/services",
+  "@type": "ItemList",
+  name: "Eyelevel Growth Studio — Marketing Services",
+  description: "Nine digital marketing services from one AI-powered studio in Chennai.",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Performance Marketing", url: "https://theeyelevelstudio.com/services/performance-marketing" },
+    { "@type": "ListItem", position: 2, name: "AI-Era SEO", url: "https://theeyelevelstudio.com/services/ai-era-seo" },
+    { "@type": "ListItem", position: 3, name: "Social Media Management", url: "https://theeyelevelstudio.com/services/social-media-management" },
+    { "@type": "ListItem", position: 4, name: "Content and Creative", url: "https://theeyelevelstudio.com/services/content-and-creative" },
+    { "@type": "ListItem", position: 5, name: "LinkedIn B2B Marketing", url: "https://theeyelevelstudio.com/services/linkedin-b2b-marketing" },
+    { "@type": "ListItem", position: 6, name: "CRO and Funnel Design", url: "https://theeyelevelstudio.com/services/cro-and-funnel-design" },
+    { "@type": "ListItem", position: 7, name: "Revenue Attribution Dashboard", url: "https://theeyelevelstudio.com/services/revenue-attribution-dashboard" },
+    { "@type": "ListItem", position: 8, name: "Brand and Identity", url: "https://theeyelevelstudio.com/services/brand-and-identity" },
+    { "@type": "ListItem", position: 9, name: "Website Design and Development", url: "https://theeyelevelstudio.com/services/website-design-and-development" },
+  ],
 };
 
 export const industriesSchema = {
@@ -93,17 +104,55 @@ export const industriesSchema = {
 export const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  url: "https://theeyelevelstudio.com/contact-us",
   name: "Contact Eyelevel Growth Studio",
+  description: "Book a 30-minute diagnostic with Eyelevel Growth Studio.",
+  url: "https://theeyelevelstudio.com/contact",
+};
+
+export const contactLocalBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Eyelevel Growth Studio",
+  url: "https://theeyelevelstudio.com",
+  telephone: "+919789099499",
+  email: "hello@eyelevelstudio.in",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Chennai",
+    addressRegion: "Tamil Nadu",
+    addressCountry: "IN",
+  },
+  areaServed: "Chennai",
+  serviceType: "Digital Marketing Agency",
 };
 
 export const aboutPageSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
   url: "https://theeyelevelstudio.com/about-us",
-  name: "About Eyelevel Growth Studio",
-  about: {
-    "@id": ORG_ID,
+  name: "About Eyelevel Growth Studio | Built From the Client Side",
+  mainEntity: {
+    "@type": "Organization",
+    name: "Eyelevel Growth Studio",
+    url: "https://theeyelevelstudio.com",
+    description: "Full-service AI-powered growth studio in Chennai. The extended marketing team built by a marketing head who spent 15 years on the client side.",
+    founder: [
+      { "@type": "Person", name: "Mohammad Jameel", jobTitle: "Co-Founder" },
+      {
+        "@type": "Person",
+        name: "Akmal Rahman",
+        jobTitle: "Founder",
+        url: "https://akmalrahman.com",
+      },
+    ],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Chennai",
+      addressRegion: "Tamil Nadu",
+      addressCountry: "IN",
+    },
+    email: "hello@eyelevelstudio.in",
+    telephone: "+91-97890-99499",
   },
 };
 
@@ -301,4 +350,200 @@ export const serviceDetailSchema = (service: {
       reviewCount: "50",
     },
   };
+};
+
+export const performanceMarketingSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Performance Marketing",
+  description: "Meta and Google Ads built for revenue, not reach. Full-funnel campaigns with complete attribution from ad to close. No black-box reporting.",
+  provider: {
+    "@type": "Organization",
+    name: "Eyelevel Growth Studio",
+    url: "https://theeyelevelstudio.com",
+  },
+  areaServed: "India",
+  url: "https://theeyelevelstudio.com/services/performance-marketing",
+};
+
+export const aiEraSeoSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "AI-Era SEO",
+  description: "Traditional SEO plus AEO (AI Overviews, featured snippets) and GEO (ChatGPT, Gemini, Perplexity). We optimise for where buyers find answers now.",
+  provider: {
+    "@type": "Organization",
+    name: "Eyelevel Growth Studio",
+    url: "https://theeyelevelstudio.com",
+  },
+  areaServed: "India",
+  url: "https://theeyelevelstudio.com/services/ai-era-seo",
+};
+
+export const socialMediaManagementSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Social Media Management",
+  description: "Content that builds the audience your sales team actually needs. Strategy, calendars, creative, and posting — fully managed. Communities that convert.",
+  provider: {
+    "@type": "Organization",
+    name: "Eyelevel Growth Studio",
+    url: "https://theeyelevelstudio.com",
+  },
+  areaServed: "India",
+  url: "https://theeyelevelstudio.com/services/social-media-management",
+};
+
+export const contentAndCreativeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Content and Creative",
+  description: "AI handles production speed. Humans handle strategy and voice. Video, design, copy, and brand assets built with your brief, delivered with your tone.",
+  provider: {
+    "@type": "Organization",
+    name: "Eyelevel Growth Studio",
+    url: "https://theeyelevelstudio.com",
+  },
+  areaServed: "India",
+  url: "https://theeyelevelstudio.com/services/content-and-creative",
+};
+
+export const linkedInB2BMarketingSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "LinkedIn B2B Marketing",
+  description: "Profile optimisation, content strategy, and targeted outreach that builds real pipeline. For founders and companies that sell to other businesses.",
+  provider: {
+    "@type": "Organization",
+    name: "Eyelevel Growth Studio",
+    url: "https://theeyelevelstudio.com",
+  },
+  areaServed: "India",
+  url: "https://theeyelevelstudio.com/services/linkedin-b2b-marketing",
+};
+
+export const croAndFunnelDesignSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "CRO and Funnel Design",
+  description: "We fix what happens after the click. Landing pages, conversion flows, and lead qualification systems built to turn visitors into conversations.",
+  provider: {
+    "@type": "Organization",
+    name: "Eyelevel Growth Studio",
+    url: "https://theeyelevelstudio.com",
+  },
+  areaServed: "India",
+  url: "https://theeyelevelstudio.com/services/cro-and-funnel-design",
+};
+
+export const revenueAttributionDashboardSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Revenue Attribution Dashboard",
+  description: "Every campaign tied to a business outcome you can show your board. Custom dashboard bundled into growth retainers. GA4, Meta Ads, Google Ads, and CRM unified.",
+  provider: {
+    "@type": "Organization",
+    name: "Eyelevel Growth Studio",
+    url: "https://theeyelevelstudio.com",
+  },
+  areaServed: "India",
+  url: "https://theeyelevelstudio.com/services/revenue-attribution-dashboard",
+};
+
+export const brandAndIdentitySchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Brand and Identity",
+  description: "Visual identity, positioning, and brand architecture for companies that are growing and need their brand to do the work. Logo, guidelines, tone of voice.",
+  provider: {
+    "@type": "Organization",
+    name: "Eyelevel Growth Studio",
+    url: "https://theeyelevelstudio.com",
+  },
+  areaServed: "India",
+  url: "https://theeyelevelstudio.com/services/brand-and-identity",
+};
+
+export const websiteDesignAndDevelopmentSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Website Design and Development",
+  description: "Fast, conversion-optimised websites built as sales tools, not brochures. Design, development, SEO, and copywriting from one studio. Chennai and India.",
+  provider: {
+    "@type": "Organization",
+    name: "Eyelevel Growth Studio",
+    url: "https://theeyelevelstudio.com",
+  },
+  areaServed: "India",
+  url: "https://theeyelevelstudio.com/services/website-design-and-development",
+};
+
+export const realEstateIndustrySchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Real Estate Marketing",
+  description: "Performance marketing, SEO, and content for real estate developers. Qualified site visits and bookings — not cheap form fills. Chennai's real estate marketing specialists.",
+  provider: {
+    "@type": "Organization",
+    name: "Eyelevel Growth Studio",
+    url: "https://theeyelevelstudio.com",
+  },
+  areaServed: "India",
+  url: "https://theeyelevelstudio.com/industries/real-estate",
+};
+
+export const itSaaSIndustrySchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "IT and SaaS Marketing",
+  description: "Demand gen, LinkedIn brand, and content that produces pipeline for B2B software companies. Performance marketing and SEO for IT and SaaS across India.",
+  provider: {
+    "@type": "Organization",
+    name: "Eyelevel Growth Studio",
+    url: "https://theeyelevelstudio.com",
+  },
+  areaServed: "India",
+  url: "https://theeyelevelstudio.com/industries/it-saas",
+};
+
+export const healthcareIndustrySchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Healthcare Marketing",
+  description: "Patient acquisition built on trust. SEO, social media, and performance marketing for specialty clinics and hospitals. Not product marketing — trust architecture.",
+  provider: {
+    "@type": "Organization",
+    name: "Eyelevel Growth Studio",
+    url: "https://theeyelevelstudio.com",
+  },
+  areaServed: "India",
+  url: "https://theeyelevelstudio.com/industries/healthcare",
+};
+
+export const automotiveIndustrySchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Automotive Marketing",
+  description: "Performance marketing for dealerships and component makers. Showroom footfall, test-drive bookings, and OEM mandate compliance — one studio, full attribution.",
+  provider: {
+    "@type": "Organization",
+    name: "Eyelevel Growth Studio",
+    url: "https://theeyelevelstudio.com",
+  },
+  areaServed: "India",
+  url: "https://theeyelevelstudio.com/industries/automotive",
+};
+
+export const manufacturingB2BIndustrySchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Manufacturing and B2B Marketing",
+  description: "LinkedIn, SEO, and content for Chennai and Coimbatore manufacturers. Your buyers moved online — we help them find you and choose you before the first call.",
+  provider: {
+    "@type": "Organization",
+    name: "Eyelevel Growth Studio",
+    url: "https://theeyelevelstudio.com",
+  },
+  areaServed: "India",
+  url: "https://theeyelevelstudio.com/industries/manufacturing-b2b",
 };

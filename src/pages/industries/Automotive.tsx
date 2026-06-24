@@ -8,6 +8,7 @@ import GreenButton from "@/components/shared/GreenButton";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import problemImage from "@/assets/industries/automotive_problem_realistic.png";
 import { motion } from "framer-motion";
+import { automotiveIndustrySchema, breadcrumbSchema } from "@/hooks/schemas";
 
 const services = [
   { title: "Performance Marketing", description: "Meta and Google Ads optimised for showroom visits and test-drive bookings, not just leads", slug: "performance-marketing" },
@@ -24,33 +25,17 @@ const Automotive = () => {
         title="Automotive Marketing Agency Chennai | Dealership Marketing | Eyelevel Growth Studio"
         description="Performance marketing for dealerships and component makers. Showroom footfall, test-drive bookings, and OEM mandate compliance — one studio, full attribution."
         keywords={["automotive marketing agency Chennai", "car dealership marketing Chennai", "automotive digital marketing India", "dealership lead generation", "OEM marketing India", "automotive advertising agency Chennai"]}
+        image="https://theeyelevelstudio.com/og/industries-1200x630.png"
         schema={[
-          {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            name: "Automotive Marketing",
-            description: "Performance marketing for dealerships and component makers. Showroom footfall, test-drive bookings, and OEM mandate compliance — one studio, full attribution.",
-            provider: {
-              "@type": "Organization",
-              name: "Eyelevel Growth Studio",
-              url: "https://theeyelevelstudio.com"
-            },
-            areaServed: "India",
-            url: "https://theeyelevelstudio.com/industries/automotive"
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://theeyelevelstudio.com/" },
-              { "@type": "ListItem", position: 2, name: "Industries", item: "https://theeyelevelstudio.com/industries" },
-              { "@type": "ListItem", position: 3, name: "Automotive", item: "https://theeyelevelstudio.com/industries/automotive" }
-            ]
-          }
+          automotiveIndustrySchema,
+          breadcrumbSchema([
+            { name: "Home", url: "https://theeyelevelstudio.com/" },
+            { name: "Industries", url: "https://theeyelevelstudio.com/industries" },
+            { name: "Automotive", url: "https://theeyelevelstudio.com/industries/automotive" },
+          ]),
         ]}
         canonical="https://theeyelevelstudio.com/industries/automotive"
         url="https://theeyelevelstudio.com/industries/automotive"
-        image="https://theeyelevelstudio.com/og/industries-1200x630.png"
       />
       <Header />
 

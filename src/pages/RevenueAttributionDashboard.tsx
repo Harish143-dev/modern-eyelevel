@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Star18 } from "@/components/shared/Star18";
 import SEO from "@/components/utils/SEO";
 import { CardsParallax, type iCardItem } from "@/components/shared/CardsParallax";
+import { revenueAttributionDashboardSchema, breadcrumbSchema } from "@/hooks/schemas";
 
 const RevenueAttributionDashboard = () => {
   const heroRef = useRef(null);
@@ -115,6 +116,15 @@ const RevenueAttributionDashboard = () => {
           "marketing analytics agency India",
           "campaign attribution Chennai",
         ]}
+        image="https://theeyelevelstudio.com/og/services-1200x630.png"
+        schema={[
+          revenueAttributionDashboardSchema,
+          breadcrumbSchema([
+            { name: "Home", url: "https://theeyelevelstudio.com/" },
+            { name: "Services", url: "https://theeyelevelstudio.com/services" },
+            { name: "Revenue Attribution Dashboard", url: "https://theeyelevelstudio.com/services/revenue-attribution-dashboard" },
+          ]),
+        ]}
         canonical="https://theeyelevelstudio.com/services/revenue-attribution-dashboard"
         url="https://theeyelevelstudio.com/services/revenue-attribution-dashboard"
       />
@@ -203,7 +213,7 @@ const RevenueAttributionDashboard = () => {
             className="md:col-span-2 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <LayoutDashboard className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <LayoutDashboard className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl lg:text-3xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">CUSTOM DASHBOARD BUILD</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80 max-w-xl">GA4, Meta Ads, Google Ads, and CRM data unified in one view</p>
           </motion.div>
@@ -215,7 +225,7 @@ const RevenueAttributionDashboard = () => {
             className="md:col-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <LinkIcon className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <LinkIcon className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">OFFLINE CONVERSION TRACKING</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80">Connecting ad spend to actual closed deals, not just lead form submissions</p>
           </motion.div>
@@ -227,7 +237,7 @@ const RevenueAttributionDashboard = () => {
             className="md:col-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Coins className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <Coins className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">COST PER ACQUISITION TRACKING</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80">Broken down by channel, campaign, and creative — not blended averages</p>
           </motion.div>
@@ -239,7 +249,7 @@ const RevenueAttributionDashboard = () => {
             className="md:col-span-2 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <FileSpreadsheet className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <FileSpreadsheet className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl lg:text-3xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">EXECUTIVE-READY REPORTING</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80 max-w-xl">One view per month, not six spreadsheets to reconcile before a board meeting</p>
           </motion.div>
@@ -251,7 +261,7 @@ const RevenueAttributionDashboard = () => {
             className="md:col-span-2 bg-primary/5 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-primary/20 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Bell className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <Bell className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl lg:text-3xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">AUTOMATED ALERTS</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80 max-w-xl">Flagged when campaigns underperform threshold benchmarks — before the month ends</p>
           </motion.div>
@@ -263,7 +273,7 @@ const RevenueAttributionDashboard = () => {
             className="md:col-span-1 bg-secondary/30 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 border border-white/5 group relative overflow-hidden flex flex-col justify-start min-h-[280px] transition-all duration-300 hover:border-primary/30"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Package className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <Package className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">BUNDLED OR STANDALONE</h3>
             <p className="font-bricolage text-sm md:text-base lg:text-lg text-foreground/80">Included in all growth retainers above Rs. 2L/month, or available as a standalone engagement</p>
           </motion.div>

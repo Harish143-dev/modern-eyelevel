@@ -8,6 +8,7 @@ import GreenButton from "@/components/shared/GreenButton";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import problemImage from "@/assets/industries/itsaas_problem_realistic.png";
 import { motion } from "framer-motion";
+import { itSaaSIndustrySchema, breadcrumbSchema } from "@/hooks/schemas";
 
 
 const services = [
@@ -25,33 +26,17 @@ const ITSaaS = () => {
         title="IT & SaaS Marketing Agency India | Eyelevel Growth Studio"
         description="Demand gen, LinkedIn brand, and content that produces pipeline for B2B software companies. Performance marketing and SEO for IT and SaaS across India."
         keywords={["IT marketing agency India", "SaaS marketing agency India", "B2B software marketing", "LinkedIn marketing for SaaS", "demand generation agency Chennai", "IT company marketing India"]}
+        image="https://theeyelevelstudio.com/og/industries-1200x630.png"
         schema={[
-          {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            name: "IT and SaaS Marketing",
-            description: "Demand gen, LinkedIn brand, and content that produces pipeline for B2B software companies. Performance marketing and SEO for IT and SaaS across India.",
-            provider: {
-              "@type": "Organization",
-              name: "Eyelevel Growth Studio",
-              url: "https://theeyelevelstudio.com"
-            },
-            areaServed: "India",
-            url: "https://theeyelevelstudio.com/industries/it-saas"
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://theeyelevelstudio.com/" },
-              { "@type": "ListItem", position: 2, name: "Industries", item: "https://theeyelevelstudio.com/industries" },
-              { "@type": "ListItem", position: 3, name: "IT and SaaS", item: "https://theeyelevelstudio.com/industries/it-saas" }
-            ]
-          }
+          itSaaSIndustrySchema,
+          breadcrumbSchema([
+            { name: "Home", url: "https://theeyelevelstudio.com/" },
+            { name: "Industries", url: "https://theeyelevelstudio.com/industries" },
+            { name: "IT and SaaS", url: "https://theeyelevelstudio.com/industries/it-saas" },
+          ]),
         ]}
         canonical="https://theeyelevelstudio.com/industries/it-saas"
         url="https://theeyelevelstudio.com/industries/it-saas"
-        image="https://theeyelevelstudio.com/og/industries-1200x630.png"
       />
       <Header />
 

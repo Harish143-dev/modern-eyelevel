@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Star18 } from "@/components/shared/Star18";
 import SEO from "@/components/utils/SEO";
 import { CardsParallax } from "@/components/shared/CardsParallax";
+import { performanceMarketingSchema, breadcrumbSchema } from "@/hooks/schemas";
 
 interface iCardItem {
   title: string;
@@ -89,7 +90,16 @@ const PerformanceMarketing = () => {
           "Meta Ads agency Chennai",
           "Google Ads agency Chennai",
           "digital advertising Chennai",
-          "performance marketing India"
+          "performance marketing India",
+        ]}
+        image="https://theeyelevelstudio.com/og/services-1200x630.png"
+        schema={[
+          performanceMarketingSchema,
+          breadcrumbSchema([
+            { name: "Home", url: "https://theeyelevelstudio.com/" },
+            { name: "Services", url: "https://theeyelevelstudio.com/services" },
+            { name: "Performance Marketing", url: "https://theeyelevelstudio.com/services/performance-marketing" },
+          ]),
         ]}
         canonical="https://theeyelevelstudio.com/services/performance-marketing"
         url="https://theeyelevelstudio.com/services/performance-marketing"
@@ -184,7 +194,7 @@ const PerformanceMarketing = () => {
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-colors duration-500" />
 
-            <Search className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <Search className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl lg:text-3xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">
               META & GOOGLE ADS
             </h3>
@@ -201,7 +211,7 @@ const PerformanceMarketing = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-            <Target className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <Target className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">
               CONVERSION TRACKING
             </h3>
@@ -218,7 +228,7 @@ const PerformanceMarketing = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-            <MousePointerClick className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <MousePointerClick className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">
               A/B TESTING
             </h3>
@@ -235,7 +245,7 @@ const PerformanceMarketing = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-            <LineChart className="w-10 h-10 text-foreground mb-6 transition-colors duration-300 group-hover:text-primary" />
+            <LineChart className="w-10 h-10 text-primary mb-6 transition-colors duration-300 group-hover:text-primary" />
             <h3 className="font-dela text-xl md:text-2xl lg:text-3xl text-foreground mb-3 transition-colors duration-300 group-hover:text-primary">
               REVENUE ATTRIBUTION DASHBOARD
             </h3>

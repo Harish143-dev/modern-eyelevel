@@ -8,6 +8,7 @@ import GreenButton from "@/components/shared/GreenButton";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import problemImage from "@/assets/industries/real_estate_problem_edited.png";
 import { motion } from "framer-motion";
+import { realEstateIndustrySchema, breadcrumbSchema } from "@/hooks/schemas";
 
 const services = [
   { title: "Performance Marketing", description: "qualified lead gen optimised for site visits and bookings, not form fills", slug: "performance-marketing" },
@@ -22,31 +23,16 @@ const RealEstate = () => {
     <div className="min-h-[65vh] lg:min-h-[95vh] bg-background selection:bg-brand-lime selection:text-black">
       <SEO
         title="Real Estate Marketing Agency Chennai | Eyelevel Growth Studio"
-        description="Performance marketing, SEO, and content for real estate developers. Qualified site visits and bookings - not cheap form fills. Chennai's real estate marketing specialists."
+        description="Performance marketing, SEO, and content for real estate developers. Qualified site visits and bookings — not cheap form fills. Chennai's real estate marketing specialists."
         keywords={["real estate marketing agency Chennai", "property marketing agency Chennai", "real estate digital marketing India", "real estate lead generation Chennai", "real estate SEO India"]}
+        image="https://theeyelevelstudio.com/og/industries-1200x630.png"
         schema={[
-          {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            name: "Real Estate Marketing",
-            description: "Performance marketing, SEO, and content for real estate developers. Qualified site visits and bookings - not cheap form fills. Chennai's real estate marketing specialists.",
-            provider: {
-              "@type": "Organization",
-              name: "Eyelevel Growth Studio",
-              url: "https://theeyelevelstudio.com"
-            },
-            areaServed: "India",
-            url: "https://theeyelevelstudio.com/industries/real-estate"
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://theeyelevelstudio.com/" },
-              { "@type": "ListItem", position: 2, name: "Industries", item: "https://theeyelevelstudio.com/industries" },
-              { "@type": "ListItem", position: 3, name: "Real Estate", item: "https://theeyelevelstudio.com/industries/real-estate" }
-            ]
-          }
+          realEstateIndustrySchema,
+          breadcrumbSchema([
+            { name: "Home", url: "https://theeyelevelstudio.com/" },
+            { name: "Industries", url: "https://theeyelevelstudio.com/industries" },
+            { name: "Real Estate", url: "https://theeyelevelstudio.com/industries/real-estate" },
+          ]),
         ]}
         canonical="https://theeyelevelstudio.com/industries/real-estate"
         url="https://theeyelevelstudio.com/industries/real-estate"

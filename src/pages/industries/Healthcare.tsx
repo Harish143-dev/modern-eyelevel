@@ -8,6 +8,7 @@ import GreenButton from "@/components/shared/GreenButton";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import problemImage from "@/assets/industries/healthcare_problem_realistic.png";
 import { motion } from "framer-motion";
+import { healthcareIndustrySchema, breadcrumbSchema } from "@/hooks/schemas";
 
 
 const services = [
@@ -25,33 +26,17 @@ const Healthcare = () => {
         title="Healthcare Marketing Agency Chennai | Hospital Marketing | Eyelevel Growth Studio"
         description="Patient acquisition built on trust. SEO, social media, and performance marketing for specialty clinics and hospitals. Not product marketing — trust architecture."
         keywords={["healthcare marketing agency Chennai", "hospital marketing agency Chennai", "clinic marketing India", "patient acquisition agency", "healthcare digital marketing Chennai", "medical marketing agency India"]}
+        image="https://theeyelevelstudio.com/og/industries-1200x630.png"
         schema={[
-          {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            name: "Healthcare Marketing",
-            description: "Patient acquisition built on trust. SEO, social media, and performance marketing for specialty clinics and hospitals. Not product marketing — trust architecture.",
-            provider: {
-              "@type": "Organization",
-              name: "Eyelevel Growth Studio",
-              url: "https://theeyelevelstudio.com"
-            },
-            areaServed: "India",
-            url: "https://theeyelevelstudio.com/industries/healthcare"
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://theeyelevelstudio.com/" },
-              { "@type": "ListItem", position: 2, name: "Industries", item: "https://theeyelevelstudio.com/industries" },
-              { "@type": "ListItem", position: 3, name: "Healthcare", item: "https://theeyelevelstudio.com/industries/healthcare" }
-            ]
-          }
+          healthcareIndustrySchema,
+          breadcrumbSchema([
+            { name: "Home", url: "https://theeyelevelstudio.com/" },
+            { name: "Industries", url: "https://theeyelevelstudio.com/industries" },
+            { name: "Healthcare", url: "https://theeyelevelstudio.com/industries/healthcare" },
+          ]),
         ]}
         canonical="https://theeyelevelstudio.com/industries/healthcare"
         url="https://theeyelevelstudio.com/industries/healthcare"
-        image="https://theeyelevelstudio.com/og/industries-1200x630.png"
       />
       <Header />
 
