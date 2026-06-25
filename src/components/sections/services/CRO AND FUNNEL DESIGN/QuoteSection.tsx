@@ -1,3 +1,4 @@
+import WavyUnderline from "@/components/shared/WavyUnderline";
 import { motion } from "framer-motion";
 
 export const QuoteSection = () => {
@@ -27,10 +28,9 @@ export const QuoteSection = () => {
 
           {/* Left Side: Eyebrow */}
           <div className="md:w-1/4 shrink-0 flex flex-col items-start relative z-10 pt-2">
-            <h3 className="text-white font-bricolage text-xs sm:text-sm tracking-[0.25em] uppercase font-semibold mb-4">
-              THE OUTCOME
+            <h3 className="text-primary font-bricolage text-lg md:text-xl lg:text-xl tracking-[0.15em] uppercase font-semibold mb-4">
+              THE <WavyUnderline>OUTCOME </WavyUnderline>
             </h3>
-            <div className="w-8 h-[2px] bg-primary"></div>
           </div>
 
           {/* Vertical Divider (Desktop only) */}
