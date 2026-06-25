@@ -17,13 +17,22 @@ import {
 } from "lucide-react";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 
-const services = [
+interface ServiceItem {
+  num: string;
+  name: string;
+  icon: React.ComponentType<any>;
+  angle: number;
+  labelPos: "top" | "bottom";
+  mobileName: string;
+}
+
+const services: ServiceItem[] = [
   {
     num: "01",
     name: "STRATEGY",
     icon: Compass,
     angle: -90,
-    labelPos: "bottom" as const,
+    labelPos: "bottom",
     mobileName: "Strategy"
   },
   {
@@ -31,7 +40,7 @@ const services = [
     name: "CREATIVE",
     icon: Palette,
     angle: -50,
-    labelPos: "bottom" as const,
+    labelPos: "bottom",
     mobileName: "Creative"
   },
   {
@@ -39,7 +48,7 @@ const services = [
     name: "PERFORMANCE",
     icon: TrendingUp,
     angle: -10,
-    labelPos: "bottom" as const,
+    labelPos: "bottom",
     mobileName: "Performance"
   },
   {
@@ -47,7 +56,7 @@ const services = [
     name: "SEO",
     icon: Search,
     angle: 30,
-    labelPos: "bottom" as const,
+    labelPos: "bottom",
     mobileName: "SEO"
   },
   {
@@ -55,7 +64,7 @@ const services = [
     name: "CONTENT",
     icon: FileText,
     angle: 70,
-    labelPos: "bottom" as const,
+    labelPos: "bottom",
     mobileName: "Content"
   },
   {
@@ -63,7 +72,7 @@ const services = [
     name: "BRANDING",
     icon: Star,
     angle: 110,
-    labelPos: "bottom" as const,
+    labelPos: "bottom",
     mobileName: "Branding"
   },
   {
@@ -71,7 +80,7 @@ const services = [
     name: "SALES ENABLEMENT",
     icon: Handshake,
     angle: 150,
-    labelPos: "bottom" as const,
+    labelPos: "bottom",
     mobileName: "Sales"
   },
   {
@@ -79,7 +88,7 @@ const services = [
     name: "ANALYTICS",
     icon: Target,
     angle: 190,
-    labelPos: "bottom" as const,
+    labelPos: "bottom",
     mobileName: "Analytics"
   },
   {
@@ -87,7 +96,7 @@ const services = [
     name: "OPTIMIZATION",
     icon: RefreshCw,
     angle: 230,
-    labelPos: "bottom" as const,
+    labelPos: "bottom",
     mobileName: "Optimization"
   },
 ];
