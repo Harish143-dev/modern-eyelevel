@@ -4,6 +4,7 @@ import WavyUnderline from "@/components/shared/WavyUnderline";
 import SEO from "@/components/utils/SEO";
 import { bookingPageSchema } from "@/hooks/schemas";
 import CustomCalendarBooking from "@/components/booking/CustomCalendarBooking";
+import ErrorBoundary from "@/components/utils/ErrorBoundary";
 
 const Booking = () => {
   return (
@@ -56,7 +57,9 @@ const Booking = () => {
             backgroundColor: "#F8FFE8",
           }}
         >
-          <CustomCalendarBooking />
+          <ErrorBoundary>
+            <CustomCalendarBooking />
+          </ErrorBoundary>
         </motion.div>
       </div>
     </div>

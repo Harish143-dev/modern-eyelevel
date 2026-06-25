@@ -14,9 +14,12 @@ import {
   CheckCircle,
   HelpCircle,
   Video,
+  Loader2,
 } from "lucide-react";
 import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
+import { bookCalendarMeeting } from "@/services/bookingService";
 
 // Configuration
 const DISABLE_WEEKENDS = true;
@@ -55,6 +58,8 @@ export default function CustomCalendarBooking() {
   const [step, setStep] = useState<"schedule" | "details">("schedule");
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
+  const [isBooking, setIsBooking] = useState(false);
+  const { toast } = useToast();
 
   // Form Fields
   const [formData, setFormData] = useState<FormData>({
@@ -127,25 +132,110 @@ export default function CustomCalendarBooking() {
     setStep("schedule");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!validateForm() || !selectedDate || !selectedTime) return;
 
-    // Save booking state temporarily in sessionStorage
-    const bookingPayload = {
-      ...formData,
-      date: format(selectedDate, "yyyy-MM-dd"),
-      time: selectedTime,
-      duration: "30 minutes",
-      type: "Free Marketing Consultation",
-      timestamp: new Date().toISOString(),
-    };
+    setIsBooking(true);
 
-    sessionStorage.setItem("eyelevel_booking_pending", JSON.stringify(bookingPayload));
+    try {
+      const parseTimeSlot = (date: Date, timeStr: string): Date => {
+        const match = timeStr.match(/^(\d{2}):(\d{2})\s*(AM|PM)$/i);
+        if (!match) return new Date(date);
+        
+        let [_, hoursStr, minutesStr, ampm] = match;
+        let hours = parseInt(hoursStr, 10);
+        const minutes = parseInt(minutesStr, 10);
+        
+        if (ampm.toUpperCase() === "PM" && hours < 12) {
+          hours += 12;
+        } else if (ampm.toUpperCase() === "AM" && hours === 12) {
+          hours = 0;
+        }
+        
+        const result = new Date(date);
+        result.setHours(hours, minutes, 0, 0);
+        return result;
+      };
 
-    // Redirect to Google Appointment Scheduling
-    window.open(GOOGLE_BOOKING_URL, "_blank", "noopener,noreferrer");
+      const startDateTime = parseTimeSlot(selectedDate, selectedTime);
+      const endDateTime = new Date(startDateTime.getTime() + 30 * 60 * 1000); // 30 minutes duration
+
+      const formatISOWithOffset = (date: Date): string => {
+        const tzo = -date.getTimezoneOffset();
+        const dif = tzo >= 0 ? '+' : '-';
+        const pad = (num: number) => String(num).padStart(2, '0');
+        
+        return date.getFullYear() +
+          '-' + pad(date.getMonth() + 1) +
+          '-' + pad(date.getDate()) +
+          'T' + pad(date.getHours()) +
+          ':' + pad(date.getMinutes()) +
+          ':' + pad(date.getSeconds()) +
+          dif + pad(Math.floor(Math.abs(tzo) / 60)) +
+          ':' + pad(Math.abs(tzo) % 60);
+      };
+
+      const startTimeStr = formatISOWithOffset(startDateTime);
+      const endTimeStr = formatISOWithOffset(endDateTime);
+
+      const descriptionParts = ["Meeting booked from website"];
+      if (formData.company.trim()) {
+        descriptionParts.push(`Company: ${formData.company.trim()}`);
+      }
+      if (formData.goal.trim()) {
+        descriptionParts.push(`Growth Objective: ${formData.goal.trim()}`);
+      }
+
+      const payload = {
+        title: "Project Discussion",
+        description: descriptionParts.join(". "),
+        startTime: startTimeStr,
+        endTime: endTimeStr,
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim(),
+      };
+
+      const response = await bookCalendarMeeting(payload);
+
+      if (response.success) {
+        toast({
+          title: "Booking Confirmed",
+          description: response.message || "Your appointment has been booked successfully.",
+        });
+
+        // Clear the form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          goal: "",
+        });
+        // Reset selected calendar date and slot
+        setSelectedDate(undefined);
+        setSelectedTime(null);
+        // Reset step to schedule page
+        setStep("schedule");
+      } else {
+        toast({
+          title: "Booking Failed",
+          description: response.message || "Selected slot unavailable. Please try another time.",
+          variant: "destructive",
+        });
+      }
+    } catch (error: any) {
+      console.error("Booking submission error:", error);
+      toast({
+        title: "Error booking meeting",
+        description: error?.message || "An unexpected error occurred. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsBooking(false);
+    }
   };
 
   return (
@@ -327,7 +417,8 @@ export default function CustomCalendarBooking() {
               <button
                 type="button"
                 onClick={handleBackToSchedule}
-                className="flex items-center text-xs font-bold text-[#173229]/70 hover:text-[#173229] mb-4 font-bricolage uppercase tracking-wider"
+                disabled={isBooking}
+                className="flex items-center text-xs font-bold text-[#173229]/70 hover:text-[#173229] mb-4 font-bricolage uppercase tracking-wider disabled:opacity-50 disabled:pointer-events-none"
               >
                 <ChevronLeft className="w-4 h-4 mr-1" />
                 Back to Select Date & Time
@@ -353,10 +444,11 @@ export default function CustomCalendarBooking() {
                       type="text"
                       id="name"
                       name="name"
+                      disabled={isBooking}
                       value={formData.name}
                       onChange={handleInputChange}
                       placeholder="John Doe"
-                      className="w-full border rounded-xl px-4 py-3 font-bricolage text-sm focus:outline-none transition-all"
+                      className="w-full border rounded-xl px-4 py-3 font-bricolage text-sm focus:outline-none transition-all disabled:opacity-60"
                       style={{
                         backgroundColor: "rgba(23, 50, 41, 0.04)",
                         borderColor: errors.name ? "rgb(239, 68, 68)" : "rgba(23, 50, 41, 0.15)",
@@ -378,10 +470,11 @@ export default function CustomCalendarBooking() {
                       type="email"
                       id="email"
                       name="email"
+                      disabled={isBooking}
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="john@company.com"
-                      className="w-full border rounded-xl px-4 py-3 font-bricolage text-sm focus:outline-none transition-all"
+                      className="w-full border rounded-xl px-4 py-3 font-bricolage text-sm focus:outline-none transition-all disabled:opacity-60"
                       style={{
                         backgroundColor: "rgba(23, 50, 41, 0.04)",
                         borderColor: errors.email ? "rgb(239, 68, 68)" : "rgba(23, 50, 41, 0.15)",
@@ -403,10 +496,11 @@ export default function CustomCalendarBooking() {
                       type="tel"
                       id="phone"
                       name="phone"
+                      disabled={isBooking}
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="+91 98765 43210"
-                      className="w-full border rounded-xl px-4 py-3 font-bricolage text-sm focus:outline-none transition-all"
+                      className="w-full border rounded-xl px-4 py-3 font-bricolage text-sm focus:outline-none transition-all disabled:opacity-60"
                       style={{
                         backgroundColor: "rgba(23, 50, 41, 0.04)",
                         borderColor: errors.phone ? "rgb(239, 68, 68)" : "rgba(23, 50, 41, 0.15)",
@@ -428,10 +522,11 @@ export default function CustomCalendarBooking() {
                       type="text"
                       id="company"
                       name="company"
+                      disabled={isBooking}
                       value={formData.company}
                       onChange={handleInputChange}
                       placeholder="Acme Corp"
-                      className="w-full border rounded-xl px-4 py-3 font-bricolage text-sm focus:outline-none transition-all"
+                      className="w-full border rounded-xl px-4 py-3 font-bricolage text-sm focus:outline-none transition-all disabled:opacity-60"
                       style={{
                         backgroundColor: "rgba(23, 50, 41, 0.04)",
                         borderColor: "rgba(23, 50, 41, 0.15)",
@@ -450,11 +545,12 @@ export default function CustomCalendarBooking() {
                   <textarea
                     id="goal"
                     name="goal"
+                    disabled={isBooking}
                     rows={3}
                     value={formData.goal}
                     onChange={handleInputChange}
                     placeholder="Tell us about your goals (e.g., scale paid acquisition, rebuild brand design system)..."
-                    className="w-full border rounded-xl px-4 py-3 font-bricolage text-sm focus:outline-none resize-none transition-all"
+                    className="w-full border rounded-xl px-4 py-3 font-bricolage text-sm focus:outline-none resize-none transition-all disabled:opacity-60"
                     style={{
                       backgroundColor: "rgba(23, 50, 41, 0.04)",
                       borderColor: "rgba(23, 50, 41, 0.15)",
@@ -563,17 +659,18 @@ export default function CustomCalendarBooking() {
                   <div className="mt-2 text-xs border-t border-[#173229]/10 pt-4 text-[#173229]/50 flex items-start gap-2 leading-relaxed">
                     <HelpCircle className="w-4 h-4 shrink-0 mt-0.5 text-[#173229]/70" />
                     <span>
-                      After completing Google confirmation, you will receive calendar reminders and join links directly.
+                      After booking, you will receive calendar invitations and joining details directly in your inbox.
                     </span>
                   </div>
                 </div>
               </div>
 
-              {/* Redirection CTA */}
+              {/* Booking CTA */}
               <div className="mt-12 lg:mt-auto pt-8 flex flex-col gap-3">
                 <Button
                   onClick={handleSubmit}
-                  className="w-full flex items-center justify-center gap-2 font-bricolage font-semibold text-sm tracking-wider uppercase group rounded-full hover:translate-y-0.5 hover:shadow-none transition-all duration-150 py-6"
+                  disabled={isBooking}
+                  className="w-full flex items-center justify-center gap-2 font-bricolage font-semibold text-sm tracking-wider uppercase group rounded-full hover:translate-y-0.5 hover:shadow-none transition-all duration-150 py-6 disabled:opacity-50 disabled:pointer-events-none"
                   style={{
                     backgroundColor: "#173229",
                     color: "#F8FFE8",
@@ -581,12 +678,20 @@ export default function CustomCalendarBooking() {
                     boxShadow: "0 4px 0 #0a0a0a",
                   }}
                 >
-                  <span className="sm:hidden">Continue</span>
-                  <span className="hidden sm:inline">Continue to Google Booking</span>
-                  <ArrowRight className="w-4 h-4 shrink-0" />
+                  {isBooking ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin shrink-0" />
+                      <span>Booking Meeting...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>Book Meeting</span>
+                      <ArrowRight className="w-4 h-4 shrink-0" />
+                    </>
+                  )}
                 </Button>
                 <p className="text-[10px] sm:text-xs text-center text-[#173229]/50 font-bricolage leading-relaxed">
-                  Final confirmation will be completed securely through Google Calendar.
+                  Your request will be processed securely. A confirmation email will be sent immediately.
                 </p>
               </div>
             </div>
