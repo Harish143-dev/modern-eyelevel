@@ -24,6 +24,7 @@ const services = [
     icon: Compass,
     angle: -90,
     labelPos: "bottom" as const,
+    mobileName: "Strategy"
   },
   {
     num: "02",
@@ -31,6 +32,7 @@ const services = [
     icon: Palette,
     angle: -50,
     labelPos: "bottom" as const,
+    mobileName: "Creative"
   },
   {
     num: "03",
@@ -38,6 +40,7 @@ const services = [
     icon: TrendingUp,
     angle: -10,
     labelPos: "bottom" as const,
+    mobileName: "Performance"
   },
   {
     num: "04",
@@ -45,6 +48,7 @@ const services = [
     icon: Search,
     angle: 30,
     labelPos: "bottom" as const,
+    mobileName: "SEO"
   },
   {
     num: "05",
@@ -52,6 +56,7 @@ const services = [
     icon: FileText,
     angle: 70,
     labelPos: "bottom" as const,
+    mobileName: "Content"
   },
   {
     num: "06",
@@ -59,6 +64,7 @@ const services = [
     icon: Star,
     angle: 110,
     labelPos: "bottom" as const,
+    mobileName: "Branding"
   },
   {
     num: "07",
@@ -66,6 +72,7 @@ const services = [
     icon: Handshake,
     angle: 150,
     labelPos: "bottom" as const,
+    mobileName: "Sales"
   },
   {
     num: "08",
@@ -73,6 +80,7 @@ const services = [
     icon: Target,
     angle: 190,
     labelPos: "bottom" as const,
+    mobileName: "Analytics"
   },
   {
     num: "09",
@@ -80,12 +88,13 @@ const services = [
     icon: RefreshCw,
     angle: 230,
     labelPos: "bottom" as const,
+    mobileName: "Optimization"
   },
 ];
 
 const HowItConnects = () => {
-  const radius = 38; // percent
-  const dotRadius = 26; // percent
+  const radius = 38;
+  const dotRadius = 26;
 
   return (
     <section className="px-4 sm:px-10 md:px-20 relative bg-forest-green text-left z-10 py-[100px] overflow-hidden">
@@ -95,7 +104,7 @@ const HowItConnects = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column — Content */}
-          <div className="lg:col-span-5 flex flex-col justify-center">
+          <div className="lg:col-span-7 flex flex-col justify-center items-center lg:items-center text-center lg:text-center">
             {/* Eyebrow */}
             <motion.div
               initial={{ y: 30, opacity: 0 }}
@@ -108,21 +117,21 @@ const HowItConnects = () => {
 
             {/* Heading */}
             <h2 className="font-dela text-3xl sm:text-4xl md:text-5xl lg:text-[52px] text-primary mb-6 uppercase tracking-tight leading-[1.1]">
-              These are not nine separate services. <br />
+              These are not nine separate <WavyUnderline>services</WavyUnderline><br />
             </h2>
             {/* Subtle Divider */}
-            <div className="w-12 h-px bg-white/10 mb-8" />
+            <div className="w-12 h-px bg-white/10 mb-8 mx-auto lg:mx-0" />
 
             {/* Body text */}
-            <p className="text-base sm:text-lg font-bricolage text-white/70 leading-relaxed mb-6">
+            <p className="text-base sm:text-lg font-bricolage text-white/70 leading-relaxed mb-6 max-w-xl">
               They are nine parts of one growth system. Strategy informs creative. Creative feeds performance. Performance data shapes SEO. SEO feeds content. Content builds the brand. The brand closes the deal.<br /><br />
               When one studio runs all of it, nothing gets lost in translation.
             </p>
           </div>
 
           {/* Right Column — Circular Diagram */}
-          <div className="lg:col-span-7 flex items-center justify-center relative select-none">
-            <div className="relative w-[340px] h-[340px] xs:w-[400px] xs:h-[400px] sm:w-[480px] sm:h-[480px] md:w-[500px] md:h-[500px]">
+          <div className="lg:col-span-5 flex items-center justify-center relative select-none">
+            <div className="relative w-[90vw] max-w-[500px] aspect-square">
 
               {/* Radial Lines SVG */}
               <svg className="absolute inset-0 w-full h-full pointer-events-none">
@@ -153,7 +162,7 @@ const HowItConnects = () => {
               <div className="w-[32%] h-[32%] rounded-full border border-white/10 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
 
               {/* Dots on Middle Concentric Ring */}
-              {services.map((item, index) => {
+              {/* {services.map((item, index) => {
                 const angleRad = (item.angle * Math.PI) / 180;
                 const left = 50 + dotRadius * Math.cos(angleRad);
                 const top = 50 + dotRadius * Math.sin(angleRad);
@@ -167,17 +176,17 @@ const HowItConnects = () => {
                     }}
                   />
                 );
-              })}
+              })}*/}
 
               {/* Center Engine Node */}
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
-                <div className="w-28 h-28 sm:w-[130px] sm:h-[130px] rounded-full border border-primary/30 bg-[#0f1412] flex flex-col items-center justify-center shadow-[0_0_40px_rgba(226,254,165,0.12)] relative overflow-hidden">
+                <div className="w-16 h-16 sm:w-24 sm:h-24 md:w-[130px] md:h-[130px] rounded-full border border-primary/30 bg-[#0f1412] flex flex-col items-center justify-center shadow-[0_0_40px_rgba(226,254,165,0.12)] relative overflow-hidden">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(226,254,165,0.1)_0%,transparent_75%)] pointer-events-none" />
-                  <LinkIcon className="w-6 h-6 sm:w-7 sm:h-7 text-primary mb-1.5" />
-                  <span className="font-bricolage text-[11px] sm:text-xs font-bold text-white tracking-widest text-center uppercase leading-none block">
+                  <LinkIcon className="w-4 h-4 sm:w-6 sm:h-6 md:w-7 md:h-7 text-primary mb-1" />
+                  <span className="font-bricolage text-[8px] sm:text-[10px] md:text-xs font-bold text-white tracking-wider text-center uppercase leading-none block">
                     GROWTH
                   </span>
-                  <span className="font-bricolage text-[11px] sm:text-xs font-bold text-white tracking-widest text-center uppercase leading-none block mt-1">
+                  <span className="font-bricolage text-[8px] sm:text-[10px] md:text-xs font-bold text-white tracking-wider text-center uppercase leading-none block">
                     ENGINE
                   </span>
                 </div>
@@ -193,7 +202,7 @@ const HowItConnects = () => {
                 return (
                   <motion.div
                     key={`node-${index}`}
-                    className="absolute w-10 h-10 sm:w-12 sm:h-12 z-20 group cursor-pointer"
+                    className="absolute w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 z-20 group cursor-pointer"
                     style={{
                       left: `${left}%`,
                       top: `${top}%`,
@@ -205,21 +214,29 @@ const HowItConnects = () => {
                   >
                     {/* Circle Button */}
                     <div className="w-full h-full rounded-full border border-white/10 bg-[#0d100f] backdrop-blur-md flex items-center justify-center text-primary group-hover:border-primary/50 group-hover:bg-primary/10 transition-all duration-300 shadow-md">
-                      <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary transition-transform duration-300 group-hover:scale-110" />
+                      <Icon className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-primary transition-transform duration-300 group-hover:scale-110" />
                     </div>
 
                     {/* Label (Positioned Absolutely) */}
                     <div
                       className={`absolute left-1/2 -translate-x-1/2 flex flex-col items-center transition-all duration-300 ${item.labelPos === "top"
                         ? "bottom-full mb-2 group-hover:-translate-y-0.5"
-                        : "top-full mt-2 group-hover:translate-y-0.5"
+                        : "top-full mt-3 md:mt-2 group-hover:translate-y-0.5"
                         }`}
                     >
                       <span className="font-bricolage text-[9px] sm:text-[10px] text-primary/80 font-bold block tracking-wider leading-none mb-0.5">
                         {item.num}
                       </span>
-                      <span className="font-bricolage text-[9px] sm:text-[11px] text-white/80 font-semibold text-center uppercase tracking-wide leading-[1.1] w-max max-w-[70px] sm:max-w-[90px] whitespace-normal">
-                        {item.name}
+                      <span className="font-bricolage text-[7px] sm:text-[9px] md:text-[11px] max-w-[45px] sm:max-w-[70px] md:max-w-[90px] leading-tight w-max max-w-[70px] sm:max-w-[90px] whitespace-normal">
+                        <>
+                          <span className="block sm:hidden">
+                            {item.mobileName}
+                          </span>
+
+                          <span className="hidden sm:block">
+                            {item.name}
+                          </span>
+                        </>
                       </span>
                     </div>
                   </motion.div>
@@ -229,7 +246,7 @@ const HowItConnects = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 
