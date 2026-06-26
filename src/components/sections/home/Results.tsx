@@ -79,7 +79,7 @@ const Results = () => {
   };
 
   return (
-    <section className="px-4 bg-forest-deep relative overflow-hidden py-[100px]">
+    <section className="px-4 bg-background relative overflow-hidden py-[100px]">
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Header */}
         <motion.div

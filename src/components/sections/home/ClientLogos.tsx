@@ -39,11 +39,11 @@ const ClientLogos = () => {
   return (
     <section
       style={{
-        backgroundColor: "#253e35",
+        background: "#173229",
       }}
       className="relative px-4 overflow-hidden ] py-[100px]"
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Pill-shaped container */}
         <motion.div
           initial={{

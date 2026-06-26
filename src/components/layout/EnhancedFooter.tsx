@@ -189,7 +189,7 @@ const FOOTER_LEAD_WEBHOOK_URL =
 const EnhancedFooter = ({
   showCTA,
   accentColor = "#E2FEA5",
-  mascotBgClass = "bg-background",
+  mascotBgClass = "bg-forest-green",
 }: EnhancedFooterProps) => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({

@@ -53,7 +53,7 @@ const ComparisonTable = () => {
     return checks.filter((c) => c === "yes" || c === "partial").length;
   };
   return (
-    <section className="px-4 bg-forest-deep relative overflow-hidden py-[100px]">
+    <section className="px-4 bg- relative overflow-hidden py-[100px]">
       <div className="max-w-4xl mx-auto relative z-10">
         {/* <motion.div
            initial={{ opacity: 0, y: 20 }}
@@ -63,7 +63,7 @@ const ComparisonTable = () => {
         >
           <h2 className="font-dela text-2xl md:text-3xl text-white/90">We're not your agency. We're your extended marketing team.</h2>
         </motion.div> */}
-         <motion.div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -74,9 +74,9 @@ const ComparisonTable = () => {
           </h2>
           <p className="font-bricolage text-lg">
             <span
-              className="inline-block px-4 py-2 rounded-full text-sm font-semibold tracking-wider bg-primary text-secondary" 
+              className="inline-block px-4 py-2 rounded-full text-sm font-semibold tracking-wider bg-primary text-secondary"
             >
-             Eight things growth needs. Here's who actually delivers all eight. 
+              Eight things growth needs. Here's who actually delivers all eight.
             </span>
           </p>
         </motion.div>

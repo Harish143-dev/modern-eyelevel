@@ -15,7 +15,7 @@ interface FAQSectionProps {
 }
 const FAQSection = ({
   faqs,
-  bgClass = "bg-forest-deep",
+  bgClass = "bg-background",
 }: FAQSectionProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
