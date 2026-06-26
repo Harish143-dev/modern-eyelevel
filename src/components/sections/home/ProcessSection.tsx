@@ -169,7 +169,7 @@ const ProcessSection = () => {
       ref={containerRef}
       className="relative border-t border-b"
       style={{
-        backgroundColor: "#253e35",
+        backgroundColor: "#173229",
         borderColor: "rgba(248, 255, 232, 0.15)",
         height: "400vh", // Reduced scroll height
       }}

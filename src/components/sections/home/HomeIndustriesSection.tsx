@@ -69,7 +69,7 @@ const industries: Industry[] = [
 
 const HomeIndustriesSection = () => {
   return (
-    <section className="bg-background relative overflow-hidden py-[100px]">
+    <section className="bg-#0D1F1A relative overflow-hidden py-[100px]">
       {/* Container for the text (centered) */}
       <div className="max-w-[1200px] mx-auto px-4 text-center mb-16 el-reveal">
         <GreenButton>INDUSTRIES</GreenButton>
@@ -81,7 +81,7 @@ const HomeIndustriesSection = () => {
           transition={{ duration: 0.6 }}
           className="font-dela text-3xl uppercase md:text-4xl lg:text-5xl text-primary text-foreground mb-6 leading-[1.1] tracking-wide"
         >
-                 Industries <WavyUnderline className="text-white">We work in</WavyUnderline>
+          Industries <WavyUnderline className="text-white">We work in</WavyUnderline>
         </motion.h2>
 
 
@@ -97,15 +97,15 @@ const HomeIndustriesSection = () => {
       </div>
 
       {/* Bottom CTA */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.3 }}
         className="mt-12 md:mt-16 flex justify-center px-4"
       >
-        <Link 
-          to="/industries" 
+        <Link
+          to="/industries"
         >
           <Button
             size="lg"
@@ -173,13 +173,6 @@ const IndustryCard = ({ industry, index }: IndustryCardProps) => {
           <p className="font-bricolage text-sm text-foreground/80 leading-relaxed max-w-xl">
             {industry.description}
           </p>
-
-          <Link to={industry.link} className="flex items-center justify-between group/link gap-4 mt-2 border-t border-primary/20 pt-4">
-            <span className="font-bricolage text-sm font-medium text-primary group-hover/link:text-white transition-colors">
-              {industry.linkText}
-            </span>
-            <ArrowRight className="w-5 h-5 text-primary group-hover/link:translate-x-1 transition-transform" />
-          </Link>
         </div>
 
       </div>

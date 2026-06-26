@@ -6,7 +6,7 @@ import WavyUnderline from "@/components/shared/WavyUnderline";
 
 const CTABand = () => {
   return (
-    <section className="px-4 bg-background relative overflow-hidden py-[100px]">
+    <section className="px-4 bg-secondary relative overflow-hidden py-[100px]">
       <div className="max-w-5xl mx-auto text-center relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

@@ -66,7 +66,7 @@ const Index = () => {
         <Results />
         <CTABand />
         <FAQSection faqs={faqs["Home"]} />
-        <EnhancedFooter showCTA={false} mascotBgClass="bg-forest-deep" />
+        <EnhancedFooter showCTA={false} mascotBgClass="bg-background" />
       </div>
     </>
   );

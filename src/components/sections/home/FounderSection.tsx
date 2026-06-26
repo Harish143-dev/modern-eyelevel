@@ -8,7 +8,7 @@ import founder_home_img from "@/assets/people/akmal_home_img.png"
 
 const FounderSection = () => {
   return (
-    <section className="px-4 bg-background relative overflow-hidden py-[100px]">
+    <section className="px-4 bg-secondary relative overflow-hidden py-[100px]">
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="mb-10 text-center ">
           <GreenButton>The Founder</GreenButton>

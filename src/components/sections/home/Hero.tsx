@@ -140,7 +140,7 @@ const Hero = () => {
               YOUR <WavyUnderline>AD AGENCY</WavyUnderline>
             </span>
           </motion.h1>
-           <div className="w-20 h-1 opacity-50 bg-primary my-8 rounded-full mx-auto"></div>
+          <div className="w-20 h-1 opacity-50 bg-primary my-8 rounded-full mx-auto"></div>
           {/* Subheadline */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -180,7 +180,7 @@ const Hero = () => {
           </motion.div>
 
           {/* Proof row */}
-          <motion.div
+          {/*<motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -191,7 +191,7 @@ const Hero = () => {
             <span>5 verticals with named-employer proof</span>
             <span className="hidden md:inline">&middot;</span>
             <span>1 team, strategy to execution</span>
-          </motion.div>
+          </motion.div>*/}
         </div>
 
       </div>

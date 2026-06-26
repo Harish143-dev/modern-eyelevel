@@ -83,7 +83,7 @@ const services: ServiceItem[] = [
 
 const ServicesSection = () => {
   return (
-    <section className="bg-background relative overflow-hidden py-[100px]">
+    <section className="bg-secondary relative overflow-hidden py-[100px]">
       <div className="max-w-[1200px] mx-auto px-4 relative z-10">
         <div className="text-center mb-16 md:mb-24">
           <GreenButton>Services</GreenButton>
@@ -107,7 +107,7 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
-              className="bg-secondary border border-white/5 rounded-[2rem] p-8 hover:border-primary/30 transition-all duration-300 group flex flex-col h-full shadow-sm hover:shadow-md"
+              className="bg-background border border-white/5 rounded-[2rem] p-8 hover:border-primary/30 transition-all duration-300 group flex flex-col h-full shadow-sm hover:shadow-md"
             >
               <div className="mb-6 flex justify-between items-start">
                 <span className="font-bricolage text-primary text-xl font-bold opacity-80 group-hover:opacity-100 transition-opacity">{service.number}</span>
