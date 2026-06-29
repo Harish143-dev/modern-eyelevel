@@ -24,7 +24,7 @@ export const HeroSection = () => {
 
   return (
     <>
-    {/* Section 1 — Hero */}
+      {/* Section 1 — Hero */}
       <section
         ref={heroRef}
         className="relative min-h-[65vh] lg:min-h-[95vh]  flex items-center px-4 overflow-hidden bg-secondary pt-40 pb-[100px]">
@@ -69,7 +69,7 @@ export const HeroSection = () => {
             transition={{ delay: 1.1 }}
             className="font-bricolage text-lg max-w-3xl mx-auto mb-10 leading-relaxed text-foreground"
           >
-            Strategy, calendars, creative, and posting — fully managed. Communities that convert, not just follower counts.
+            Strategy, calendars, creative, and posting - fully managed. Communities that convert, not just follower counts.
           </motion.p>
 
           <motion.div
@@ -87,7 +87,7 @@ export const HeroSection = () => {
           </motion.div>
         </div>
       </section>
- 
+
     </>
   );
 };

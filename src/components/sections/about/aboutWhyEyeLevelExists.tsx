@@ -164,7 +164,7 @@ const WhyEyeLevelExists = () => {
                 {/* Card footer */}
                 <div className="flex items-center gap-2">
                   <span className="text-primary/60 text-xs font-semibold tracking-widest uppercase font-bricolage">
-                    — Eyelevel growth STUDIO
+                    - Eyelevel growth STUDIO
                   </span>
                 </div>
               </div>

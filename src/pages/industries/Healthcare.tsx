@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import GreenButton from "@/components/shared/GreenButton";
 import WavyUnderline from "@/components/shared/WavyUnderline";
-import problemImage from "@/assets/industries/healthcare_problem_realistic.png";
+import problemImage from "@/assets/industries/new/healthcare_market-problem_1.webp";
 import { motion } from "framer-motion";
 import { healthcareIndustrySchema, breadcrumbSchema } from "@/hooks/schemas";
 

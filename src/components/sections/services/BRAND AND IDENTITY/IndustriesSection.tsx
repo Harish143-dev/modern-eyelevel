@@ -12,6 +12,12 @@ import { Star18 } from "@/components/shared/Star18";
 import SEO from "@/components/utils/SEO";
 import { CardsParallax, type iCardItem } from "@/components/shared/CardsParallax";
 import { brandAndIdentitySchema, breadcrumbSchema } from "@/hooks/schemas";
+import realestateImg from "@/assets/homepage/realestate.webp";
+import healthcareImg from "@/assets/homepage/healthcare.webp";
+import automotiveImg from "@/assets/homepage/automotive.webp";
+import itsaasImg from "@/assets/homepage/ITSAAS.webp";
+import b2bImg from "@/assets/homepage/manufacturingb2b.webp";
+
 
 interface iCardItem {
   title: string;
@@ -28,7 +34,7 @@ const parallaxItems: iCardItem[] = [
       title: "Real Estate",
       description: "Qualified site visit bookings and developer branding.",
       tag: "Real Estate",
-      src: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1000&auto=format&fit=crop",
+      src: realestateImg,
       link: "#",
       color: "#1a2f28",
       textColor: "#F8FFE8",
@@ -37,7 +43,7 @@ const parallaxItems: iCardItem[] = [
       title: "IT / SaaS",
       description: "B2B thought leadership, founder branding, and product updates.",
       tag: "IT/SaaS",
-      src: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&auto=format&fit=crop",
+      src: itsaasImg,
       link: "#",
       color: "#2a4f44",
       textColor: "#F8FFE8",
@@ -46,7 +52,7 @@ const parallaxItems: iCardItem[] = [
       title: "Healthcare",
       description: "Patient calls, doctor-led content, and trust-building feeds.",
       tag: "Healthcare",
-      src: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1000&auto=format&fit=crop",
+      src: healthcareImg,
       link: "#",
       color: "#1a2f28",
       textColor: "#F8FFE8",

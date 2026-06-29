@@ -5,9 +5,13 @@ import WavyUnderline from "@/components/shared/WavyUnderline";
 import GreenButton from "@/components/shared/GreenButton";
 import { Button } from "@/components/ui/button";
 
-import realestateImg from "@/assets/industries/h_industry/realestate.webp";
-import healthcareImg from "@/assets/industries/h_industry/healthcare.webp";
-import b2bImg from "@/assets/industries/h_industry/b2b.webp";
+
+import realestateImg from "@/assets/homepage/realestate.webp";
+import healthcareImg from "@/assets/homepage/healthcare.webp";
+import automotiveImg from "@/assets/homepage/automotive.webp";
+import itsaasImg from "@/assets/homepage/ITSAAS.webp";
+import b2bImg from "@/assets/homepage/manufacturingb2b.webp";
+
 
 export interface Industry {
   id: string;
@@ -36,7 +40,7 @@ const industries: Industry[] = [
     description: "Funded product companies and profitable B2B software. Demand gen, LinkedIn brand, and content that produces pipeline.",
     link: "/industries/it-saas",
     linkText: "Hook: FreshToHome",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+    image: itsaasImg,
   },
   {
     id: "healthcare",
@@ -79,7 +83,7 @@ const HomeIndustriesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-dela text-3xl uppercase md:text-4xl lg:text-5xl text-primary text-foreground mb-6 leading-[1.1] tracking-wide"
+          className="font-dela text-3xl uppercase md:text-4xl lg:text-5xl text-primary mb-6 leading-[1.1] tracking-wide"
         >
           Industries <WavyUnderline className="text-white">We work in</WavyUnderline>
         </motion.h2>
@@ -148,7 +152,7 @@ const IndustryCard = ({ industry, index }: IndustryCardProps) => {
       <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent z-10" />
 
       {/* COLLAPSED STATE CONTENT (Visible on desktop by default, hides on hover) */}
-      <div className="absolute inset-0 p-6 flex flex-col items-center justify-end z-20 md:flex md:group-hover:opacity-0 md:group-hover:pointer-events-none transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] hidden">
+      <div className="absolute inset-0 p-6 flex-col items-center justify-end z-20 md:flex md:group-hover:opacity-0 md:group-hover:pointer-events-none transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] hidden">
         <span className="font-bricolage text-sm text-primary mb-2 md:mb-4 md:[writing-mode:vertical-rl] md:-rotate-180">
           {industry.number}
         </span>

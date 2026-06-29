@@ -53,7 +53,7 @@ const ComparisonTable = () => {
     return checks.filter((c) => c === "yes" || c === "partial").length;
   };
   return (
-    <section className="px-4 bg- relative overflow-hidden py-[100px]">
+    <section className="px-4 bg-secondary relative overflow-hidden py-[100px]">
       <div className="max-w-4xl mx-auto relative z-10">
         {/* <motion.div
            initial={{ opacity: 0, y: 20 }}
@@ -89,14 +89,14 @@ const ComparisonTable = () => {
           className="hidden lg:block rounded-3xl overflow-hidden border border-white/10"
         >
           {/* Table Header */}
-          <div className="grid grid-cols-6 bg-background">
+          <div className="grid grid-cols-6 bg-background items-center">
             <div className="p-6 font-bricolage text-white/50 text-sm font-medium">
               Criteria
             </div>
             {competitors.map((comp, i) => (
               <div
                 key={i}
-                className="p-6 font-bricolage text-white/70 text-sm font-medium text-center border-l border-white/10"
+                className="font-bricolage text-white/70 text-sm font-medium text-center border-l border-white/10"
               >
                 {comp.name}
               </div>
@@ -108,10 +108,10 @@ const ComparisonTable = () => {
               <div
                 className="absolute -top-0 left-1/2 -translate-x-1/2 px-3 py-1 rounded-b-lg bg-background text-primary"
               >
-                <Trophy className="w-4 h-4" />
+                <Trophy className="w-4 h-8" />
               </div>
-              <span className="font-dela text-forest-dark text-sm">
-                Your Extended Marketing Team (Eyelevel)
+              <span className="font-dela text-forest-dark text-sm pt-5 block">
+                Eyelevel
               </span>
             </div>
           </div>

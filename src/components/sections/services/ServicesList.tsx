@@ -4,31 +4,42 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ServiceGallery from "@/components/sections/services/ServiceGallery";
 
-import influencerCelebrityImg from "@/assets/services/content/influencer-celebrity.webp";
-import photoGallery1 from "@/assets/services/content/photo-gallery-1.webp";
-import photoGallery2 from "@/assets/services/content/photo-gallery-2.webp";
-import photoGallery3 from "@/assets/services/content/photo-gallery-3.webp";
-import martechGallery1 from "@/assets/services/content/martech-gallery-1.webp";
-import martechGallery2 from "@/assets/services/content/martech-gallery-2.webp";
-import production_1 from "@/assets/services/content/production_1.webp";
-import production_2 from "@/assets/services/content/production_2.webp";
-import production_3 from "@/assets/services/content/production_3.webp";
-import poster_1 from "@/assets/services/content/poster_1.webp";
-import poster_3 from "@/assets/services/content/poster_3.webp";
-import social_1 from "@/assets/services/social/google.webp";
-import social_2 from "@/assets/services/social/social-media.webp";
-import social_3 from "@/assets/services/social/linkedin.webp";
-import perf_mark_01 from "@/assets/services/social/peformance_marketing_01.webp";
-import perf_mark_02 from "@/assets/services/social/performance_marketing_02.webp";
-import perf_mark_03 from "@/assets/services/social/performance_marketing_03.webp";
-import performance_1 from "@/assets/services/social/Performance marketing.webp"
-import celebrityEvent from "@/assets/services/content/celebrity.webp";
-import meeting from "@/assets/services/content/meeting.webp";
-import crm from "@/assets/services/content/crm.webp";
-import web_1 from "@/assets/mockup/web_1.webp";
-import web_2 from "@/assets/mockup/web_2.webp";
-import web_3 from "@/assets/mockup/web_3.webp";
-import web_4 from "@/assets/mockup/web_4.webp";
+import influencerCelebrityImg from "@/assets/services/influencer-celebrity.webp";
+import photoGallery1 from "@/assets/services/photo-gallery-1.webp";
+import photoGallery2 from "@/assets/services/photo-gallery-2.webp";
+import photoGallery3 from "@/assets/services/photo-gallery-3.webp";
+import martechGallery1 from "@/assets/services/martech-gallery-1.webp";
+import martechGallery2 from "@/assets/services/martech-gallery-2.webp";
+import production_1 from "@/assets/services/content-production-1.webp";
+import production_2 from "@/assets/services/content-production-2.webp";
+import production_3 from "@/assets/services/content-production-3.webp";
+import poster_1 from "@/assets/services/cro-poster-1.webp";
+import poster_3 from "@/assets/services/cro-poster-3.webp";
+import social_1 from "@/assets/services/seo-social.webp";
+import social_2 from "@/assets/services/social-media.webp";
+import perf_mark_01 from "@/assets/services/performance-marketing-1.webp";
+import perf_mark_02 from "@/assets/services/performance-marketing-2.webp";
+import perf_mark_03 from "@/assets/services/performance-marketing-3.webp";
+import celebrityEvent from "@/assets/services/celebrity.webp";
+import meeting from "@/assets/services/meeting.webp";
+import crm from "@/assets/services/crm.webp";
+import web_1 from "@/assets/services/web-design-1.webp";
+import web_2 from "@/assets/services/web-design-2.webp";
+import web_3 from "@/assets/services/web-design-3.webp";
+import web_4 from "@/assets/services/web-design-4.webp";
+import social from "@/assets/services/social-media-management.webp";
+import linkedinb2b_2 from "@/assets/services/linkedinb2b_2.webp";
+import crofunneldesign_1 from "@/assets/services/crofunneldesign.webp";
+import crofunneldesign_2 from "@/assets/services/crofunneldesign_2.webp";
+import crofunneldesign_3 from "@/assets/services/crofunneldesign_1.webp";
+import revenueattribution_1 from "@/assets/services/revenueattribution_1.webp";
+import revenueattribution_2 from "@/assets/services/revenueattribution_2.webp";
+import brandandidentity_1 from "@/assets/services/cro-poster-3.webp";
+import brandandidentity_2 from "@/assets/services/social_media_1.webp";
+import brandandidentity_3 from "@/assets/works/shoot_1.webp";
+import aiseo_1 from "@/assets/services/aiseo_3.webp";
+import aiseo_2 from "@/assets/services/aiseo_2.webp";
+import linkedinb2b_3 from "@/assets/services/linkedinb2b_3.webp";
 
 const services = [
   {
@@ -59,11 +70,14 @@ const services = [
     description:
       " Traditional SEO is table stakes. We add AEO (AI Overviews, featured snippets) and GEO (ChatGPT, Gemini, Perplexity citations). Buyers get answers before they click. We make sure yours is the answer they get.",
     media: [
-      { src: "https://connectedmarkets.com/wp-content/uploads/2025/02/AI-SEO-in-2025-1200x686.webp", type: "image" as const }, {
+      { src: aiseo_1, type: "image" as const }, {
         src: social_1,
         type: "image" as const,
       },
-
+      {
+        src: aiseo_2,
+        type: "image" as const,
+      }
     ],
     bgColor: "#0D1F1A",
     cta: { text: "Learn More →", link: "/services/ai-era-seo" },
@@ -77,6 +91,10 @@ const services = [
       { src: influencerCelebrityImg, type: "image" as const },
       {
         src: celebrityEvent,
+        type: "image" as const,
+      },
+      {
+        src: social,
         type: "image" as const,
       },
     ],
@@ -109,9 +127,12 @@ const services = [
         src: meeting,
         type: "image" as const,
       },
-
       {
-        src: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+        src: linkedinb2b_2,
+        type: "image" as const,
+      },
+      {
+        src: linkedinb2b_3,
         type: "image" as const,
       },
     ],
@@ -124,15 +145,15 @@ const services = [
     description:
       "We fix what happens after the click. Landing pages, conversion flows, lead qualification systems built to turn visitors into conversations.", media: [
         {
-          src: poster_1,
+          src: crofunneldesign_3,
           type: "image" as const,
         },
         {
-          src: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=80",
+          src: crofunneldesign_1,
           type: "image" as const,
         },
         {
-          src: poster_3,
+          src: crofunneldesign_2,
           type: "image" as const,
         },
       ],
@@ -146,7 +167,8 @@ const services = [
       " Bundled into every growth retainer. Every channel tied to a business outcome. You will always know which activity is producing revenue and which one to cut.",
     media: [
       { src: crm, type: "image" as const },
-      { src: social_2, type: "image" as const },
+      { src: revenueattribution_1, type: "image" as const },
+      { src: revenueattribution_2, type: "image" as const },
     ],
     bgColor: "#1a2f28",
     cta: { text: "Learn More →", link: "/services/revenue-attribution-dashboard" },
@@ -157,9 +179,9 @@ const services = [
     description:
       "Visual identity, positioning, and brand architecture for companies that are growing and need their brand to do the work. Logo, guidelines, tone of voice, and the full system.",
     media: [
-      { src: martechGallery1, type: "image" as const },
-      { src: martechGallery2, type: "image" as const },
-      { src: crm, type: "image" as const },
+      { src: brandandidentity_1, type: "image" as const },
+      { src: brandandidentity_2, type: "image" as const },
+      { src: brandandidentity_3, type: "image" as const },
     ],
     bgColor: "#0D1F1A",
     cta: { text: "Learn More →", link: "/services/brand-and-identity" },

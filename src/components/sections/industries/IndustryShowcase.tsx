@@ -1,14 +1,14 @@
 import industryEducation from "@/assets/industries/edu.webp";
 import industrySports from "@/assets/industries/sport.webp";
-import industryRealestate from "@/assets/industries/real_estate_problem_edited.png";
+import industryRealestate from "@/assets/industries/new/realestate.webp";
 import industryB2b from "@/assets/industries/b2b.webp";
 import pickelball from "@/assets/industries/pickleball.webp";
-import industrySaas from "@/assets/industries/itsaas_problem_realistic.png";
+import industrySaas from "@/assets/industries/new/saas.webp";
 import industryD2d from "@/assets/industries/d2c.webp";
-import industryHealthcare from "@/assets/industries/healthcare_problem_realistic.png";
+import industryHealthcare from "@/assets/industries/new/healthcare.webp";
 import industryOffshore from "@/assets/industries/offshore.webp";
-import industryAutomotive from "@/assets/industries/automotive_problem_realistic.png";
-import industryManufacturing from "@/assets/industries/manufacturing_problem_realistic_v2.png";
+import industryAutomotive from "@/assets/industries/new/automative.webp";
+import industryManufacturing from "@/assets/industries/new/Automation.webp";
 
 export interface IndustryPageItem {
   id: string;
@@ -68,7 +68,7 @@ export const industriesPageData: IndustryPageItem[] = [
     longDescription: "Digital marketing for hospitals, clinics, and wellness brands. GMB optimisation, patient acquisition campaigns, and content.",
     href: "/industries/healthcare",
     image: industryHealthcare,
-    accentColor: "#FFB4B4",
+    accentColor: "#E2FEA5",
     stats: [],
     capabilities: ["AI-Era SEO", "Social Media", "Performance Marketing", "Content and Creative", "CRO and Funnel Design"],
   },
@@ -100,7 +100,7 @@ export const industriesPageData: IndustryPageItem[] = [
     longDescription: "LinkedIn, SEO, and content for Chennai and Coimbatore manufacturers. Your buyers moved online — we help them find you and choose you before the first call.",
     href: "/industries/manufacturing-b2b",
     image: industryManufacturing,
-    accentColor: "#C7B6FF",
+    accentColor: "#E2FEA5",
     stats: [],
     capabilities: ["LinkedIn B2B Marketing", "AI-Era SEO", "Content and Creative", "Website Design and Development", "Revenue Attribution Dashboard"],
   },
@@ -334,7 +334,7 @@ export const IndustryShowcase = ({ industry, index }: IndustryShowcaseProps) => 
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden group">
+            <div className="relative aspect-[9/11] rounded-3xl overflow-hidden group">
               {/* Image with parallax */}
               <motion.div
                 style={{ scale: imageScale }}

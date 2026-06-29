@@ -4,15 +4,15 @@ import { Button } from "@/components/ui/button";
 import GreenButton from "@/components/shared/GreenButton";
 import {
   Link as LinkIcon,
-  Compass,
-  Palette,
   TrendingUp,
   Search,
-  FileText,
+  Users,
+  Palette,
+  Linkedin,
+  Filter,
+  PieChart,
   Star,
-  Handshake,
-  Target,
-  RefreshCw,
+  Layout,
   ArrowRight
 } from "lucide-react";
 import WavyUnderline from "@/components/shared/WavyUnderline";
@@ -29,76 +29,76 @@ interface ServiceItem {
 const services: ServiceItem[] = [
   {
     num: "01",
-    name: "STRATEGY",
-    icon: Compass,
-    angle: -90,
-    labelPos: "bottom",
-    mobileName: "Strategy"
-  },
-  {
-    num: "02",
-    name: "CREATIVE",
-    icon: Palette,
-    angle: -50,
-    labelPos: "bottom",
-    mobileName: "Creative"
-  },
-  {
-    num: "03",
-    name: "PERFORMANCE",
+    name: "PERFORMANCE MARKETING",
     icon: TrendingUp,
-    angle: -10,
+    angle: -90,
     labelPos: "bottom",
     mobileName: "Performance"
   },
   {
-    num: "04",
-    name: "SEO",
+    num: "02",
+    name: "AI ERA SEO",
     icon: Search,
-    angle: 30,
+    angle: -50,
     labelPos: "bottom",
     mobileName: "SEO"
   },
   {
-    num: "05",
-    name: "CONTENT",
-    icon: FileText,
-    angle: 70,
+    num: "03",
+    name: "SOCIAL MEDIA MANAGEMENT",
+    icon: Users,
+    angle: -10,
+    labelPos: "bottom",
+    mobileName: "Social Media"
+  },
+  {
+    num: "04",
+    name: "CONTENT AND CREATIVE",
+    icon: Palette,
+    angle: 30,
     labelPos: "bottom",
     mobileName: "Content"
   },
   {
+    num: "05",
+    name: "LINKEDIN B2B MARKETING",
+    icon: Linkedin,
+    angle: 70,
+    labelPos: "bottom",
+    mobileName: "LinkedIn B2B"
+  },
+  {
     num: "06",
-    name: "BRANDING",
-    icon: Star,
+    name: "CRO AND FUNNEL DESIGN",
+    icon: Filter,
     angle: 110,
+    labelPos: "bottom",
+    mobileName: "CRO & Funnel"
+  },
+  {
+    num: "07",
+    name: "REVENUE ATTRIBUTION DASHBOARD",
+    icon: PieChart,
+    angle: 150,
+    labelPos: "bottom",
+    mobileName: "Attribution"
+  },
+  {
+    num: "08",
+    name: "BRAND AND IDENTITY",
+    icon: Star,
+    angle: 190,
     labelPos: "bottom",
     mobileName: "Branding"
   },
   {
-    num: "07",
-    name: "SALES ENABLEMENT",
-    icon: Handshake,
-    angle: 150,
-    labelPos: "bottom",
-    mobileName: "Sales"
-  },
-  {
-    num: "08",
-    name: "ANALYTICS",
-    icon: Target,
-    angle: 190,
-    labelPos: "bottom",
-    mobileName: "Analytics"
-  },
-  {
     num: "09",
-    name: "OPTIMIZATION",
-    icon: RefreshCw,
+    name: "WEBSITE DESIGN AND DEVELOPMENT",
+    icon: Layout,
     angle: 230,
     labelPos: "bottom",
-    mobileName: "Optimization"
-  },
+    mobileName: "Web Design"
+  }
 ];
 
 const HowItConnects = () => {
@@ -233,10 +233,10 @@ const HowItConnects = () => {
                         : "top-full mt-3 md:mt-2 group-hover:translate-y-0.5"
                         }`}
                     >
-                      <span className="font-bricolage text-[9px] sm:text-[10px] text-primary/80 font-bold block tracking-wider leading-none mb-0.5">
+                      <span className="font-bricolage text-[9px] sm:text-[10px] text-primary/80 font-bold block tracking-wider leading-none mb-0.5 text-center">
                         {item.num}
                       </span>
-                      <span className="font-bricolage text-[7px] sm:text-[9px] md:text-[11px] max-w-[45px] sm:max-w-[70px] md:max-w-[90px] leading-tight w-max max-w-[70px] sm:max-w-[90px] whitespace-normal">
+                      <span className="font-bricolage text-[7px] sm:text-[9px] md:text-[11px] max-w-[50px] sm:max-w-[70px] md:max-w-[90px] leading-tight w-max whitespace-normal text-center">
                         <>
                           <span className="block sm:hidden">
                             {item.mobileName}
