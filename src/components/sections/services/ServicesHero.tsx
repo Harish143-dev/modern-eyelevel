@@ -50,7 +50,7 @@ const ServicesHero = () => {
     lottieRef.current.setSpeed(1.5);
     lottieRef.current.goToAndPlay(0, true);
   };
-  
+
   useEffect(() => {
     if (animationData && !hasPlayedInitial.current) {
       playAnimation();
@@ -140,7 +140,7 @@ const ServicesHero = () => {
             </span>
           </span>
         </motion.h1>
-         <div className="w-20 h-1 opacity-50 bg-primary my-8 rounded-full mx-auto"></div>
+        <div className="w-20 h-1 opacity-50 bg-primary my-8 rounded-full mx-auto"></div>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -148,7 +148,7 @@ const ServicesHero = () => {
           className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto font-bricolage leading-relaxed"
           style={{ color: "rgba(248, 255, 232, 0.7)" }}
         >
-          Most companies run 3 to 5 vendors for what we do inside one studio. Strategy, performance, content, SEO, and creative — all connected, all accountable to the same outcome.
+          Most companies run 3 to 5 vendors for what we do inside one studio. Strategy, performance, content, SEO, and creatives - all connected, all accountable to the same outcome.
         </motion.p>
       </div>
       <div className="flex items-center rounded-full relative font-bricolage z-1000 mt-8 justify-start gap-4">

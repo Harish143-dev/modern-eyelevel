@@ -16,7 +16,7 @@ const ServicesCTA = () => {
         >
           <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-dela mb-6 uppercase text-primary">
             Which service does your marketing{" "}
-            <WavyUnderline>need most?</WavyUnderline>
+            <WavyUnderline>need the most?</WavyUnderline>
           </h2>
 
           <p

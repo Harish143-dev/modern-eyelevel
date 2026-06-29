@@ -145,7 +145,7 @@ const Industries = () => {
               animationData={animationData}
               autoPlay={false}
               loop
-              className="absolute sm: -top-[-19px] -right-[0px] md:right-[100px] lg:right-[190px] -top-[5px] w-[130px] md:-top-[10px] md:w-[180px] lg:-top-[35px] lg:w-[220px] pointer-events-none"
+              className="absolute -right-[0px] md:right-[100px] lg:right-[190px] -top-[5px] w-[130px] md:-top-[10px] md:w-[180px] lg:-top-[35px] lg:w-[220px] pointer-events-none"
             />
           )}
           <motion.h1
@@ -157,7 +157,7 @@ const Industries = () => {
             INDUSTRIES <WavyUnderline>WE GROW</WavyUnderline>
           </motion.h1>
 
-           <div className="w-20 h-1 opacity-50 bg-primary my-8 rounded-full mx-auto"></div>
+          <div className="w-20 h-1 opacity-50 bg-primary my-8 rounded-full mx-auto"></div>
 
           <motion.p
             initial={{ y: 20 }}
@@ -235,7 +235,7 @@ const Industries = () => {
 
       {/* faqs */}
       <FAQSection faqs={faqs["Industries"]} />
-      <EnhancedFooter mascotBgClass="bg-forest-deep" showCTA={false} />
+      <EnhancedFooter mascotBgClass="bg-background" showCTA={false} />
     </div>
   );
 };

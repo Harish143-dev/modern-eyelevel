@@ -67,7 +67,7 @@ const FounderSection = () => {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative w-4/5 lg:w-[80%] mx-auto aspect-[4/5] rounded-[2rem] overflow-hidden group border border-2 border-primary/10 flex items-end justify-center px-6 pt-6 md:px-0 md:pt-8">
+            <div className="relative w-4/5 lg:w-[80%] mx-auto aspect-[4/5] rounded-[2rem] overflow-hidden group border-2 border-primary/10 flex items-end justify-center px-6 pt-6 md:px-0 md:pt-8">
               {/* Background styling for image container */}
               <div className="absolute inset-0 transition-opacity duration-500 z-10 pointer-events-none" />
 
