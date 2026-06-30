@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { MessageCircle } from "lucide-react";
-import mascotPointing from "@/assets/mascot/mascot-pointing.png";
+import mascotPointing from "@/assets/global/mascot/mascot-pointing.png";
 
 const faqs = [
   {

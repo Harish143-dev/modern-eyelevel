@@ -234,7 +234,7 @@ const Industries = () => {
       ))}
 
       {/* faqs */}
-      <FAQSection faqs={faqs["Industries"]} />
+      <FAQSection bgClass="bg-background" faqs={faqs["Industries"]} />
       <EnhancedFooter mascotBgClass="bg-background" showCTA={false} />
     </div>
   );

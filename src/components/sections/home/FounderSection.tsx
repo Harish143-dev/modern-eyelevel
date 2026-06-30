@@ -3,8 +3,8 @@ import WavyUnderline from "@/components/shared/WavyUnderline";
 import GreenButton from "@/components/shared/GreenButton";
 import { Quote, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import founderImg from "@/assets/people/akmal.webp";
-import founder_home_img from "@/assets/people/akmal_home_img.png"
+import founderImg from "@/assets/content/people/akmal.webp";
+import founder_home_img from "@/assets/content/people/akmal_home_img.png"
 
 const FounderSection = () => {
   return (

@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import GreenButton from "@/components/shared/GreenButton";
 import WavyUnderline from "@/components/shared/WavyUnderline";
-import problemImage from "@/assets/industries/itsaas_problem_realistic.png";
+import problemImage from "@/assets/pages/industries/itsaas_problem_realistic.png";
 import { motion } from "framer-motion";
 import { itSaaSIndustrySchema, breadcrumbSchema } from "@/hooks/schemas";
 

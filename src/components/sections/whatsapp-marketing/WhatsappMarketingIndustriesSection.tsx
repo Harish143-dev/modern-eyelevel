@@ -1,8 +1,8 @@
 import WhatsappMarketingSectionHeader from "./WhatsappMarketingSectionHeader";
-import d2cImage from "@/assets/services/whatsappMarketing/d2d.webp";
-import healthcareImage from "@/assets/services/whatsappMarketing/healthcare.webp";
-import educationImage from "@/assets/services/whatsappMarketing/preschool.webp";
-import saasImage from "@/assets/services/whatsappMarketing/saas.webp";
+import d2cImage from "@/assets/pages/services/whatsappMarketing/d2d.webp";
+import healthcareImage from "@/assets/pages/services/whatsappMarketing/healthcare.webp";
+import educationImage from "@/assets/pages/services/whatsappMarketing/preschool.webp";
+import saasImage from "@/assets/pages/services/whatsappMarketing/saas.webp";
 
 const industries = [
   {

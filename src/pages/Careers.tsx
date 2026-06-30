@@ -13,9 +13,9 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import WavyUnderline from "@/components/shared/WavyUnderline";
-import mascotWave from "@/assets/mascot/mascot-wave.png";
+import mascotWave from "@/assets/global/mascot/mascot-wave.png";
 import GreenButton from "@/components/shared/GreenButton";
-import career_mascot from "@/assets/mascot/career_mascot.webp";
+import career_mascot from "@/assets/global/mascot/career_mascot.webp";
 import { useEffect, useRef, useState } from "react";
 import ClientLottie, { type ClientLottieRef } from "@/components/shared/ClientLottie";
 import SEO from "@/components/utils/SEO";

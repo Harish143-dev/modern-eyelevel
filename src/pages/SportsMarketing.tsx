@@ -19,10 +19,10 @@ import {
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import WavyUnderline from "@/components/shared/WavyUnderline";
-import sportsGallery1 from "@/assets/galleries/sports/sports-gallery-1.jpg";
-import sportsGallery2 from "@/assets/galleries/sports/sports-gallery-2.jpg";
-import sportsGallery3 from "@/assets/galleries/sports/sports-gallery-3.jpg";
-import mascotTrophy from "@/assets/mascot/mascot-trophy-new.png";
+import sportsGallery1 from "@/assets/content/works/galleries/sports/sports-gallery-1.jpg";
+import sportsGallery2 from "@/assets/content/works/galleries/sports/sports-gallery-2.jpg";
+import sportsGallery3 from "@/assets/content/works/galleries/sports/sports-gallery-3.jpg";
+import mascotTrophy from "@/assets/global/mascot/mascot-trophy-new.png";
 import {
   ImageGallerySection,
   TestimonialsSection,

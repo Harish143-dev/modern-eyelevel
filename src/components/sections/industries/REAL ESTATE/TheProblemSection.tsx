@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import GreenButton from "@/components/shared/GreenButton";
 import WavyUnderline from "@/components/shared/WavyUnderline";
-import problemImage from "@/assets/industries/new/realestateproblems.webp";
+import problemImage from "@/assets/pages/industries/new/realestateproblems.webp";
 import { motion } from "framer-motion";
 import { realEstateIndustrySchema, breadcrumbSchema } from "@/hooks/schemas";
 

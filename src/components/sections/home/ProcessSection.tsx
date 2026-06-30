@@ -15,10 +15,10 @@ type AnimationMap = Partial<Record<AnimationKey, unknown>>;
 const animationOrder: AnimationKey[] = ["stare", "scatt", "blocks", "gun"];
 const animationLoaders: Record<AnimationKey, () => Promise<{ default: unknown }>> =
 {
-  stare: () => import("@/assets/stackingCardsAnimation/stare.json"),
-  scatt: () => import("@/assets/stackingCardsAnimation/scatt.json"),
-  blocks: () => import("@/assets/stackingCardsAnimation/blocks.json"),
-  gun: () => import("@/assets/stackingCardsAnimation/gun.json"),
+  stare: () => import("@/assets/animations/stacking-cards/stare.json"),
+  scatt: () => import("@/assets/animations/stacking-cards/scatt.json"),
+  blocks: () => import("@/assets/animations/stacking-cards/blocks.json"),
+  gun: () => import("@/assets/animations/stacking-cards/gun.json"),
 };
 
 const processSteps = [

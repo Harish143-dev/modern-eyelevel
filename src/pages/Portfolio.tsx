@@ -16,28 +16,28 @@ import {
   WandSparkles,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import poster1 from "@/assets/services/cro-poster-1.webp";
-import poster3 from "@/assets/services/cro-poster-3.webp";
-import production1 from "@/assets/services/content-production-1.webp";
-import production2 from "@/assets/services/content-production-2.webp";
-import production3 from "@/assets/services/content-production-3.webp";
-import photoGallery1 from "@/assets/services/photo-gallery-1.webp";
-import photoGallery2 from "@/assets/services/photo-gallery-2.webp";
-import photoGallery3 from "@/assets/services/photo-gallery-3.webp";
-import socialMedia from "@/assets/services/social-media.webp";
-import web1 from "@/assets/services/web-design-1.webp";
-import web2 from "@/assets/services/web-design-2.webp";
-import web3 from "@/assets/services/web-design-3.webp";
-import web4 from "@/assets/services/web-design-4.webp";
-import logo1 from "@/assets/logos/logo_1.png";
-import logo2 from "@/assets/logos/logo_2.png";
-import logo3 from "@/assets/logos/logo_3.webp";
-import logo4 from "@/assets/logos/logo_4.png";
-import logo5 from "@/assets/logos/logo_5.png";
-import logo6 from "@/assets/logos/logo_6.png";
-import logo7 from "@/assets/logos/logo_7.png";
-import logo8 from "@/assets/logos/logo_8.png";
-import logo9 from "@/assets/logos/logo_9.png";
+import poster1 from "@/assets/pages/services/cro-poster-1.webp";
+import poster3 from "@/assets/pages/services/cro-poster-3.webp";
+import production1 from "@/assets/pages/services/content-production-1.webp";
+import production2 from "@/assets/pages/services/content-production-2.webp";
+import production3 from "@/assets/pages/services/content-production-3.webp";
+import photoGallery1 from "@/assets/pages/services/photo-gallery-1.webp";
+import photoGallery2 from "@/assets/pages/services/photo-gallery-2.webp";
+import photoGallery3 from "@/assets/pages/services/photo-gallery-3.webp";
+import socialMedia from "@/assets/pages/services/social-media.webp";
+import web1 from "@/assets/pages/services/web-design-1.webp";
+import web2 from "@/assets/pages/services/web-design-2.webp";
+import web3 from "@/assets/pages/services/web-design-3.webp";
+import web4 from "@/assets/pages/services/web-design-4.webp";
+import logo1 from "@/assets/global/logos/logo_1.png";
+import logo2 from "@/assets/global/logos/logo_2.png";
+import logo3 from "@/assets/global/logos/logo_3.webp";
+import logo4 from "@/assets/global/logos/logo_4.png";
+import logo5 from "@/assets/global/logos/logo_5.png";
+import logo6 from "@/assets/global/logos/logo_6.png";
+import logo7 from "@/assets/global/logos/logo_7.png";
+import logo8 from "@/assets/global/logos/logo_8.png";
+import logo9 from "@/assets/global/logos/logo_9.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 36 },

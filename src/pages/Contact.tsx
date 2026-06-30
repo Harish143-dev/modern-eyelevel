@@ -52,7 +52,7 @@ const Contact = () => {
           <ContactWhatToExpect />
           <ContactDirectDetails />
         </main>
-        <FAQSection faqs={faqs["Contact"]} />
+        <FAQSection bgClass="bg-forest-deep" faqs={faqs["Contact"]} />
         <EnhancedFooter showCTA={false} mascotBgClass="bg-forest-deep" />
       </div>
     </>

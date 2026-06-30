@@ -6,7 +6,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import GreenButton from "@/components/shared/GreenButton";
 import WavyUnderline from "@/components/shared/WavyUnderline";
-import problemImage from "@/assets/industries/new/manufacturing_market_problem_2.webp";
+import problemImage from "@/assets/pages/industries/new/manufacturing_market_problem_2.webp";
 import { motion } from "framer-motion";
 import { manufacturingB2BIndustrySchema, breadcrumbSchema } from "@/hooks/schemas";
 

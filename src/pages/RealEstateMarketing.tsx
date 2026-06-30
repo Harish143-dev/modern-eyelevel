@@ -21,10 +21,10 @@ import {
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import WavyUnderline from "@/components/shared/WavyUnderline";
-import realestateGallery1 from "@/assets/galleries/realestate/realestate-gallery-1.jpg";
-import realestateGallery2 from "@/assets/galleries/realestate/realestate-gallery-2.jpg";
-import realestateGallery3 from "@/assets/galleries/realestate/realestate-gallery-3.jpg";
-import mascotTrophy from "@/assets/mascot/mascot-trophy-new.png";
+import realestateGallery1 from "@/assets/content/works/galleries/realestate/realestate-gallery-1.jpg";
+import realestateGallery2 from "@/assets/content/works/galleries/realestate/realestate-gallery-2.jpg";
+import realestateGallery3 from "@/assets/content/works/galleries/realestate/realestate-gallery-3.jpg";
+import mascotTrophy from "@/assets/global/mascot/mascot-trophy-new.png";
 import {
   ImageGallerySection,
   TestimonialsSection,

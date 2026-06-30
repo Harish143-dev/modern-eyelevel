@@ -4,7 +4,7 @@ import EnhancedFooter from "@/components/layout/EnhancedFooter";
 import { motion } from "framer-motion";
 import { CheckCircle, ArrowRight, Home, Briefcase, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import mascotTrophy from "@/assets/mascot/mascot_transparent.webp";
+import mascotTrophy from "@/assets/global/mascot/mascot_transparent.webp";
 import SEO from "@/components/utils/SEO";
 
 type ThankYouType = "application" | "contact" | "booking" | "general";

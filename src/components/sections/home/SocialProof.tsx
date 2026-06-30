@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useScroll, useTransform } from "framer-motion";
 import { Star } from "lucide-react";
-import mascotThumbsup from "@/assets/mascot/mascot-thumbsup.png";
+import mascotThumbsup from "@/assets/global/mascot/mascot-thumbsup.png";
 
 const stats = [
   { value: "50%", label: "Average Increase in Qualified Leads", color: "from-orange to-pink" },

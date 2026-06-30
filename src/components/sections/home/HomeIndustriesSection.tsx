@@ -6,11 +6,11 @@ import GreenButton from "@/components/shared/GreenButton";
 import { Button } from "@/components/ui/button";
 
 
-import realestateImg from "@/assets/homepage/realestate.webp";
-import healthcareImg from "@/assets/homepage/healthcare.webp";
-import automotiveImg from "@/assets/homepage/automotive.webp";
-import itsaasImg from "@/assets/homepage/ITSAAS.webp";
-import b2bImg from "@/assets/homepage/manufacturingb2b.webp";
+import realestateImg from "@/assets/pages/homepage/realestate.webp";
+import healthcareImg from "@/assets/pages/homepage/healthcare.webp";
+import automotiveImg from "@/assets/pages/homepage/automotive.webp";
+import itsaasImg from "@/assets/pages/homepage/ITSAAS.webp";
+import b2bImg from "@/assets/pages/homepage/manufacturingb2b.webp";
 
 
 export interface Industry {
