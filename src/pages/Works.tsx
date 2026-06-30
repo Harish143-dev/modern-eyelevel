@@ -8,25 +8,25 @@ import { Button } from "@/components/ui/button";
 
 // images
 
-import print_2 from "@/assets/works/print_2.webp";
-import print_3 from "@/assets/works/print_3.webp";
+import print_2 from "@/assets/content/works/misc/print_2.webp";
+import print_3 from "@/assets/content/works/misc/print_3.webp";
 
-import brand_1 from "@/assets/works/brand_1.webp";
-import brand_2 from "@/assets/works/brand_2.webp";
+import brand_1 from "@/assets/content/works/misc/brand_1.webp";
+import brand_2 from "@/assets/content/works/misc/brand_2.webp";
 
-import brand_4 from "@/assets/works/brand_4.webp";
-import brand_5 from "@/assets/works/brand_5.webp";
-import brand_6 from "@/assets/works/brand_6.webp";
-import brand_7 from "@/assets/works/brand_7.webp";
+import brand_4 from "@/assets/content/works/misc/brand_4.webp";
+import brand_5 from "@/assets/content/works/misc/brand_5.webp";
+import brand_6 from "@/assets/content/works/misc/brand_6.webp";
+import brand_7 from "@/assets/content/works/misc/brand_7.webp";
 
-import social_1 from "@/assets/works/social_media_1.webp";
-import social_2 from "@/assets/works/social_media_2.webp";
-import social_3 from "@/assets/works/social_media_3.webp";
+import social_1 from "@/assets/content/works/misc/social_media_1.webp";
+import social_2 from "@/assets/content/works/misc/social_media_2.webp";
+import social_3 from "@/assets/content/works/misc/social_media_3.webp";
 
-import web_1 from "@/assets/works/web_1.webp";
-import web_2 from "@/assets/works/web_2.webp";
+import web_1 from "@/assets/content/works/misc/web_1.webp";
+import web_2 from "@/assets/content/works/misc/web_2.webp";
 
-import shoot_1 from "@/assets/works/shoot_1.webp";
+import shoot_1 from "@/assets/content/works/misc/shoot_1.webp";
 
 type Category =
   | "Social Media"

@@ -20,10 +20,10 @@ import {
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import WavyUnderline from "@/components/shared/WavyUnderline";
-import b2bGallery1 from "@/assets/galleries/b2b/b2b-gallery-1.jpg";
-import b2bGallery2 from "@/assets/galleries/b2b/b2b-gallery-2.jpg";
-import b2bGallery3 from "@/assets/galleries/b2b/b2b-gallery-3.jpg";
-import mascotTrophy from "@/assets/mascot/mascot-trophy-new.png";
+import b2bGallery1 from "@/assets/content/works/galleries/b2b/b2b-gallery-1.jpg";
+import b2bGallery2 from "@/assets/content/works/galleries/b2b/b2b-gallery-2.jpg";
+import b2bGallery3 from "@/assets/content/works/galleries/b2b/b2b-gallery-3.jpg";
+import mascotTrophy from "@/assets/global/mascot/mascot-trophy-new.png";
 import {
   ImageGallerySection,
   TestimonialsSection,

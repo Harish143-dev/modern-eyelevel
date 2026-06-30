@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import mascotTrophy from "@/assets/mascot/mascot-trophy-new.png";
+import mascotTrophy from "@/assets/global/mascot/mascot-trophy-new.png";
 
 const processData = [
   { label: "Strategy", value: 25, color: "hsl(72 60% 65%)" },

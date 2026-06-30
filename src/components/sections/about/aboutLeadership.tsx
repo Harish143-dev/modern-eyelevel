@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Linkedin, Link as LinkIcon } from "lucide-react";
 import WavyUnderline from "@/components/shared/WavyUnderline";
-import akmal from "@/assets/people/akmal.webp";
-import jameel from "@/assets/people/jameel.webp";
+import akmal from "@/assets/content/people/akmal.webp";
+import jameel from "@/assets/content/people/jameel.webp";
 
 const authors = [
   {

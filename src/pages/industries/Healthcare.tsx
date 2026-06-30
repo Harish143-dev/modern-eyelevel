@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import GreenButton from "@/components/shared/GreenButton";
 import WavyUnderline from "@/components/shared/WavyUnderline";
-import problemImage from "@/assets/industries/new/healthcare_market-problem_1.webp";
+import problemImage from "@/assets/pages/industries/new/healthcare_market-problem_1.webp";
 import { motion } from "framer-motion";
 import { healthcareIndustrySchema, breadcrumbSchema } from "@/hooks/schemas";
 
@@ -41,15 +41,15 @@ const Healthcare = () => {
       <Header />
 
       <main>
-      <HeroSection />
-      <TheProblemSection />
-      <WhatWeDoSection />
-      <WhyEyeLevelSection />
-      <CTABandSection />
+        <HeroSection />
+        <TheProblemSection />
+        <WhatWeDoSection />
+        <WhyEyeLevelSection />
+        <CTABandSection />
 
-        
+
       </main>
-      <EnhancedFooter showCTA={false} mascotBgClass="bg-forest-deep" />
+      <EnhancedFooter showCTA={false} mascotBgClass="bg-secondary" />
     </div>
   );
 };

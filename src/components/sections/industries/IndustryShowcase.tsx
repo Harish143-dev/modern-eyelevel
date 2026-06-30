@@ -1,14 +1,14 @@
-import industryEducation from "@/assets/industries/edu.webp";
-import industrySports from "@/assets/industries/sport.webp";
-import industryRealestate from "@/assets/industries/new/realestate.webp";
-import industryB2b from "@/assets/industries/b2b.webp";
-import pickelball from "@/assets/industries/pickleball.webp";
-import industrySaas from "@/assets/industries/new/saas.webp";
-import industryD2d from "@/assets/industries/d2c.webp";
-import industryHealthcare from "@/assets/industries/new/healthcare.webp";
-import industryOffshore from "@/assets/industries/offshore.webp";
-import industryAutomotive from "@/assets/industries/new/automative.webp";
-import industryManufacturing from "@/assets/industries/new/Automation.webp";
+import industryEducation from "@/assets/pages/industries/edu.webp";
+import industrySports from "@/assets/pages/industries/sport.webp";
+import industryRealestate from "@/assets/pages/industries/new/realestate.webp";
+import industryB2b from "@/assets/pages/industries/b2b.webp";
+import pickelball from "@/assets/pages/industries/pickleball.webp";
+import industrySaas from "@/assets/pages/industries/new/saas.webp";
+import industryD2d from "@/assets/pages/industries/d2c.webp";
+import industryHealthcare from "@/assets/pages/industries/new/healthcare.webp";
+import industryOffshore from "@/assets/pages/industries/offshore.webp";
+import industryAutomotive from "@/assets/pages/industries/new/automative.webp";
+import industryManufacturing from "@/assets/pages/industries/new/Automation.webp";
 
 export interface IndustryPageItem {
   id: string;

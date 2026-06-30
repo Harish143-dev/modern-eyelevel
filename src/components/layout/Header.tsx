@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ArrowUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import eyelevelLogo from "@/assets/branding/eyelevel_Logo.svg";
-import mascotGrowth from "@/assets/mascot/hide.webp";
+import mascotGrowth from "@/assets/global/mascot/hide.webp";
 const navLinks = [
   {
     href: "/services",

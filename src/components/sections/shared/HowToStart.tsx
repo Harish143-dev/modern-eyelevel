@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, FileText, Rocket } from "lucide-react";
-import mascotWave from "@/assets/mascot/mascot-wave.png";
+import mascotWave from "@/assets/global/mascot/mascot-wave.png";
 
 const steps = [
   {

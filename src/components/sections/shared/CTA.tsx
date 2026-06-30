@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import mascotThumbsup from "@/assets/mascot/mascot-thumbsup.png";
+import mascotThumbsup from "@/assets/global/mascot/mascot-thumbsup.png";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import AppointmentDialog from "@/components/dialogs/AppointmentDialog";

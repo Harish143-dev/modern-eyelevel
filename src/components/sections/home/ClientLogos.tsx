@@ -1,20 +1,20 @@
 import { motion } from "framer-motion";
-import logo_1 from "@/assets/logos/logo_1.png";
-import logo_2 from "@/assets/logos/logo_2.png";
-import logo_3 from "@/assets/logos/logo_3.webp";
-import logo_4 from "@/assets/logos/logo_4.png";
-import logo_5 from "@/assets/logos/logo_5.png";
-import logo_6 from "@/assets/logos/logo_6.png";
-import logo_7 from "@/assets/logos/logo_7.png";
-import logo_8 from "@/assets/logos/logo_8.png";
-import logo_9 from "@/assets/logos/logo_9.png";
-import logo_10 from "@/assets/logos/logo_10.png";
-import logo_11 from "@/assets/logos/logo_11.png";
-import logo_12 from "@/assets/logos/logo_12.png";
-import logo_13 from "@/assets/logos/logo_13.png";
-import logo_14 from "@/assets/logos/logo_14.png";
-import logo_15 from "@/assets/logos/logo_15.png";
-import logo_16 from "@/assets/logos/logo_16.png";
+import logo_1 from "@/assets/global/logos/logo_1.png";
+import logo_2 from "@/assets/global/logos/logo_2.png";
+import logo_3 from "@/assets/global/logos/logo_3.webp";
+import logo_4 from "@/assets/global/logos/logo_4.png";
+import logo_5 from "@/assets/global/logos/logo_5.png";
+import logo_6 from "@/assets/global/logos/logo_6.png";
+import logo_7 from "@/assets/global/logos/logo_7.png";
+import logo_8 from "@/assets/global/logos/logo_8.png";
+import logo_9 from "@/assets/global/logos/logo_9.png";
+import logo_10 from "@/assets/global/logos/logo_10.png";
+import logo_11 from "@/assets/global/logos/logo_11.png";
+import logo_12 from "@/assets/global/logos/logo_12.png";
+import logo_13 from "@/assets/global/logos/logo_13.png";
+import logo_14 from "@/assets/global/logos/logo_14.png";
+import logo_15 from "@/assets/global/logos/logo_15.png";
+import logo_16 from "@/assets/global/logos/logo_16.png";
 
 const ClientLogos = () => {
   const clientLogo = [

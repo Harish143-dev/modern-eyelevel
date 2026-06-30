@@ -111,18 +111,19 @@ const HowItConnects = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto">
+        {/* Eyebrow (Common Center) */}
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.1 }}
+          className="w-full flex justify-center"
+        >
+          <GreenButton>HOW IT ALL CONNECTS</GreenButton>
+        </motion.div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column — Content */}
-          <div className="lg:col-span-7 flex flex-col justify-center items-center lg:items-center text-center lg:text-center">
-            {/* Eyebrow */}
-            <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.1 }}
-              className="mb-6"
-            >
-              <GreenButton>HOW IT ALL CONNECTS</GreenButton>
-            </motion.div>
+          <div className="lg:col-span-7 flex flex-col justify-center items-start lg:items-start text-center lg:text-left">
 
             {/* Heading */}
             <h2 className="font-dela text-3xl sm:text-4xl md:text-5xl lg:text-[52px] text-primary mb-6 uppercase tracking-tight leading-[1.1]">

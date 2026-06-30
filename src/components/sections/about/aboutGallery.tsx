@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import WavyUnderline from "@/components/shared/WavyUnderline";
-import teamImage1 from "@/assets/galleries/about/aboutImage1.jpeg";
-import teamImage2 from "@/assets/galleries/about/aboutImg2.jpg";
-import teamImage3 from "@/assets/galleries/about/aboutImg3.jpeg";
-import teamImage4 from "@/assets/galleries/about/aboutImg4.jpg";
-import video from "@/assets/videos/videogallery.mp4";
-import video1 from "@/assets/videos/videogallery2.mp4";
+import teamImage1 from "@/assets/content/works/galleries/about/aboutImage1.jpeg";
+import teamImage2 from "@/assets/content/works/galleries/about/aboutImg2.jpg";
+import teamImage3 from "@/assets/content/works/galleries/about/aboutImg3.jpeg";
+import teamImage4 from "@/assets/content/works/galleries/about/aboutImg4.jpg";
+import video from "@/assets/animations/videos/videogallery.mp4";
+import video1 from "@/assets/animations/videos/videogallery2.mp4";
 
 const galleryImages = [
   { src: teamImage1, alt: "Team collaboration" },
