@@ -9,6 +9,7 @@ import EnhancedFooter from "@/components/layout/EnhancedFooter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Select,
   SelectContent,
@@ -17,14 +18,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import {
-  Upload,
-  ArrowLeft,
-  FileText,
-  X,
-  Plus,
-  Trash2,
-} from "lucide-react";
+import { Upload, ArrowLeft, FileText, X, Plus, Trash2 } from "lucide-react";
 import GreenButton from "@/components/shared/GreenButton";
 import SEO from "@/components/utils/SEO";
 
@@ -62,6 +56,26 @@ interface Experience {
   title: string;
   duration: string;
 }
+
+const createEducation = (): Education => ({
+  id: Date.now().toString(),
+  degree: "",
+  institution: "",
+  year: "",
+});
+
+const createExperience = (): Experience => ({
+  id: Date.now().toString(),
+  company: "",
+  title: "",
+  duration: "",
+});
+
+const isEducationFilled = (edu: Education) =>
+  Boolean(edu.degree.trim() && edu.institution.trim() && edu.year.trim());
+
+const isExperienceFilled = (exp: Experience) =>
+  Boolean(exp.company.trim() && exp.title.trim() && exp.duration.trim());
 
 const SOCIAL_PLATFORMS = [
   { value: "linkedin", label: "LinkedIn" },
@@ -102,8 +116,11 @@ const Apply = () => {
 
   const [resumeFile, setResumeFile] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [education, setEducation] = useState<Education[]>([]);
+  const [education, setEducation] = useState<Education[]>(() => [
+    createEducation(),
+  ]);
   const [experience, setExperience] = useState<Experience[]>([]);
+  const [isFresher, setIsFresher] = useState(false);
   const [socialLinks, setSocialLinks] = useState<SocialLink[]>([]);
   const [selectedSocialPlatform, setSelectedSocialPlatform] =
     useState<SocialPlatform>();
@@ -150,14 +167,14 @@ const Apply = () => {
   };
 
   const addEducation = () => {
-    setEducation([
-      ...education,
-      { id: Date.now().toString(), degree: "", institution: "", year: "" },
-    ]);
+    setEducation([...education, createEducation()]);
   };
 
+  // The section is mandatory, so the last row always stays.
   const removeEducation = (id: string) => {
-    setEducation(education.filter((e) => e.id !== id));
+    setEducation(
+      education.length <= 1 ? education : education.filter((e) => e.id !== id),
+    );
   };
 
   const updateEducation = (
@@ -171,10 +188,13 @@ const Apply = () => {
   };
 
   const addExperience = () => {
-    setExperience([
-      ...experience,
-      { id: Date.now().toString(), company: "", title: "", duration: "" },
-    ]);
+    setExperience([...experience, createExperience()]);
+  };
+
+  // Freshers have no experience to list, so drop any rows they already added.
+  const toggleFresher = (fresher: boolean) => {
+    setIsFresher(fresher);
+    if (fresher) setExperience([]);
   };
 
   const removeExperience = (id: string) => {
@@ -226,6 +246,36 @@ const Apply = () => {
       return;
     }
 
+    if (!education.every(isEducationFilled)) {
+      toast({
+        title: "Educational details required",
+        description:
+          "Please fill in the degree, institution, and year for each qualification",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!isFresher && experience.length === 0) {
+      toast({
+        title: "Experience required",
+        description:
+          'Add at least one experience, or tick "I\'m a fresher" if this is your first job',
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!isFresher && !experience.every(isExperienceFilled)) {
+      toast({
+        title: "Experience details required",
+        description:
+          "Please fill in the company, job title, and duration for each experience",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -235,21 +285,37 @@ const Apply = () => {
         .map((link) => ({
           platform: link.platform,
           label:
-            SOCIAL_PLATFORMS.find((platform) => platform.value === link.platform)
-              ?.label ?? link.platform,
+            SOCIAL_PLATFORMS.find(
+              (platform) => platform.value === link.platform,
+            )?.label ?? link.platform,
           url: link.url.trim(),
         }));
       const linkedIn =
         cleanedSocialLinks.find((link) => link.platform === "linkedin")?.url ??
         "";
 
+      // `id` is a UI-only React key, so keep it out of the webhook payload.
+      const cleanedEducation = education.map((edu) => ({
+        degree: edu.degree.trim(),
+        institution: edu.institution.trim(),
+        year: edu.year.trim(),
+      }));
+      const cleanedExperience = isFresher
+        ? []
+        : experience.map((exp) => ({
+            company: exp.company.trim(),
+            title: exp.title.trim(),
+            duration: exp.duration.trim(),
+          }));
+
       formData.append(
         "payload",
         JSON.stringify({
           ...data,
           position,
-          education,
-          experience,
+          education: cleanedEducation,
+          isFresher,
+          experience: cleanedExperience,
           socialLinks: cleanedSocialLinks,
           linkedIn,
         }),
@@ -701,7 +767,7 @@ const Apply = () => {
               <div className="bg-background rounded-2xl p-6 md:p-8 border border-primary/10">
                 <div className="flex items-center justify-between mb-6">
                   <h2 className="font-dela text-2xl text-foreground uppercase">
-                    Educational Details
+                    Educational Details *
                   </h2>
                   <button
                     type="button"
@@ -712,17 +778,13 @@ const Apply = () => {
                   </button>
                 </div>
 
-                {education.length === 0 ? (
-                  <p className="text-[rgba(248,255,232,0.5)] text-center py-4 font-bricolage">
-                    Click "Add" to add your educational details
-                  </p>
-                ) : (
-                  <div className="space-y-4">
-                    {education.map((edu) => (
-                      <div
-                        key={edu.id}
-                        className="bg-secondary rounded-xl p-4 border border-primary/10"
-                      >
+                <div className="space-y-4">
+                  {education.map((edu) => (
+                    <div
+                      key={edu.id}
+                      className="bg-secondary rounded-xl p-4 border border-primary/10"
+                    >
+                      {education.length > 1 && (
                         <div className="flex justify-end mb-3">
                           <button
                             type="button"
@@ -732,60 +794,85 @@ const Apply = () => {
                             <Trash2 className="w-4 h-4" />
                           </button>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                          <Input
-                            value={edu.degree}
-                            onChange={(e) =>
-                              updateEducation(edu.id, "degree", e.target.value)
-                            }
-                            placeholder="Degree/Qualification"
-                            className="bg-background border-primary/20 text-foreground placeholder:text-[rgba(248,255,232,0.4)]"
-                          />
-                          <Input
-                            value={edu.institution}
-                            onChange={(e) =>
-                              updateEducation(
-                                edu.id,
-                                "institution",
-                                e.target.value,
-                              )
-                            }
-                            placeholder="Institution"
-                            className="bg-background border-primary/20 text-foreground placeholder:text-[rgba(248,255,232,0.4)]"
-                          />
-                          <Input
-                            value={edu.year}
-                            onChange={(e) =>
-                              updateEducation(edu.id, "year", e.target.value)
-                            }
-                            placeholder="Year of Completion"
-                            className="bg-background border-primary/20 text-foreground placeholder:text-[rgba(248,255,232,0.4)]"
-                          />
-                        </div>
+                      )}
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <Input
+                          value={edu.degree}
+                          onChange={(e) =>
+                            updateEducation(edu.id, "degree", e.target.value)
+                          }
+                          placeholder="Degree/Qualification"
+                          className="bg-background border-primary/20 text-foreground placeholder:text-[rgba(248,255,232,0.4)]"
+                        />
+                        <Input
+                          value={edu.institution}
+                          onChange={(e) =>
+                            updateEducation(
+                              edu.id,
+                              "institution",
+                              e.target.value,
+                            )
+                          }
+                          placeholder="Institution"
+                          className="bg-background border-primary/20 text-foreground placeholder:text-[rgba(248,255,232,0.4)]"
+                        />
+                        <Input
+                          value={edu.year}
+                          onChange={(e) =>
+                            updateEducation(edu.id, "year", e.target.value)
+                          }
+                          placeholder="Year of Completion"
+                          className="bg-background border-primary/20 text-foreground placeholder:text-[rgba(248,255,232,0.4)]"
+                        />
                       </div>
-                    ))}
-                  </div>
-                )}
+                    </div>
+                  ))}
+                </div>
               </div>
 
               {/* Experience Details */}
               <div className="bg-background rounded-2xl p-6 md:p-8 border border-primary/10">
                 <div className="flex items-center justify-between mb-6">
                   <h2 className="font-dela text-2xl text-foreground uppercase">
-                    Experience Details
+                    Experience Details *
                   </h2>
-                  <button
-                    type="button"
-                    onClick={addExperience}
-                    className="flex items-center gap-2 text-sm text-primary hover:underline font-bricolage"
-                  >
-                    <Plus className="w-4 h-4" /> Add
-                  </button>
+                  <div className="flex items-center gap-5">
+                    <div className="flex items-center gap-2">
+                      <Checkbox
+                        id="fresher"
+                        checked={isFresher}
+                        onCheckedChange={(checked) =>
+                          toggleFresher(checked === true)
+                        }
+                        className="border-primary/40 data-[state=checked]:bg-primary data-[state=checked]:text-background"
+                      />
+                      <Label
+                        htmlFor="fresher"
+                        className="text-foreground font-bricolage cursor-pointer"
+                      >
+                        I'm a fresher
+                      </Label>
+                    </div>
+                    {!isFresher && (
+                      <button
+                        type="button"
+                        onClick={addExperience}
+                        className="flex items-center gap-2 text-sm text-primary hover:underline font-bricolage"
+                      >
+                        <Plus className="w-4 h-4" /> Add
+                      </button>
+                    )}
+                  </div>
                 </div>
 
-                {experience.length === 0 ? (
+                {isFresher ? (
                   <p className="text-[rgba(248,255,232,0.5)] text-center py-4 font-bricolage">
-                    Click "Add" to add your experience details
+                    No experience needed — we'll take it from here.
+                  </p>
+                ) : experience.length === 0 ? (
+                  <p className="text-[rgba(248,255,232,0.5)] text-center py-4 font-bricolage">
+                    Click "Add" to add your experience details, or tick "I'm a
+                    fresher"
                   </p>
                 ) : (
                   <div className="space-y-4">
@@ -1013,7 +1100,7 @@ const Apply = () => {
                         <button
                           type="button"
                           onClick={() => removeSocialLink(socialLink.id)}
-                          className="h-10 w-10 rounded-lg border border-red-400/30 text-red-400 hover:text-red-300 hover:border-red-300 transition-colors flex items-start justify-start"
+                          className="h-10 w-10 rounded-lg border border-red-400/30 text-red-400 hover:text-red-300 hover:border-red-300 transition-colors flex items-center justify-center"
                           aria-label="Remove social link"
                         >
                           <Trash2 className="w-4 h-4" />
@@ -1021,7 +1108,6 @@ const Apply = () => {
                       </div>
                     ))
                   )}
-
                 </div>
               </div>
 
@@ -1087,6 +1173,3 @@ const Apply = () => {
 };
 
 export default Apply;
-
-
-
