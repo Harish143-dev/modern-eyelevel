@@ -69,16 +69,26 @@ const ClientLogos = () => {
         >
           {/* Content layout */}
           <div className="flex flex-col lg:items-center lg:justify-between gap-8 lg:gap-12">
-            {/* Left side - Title */}
-            <div className="flex-shrink-0 text-center">
+            {/* Title, flanked by a rule that tapers into a dot */}
+            <div className="flex-shrink-0 w-full flex items-center justify-center gap-5 md:gap-8">
+              <div className="hidden md:flex flex-1 max-w-[220px] items-center gap-2">
+                <span className="h-[2px] flex-1 bg-gradient-to-r from-transparent to-brand-black" />
+                <span className="w-2.5 h-2.5 rounded-full bg-brand-black" />
+              </div>
+
               <h2
-                className="font-dela text-3xl md:text-4xl lg:text-5xl leading-[1.1] tracking-tight uppercase"
+                className="font-dela text-3xl md:text-4xl lg:text-5xl leading-[1.1] tracking-tight uppercase text-center md:max-w-[13ch]"
                 style={{
                   color: "#0a0a0a",
                 }}
               >
-                <span className="block">Brands choosing depth over noise</span>
+                <span className="block">Chosen for depth, not noise</span>
               </h2>
+
+              <div className="hidden md:flex flex-1 max-w-[220px] items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-brand-black" />
+                <span className="h-[2px] flex-1 bg-gradient-to-l from-transparent to-brand-black" />
+              </div>
             </div>
 
             {/* Right side - Marquee */}
@@ -92,22 +102,24 @@ const ClientLogos = () => {
                 <div className="overflow-hidden w-full">
                   <div className="flex w-max animate-join-league-marquee items-center">
                     {[0, 1, 2].map((groupIndex) => (
+                      // The gap and the trailing padding must stay equal, or
+                      // spacing jumps where the marquee loops.
                       <div
                         key={groupIndex}
-                        className="flex shrink-0 gap-14 md:gap-20 pr-14 md:pr-20 items-center"
+                        className="flex shrink-0 gap-5 md:gap-6 pr-5 md:pr-6 items-center"
                         aria-hidden={groupIndex > 0}
                       >
                         {clientLogo.map((client, index) => (
                           <div
                             key={`${groupIndex}-${index}`}
-                            className="flex-shrink-0 w-48 md:w-56 h-28 flex items-center justify-center mx-4"
+                            className="flex-shrink-0 w-44 md:w-52 h-28 md:h-32 rounded-2xl bg-white flex items-center justify-center p-5 md:p-6 shadow-[0_2px_10px_rgba(10,10,10,0.06)]"
                           >
                             <img
                               loading="lazy"
                               src={client}
                               alt="Client logo"
                               title="Client logo"
-                              className="h-20 md:h-24 w-48 md:w-52 object-contain"
+                              className="max-h-full max-w-full object-contain"
                             />
                           </div>
                         ))}

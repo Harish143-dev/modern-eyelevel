@@ -4,11 +4,18 @@ import {
   Target,
   TrendingUp,
   Lightbulb,
-  CheckCircle2,
+  User,
+  Quote,
 } from "lucide-react";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import Eyeball from "@/components/shared/Eyeball";
 import GreenButton from "@/components/shared/GreenButton";
+
+const pillars = [
+  { Icon: User, title: "Senior practitioners", caption: "run every strategy" },
+  { Icon: Zap, title: "AI-native production", caption: "human-led judgment" },
+  { Icon: Target, title: "Outcomes, not activities", caption: "" },
+];
 
 const WhyEyeLevelExists = () => {
   return (
@@ -17,27 +24,94 @@ const WhyEyeLevelExists = () => {
       className="px-4 md:px-6 overflow-hidden relative ] bg-secondary py-[100px]"
     >
       <div className="max-w-6xl mx-auto relative z-10">
-        {/* Main Headline */}
-        <div className="text-center mb-16 md:mb-24">
-          <GreenButton>Why Eyelevel exists</GreenButton>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-dela text-3xl md:text-4xl lg:text-5xl leading-[1.2] tracking-tight mb-6 uppercase"
-          >
- 
-            <span className="text-primary">Eyelevel is built to <WavyUnderline className=" text-primary">grow</WavyUnderline></span>
-          </motion.h2>
-        </div>
-
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left: The Unblinking Eye Visualization */}
+          {/* Left: Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <GreenButton align="start">Why Eyelevel exists</GreenButton>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="font-dela text-3xl md:text-4xl lg:text-5xl leading-[1.2] tracking-tight mb-6 uppercase text-foreground"
+            >
+              Eyelevel is built to{" "}
+              <WavyUnderline color="hsl(var(--primary))">grow</WavyUnderline>
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="text-lg md:text-xl font-bricolage leading-relaxed text-foreground/80 mt-8"
+            >
+              Eyelevel Growth Studio is a digital marketing agency in Chennai
+              that runs strategy, performance, content, and AI as one connected
+              system. Not three vendors. Not three invoices. One studio.
+            </motion.p>
+
+            <div className="h-px bg-foreground/10 my-8 md:my-10" />
+
+            {/* Three pillars */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-0"
+            >
+              {pillars.map(({ Icon, title, caption }, index) => (
+                <div
+                  key={title}
+                  className={`sm:px-5 sm:first:pl-0 sm:last:pr-0 ${
+                    index > 0 ? "sm:border-l sm:border-foreground/10" : ""
+                  }`}
+                >
+                  <div className="w-11 h-11 rounded-full border border-primary/40 flex items-center justify-center mb-4">
+                    <Icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <p className="font-bricolage font-semibold text-foreground text-base md:text-lg leading-snug">
+                    {title}
+                  </p>
+                  {caption && (
+                    <p className="font-bricolage text-sm text-foreground/50 mt-1">
+                      {caption}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </motion.div>
+
+            {/* Pull Quote */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="mt-10 rounded-2xl border border-primary/20 bg-primary/5 p-6 md:p-7 flex items-start gap-5"
+            >
+              <Quote className="w-8 h-8 md:w-9 md:h-9 text-primary fill-primary shrink-0" />
+              <div className="border-l border-primary/20 pl-5">
+                <p className="font-dela italic text-primary text-base md:text-lg leading-snug">
+                  We're not your agency.
+                  <br />
+                  We're your extended marketing team.
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Right: The Unblinking Eye Visualization */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -91,78 +165,6 @@ const WhyEyeLevelExists = () => {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
-
-          {/* Right: Content */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-10"
-          >
-            {/* Body Copy */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-            >
-              <p className="text-lg md:text-xl font-bricolage leading-relaxed text-foreground">
-                Eyelevel Growth Studio is a digital marketing agency in Chennai that runs strategy, performance, content, and AI as one connected system. Not three vendors. Not three invoices. One studio.
-              </p> <br />
-              <p className="text-lg md:text-xl font-bricolage leading-relaxed text-foreground">
-                Every retainer pads. Every report obscures. Every campaign looks busier than it works. That is not a few bad agencies. That is how the industry is structured.
-              </p> <br />
-              <p className="text-lg md:text-xl font-bricolage leading-relaxed text-foreground">
-                Eyelevel was built by a marketing head who spent 15 years on the client side, being the one pitched to. It is the team he always wished he could plug in.
-              </p>
-            </motion.div>
-
-            {/* Three Points */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-            >
-              <ul className="space-y-4">
-                {[
-                  "Senior practitioners run every strategy",
-                  "AI-native production, human-led judgment",
-                  "Outcomes, not activities",
-                ].map((point, index) => (
-                  <motion.li 
-                    key={index} 
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4 + index * 0.1 }}
-                    className="flex items-center gap-4"
-                  >
-                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-4 h-4 text-primary" />
-                    </div>
-                    <span className="font-bricolage text-foreground/90 font-medium text-lg">{point}</span>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
-
-            {/* Pull Quote */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6 }}
-              className="relative pt-4"
-            >
-              <div className="p-6 md:p-8 border-l-4 border-primary bg-primary/5 rounded-r-2xl relative overflow-hidden">
-                <p className="font-dela text-xl md:text-2xl text-primary leading-tight relative z-10 italic">
-                  "We're not your agency. We're your extended marketing team."
-                </p>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </div>

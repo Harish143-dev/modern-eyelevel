@@ -3,11 +3,14 @@ import { motion } from "framer-motion";
 
 interface GreenButtonprops {
   children: React.ReactNode;
+  align?: "center" | "start";
 }
 
-const GreenButton = ({ children }: GreenButtonprops) => {
+const GreenButton = ({ children, align = "center" }: GreenButtonprops) => {
   return (
-    <div className="flex justify-center w-full">
+    <div
+      className={`flex w-full ${align === "start" ? "justify-start" : "justify-center"}`}
+    >
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
