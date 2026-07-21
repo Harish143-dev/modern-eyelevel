@@ -92,7 +92,6 @@ const SocialMediaManagement = () => {
       <QuoteSection />
       <IndustriesSection />
       <CTASection />
-
       <EnhancedFooter mascotBgClass="bg-background" showCTA={false} />
     </div >
   );

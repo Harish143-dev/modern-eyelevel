@@ -11,7 +11,7 @@ const FounderSection = () => {
     <section className="px-4 bg-secondary relative overflow-hidden py-[100px]">
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="mb-10 text-center ">
-          <GreenButton>The Founder</GreenButton>
+          <GreenButton>The Co-Founder</GreenButton>
           <h2 className="font-dela text-3xl  md:text-4xl lg:text-5xl text-primary leading-[1.1] uppercase break-words">
             I sat where you're sitting.
           </h2>
@@ -28,7 +28,7 @@ const FounderSection = () => {
             <div className="space-y-4 ">
               <h3 className="font-dela text-2xl text-primary">Akmal Rahman</h3>
               <p className="font-bricolage text-xl text-foreground/80 font-medium">
-                Founder
+                Co- Founder
               </p>
 
               <p className="font-bricolage text-lg text-foreground/70 leading-relaxed">
