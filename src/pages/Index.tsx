@@ -59,9 +59,7 @@ const Index = () => {
         <WhyEyeLevelExists />
         <HomeIndustriesSection />
         <ServicesSection />
-        <ProcessSection />
-        <ComparisonTable />
-        <Difference />
+        <ProcessSection /> 
         <FounderSection />
         <Results />
         <CTABand />

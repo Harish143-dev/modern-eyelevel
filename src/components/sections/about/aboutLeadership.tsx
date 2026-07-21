@@ -6,20 +6,20 @@ import jameel from "@/assets/content/people/jameel.webp";
 
 const authors = [
   {
-    name: "Akmal Rahman",
-    role: "Founder",
-    image: akmal,
-    dec: "He runs the craft: 15 years as a client-side marketing head across automotive, real estate, D2C, and manufacturing. He owns strategy, positioning, and growth for every Eyelevel client. The full career, and the brands, live on akmalrahman.com.",
-    socials: "https:www.linkedin.com/in/akmalbillekar",
-    website: "https://akmalrahman.com/",
-  },
-  {
     name: "Mohammad Jameel",
-    role: "Co-Founder",
+    role: "Founder",
     image: jameel,
     dec: "A seasoned investment banking professional specializing in wealth management and alternative investment solutions for high-net-worth and celebrity clients. At Eyelevel, he leads the business, finance, and partnership side of the studio.",
     socials: "https://www.linkedin.com/in/muhammad-jameel-1b340836/",
     website: "",
+  },
+  {
+    name: "Akmal Rahman",
+    role: "Co-Founder",
+    image: akmal,
+    dec: "He runs the craft: 15 years as a client-side marketing head across automotive, real estate, D2C, and manufacturing. He owns strategy, positioning, and growth for every Eyelevel client. The full career, and the brands, live on akmalrahman.com.",
+    socials: "https://www.linkedin.com/in/akmalbillekar",
+    website: "https://akmalrahman.com/",
   },
 ];
 

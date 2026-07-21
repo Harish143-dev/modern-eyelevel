@@ -55,6 +55,7 @@ const footerLinks = [
     links: [
       { label: "About", href: "/about-us" },
       { label: "Work", href: "/works" },
+      { label: "Careers", href: "/careers" },
       { label: "Blog", href: "/blog" },
       { label: "Book a call", href: "/booking" },
       { label: "Contact", href: "/contact-us" },

@@ -137,11 +137,11 @@ export const aboutPageSchema = {
     url: "https://theeyelevelstudio.com",
     description: "Full-service AI-powered growth studio in Chennai. The extended marketing team built by a marketing head who spent 15 years on the client side.",
     founder: [
-      { "@type": "Person", name: "Mohammad Jameel", jobTitle: "Co-Founder" },
+      { "@type": "Person", name: "Mohammad Jameel", jobTitle: "Founder" },
       {
         "@type": "Person",
         name: "Akmal Rahman",
-        jobTitle: "Founder",
+        jobTitle: "Co-Founder",
         url: "https://akmalrahman.com",
       },
     ],

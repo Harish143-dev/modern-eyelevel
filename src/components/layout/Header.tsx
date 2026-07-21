@@ -23,6 +23,10 @@ const navLinks = [
     label: "About",
   },
   {
+    href: "/careers",
+    label: "Careers",
+  },
+  {
     href: "/blog",
     label: "Blog",
   },

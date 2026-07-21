@@ -51,7 +51,7 @@ const WhyEyeLevelExists = () => {
                 </div>
 
                 <p className="text-sm lg:text-lg leading-relaxed font-bricolage font-light" style={{ color: "rgba(248, 255, 232, 0.8)" }}>
-                  For 15 years, our founder sat on the other side of the table. He was
+                  For 15 years, our co-founder sat on the other side of the table. He was
                   the marketing head agencies pitched to. The person deciding which
                   agency got the budget, which strategy got approved, and which agency
                   got fired.

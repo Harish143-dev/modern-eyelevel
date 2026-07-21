@@ -14,7 +14,7 @@ export interface BookingResponse {
 }
 
 const WEBHOOK_URL =
-  "https://automate.eyelevelstudio.in/webhook-test/30b0da17-4779-4557-878a-4ef85082c28c";
+  "https://automate.eyelevelstudio.in/webhook/30b0da17-4779-4557-878a-4ef85082c28c";
 
 /**
  * Sends a booking request to the n8n webhook.
