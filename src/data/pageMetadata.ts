@@ -37,8 +37,8 @@ export const pageMetadataRegistry: Record<string, PageMetadata> = {
     ogType: "website",
     schemas: ["organization", "website", "homePage", "localBusiness", "faq"],
   },
-  "/about-us": {
-    route: "/about-us",
+  "/about": {
+    route: "/about",
     title: "Best Digital Marketing Agency Chennai | Eyelevel",
     description:
       "Eyelevel is Chennai's specialized agency for Sports, Healthcare & Education, 15+ years experience. Book a free consultation today.",
@@ -48,7 +48,7 @@ export const pageMetadataRegistry: Record<string, PageMetadata> = {
       "growth agency",
       "best marketing agency",
     ],
-    canonical: "https://theeyelevelstudio.com/about-us",
+    canonical: "https://theeyelevelstudio.com/about",
     ogType: "website",
     schemas: ["organization", "localBusiness"],
   },
@@ -85,8 +85,8 @@ export const pageMetadataRegistry: Record<string, PageMetadata> = {
     ogType: "website",
     schemas: ["industries", "breadcrumb"],
   },
-  "/contact-us": {
-    route: "/contact-us",
+  "/contact": {
+    route: "/contact",
     title: "Contact Eyelevel — Free Marketing Consultation Chennai",
     description:
       "Book a free 30-min consultation with Eyelevel — Chennai's specialized agency for Sports, Healthcare & Education. Call +91 97890 99499 or email us.",
@@ -96,7 +96,7 @@ export const pageMetadataRegistry: Record<string, PageMetadata> = {
       "marketing consultation",
       "contact marketing agency",
     ],
-    canonical: "https://theeyelevelstudio.com/contact-us",
+    canonical: "https://theeyelevelstudio.com/contact",
     ogType: "website",
     schemas: ["contactPage", "organization"],
   },

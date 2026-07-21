@@ -2,9 +2,19 @@
   RewriteEngine On
   RewriteBase /
 
-  # ✅ ADD THIS AT VERY TOP (before 404 block)
-  RewriteRule ^education-digital-marketing-services/?$ /education-marketing-agency/ [R=301,L]
-  RewriteRule ^pickleball-agency/?$ /pickleball-marketing-agency/ [R=301,L]
+  # Legacy industry URLs -> current /industries/* routes.
+  RewriteRule ^real-estate-marketing-agency/?$ /industries/real-estate [R=301,L]
+  RewriteRule ^it-saas-marketing-agency/?$ /industries/it-saas [R=301,L]
+  RewriteRule ^healthcare-marketing-agency/?$ /industries/healthcare [R=301,L]
+  RewriteRule ^automotive-marketing-agency/?$ /industries/automotive [R=301,L]
+  RewriteRule ^manufacturing-b2b-marketing-agency/?$ /industries/manufacturing-b2b [R=301,L]
+  RewriteRule ^b2b-marketing-agency/?$ /industries/manufacturing-b2b [R=301,L]
+
+  # Legacy URLs with no current equivalent -> industries hub.
+  RewriteRule ^(education|sports|pickleball|fintech)-marketing-agency/?$ /industries [R=301,L]
+  RewriteRule ^education-digital-marketing-services/?$ /industries [R=301,L]
+  RewriteRule ^pickleball-agency/?$ /industries [R=301,L]
+  RewriteRule ^portfolio/?$ /work [R=301,L]
 
   # Block junk query strings like ?161df1950567902.html (not real pages)
   RewriteCond %{QUERY_STRING} ^[0-9a-f]{8,}\.html=?$ [NC]
@@ -16,15 +26,22 @@
   RewriteRule ^ - [R=410,L]
 
   # Server-side redirects (avoid client-only SPA redirects)
-  RewriteRule ^how-we-work/?$ /about-us [R=301,L]
+  RewriteRule ^how-we-work/?$ /about [R=301,L]
+  RewriteRule ^about-us/?$ /about [R=301,L]
+  RewriteRule ^contact-us/?$ /contact [R=301,L]
+  RewriteRule ^works/?$ /work [R=301,L]
+  RewriteRule ^terms-and-conditions/?$ /terms-and-condition [R=301,L]
   RewriteRule ^terms-conditions/?$ /terms-and-condition [R=301,L]
 
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # Return a real 404 for unknown routes instead of serving SPA shell for everything.
-  RewriteCond %{REQUEST_URI} !^/(?:$|about-us/?$|careers/?$|careers/[^/]+/?$|services/?$|industries/?$|contact-us/?$|blog/?$|blog/[^/]+/?$|booking/?$|apply/?$|thank-you/?$|terms-and-condition/?$|privacy-policy/?$) [NC]
+  # Return a real 404 for unknown routes instead of serving the SPA shell for
+  # everything (which would make every typo a soft 404 with a 200 status).
+  # This list MUST mirror src/AppRoutes.tsx — update both together when adding
+  # a page, or the new route will 404 in production while working in dev.
+  RewriteCond %{REQUEST_URI} !^/(?:$|about/?$|work/?$|contact/?$|booking/?$|apply/?$|thank-you/?$|privacy-policy/?$|terms-and-condition/?$|services/?$|services/[^/]+/?$|industries/?$|industries/[^/]+/?$|careers/?$|careers/[^/]+/?$|blog/?$|blog/category/[^/]+/?$|blog/[^/]+/?$) [NC]
   RewriteRule ^ - [R=404,L]
 
   RewriteRule ^ index.html [L]

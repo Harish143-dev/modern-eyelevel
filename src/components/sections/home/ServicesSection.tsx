@@ -28,56 +28,56 @@ const services: ServiceItem[] = [
     title: "AI-ERA SEO",
     subtitle: "( AEO + GEO ) ",
     description: "Traditional SEO plus AEO (AI Overviews, Featured Snippets) and GEO (ChatGPT, Gemini, Perplexity citations).",
-    link: "/services/seo"
+    link: "/services/ai-era-seo"
   },
   {
     id: "social",
     number: "03",
     title: "SOCIAL MEDIA MANAGEMENT",
     description: "Content that builds the audience your sales team needs.",
-    link: "/services/social-media"
+    link: "/services/social-media-management"
   },
   {
     id: "content",
     number: "04",
     title: "CONTENT & CREATIVE",
     description: "AI handles production speed, humans handle strategy and voice. Video, design, copy, brand assets.",
-    link: "/services/content-creative"
+    link: "/services/content-and-creative"
   },
   {
     id: "linkedin",
     number: "05",
     title: "LINKEDIN B2B MARKETING",
     description: "Profile optimisation, content strategy, and targeted outreach that builds real pipeline.",
-    link: "/services/linkedin-b2b"
+    link: "/services/linkedin-b2b-marketing"
   },
   {
     id: "cro",
     number: "06",
     title: "CRO AND FUNNEL DESIGN",
     description: "We fix what happens after the click. Landing pages, conversion flows, lead qualification.",
-    link: "/services/cro-funnel"
+    link: "/services/cro-and-funnel-design"
   },
   {
     id: "revenue",
     number: "07",
     title: "REVENUE ATTRIBUTION DASHBOARD",
     description: "Bundled into growth retainers. Every campaign tied to a business outcome.",
-    link: "/services/revenue-attribution"
+    link: "/services/revenue-attribution-dashboard"
   },
   {
     id: "brand",
     number: "08",
     title: "BRAND & IDENTITY",
     description: "Visual identity, positioning, and brand architecture.",
-    link: "/services/brand-identity"
+    link: "/services/brand-and-identity"
   },
   {
     id: "web",
     number: "09",
     title: "WEBSITE DESIGN & DEVELOPMENT",
     description: "Fast, conversion-optimised sites. A sales tool, not a brochure.",
-    link: "/services/website-design"
+    link: "/services/website-design-and-development"
   },
 ];
 

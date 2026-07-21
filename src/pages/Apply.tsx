@@ -105,7 +105,6 @@ interface SocialLink {
 }
 
 const JOB_APPLY_WEBHOOK_URL =
-  import.meta.env.VITE_JOB_APPLY_WEBHOOK_URL ??
   "https://automate.eyelevelstudio.in/webhook/job-apply";
 
 const Apply = () => {

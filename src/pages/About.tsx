@@ -34,11 +34,11 @@ const About = () => {
           organizationSchema,
           aboutPageSchema,
           faqPageSchema(faqs["About Us"], {
-            url: "https://theeyelevelstudio.com/about-us",
+            url: "https://theeyelevelstudio.com/about",
           }),
         ]}
-        canonical="https://theeyelevelstudio.com/about-us"
-        url="https://theeyelevelstudio.com/about-us"
+        canonical="https://theeyelevelstudio.com/about"
+        url="https://theeyelevelstudio.com/about"
       />
       <Header />
 

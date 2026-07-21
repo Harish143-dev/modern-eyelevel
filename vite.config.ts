@@ -4,15 +4,21 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 import { vitePrerenderPlugin } from "vite-prerender-plugin";
 
+// Entry points for the prerender crawler. It follows in-page links from here,
+// so listing the hubs (/services, /industries, /blog, /careers) is enough to
+// reach every detail page. Only add routes that exist in AppRoutes.tsx —
+// anything else renders the NotFound component into a static 200 page.
 const prerenderRoutes = [
   "/",
-  "/about-us",
+  "/about",
   "/services",
-  "/portfolio",
   "/industries",
-  "/contact-us",
+  "/work",
+  "/contact",
   "/blog",
   "/careers",
+  "/booking",
+  "/apply",
   "/privacy-policy",
   "/terms-and-condition",
 ];

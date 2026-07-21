@@ -37,7 +37,6 @@ const contactSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactSchema>;
 const CONTACT_FORM_WEBHOOK_URL =
-  import.meta.env.VITE_CONTACT_FORM_WEBHOOK_URL ??
   "https://automate.eyelevelstudio.in/webhook/contact-form";
 
 const ContactFormSection = () => {

@@ -129,7 +129,7 @@ export const contactLocalBusinessSchema = {
 export const aboutPageSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  url: "https://theeyelevelstudio.com/about-us",
+  url: "https://theeyelevelstudio.com/about",
   name: "About Eyelevel Growth Studio | Built From the Client Side",
   mainEntity: {
     "@type": "Organization",

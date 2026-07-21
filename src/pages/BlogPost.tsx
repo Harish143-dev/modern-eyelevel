@@ -577,7 +577,7 @@ const BlogPost = () => {
                 Let's discuss how we can help you achieve your marketing goals.
               </p>
               <Button
-                onClick={() => navigate("/contact-us")}
+                onClick={() => navigate("/contact")}
                 size="lg"
                 className="group rounded-full px-10 py-7 text-base md:text-lg font-semibold font-bricolage hover:translate-y-1 hover:shadow-none transition-all duration-150"
                 style={{

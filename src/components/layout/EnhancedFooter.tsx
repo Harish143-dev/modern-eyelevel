@@ -30,11 +30,11 @@ const footerLinks = [
     title: "Services",
     links: [
       { label: "Performance Marketing", href: "/services/performance-marketing" },
-      { label: "AI-Era SEO", href: "/services/seo" },
-      { label: "Social Media Management", href: "/services/social-media" },
-      { label: "Content and Creative", href: "/services/content-creative" },
-      { label: "LinkedIn B2B Marketing", href: "/services/linkedin-b2b" },
-      { label: "CRO and Funnel Design", href: "/services/cro-funnel" },
+      { label: "AI-Era SEO", href: "/services/ai-era-seo" },
+      { label: "Social Media Management", href: "/services/social-media-management" },
+      { label: "Content and Creative", href: "/services/content-and-creative" },
+      { label: "LinkedIn B2B Marketing", href: "/services/linkedin-b2b-marketing" },
+      { label: "CRO and Funnel Design", href: "/services/cro-and-funnel-design" },
       { label: "Revenue Attribution Dashboard", href: "/services" },
       { label: "Brand and Identity", href: "/services" },
       { label: "Website Design and Development", href: "/services" },
@@ -43,22 +43,22 @@ const footerLinks = [
   {
     title: "Industries",
     links: [
-      { label: "Real Estate", href: "/real-estate-marketing-agency" },
-      { label: "IT/SaaS", href: "/it-saas-marketing-agency" },
-      { label: "Healthcare", href: "/healthcare-marketing-agency" },
-      { label: "Automotive", href: "/automotive-marketing-agency" },
-      { label: "Manufacturing / B2B", href: "/manufacturing-b2b-marketing-agency" },
+      { label: "Real Estate", href: "/industries/real-estate" },
+      { label: "IT/SaaS", href: "/industries/it-saas" },
+      { label: "Healthcare", href: "/industries/healthcare" },
+      { label: "Automotive", href: "/industries/automotive" },
+      { label: "Manufacturing / B2B", href: "/industries/manufacturing-b2b" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About", href: "/about-us" },
+      { label: "About", href: "/about" },
       { label: "Work", href: "/works" },
       { label: "Careers", href: "/careers" },
       { label: "Blog", href: "/blog" },
       { label: "Book a call", href: "/booking" },
-      { label: "Contact", href: "/contact-us" },
+      { label: "Contact", href: "/contact" },
     ],
   },
 ];
@@ -184,8 +184,7 @@ interface EnhancedFooterProps {
   mascotBgClass?: string;
 }
 const FOOTER_LEAD_WEBHOOK_URL =
-  import.meta.env.VITE_FOOTER_LEAD_WEBHOOK_URL ??
-  "https://automate.eyelevelstudio.in/webhook-test/fa30713f-f07b-4f1a-a560-d9409df62413";
+  "https://automate.eyelevelstudio.in/webhook/fa30713f-f07b-4f1a-a560-d9409df62413";
 
 const EnhancedFooter = ({
   showCTA,

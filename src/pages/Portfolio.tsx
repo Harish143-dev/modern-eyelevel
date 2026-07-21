@@ -493,7 +493,7 @@ const Portfolio = () => {
                 </h2>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row">
-                <Link to="/contact-us">
+                <Link to="/contact">
                   <Button className="h-12 rounded-full bg-secondary px-7 font-bricolage font-semibold text-foreground hover:bg-background">
                     Start a Project
                     <ArrowRight className="ml-2 h-4 w-4" />

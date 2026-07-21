@@ -12,7 +12,7 @@ import { healthcareIndustrySchema, breadcrumbSchema } from "@/hooks/schemas";
 
 const services = [
   { title: "AI-Era SEO", description: "appear when patients search symptoms, conditions, and specialist names", slug: "ai-era-seo" },
-  { title: "Social Media", description: "doctor-forward content that builds credibility, not just reach", slug: "social-media" },
+  { title: "Social Media", description: "doctor-forward content that builds credibility, not just reach", slug: "social-media-management" },
   { title: "Performance Marketing", description: "paid campaigns targeting specific conditions, geographies, and patient demographics", slug: "performance-marketing" },
   { title: "Content and Creative", description: "patient education content, doctor profiles, and treatment explainers", slug: "content-and-creative" },
   { title: "CRO and Funnel Design", description: "appointment booking flows that reduce friction and increase conversion", slug: "cro-and-funnel-design" }

@@ -23,8 +23,6 @@ import { bookCalendarMeeting } from "@/services/bookingService";
 
 // Configuration
 const DISABLE_WEEKENDS = true;
-const GOOGLE_BOOKING_URL =
-  "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2pwEfwQCBbY8eZgs7bPdbaTLJzzCmU6_ZuQaRnAisL2VBrlPAkUxElWoEZJVhcNfXvR-PGB4LA";
 
 const TIME_SLOTS = [
   "09:00 AM",

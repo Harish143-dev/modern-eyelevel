@@ -13,7 +13,7 @@ import { realEstateIndustrySchema, breadcrumbSchema } from "@/hooks/schemas";
 const services = [
   { title: "Performance Marketing", description: "qualified lead gen optimised for site visits and bookings, not form fills", slug: "performance-marketing" },
   { title: "AI-Era SEO", description: "project pages ranking for intent keywords before the campaign launches", slug: "ai-era-seo" },
-  { title: "Social Media", description: "aspirational content that builds trust before the buyer calls", slug: "social-media" },
+  { title: "Social Media", description: "aspirational content that builds trust before the buyer calls", slug: "social-media-management" },
   { title: "Content and Creative", description: "video walkthroughs, project stories, and neighbourhood content", slug: "content-and-creative" },
   { title: "CRO and Funnel Design", description: "landing pages built to qualify buyers, not just capture names", slug: "cro-and-funnel-design" }
 ];

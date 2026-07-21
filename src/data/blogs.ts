@@ -1376,7 +1376,7 @@ const rawBlogPosts: BlogPost[] = [
       description:
         "Ready to build a B2B pipeline on LinkedIn? We manage organic content, founder branding, and lead generation campaigns for SaaS companies and B2B founders.",
       btnText: "Explore B2B Marketing",
-      btnLink: "/services/linkedin-b2b",
+      btnLink: "/services/linkedin-b2b-marketing",
     },
     seoTitle: "LinkedIn B2B Marketing India: What Actually Drives Pipeline | Eyelevel",
     seoDescription:
@@ -1437,8 +1437,8 @@ const rawBlogPosts: BlogPost[] = [
       heading: "Talk to Eyelevel about pickleball sponsorship",
       description:
         "We have built sponsorship decks, managed sponsor relationships, and designed activation formats for national pickleball leagues. Let's work together.",
-      btnText: "Explore Pickleball Marketing",
-      btnLink: "/pickleball-marketing-agency",
+      btnText: "Talk to Eyelevel",
+      btnLink: "/contact",
     },
     seoTitle: "Pickleball Sponsorship India 2026: What Brands Need to Know | Eyelevel",
     seoDescription:
@@ -1739,8 +1739,8 @@ const rawBlogPosts: BlogPost[] = [
       heading: "Talk to Eyelevel about pickleball community and brand activation",
       description:
         "We build marketing infrastructure for national pickleball leagues, including digital community management and sponsorship activation.",
-      btnText: "Explore Pickleball Marketing",
-      btnLink: "/pickleball-marketing-agency",
+      btnText: "Talk to Eyelevel",
+      btnLink: "/contact",
     },
     seoTitle: "How to Build a Pickleball Community in India: Brand Activation Guide | Eyelevel",
     seoDescription:
@@ -2225,7 +2225,7 @@ const rawBlogPosts: BlogPost[] = [
       description:
         "Looking for an agency that can actually answer these questions? Book a discovery call with us.",
       btnText: "Book a Discovery Call",
-      btnLink: "/contact-us",
+      btnLink: "/contact",
     },
     seoTitle: "How to Choose a Marketing Agency in India: 8 Questions to Ask | Eyelevel",
     seoDescription:
