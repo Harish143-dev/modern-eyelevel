@@ -19,15 +19,6 @@ import itsaasImg from "@/assets/pages/homepage/ITSAAS.webp";
 import b2bImg from "@/assets/pages/homepage/manufacturingb2b.webp";
 
 
-interface iCardItem {
-  title: string;
-  description: string;
-  tag: string;
-  src: string;
-  link: string;
-  color: string;
-  textColor: string;
-}
 
 const parallaxItems: iCardItem[] = [
     {
