@@ -16,7 +16,7 @@ const navLinks = [
   },
   {
     href: "/work",
-    label: "Work",
+    label: "Portfolio",
   },
   {
     href: "/about",

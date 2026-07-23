@@ -54,7 +54,7 @@ const footerLinks = [
     title: "Company",
     links: [
       { label: "About", href: "/about" },
-      { label: "Work", href: "/works" },
+      { label: "Portfolio", href: "/works" },
       { label: "Careers", href: "/careers" },
       { label: "Blog", href: "/blog" },
       { label: "Book a call", href: "/booking" },
