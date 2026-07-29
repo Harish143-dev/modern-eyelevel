@@ -37,7 +37,7 @@ const rawOpenPositions = [
   {
     title: "AI Creative Video Intern",
     department: "Video Production",
-    type: "Full-time · On-site",
+    type: "Full-time · Internship · On-site",
     location: "Chennai, India",
     description:
       "Cut Reels, Shorts, and short-form video that actually performs.",
@@ -45,7 +45,7 @@ const rawOpenPositions = [
   {
     title: "AI Content & Copywriting Intern",
     department: "Content & AI",
-    type: "Full-time · Internship",
+    type: "Full-time · Internship · On-site",
     location: "Chennai, India",
     description:
       "Create high-performing AI-assisted content, blogs, social posts, ad copies, and marketing assets for real brands.",
@@ -53,7 +53,7 @@ const rawOpenPositions = [
   {
     title: "AI Creative Graphics Intern",
     department: "Creative Design",
-    type: "Full-time · Internship",
+    type: "Full-time · Internship · On-site",
     location: "Chennai, India",
     description:
       "Design social media creatives, branding assets, and marketing visuals using AI-powered design workflows.",
@@ -64,7 +64,7 @@ const rawJobListings: Record<string, JobListing> = {
   "ai-creative-video-intern": {
     title: "AI Creative Video Intern",
     department: "Video Production",
-    type: "Full-time · On-site",
+    type: "Full-time · Internship · On-site",
     location: "Chennai, India",
     datePosted: "29/07/2026",
     experience: "0-1 years",
@@ -130,7 +130,7 @@ We're not your agency. We're your extended marketing team — one studio, full s
   "ai-content-copywriting-intern": {
     title: "AI Content & Copywriting Intern",
     department: "Digital Marketing",
-    type: "Full-time · Internship",
+    type: "Full-time · Internship · On-site",
     location: "Chennai, India",
     datePosted: "17/07/2026",
     experience: "0–1 years",
@@ -176,47 +176,10 @@ We're not your agency. We're your extended marketing team — one studio, full s
       "Room to grow creatively and professionally",
     ],
   },
-  "general-application": {
-    title: "General Application",
-    department: "Various",
-    type: "Full-time / Part-time",
-    location: "Remote / Hybrid / On-site",
-    datePosted: "Open",
-    experience: "Various",
-    shortDescription:
-      "We're always looking for exceptional talent. Send us your resume and tell us how you can contribute to our growth story.",
-    aboutCompany: `Founded in 2020, Eyelevel Growth Studio is a digital growth partner for leading brands and hyper-scaling startups in India. With a team of digital experts across Bengaluru, Mumbai, NCR, and Chennai, we are one of India's fastest-growing independent digital marketing solutions companies.
-
-Eyelevel is a Google Premier Partner, Facebook Business Partner, and works closely with ecosystem partners like Hotstar, Amazon & LinkedIn.`,
-    responsibilities: [
-      "Responsibilities will vary based on the role and your expertise.",
-      "Collaborate with cross-functional teams to deliver exceptional results.",
-      "Contribute to the growth and success of our clients.",
-      "Stay updated with industry trends and best practices.",
-    ],
-    requirements: [
-      "Relevant experience in your area of expertise.",
-      "Strong communication and collaboration skills.",
-      "Passion for digital marketing and growth.",
-      "Ability to work in a fast-paced environment.",
-    ],
-    qualities: [
-      "Someone who embraces the Eyelevel Mindset.",
-      "Creative and data-driven approach.",
-      "Positive attitude and eagerness to learn.",
-      "Team player with strong work ethic.",
-    ],
-    benefits: [
-      "Competitive compensation",
-      "Flexible work arrangements",
-      "Learning and development opportunities",
-      "Great team culture",
-    ],
-  },
   "ai-creative-graphics-intern": {
     title: "AI Creative Graphics Intern",
     department: "Creative Design",
-    type: "Full-time · Internship",
+    type: "Full-time · Internship · On-site",
     location: "Chennai, India",
     datePosted: "29/07/2026",
     experience: "Freshers / 0–1 years",
