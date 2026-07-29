@@ -35,7 +35,7 @@ export const titleToSlug = (title: string) =>
 
 const rawOpenPositions = [
   {
-    title: "Video Editor",
+    title: "AI Creative Video Intern",
     department: "Video Production",
     type: "Full-time · On-site",
     location: "Chennai, India",
@@ -43,23 +43,31 @@ const rawOpenPositions = [
       "Cut Reels, Shorts, and short-form video that actually performs.",
   },
   {
-    title: "Social Media Manager Intern",
-    department: "Digital Marketing",
+    title: "AI Content & Copywriting Intern",
+    department: "Content & AI",
     type: "Full-time · Internship",
     location: "Chennai, India",
     description:
-      "Own the content calendar and client relationship for real brands.",
+      "Create high-performing AI-assisted content, blogs, social posts, ad copies, and marketing assets for real brands.",
   },
+  {
+    title: "AI Creative Graphics Intern",
+    department: "Creative Design",
+    type: "Full-time · Internship",
+    location: "Chennai, India",
+    description:
+      "Design social media creatives, branding assets, and marketing visuals using AI-powered design workflows.",
+  }
 ] satisfies Array<Omit<OpenPosition, "slug">>;
 
 const rawJobListings: Record<string, JobListing> = {
-  "video-editor": {
-    title: "Video Editor",
+  "ai-creative-video-intern": {
+    title: "AI Creative Video Intern",
     department: "Video Production",
     type: "Full-time · On-site",
     location: "Chennai, India",
-    datePosted: "17/07/2026",
-    experience: "1–3 years",
+    datePosted: "29/07/2026",
+    experience: "0-1 years",
     shortDescription:
       "Cut Reels, Shorts, and short-form video that actually performs.",
     aboutCompany: `EyeLevel was not built by an agency chasing clients. It was built by a marketing head who spent 15 years hiring agencies, and knowing exactly what they failed to deliver.
@@ -73,13 +81,25 @@ We're not your agency. We're your extended marketing team — one studio, full s
       "Color grade and finish videos to a consistent, professional standard",
       "Stay on top of reels trends, formats, and editing styles across industries",
       "Organise and manage raw footage and project files without losing anything",
+
+      // AI Creative additions
+      "Create AI-powered video assets using tools such as Runway, Veo, Kling AI, Pika, or similar platforms",
+      "Use AI tools to accelerate scripting, storyboard creation, voiceovers, subtitles, and creative ideation",
+      "Experiment with emerging AI workflows to improve video quality, production speed, and creative output",
+      "Collaborate with designers, content writers, and marketers to produce engaging AI-assisted campaigns",
+      "Research and test the latest AI video technologies, trends, and content formats for client projects",
     ],
     requirements: [
-      "1–3 years of hands-on reels/short-form editing experience (mandatory)",
+      "0–1 years of hands-on reels/short-form editing experience (mandatory)",
       "Majority of your editing experience must be on DaVinci Resolve — Fusion basics and Fairlight audio are a plus",
       "Working knowledge of color correction and grading fundamentals",
       "Comfortable with captions, motion graphics basics, and sound design for short-form",
       "A portfolio or showreel is mandatory to apply",
+      "Hands-on experience with AI-powered video tools such as Runway, Google Veo, Kling AI, Pika, Luma AI, or similar platforms is a plus",
+      "Familiarity with AI-assisted editing workflows, including auto-captioning, background removal, object tracking, and generative video features",
+      "Comfortable using AI tools like ChatGPT or Claude for scripting, shot planning, content ideation, and creative research",
+      "Basic understanding of prompt writing for AI video generation and creative automation is an advantage",
+      "Knowledge of social media content formats, trends, and platform-specific editing styles for Instagram Reels, YouTube Shorts, and TikTok",
       "Own laptop capable of running DaVinci Resolve smoothly, preferred",
     ],
     qualities: [
@@ -88,6 +108,11 @@ We're not your agency. We're your extended marketing team — one studio, full s
       "Organised, reliable, and proactive",
       "No ego about revisions — you take feedback and iterate fast",
       "Self-starter who doesn't wait to be told what to do",
+      "Passionate about AI-powered video creation and eager to explore the latest creative technologies",
+      "Continuously experiments with new AI video tools, editing techniques, and storytelling formats",
+      "Strong creative storytelling skills with the ability to combine traditional editing and AI workflows",
+      "Keeps up with the latest trends in short-form video, AI-generated content, and creator economy",
+      "Creative problem-solver who leverages AI to improve efficiency without compromising quality",
     ],
     whatYouGet: [
       "Salary based on experience",
@@ -102,13 +127,13 @@ We're not your agency. We're your extended marketing team — one studio, full s
       "Room to grow creatively and professionally",
     ],
   },
-  "social-media-manager-intern": {
-    title: "Social Media Manager Intern",
+  "ai-content-copywriting-intern": {
+    title: "AI Content & Copywriting Intern",
     department: "Digital Marketing",
     type: "Full-time · Internship",
     location: "Chennai, India",
     datePosted: "17/07/2026",
-    experience: "0–2 years",
+    experience: "0–1 years",
     shortDescription:
       "Own the content calendar and client relationship for real brands.",
     aboutCompany: `EyeLevel was not built by an agency chasing clients. It was built by a marketing head who spent 15 years hiring agencies, and knowing exactly what they failed to deliver.
@@ -124,7 +149,7 @@ We're not your agency. We're your extended marketing team — one studio, full s
       "Track performance monthly and flag content gaps or delays before they become a client problem",
     ],
     requirements: [
-      "0–2 years managing social media for a brand, agency, or personal project (internships/freelance count)",
+      "0–1 years managing social media for a brand, agency, or personal project (internships/freelance count)",
       "Working knowledge of Instagram, Facebook, and LinkedIn — content formats, posting best practices, basic analytics",
       "Comfortable writing captions and content briefs in clear English",
       "Basic familiarity with scheduling tools (Meta Business Suite, or similar) is a plus",
@@ -186,6 +211,58 @@ Eyelevel is a Google Premier Partner, Facebook Business Partner, and works close
       "Flexible work arrangements",
       "Learning and development opportunities",
       "Great team culture",
+    ],
+  },
+  "ai-creative-graphics-intern": {
+    title: "AI Creative Graphics Intern",
+    department: "Creative Design",
+    type: "Full-time · Internship",
+    location: "Chennai, India",
+    datePosted: "29/07/2026",
+    experience: "Freshers / 0–1 years",
+
+    shortDescription:
+      "Design modern graphics using AI-powered creative tools for real marketing campaigns.",
+
+    aboutCompany: `EyeLevel Growth Studio empowers brands through creativity, strategy, and AI. Our designers combine artistic thinking with cutting-edge AI tools to deliver exceptional creative work.`,
+
+    responsibilities: [
+      "Design social media posts and ad creatives.",
+      "Create branding assets and marketing materials.",
+      "Use AI image generation tools responsibly.",
+      "Collaborate with content writers and video editors.",
+      "Maintain design consistency across campaigns.",
+      "Prepare assets for multiple digital platforms.",
+      "Explore new AI design workflows.",
+    ],
+
+    requirements: [
+      "Basic knowledge of Photoshop, Illustrator, Canva, or Figma.",
+      "Interest in AI-powered design.",
+      "Creative portfolio is preferred.",
+      "Basic typography and color knowledge.",
+    ],
+
+    qualities: [
+      "Creative thinker.",
+      "Attention to detail.",
+      "Open to feedback.",
+      "Team player.",
+      "Eagerness to learn.",
+    ],
+
+    whatYouGet: [
+      "Real-world design experience.",
+      "Exposure to AI design tools.",
+      "Mentorship from experienced creatives.",
+      "Opportunity for long-term growth.",
+    ],
+
+    benefits: [
+      "Creative freedom.",
+      "Continuous learning.",
+      "Work on diverse brands.",
+      "Supportive team culture.",
     ],
   },
 };
