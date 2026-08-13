@@ -177,10 +177,43 @@ const stripExtension = (path: string) => path.replace(/\.[^./]+$/, "");
 const basenameOf = (path: string) =>
   stripExtension(path.split("/").pop() ?? "").toLowerCase();
 
+const HOME_ALIASES: Record<string, string> = {
+  "website-design-&-development": "websites",
+  "website-design-and-development": "websites",
+  "website-design": "websites",
+  websites: "websites",
+  website: "websites",
+  photography: "photography",
+  "eyelevel-photography": "photography",
+  photo: "photography",
+  "brand-&-campaign": "brand-and-campaign",
+  "brand-and-campaign": "brand-and-campaign",
+  "brand-campaign": "brand-and-campaign",
+  branding: "brand-and-campaign",
+  "social-media": "social-media",
+  "social-media-management": "social-media",
+  "eyelevel-social-media-management": "social-media",
+  videos: "videos",
+  video: "videos",
+  "eyelevel-videography": "videos",
+  videography: "videos",
+  "ai-video": "ai-videos",
+  "ai-videos": "ai-videos",
+  "ai-film": "ai-videos",
+};
+
 /** Basename → url, so a card can ask for "voso" and get undefined if it's absent. */
 const indexByBasename = (modules: Modules) => {
   const index: Record<string, string> = {};
-  for (const [path, url] of urlsOf(modules)) index[basenameOf(path)] = url;
+  for (const [path, url] of urlsOf(modules)) {
+    const rawBase = basenameOf(path);
+    index[rawBase] = url;
+    const normalized = rawBase.replace(/[-_]logo$/i, "").replace(/[\s_]+/g, "-");
+    index[normalized] = url;
+    if (HOME_ALIASES[normalized]) {
+      index[HOME_ALIASES[normalized]] = url;
+    }
+  }
   return index;
 };
 
