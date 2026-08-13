@@ -20,6 +20,9 @@ export default {
         display: ['Dela Gothic One', 'cursive'],
         'dela': ['Dela Gothic One', 'cursive'],
         'bricolage': ['Bricolage Grotesque', 'sans-serif'],
+        // Portfolio section only — see the `pf` colour scale below.
+        'pf-display': ['Space Grotesk', 'sans-serif'],
+        'pf-sans': ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -67,6 +70,26 @@ export default {
           dark: "hsl(var(--forest-dark))",
           deep: "hsl(var(--forest-deep))",
         },
+        /**
+         * Portfolio section palette. Namespaced under `pf` on purpose — the
+         * portfolio's own names for these (card, muted, border, display) all
+         * already mean something else in the shadcn theme above, and `border`
+         * in particular is applied globally by `* { @apply border-border }`.
+         * Nothing outside src/components/portfolio should reach for these.
+         */
+        pf: {
+          teal: "#163027",
+          "teal-light": "#1f4436",
+          cream: "#F3EFE6",
+          gold: "#E6B961",
+          ink: "#1a1a1a",
+          muted: "#6b6f6a",
+          card: "#ffffff",
+          border: "#e4ddcd",
+          chip: "#f0ede2", // badge pill background
+          "on-dark": "#cfd9d0", // secondary text on teal
+          body: "#3f4640", // long-form copy on cream
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -94,10 +117,15 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "pf-fade": {
+          from: { opacity: "0", transform: "translateY(6px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pf-fade": "pf-fade 0.25s ease",
       },
     },
   },

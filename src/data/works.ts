@@ -6,8 +6,10 @@ import brand_4 from "@/assets/content/works/misc/brand_4.webp";
 import brand_5 from "@/assets/content/works/misc/brand_5.webp";
 import brand_6 from "@/assets/content/works/misc/brand_6.webp";
 import brand_7 from "@/assets/content/works/misc/brand_7.webp";
-import social_1 from "@/assets/content/works/misc/social_media_1.webp";
-import social_2 from "@/assets/content/works/misc/social_media_2.webp";
+import heavensElix from "@/assets/content/works/social media/heavens-elix.webp";
+import rightHospitals from "@/assets/content/works/social media/right-hospitals.webp";
+import vosoSports from "@/assets/content/works/social media/voso-sports.webp";
+import tnPickleball from "@/assets/content/works/social media/tamilnadu-pickleball.webp";
 import web_1 from "@/assets/content/works/misc/web_1.webp";
 import web_2 from "@/assets/content/works/misc/web_2.webp";
 import shoot_1 from "@/assets/content/works/misc/shoot_1.webp";
@@ -21,9 +23,21 @@ export type WorkCategoryId =
   | "videos"
   | "events";
 
+/**
+ * How a category presents its work. Each category picks the treatment that
+ * suits its medium, so add a variant here rather than special-casing a
+ * category id inside the page.
+ *
+ * - `grid`           evenly sized cards, the default
+ * - `phone-carousel` one 9:16 device frame at a time, paged with arrows
+ */
+export type WorkLayout = "grid" | "phone-carousel";
+
 export type WorkCategory = {
   id: WorkCategoryId;
   name: string;
+  /** Presentation for this category. Defaults to "grid" when omitted. */
+  layout?: WorkLayout;
   /** One aspect ratio per category keeps each grid even. */
   aspect: string;
   /**
@@ -56,7 +70,8 @@ export const CATEGORY_DEFS: WorkCategory[] = [
   {
     id: "social-media",
     name: "Social Media",
-    aspect: "aspect-[4/5]",
+    layout: "phone-carousel",
+    aspect: "aspect-[9/16]",
     cols: "lg:w-[calc(25%-18px)]",
     desc: "Campaigns and always-on content built to be watched, not scrolled past.",
   },
@@ -180,13 +195,43 @@ export const WORKS: WorkItem[] = [
   },
   {
     id: "w8",
-    title: "Sports League Launch Campaign",
+    title: "Tamilnadu Pickleball Association",
     description:
-      "A social media campaign designed for a pickleball league launch announcement.",
-    tag: "Campaign",
+      "The official state federation's feed, built around league announcements, player features and match-day coverage.",
+    tag: "Sports",
     category: "social-media",
     type: "image",
-    src: social_2,
+    src: tnPickleball,
+  },
+  {
+    id: "w15",
+    title: "Heavens Elix",
+    description:
+      "Always-on content for a Chennai kombucha and ferments brand — product drops, founder features and taste-test reels.",
+    tag: "D2C",
+    category: "social-media",
+    type: "image",
+    src: heavensElix,
+  },
+  {
+    id: "w16",
+    title: "Right Hospitals",
+    description:
+      "Patient education and specialist storytelling for a multi-speciality hospital, turning clinical expertise into content people watch.",
+    tag: "Healthcare",
+    category: "social-media",
+    type: "image",
+    src: rightHospitals,
+  },
+  {
+    id: "w17",
+    title: "Voso Sports",
+    description:
+      "Brand-led activewear content — campaign key visuals, product launches and category storytelling for an everyday performance label.",
+    tag: "Apparel",
+    category: "social-media",
+    type: "image",
+    src: vosoSports,
   },
   {
     id: "w9",
@@ -226,15 +271,6 @@ export const WORKS: WorkItem[] = [
     category: "website",
     type: "image",
     src: web_2,
-  },
-  {
-    id: "w13",
-    title: "Kombucha Social Media Campaign",
-    description: "A social media creative for a kombucha wellness brand.",
-    tag: "Campaign",
-    category: "social-media",
-    type: "image",
-    src: social_1,
   },
 ];
 

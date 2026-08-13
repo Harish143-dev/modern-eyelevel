@@ -5,6 +5,7 @@ import { X, Play } from "lucide-react";
 import Header from "@/components/layout/Header";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 import EnhancedFooter from "@/components/layout/EnhancedFooter";
+import PhoneCarousel from "@/components/works/PhoneCarousel";
 import {
   WORKS,
   workCategories,
@@ -129,7 +130,16 @@ const Works = () => {
             </span>
           </div>
 
-          {/* Grid */}
+          {/* Each category renders with the treatment set on its definition. */}
+          {active.layout === "phone-carousel" ? (
+            <div role="tabpanel" aria-labelledby={`tab-${active.id}`}>
+              <PhoneCarousel
+                items={items}
+                categoryName={active.name}
+                onOpen={setOpenId}
+              />
+            </div>
+          ) : (
           <div
             role="tabpanel"
             aria-labelledby={`tab-${active.id}`}
@@ -203,6 +213,7 @@ const Works = () => {
               ))}
             </AnimatePresence>
           </div>
+          )}
         </div>
       </main>
 

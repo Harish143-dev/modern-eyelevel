@@ -20,16 +20,25 @@ const RADIUS_V = (SCREEN_RADIUS / SCREEN_HEIGHT) * 100
 export interface IphoneProps extends HTMLAttributes<HTMLDivElement> {
   src?: string
   videoSrc?: string
+  /**
+   * How the media sits in the screen. The screen is a true iPhone ratio
+   * (~0.46), so `cover` crops artwork cut to 9:16 by about 18% of its width.
+   * Use `contain` to keep a whole creative visible; the letterboxing reads as
+   * the phone's own black screen.
+   */
+  fit?: "cover" | "contain"
 }
 
 export function Iphone({
   src,
   videoSrc,
+  fit = "cover",
   className,
   style,
   children,
   ...props
 }: IphoneProps) {
+  const objectFit = fit === "cover" ? "object-cover object-top" : "object-contain"
   const hasVideo = !!videoSrc
   const hasMedia = hasVideo || !!src || !!children
 
@@ -44,7 +53,7 @@ export function Iphone({
     >
       {hasVideo && (
         <div
-          className="pointer-events-none absolute z-0 overflow-hidden"
+          className="pointer-events-none absolute z-0 overflow-hidden bg-black"
           style={{
             left: `${LEFT_PCT}%`,
             top: `${TOP_PCT}%`,
@@ -54,7 +63,7 @@ export function Iphone({
           }}
         >
           <video
-            className="block size-full object-cover"
+            className={`block size-full ${objectFit}`}
             src={videoSrc}
             autoPlay
             loop
@@ -67,7 +76,7 @@ export function Iphone({
 
       {!hasVideo && src && (
         <div
-          className="pointer-events-none absolute z-0 overflow-hidden"
+          className="pointer-events-none absolute z-0 overflow-hidden bg-black"
           style={{
             left: `${LEFT_PCT}%`,
             top: `${TOP_PCT}%`,
@@ -76,11 +85,7 @@ export function Iphone({
             borderRadius: `${RADIUS_H}% / ${RADIUS_V}%`,
           }}
         >
-          <img
-            src={src}
-            alt=""
-            className="block size-full object-cover object-top"
-          />
+          <img src={src} alt="" className={`block size-full ${objectFit}`} />
         </div>
       )}
 

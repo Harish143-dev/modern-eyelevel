@@ -15,10 +15,10 @@ const ORIGIN = "https://theeyelevelstudio.com";
 const EXCLUDE = new Set([
   "/about-us",
   "/contact-us",
+  "/work",
   "/works",
   "/how-we-work",
   "/terms-and-conditions",
-  "/portfolio",
 ]);
 
 // Hubs first, then detail pages — priority is a weak signal but a cheap one.

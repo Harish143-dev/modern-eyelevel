@@ -13,12 +13,21 @@ const prerenderRoutes = [
   "/about",
   "/services",
   "/industries",
-  "/work",
+  "/portfolio",
+  "/portfolio/websites",
+  "/portfolio/photography",
+  "/portfolio/brand-and-campaign",
+  "/portfolio/social-media",
+  "/portfolio/videos",
+  "/portfolio/ai-videos",
   "/contact",
   "/blog",
   "/careers",
   "/booking",
   "/apply",
+  // Not linked from the nav, but prerendered so LinkedIn and Instagram get a
+  // real title, description and image when the campaign URL is shared.
+  "/3-websites-free",
   "/privacy-policy",
   "/terms-and-condition",
 ];
