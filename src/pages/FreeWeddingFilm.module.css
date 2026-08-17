@@ -1,0 +1,198 @@
+/*
+ * Scoped styles for the AI wedding-film application page. Class names are
+ * hashed by CSS Modules, so nothing here leaks into the rest of the app.
+ * The palette and type deliberately diverge from the site theme — near-black
+ * ground, cream wizard card — per the design brief for this page.
+ */
+
+.page {
+  --page-bg: #0a1712;
+  --bg: #173229;
+  --bg-deep: #0e201a;
+  --cream: #f8ffe6;
+  --lime: #e6fda5;
+  --white: #fff;
+  --card-light: #f8f5ec;
+  --card-ink: #14231d;
+  --danger: #ff8066;
+  --muted: rgba(248, 255, 230, 0.6);
+  --hairline: rgba(255, 255, 255, 0.12);
+  --ink-on-yellow-cta: #173229;
+  --dela: "Dela Gothic One", "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --bric: "Bricolage Grotesque", sans-serif;
+  --maxw: 1480px;
+
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--cream);
+  font-family: var(--bric);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 110px;
+  /* Safety: nothing on this page should scroll the viewport sideways. */
+  overflow-x: hidden;
+}
+.page * { box-sizing: border-box; }
+.page fieldset { border: 0; padding: 0; margin: 0; }
+.page svg { display: block; }
+
+.icon {
+  width: 20px; height: 20px; stroke: currentColor; fill: none;
+  stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round;
+}
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 40px 24px 80px; }
+@media (max-width: 640px) { .wrap { padding: 20px 16px 60px; } }
+
+/* ---------- hero ---------- */
+.heroBanner {
+  position: relative; border-radius: 28px; overflow: hidden;
+  min-height: clamp(420px, 46vw, 540px);
+  background: linear-gradient(160deg, var(--bg-deep), var(--bg));
+  margin-bottom: 28px; display: flex; flex-direction: column;
+}
+/* Direct child only — the background photo. Nested imgs (the logo) are exempt. */
+.heroBanner > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.heroBanner::after {
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(100deg, rgba(8,18,14,.82) 0%, rgba(8,18,14,.5) 42%, rgba(8,18,14,.12) 68%, rgba(8,18,14,.35) 100%);
+}
+.heroContent { position: relative; z-index: 2; padding: 36px; display: flex; flex-direction: column; flex: 1; }
+/* align-self stops the flex column from stretching the logo to full width,
+   which would squash its aspect ratio. width:auto then follows from height. */
+.heroLogo { height: 52px; width: auto; align-self: flex-start; object-fit: contain; display: block; }
+@media (max-width: 640px) { .heroLogo { height: 42px; } }
+.heroCopy { margin-top: auto; max-width: 520px; }
+.heroCopy h1 { font-family: var(--dela); font-weight: 400; text-transform: uppercase; font-size: clamp(1.7rem, 6vw, 3.2rem); line-height: 1.08; color: var(--white); margin: 0 0 18px; overflow-wrap: break-word; }
+.heroCopy h1 .accent { color: var(--lime); }
+.heroCopy .lede { font-family: var(--bric); font-size: .98rem; line-height: 1.6; color: rgba(255,255,255,.82); max-width: 38ch; margin: 0 0 22px; }
+.heroDash { width: 44px; height: 3px; background: var(--lime); border-radius: 2px; }
+
+.statsCard {
+  position: absolute; top: 28px; right: 28px; z-index: 3;
+  background: rgba(9,20,15,.72); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,.14); border-radius: 20px; padding: 22px; width: 184px;
+}
+.scTitle { font-family: var(--bric); font-size: .64rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--lime); margin-bottom: 16px; }
+.scRow { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.scRow:last-child { margin-bottom: 0; }
+.scIcon { width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,.22); display: flex; align-items: center; justify-content: center; flex: none; color: var(--lime); font-family: var(--bric); font-weight: 700; font-size: .85rem; }
+.scValue { font-family: var(--dela); font-size: .88rem; font-weight: 400; color: var(--white); line-height: 1.2; }
+.scLabel { font-family: var(--bric); font-size: .64rem; color: rgba(255,255,255,.55); text-transform: uppercase; letter-spacing: .03em; margin-top: 2px; }
+@media (max-width: 640px) {
+  .statsCard { position: static; width: auto; margin: 16px 20px 20px; order: 2; }
+  .heroBanner { display: block; }
+  .heroContent { padding: 24px; }
+}
+
+/* ---------- before we begin ---------- */
+.begin { margin-bottom: 20px; }
+.sectitle { font-family: var(--dela); text-transform: uppercase; font-weight: 400; font-size: 1.35rem; color: var(--cream); margin: 0 0 8px; }
+.subtext { font-family: var(--bric); color: var(--muted); margin: 0 0 26px; font-size: .95rem; }
+.beginCardWrap { background: rgba(255,255,255,.03); border: 1px solid var(--hairline); border-radius: 28px; padding: 36px; }
+@media (max-width: 640px) { .beginCardWrap { padding: 24px 20px; } }
+.beginGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-bottom: 30px; }
+@media (max-width: 720px) { .beginGrid { grid-template-columns: 1fr; gap: 24px; } }
+.bcIcon { width: 44px; height: 44px; border-radius: 12px; border: 1px solid rgba(230,253,165,.3); color: var(--lime); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.bcTitle { font-family: var(--bric); font-size: .82rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--cream); margin-bottom: 8px; }
+.bcDesc { font-family: var(--bric); font-size: .86rem; line-height: 1.55; color: var(--muted); margin: 0; }
+
+.consentRow { display: flex; align-items: center; justify-content: space-between; gap: 16px; background: rgba(255,255,255,.04); border: 1px solid var(--hairline); border-radius: 16px; padding: 18px 22px; margin-bottom: 16px; }
+.consentRow .left { display: flex; align-items: center; gap: 14px; }
+.consentRow input { width: 20px; height: 20px; accent-color: var(--lime); flex: none; }
+.consentRow label { font-family: var(--bric); font-size: .94rem; color: var(--cream); margin: 0; cursor: pointer; }
+.requiredTag { font-family: var(--bric); font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--danger); flex: none; }
+
+.unlockBtn { width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--bric); font-weight: 700; font-size: .92rem; letter-spacing: .06em; text-transform: uppercase; padding: 18px; border-radius: 16px; border: 0; cursor: pointer; background: rgba(255,255,255,.06); color: rgba(255,255,255,.38); transition: background .15s, color .15s; }
+.unlockBtn.active { background: var(--lime); color: var(--ink-on-yellow-cta); }
+.lockedNote { display: flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--bric); font-size: .82rem; font-weight: 600; color: var(--muted); text-align: center; margin-top: 14px; letter-spacing: .02em; }
+.lockedNote .icon { width: 15px; height: 15px; }
+
+/* ---------- wizard ---------- */
+.wizardWrap { margin-top: 24px; }
+.wizard { border: 1px solid var(--hairline); border-radius: 28px; overflow: hidden; }
+
+.stepsNav { display: flex; background: rgba(255,255,255,.03); padding: 26px 30px; }
+.stepItem { display: flex; align-items: center; gap: 11px; flex: 1; min-width: 0; }
+.stepConnector { flex: .5; height: 1px; background-image: linear-gradient(to right, rgba(255,255,255,.22) 50%, transparent 0%); background-size: 8px 1px; background-repeat: repeat-x; margin: 0 6px; align-self: center; }
+.stepNum { width: 30px; height: 30px; border-radius: 50%; flex: none; display: flex; align-items: center; justify-content: center; font-family: var(--bric); font-weight: 700; font-size: .8rem; border: 1.5px solid rgba(255,255,255,.28); color: rgba(255,255,255,.5); }
+.stepItem.active .stepNum { background: var(--lime); border-color: var(--lime); color: var(--ink-on-yellow-cta); }
+.stepItem.done .stepNum { background: transparent; border-color: var(--lime); color: var(--lime); }
+.stepText { line-height: 1.25; min-width: 0; }
+.stepTitle { font-family: var(--bric); font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; color: rgba(255,255,255,.42); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.stepItem.active .stepTitle { color: var(--lime); }
+.stepSub { font-family: var(--bric); font-size: .7rem; color: rgba(255,255,255,.32); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 640px) { .stepSub { display: none; } .stepsNav { padding: 18px 16px; } .stepConnector { flex: .3; } }
+
+.stepBody { background: var(--card-light); color: var(--card-ink); padding: 40px; }
+@media (max-width: 640px) { .stepBody { padding: 26px 20px; } }
+/* One vertical rhythm for the whole step: the fieldset spaces the heading,
+   rows and standalone fields evenly, and each row spaces its own columns by
+   the same amount — so nothing gets a double gap. */
+.stepBody fieldset { display: flex; flex-direction: column; gap: 18px; }
+.stepHead { margin: 0 0 4px; }
+.stepHead h3 { font-family: var(--dela); font-weight: 400; text-transform: uppercase; font-size: 1.15rem; color: var(--card-ink); margin: 0 0 6px; }
+.stepHead p { font-family: var(--bric); font-size: .88rem; color: rgba(20,35,29,.55); margin: 0; }
+
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 560px) { .row { grid-template-columns: 1fr; } }
+.field { margin: 0; }
+.stepBody label { display: block; font-family: var(--bric); font-size: .84rem; font-weight: 600; color: rgba(20,35,29,.85); margin-bottom: 8px; }
+.req { color: var(--danger); margin-left: 2px; }
+.hint { font-family: var(--bric); font-size: .78rem; font-weight: 400; color: rgba(20,35,29,.45); margin-left: 4px; }
+.stepBody input[type=text], .stepBody input[type=email], .stepBody input[type=tel], .stepBody input[type=date], .stepBody textarea, .stepBody select {
+  width: 100%; font-family: var(--bric); font-size: .98rem; color: var(--card-ink);
+  background: #fff; border: 1px solid rgba(20,35,29,.16); border-radius: 12px;
+  padding: 13px 15px; transition: border-color .15s, box-shadow .15s;
+}
+.stepBody input::placeholder, .stepBody textarea::placeholder { color: rgba(20,35,29,.32); }
+.stepBody input:focus, .stepBody textarea:focus, .stepBody select:focus { outline: none; border-color: var(--bg); box-shadow: 0 0 0 3px rgba(23,50,41,.1); }
+.stepBody textarea { resize: vertical; min-height: 100px; }
+.stepBody select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='rgba(20,35,29,0.5)' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; }
+
+.fieldIconWrap { position: relative; }
+.fieldIconWrap .fi { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: rgba(20,35,29,.4); }
+.fieldIconWrap input { padding-left: 40px; }
+
+.noteSmall { font-family: var(--bric); font-size: .85rem; color: rgba(20,35,29,.55); margin: 14px 0 0; }
+
+/* ---------- collapsed steps ---------- */
+.collapsedList { margin-top: 14px; }
+.stepCollapsed { display: flex; align-items: center; justify-content: space-between; gap: 16px; background: rgba(255,255,255,.03); border: 1px solid var(--hairline); border-radius: 20px; padding: 18px 24px; margin-bottom: 12px; cursor: pointer; transition: background .15s; width: 100%; text-align: left; }
+.stepCollapsed:hover { background: rgba(255,255,255,.05); }
+.scLeft { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.stepCollapsed .stepNum { border-color: rgba(255,255,255,.28); }
+.stepCollapsed .stepTitle { color: rgba(255,255,255,.7); }
+.stepCollapsed .stepSub { display: block; color: rgba(255,255,255,.35); }
+.chev { color: rgba(255,255,255,.4); flex: none; }
+
+/* ---------- sticky bottom bar ---------- */
+.stickyBar { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); width: min(var(--maxw), calc(100% - 32px)); background: rgba(10,22,17,.92); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border: 1px solid var(--hairline); border-radius: 20px; padding: 16px 26px; z-index: 20; box-shadow: 0 12px 32px rgba(0,0,0,.35); }
+.sbRow { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.sbLeft { line-height: 1.2; }
+.sbStep { font-family: var(--bric); font-size: .64rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--lime); }
+.sbTitle { font-family: var(--bric); font-size: .98rem; font-weight: 700; color: var(--cream); }
+.sbHint { font-family: var(--bric); font-size: .8rem; color: rgba(255,255,255,.4); flex: 1; text-align: center; }
+@media (max-width: 720px) { .sbHint { display: none; } }
+.sbRight { display: flex; align-items: center; gap: 16px; }
+.dots { display: flex; gap: 6px; }
+.dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.2); }
+.dot.on { background: var(--lime); }
+@media (max-width: 480px) { .dots { display: none; } }
+.continueBtn { display: flex; align-items: center; gap: 6px; font-family: var(--bric); font-weight: 700; font-size: .88rem; color: var(--ink-on-yellow-cta); background: var(--lime); border: 0; padding: 13px 22px; border-radius: 999px; cursor: pointer; white-space: nowrap; }
+.continueBtn:hover { filter: brightness(1.06); }
+.continueBtn:disabled { opacity: .7; cursor: default; }
+.continueBtn .icon { width: 16px; height: 16px; }
+.progressTrack { height: 3px; background: rgba(255,255,255,.1); border-radius: 2px; margin-top: 14px; overflow: hidden; }
+.progressFill { height: 100%; background: var(--lime); transition: width .3s ease; }
+
+/* ---------- success ---------- */
+.success { background: rgba(255,255,255,.03); border: 1px solid var(--hairline); color: var(--cream); border-radius: 28px; padding: 48px; text-align: center; margin-top: 24px; }
+.success h2 { font-family: var(--dela); font-weight: 400; text-transform: uppercase; font-size: 1.5rem; margin: 0 0 14px; color: var(--lime); }
+.success p { font-family: var(--bric); color: var(--muted); margin: 0 auto; max-width: 40ch; }
+
+/* !important so a hidden step always wins over `.stepBody fieldset`'s flex. */
+.hidden { display: none !important; }
+
+@media (prefers-reduced-motion: reduce) { .page * { transition: none !important; } }

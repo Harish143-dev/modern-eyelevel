@@ -28,6 +28,9 @@ const prerenderRoutes = [
   // Not linked from the nav, but prerendered so LinkedIn and Instagram get a
   // real title, description and image when the campaign URL is shared.
   "/3-websites-free",
+  // Link-only page: prerendered for a static shell + baked-in noindex, but
+  // kept out of the sitemap (see scripts/generate-sitemap.cjs EXCLUDE).
+  "/free-wedding-film",
   "/privacy-policy",
   "/terms-and-condition",
 ];

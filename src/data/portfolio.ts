@@ -54,6 +54,22 @@ export interface SiteCard {
   /** Shown on the hatch placeholder while the image is missing. */
   shotLabel: string;
   imageUrl?: string;
+  /**
+   * True when the live site can be shown inside an iframe. Sites that send
+   * X-Frame-Options / CSP frame-ancestors (Shopify stores, same-origin locks)
+   * can't be embedded — leave this false and they show `previewUrl` instead.
+   */
+  embeddable?: boolean;
+  /** Domain shown in the preview title bar, e.g. "vososports.com". */
+  domain?: string;
+  /**
+   * Basename of a full-page screenshot in `portfolio/websites/previews/`.
+   * Used as the fallback for non-embeddable sites and as the placeholder shown
+   * while an embeddable site's iframe is still loading.
+   */
+  preview?: string;
+  /** Resolved at build time from `preview`. */
+  previewUrl?: string;
 }
 
 export interface SocialCard {
@@ -129,6 +145,12 @@ const homeModules = import.meta.glob(
 );
 const websiteModules = import.meta.glob(
   "../assets/content/works/portfolio/websites/*.{webp,jpg,jpeg,png,svg,avif}",
+  { eager: true, query: "?url", import: "default" },
+);
+// Full-page screenshots for the live-preview modal, kept in their own subfolder
+// so they don't get picked up as card logos above.
+const websitePreviewModules = import.meta.glob(
+  "../assets/content/works/portfolio/websites/previews/*.{webp,jpg,jpeg,png,avif}",
   { eager: true, query: "?url", import: "default" },
 );
 const socialModules = import.meta.glob(
@@ -219,6 +241,7 @@ const indexByBasename = (modules: Modules) => {
 
 const homeImages = indexByBasename(homeModules);
 const websiteImages = indexByBasename(websiteModules);
+const websitePreviews = indexByBasename(websitePreviewModules);
 const socialImages = indexByBasename(socialModules);
 
 /** Full path minus extension → url, so a poster can be matched to its clip. */
@@ -400,6 +423,9 @@ const SITE_CARDS: SiteCard[] = [
     name: "VOSO",
     description: "Shopify store selling premium sportswear and activewear.",
     link: "https://vososports.com/",
+    domain: "vososports.com",
+    embeddable: false,
+    preview: "voso",
     image: "voso",
     imageBg: "#000000",
     flag: "Ecommerce",
@@ -411,6 +437,9 @@ const SITE_CARDS: SiteCard[] = [
     description:
       "Apparel manufacturer and clothing brand for men, women and kids.",
     link: "https://essa.in/",
+    domain: "essa.in",
+    embeddable: false,
+    preview: "essa",
     image: "essa",
     imageBg: "#ffffff",
     flag: "Apparel",
@@ -422,6 +451,9 @@ const SITE_CARDS: SiteCard[] = [
     description:
       "Premium kombucha and probiotic drinks for everyday gut health.",
     link: "https://heavenselix.com/",
+    domain: "heavenselix.com",
+    embeddable: false,
+    preview: "heavens-elix",
     image: "heavens-elix",
     imageBg: "#0a0a0a",
     flag: "Beverage Brand",
@@ -432,6 +464,9 @@ const SITE_CARDS: SiteCard[] = [
     name: "TNPPL",
     description: "Official league site with franchise sign-ups and fixtures.",
     link: "https://tnppl.com/",
+    domain: "tnppl.com",
+    embeddable: false,
+    preview: "tnppl",
     image: "tnppl",
     imageBg: "#ffffff",
     flag: "Sports League",
@@ -443,6 +478,9 @@ const SITE_CARDS: SiteCard[] = [
     description:
       "Luxury real estate and investment across India, Dubai and beyond.",
     link: "https://www.vilaasaestates.com/",
+    domain: "vilaasaestates.com",
+    embeddable: true,
+    preview: "vilaasa",
     image: "vilaasa",
     imageBg: "#ffffff",
     flag: "Real Estate",
@@ -453,6 +491,9 @@ const SITE_CARDS: SiteCard[] = [
     name: "Pickabuuu",
     description: "Social gifting platform for shareable, personalised wishlists.",
     link: "https://pickabuuu.com/",
+    domain: "pickabuuu.com",
+    embeddable: true,
+    preview: "pickabuuu",
     image: "pickabuuu",
     imageBg: "#ffffff",
     flag: "Social Platform",
@@ -463,6 +504,9 @@ const SITE_CARDS: SiteCard[] = [
     name: "NJ Macson",
     description: "Financial advisory and family office for wealth management.",
     link: "https://www.njmacson.com/",
+    domain: "njmacson.com",
+    embeddable: true,
+    preview: "nj-macson",
     image: "nj-macson",
     imageBg: "#ffffff",
     flag: "Service Website",
@@ -473,6 +517,9 @@ const SITE_CARDS: SiteCard[] = [
     name: "VERTX Drone Show",
     description: "Synchronised aerial drone light shows for events and brands.",
     link: "https://vertxdroneshow.in/",
+    domain: "vertxdroneshow.in",
+    embeddable: true,
+    preview: "vertx",
     image: "vertx",
     imageBg: "#111318",
     flag: "Brand Website",
@@ -484,13 +531,20 @@ const SITE_CARDS: SiteCard[] = [
     description:
       "Multi-speciality hospital for surgical, emergency and critical care.",
     link: "https://righthospitals.in/",
+    domain: "righthospitals.in",
+    embeddable: true,
+    preview: "right-hospitals",
     image: "right-hospitals",
     imageBg: "#ffffff",
     flag: "Healthcare",
     badges: ["Multi-Speciality", "Critical Care"],
     shotLabel: "Right Hospitals Website",
   },
-].map((card) => ({ ...card, imageUrl: card.image ? websiteImages[card.image] : undefined }));
+].map((card) => ({
+  ...card,
+  imageUrl: card.image ? websiteImages[card.image] : undefined,
+  previewUrl: card.preview ? websitePreviews[card.preview] : undefined,
+}));
 
 const SOCIAL_CARDS: SocialCard[] = [
   {

@@ -23,6 +23,7 @@ import ServicesPage from "./pages/Services";
 import Terms from "./pages/Terms";
 import ThankYou from "./pages/ThankYou";
 import FreeWebsites from "./pages/FreeWebsites";
+import FreeWeddingFilm from "./pages/FreeWeddingFilm";
 import WhatsappMarketing from "./pages/WhatsappMarketing";
 import PerformanceMarketing from "./pages/PerformanceMarketing";
 import AiEraSeo from "./pages/AiEraSeo";
@@ -85,6 +86,8 @@ const AppRoutes = () => (
     <Route path="/careers/:slug" element={<JobDetails />} />
     {/* Campaign landing page — deliberately not linked from the nav or footer */}
     <Route path="/3-websites-free" element={<FreeWebsites />} />
+    {/* Link-only application page — not in nav, footer, or sitemap (noindex) */}
+    <Route path="/free-wedding-film" element={<FreeWeddingFilm />} />
     <Route path="/thank-you" element={<ThankYou />} />
     <Route
       path="/terms-and-conditions"

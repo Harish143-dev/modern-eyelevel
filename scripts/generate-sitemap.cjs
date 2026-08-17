@@ -11,7 +11,8 @@ const path = require("path");
 const DIST = path.resolve(__dirname, "../dist");
 const ORIGIN = "https://theeyelevelstudio.com";
 
-// Routes that only redirect elsewhere; they must not be advertised to crawlers.
+// Routes kept out of the sitemap: redirect-only paths, plus unlisted pages
+// that should only reach people who are sent the link directly.
 const EXCLUDE = new Set([
   "/about-us",
   "/contact-us",
@@ -19,6 +20,8 @@ const EXCLUDE = new Set([
   "/works",
   "/how-we-work",
   "/terms-and-conditions",
+  // Link-only application page — not advertised to search engines.
+  "/free-wedding-film",
 ]);
 
 // Hubs first, then detail pages — priority is a weak signal but a cheap one.
