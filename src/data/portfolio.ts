@@ -75,6 +75,8 @@ export interface SiteCard {
 export interface SocialCard {
   /** Basename of the avatar in `portfolio/social/`, without extension. */
   avatar?: string;
+  name?: string;
+  category?: string;
   iconText: string;
   platform: string;
   handle: string;
@@ -82,6 +84,15 @@ export interface SocialCard {
   link?: string;
   linkText: string;
   logoUrl?: string;
+  embedUrl?: string;
+  followers?: string;
+  following?: string;
+  postsCount?: string;
+  bio?: string;
+  bioLink?: string;
+  storyHighlights?: { name: string; icon?: string }[];
+  highlights?: string[];
+  pitch?: string;
 }
 
 export interface VideoTile {
@@ -549,72 +560,159 @@ const SITE_CARDS: SiteCard[] = [
 const SOCIAL_CARDS: SocialCard[] = [
   {
     avatar: "voso",
-    iconText: "IG",
+    name: "VOSO Sports",
+    category: "Activewear & Athleisure",
+    iconText: "VS",
     platform: "Instagram",
     handle: "@vososports_india",
-    description: "VOSO Sports — premium activewear and athleisure brand.",
+    followers: "18.2k",
+    following: "42",
+    postsCount: "180+",
+    bio: "Engineered for movement. High performance activewear & athleisure.",
+    description: "VOSO Sports — premium activewear and high-performance athleisure brand.",
+    pitch: "High-energy athlete shoots, product drop trailers, and daily community reels that turn activewear into a lifestyle movement.",
     link: "https://www.instagram.com/vososports_india",
+    embedUrl: "https://www.instagram.com/vososports_india/embed",
     linkText: "View profile →",
-  },
-  {
-    avatar: "madurai-all-stars",
-    iconText: "IG",
-    platform: "Instagram",
-    handle: "@madurai_allstars",
-    description:
-      "The official Instagram for the Madurai franchise in the Tamil Nadu Pickleball Premier League.",
-    link: "https://www.instagram.com/madurai_allstars",
-    linkText: "View profile →",
-  },
-  {
-    avatar: "tnpa",
-    iconText: "IG",
-    platform: "Instagram",
-    handle: "@tamilnadupickleball.assn",
-    description:
-      "The official state pickleball body in Tamil Nadu, promoting the TNPPL and association activities.",
-    link: "https://www.instagram.com/tamilnadupickleball.assn/",
-    linkText: "View profile →",
+    highlights: ["High-Energy Reels", "Product Drop Teasers", "Influencer Strategy"],
   },
   {
     avatar: "bengaluru-jawans",
-    iconText: "IG",
+    name: "Bengaluru Jawans",
+    category: "Franchise Sports Team",
+    iconText: "BJ",
     platform: "Instagram",
-    handle: "@bengalurujawans",
+    handle: "@bengaluru.jawans",
+    followers: "15.8k",
+    following: "28",
+    postsCount: "210+",
+    bio: "Official Instagram of Bengaluru Jawans. Season 1 Champions of WPBL.",
     description:
       "Official Instagram of the Bengaluru Jawans pickleball team, Season 1 champions of WPBL.",
+    pitch: "Real-time matchday coverage, high-fps action reels, trophy celebrations, and player spotlight campaigns.",
     link: "https://www.instagram.com/bengaluru.jawans",
+    embedUrl: "https://www.instagram.com/bengaluru.jawans/embed",
     linkText: "View profile →",
+    highlights: ["Matchday Live Coverage", "Player Spotlights", "Sponsor Integrations"],
   },
   {
-    avatar: "hi-living",
-    iconText: "IG",
+    avatar: "madurai-all-stars",
+    name: "Madurai All-Stars",
+    category: "Franchise Sports Team",
+    iconText: "MA",
     platform: "Instagram",
-    handle: "@hilivingprojects",
+    handle: "@madurai_allstars",
+    followers: "8.4k",
+    following: "19",
+    postsCount: "95+",
+    bio: "The pride of Madurai in the Tamil Nadu Pickleball Premier League (TNPPL).",
     description:
-      "Chennai-based real estate brand promoting residential projects and lifestyle-focused developments.",
-    link: "https://www.instagram.com/hilivingprojects",
+      "The official Instagram for the Madurai franchise in the Tamil Nadu Pickleball Premier League.",
+    pitch: "Regional pride storytelling, fierce player introductions, behind-the-scenes training camp footage, and fan engagement.",
+    link: "https://www.instagram.com/madurai_allstars",
+    embedUrl: "https://www.instagram.com/madurai_allstars/embed",
     linkText: "View profile →",
+    highlights: ["Fan Contests", "Training Camp BTS", "Jersey Launch Films"],
   },
   {
-    avatar: "iris",
-    iconText: "IG",
+    avatar: "tnpa",
+    name: "TNPA",
+    category: "State Sports Federation",
+    iconText: "TN",
     platform: "Instagram",
-    handle: "@irishomefragrances",
+    handle: "@tamilnadupickleball.assn",
+    followers: "9.6k",
+    following: "34",
+    postsCount: "145+",
+    bio: "Official State Pickleball Governing Body in Tamil Nadu. Organizers of TNPPL.",
     description:
-      "Home fragrance brand focused on premium scented products and fragrant living since 2008.",
-    link: "https://www.instagram.com/irishomefragrances",
+      "The official state pickleball body in Tamil Nadu, promoting the TNPPL and association activities.",
+    pitch: "Tournament broadcasts, official announcements, state ranking releases, and grassroot sports development storytelling.",
+    link: "https://www.instagram.com/tamilnadupickleball.assn/",
+    embedUrl: "https://www.instagram.com/tamilnadupickleball.assn/embed",
     linkText: "View profile →",
+    highlights: ["Tournament Calendars", "Official Circulars", "Live Score Graphics"],
   },
   {
     avatar: "heavens-elix",
-    iconText: "IG",
+    name: "Heavens Elix Probiotics",
+    category: "Health Food Store",
+    iconText: "HE",
     platform: "Instagram",
     handle: "@heavens.elix",
-    description:
-      "Heaven's Elix — premium kombucha and probiotic beverage brand.",
+    followers: "1,104",
+    following: "812",
+    postsCount: "288",
+    bio: "✨ Kombucha, Kimchi and Ferments🌿\n🍹 Gut-friendly brews & ferments\n📍 Chennai | 💌 DM for orders",
+    bioLink: "https://rzp.io/rzp/Heavenselix-Kombucha-Workshop",
+    description: "Heaven's Elix — artisanal kombucha, gut-friendly brews and prebiotic ferments crafted in Chennai.",
+    pitch: "Clean, thirst-provoking visual aesthetics highlighting organic ingredients, fermentation workshops, and gut-health education.",
     link: "https://www.instagram.com/heavens.elix",
+    embedUrl: "https://www.instagram.com/heavens.elix/embed",
     linkText: "View profile →",
+    storyHighlights: [
+      { name: "Elix X Voko" },
+      { name: "Workshop" },
+      { name: "Reviews❤️" },
+      { name: "Korean Ferments" },
+    ],
+    highlights: ["Sensory Video Ads", "Health Education Carousels", "Retail Launch Campaigns"],
+  },
+  {
+    avatar: "hi-living",
+    name: "Hi-Living Projects",
+    category: "Real Estate & Living",
+    iconText: "HL",
+    platform: "Instagram",
+    handle: "@hilivingprojects",
+    followers: "14.1k",
+    following: "22",
+    postsCount: "160+",
+    bio: "Luxury residential developments and aspirational living spaces in Chennai.",
+    description:
+      "Chennai-based real estate brand promoting residential projects and lifestyle-focused developments.",
+    pitch: "Cinematic walkthroughs, architectural drone captures, and lifestyle storytelling that turns prospective homebuyers into site visits.",
+    link: "https://www.instagram.com/hilivingprojects",
+    embedUrl: "https://www.instagram.com/hilivingprojects/embed",
+    linkText: "View profile →",
+    highlights: ["Drone Walkthroughs", "Unit Floor Plan Carousels", "Buyer Testimonials"],
+  },
+  {
+    avatar: "iris",
+    name: "IRIS Home Fragrances",
+    category: "Fragrances & Decor",
+    iconText: "IR",
+    platform: "Instagram",
+    handle: "@irishomefragrances",
+    followers: "32.5k",
+    following: "51",
+    postsCount: "420+",
+    bio: "Pioneers of fragrant living since 2008. Diffusers, candles & aroma accessories.",
+    description:
+      "Home fragrance brand focused on premium scented products and fragrant living since 2008.",
+    pitch: "Warm, atmospheric lifestyle imagery, scent guide reels, and festive gifting campaigns across all digital channels.",
+    link: "https://www.instagram.com/irishomefragrances",
+    embedUrl: "https://www.instagram.com/irishomefragrances/embed",
+    linkText: "View profile →",
+    highlights: ["Atmospheric Shoot Reels", "Festive Gifting Guides", "Aroma Education"],
+  },
+  {
+    iconText: "ES",
+    name: "ESSA Garments",
+    category: "Clothing Manufacturer",
+    platform: "Instagram",
+    handle: "@essa_garments",
+    followers: "24.6k",
+    following: "0",
+    postsCount: "280+",
+    bio: "Clothing manufacturer | B2B clothing brand | essagarments.com",
+    description:
+      "A B2B clothing manufacturer, and one of the largest accounts in the apparel trade.",
+    pitch: "The pieces shot on Tuesday are posted the same week, and those films become the advertising. Nothing is produced twice.",
+    link: "https://www.instagram.com/essa_garments",
+    embedUrl: "https://www.instagram.com/essa_garments/embed",
+    linkText: "View profile →",
+    highlights: ["Weekly Production Reels", "B2B Catalog Launches", "High-Reach Meta Ads"],
   },
 ].map((card) => ({ ...card, logoUrl: card.avatar ? socialImages[card.avatar] : undefined }));
 
