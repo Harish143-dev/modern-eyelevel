@@ -142,7 +142,7 @@ export default function CustomCalendarBooking() {
         const match = timeStr.match(/^(\d{2}):(\d{2})\s*(AM|PM)$/i);
         if (!match) return new Date(date);
         
-        let [_, hoursStr, minutesStr, ampm] = match;
+        const [, hoursStr, minutesStr, ampm] = match;
         let hours = parseInt(hoursStr, 10);
         const minutes = parseInt(minutesStr, 10);
         
@@ -224,11 +224,12 @@ export default function CustomCalendarBooking() {
           variant: "destructive",
         });
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Booking submission error:", error);
+      const message = error instanceof Error ? error.message : "An unexpected error occurred. Please try again.";
       toast({
         title: "Error booking meeting",
-        description: error?.message || "An unexpected error occurred. Please try again.",
+        description: message,
         variant: "destructive",
       });
     } finally {

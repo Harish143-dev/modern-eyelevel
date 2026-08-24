@@ -33,7 +33,7 @@ export async function bookCalendarMeeting(
     });
 
     const contentType = response.headers.get("content-type");
-    let result: any = null;
+    let result: { success?: boolean; message?: string } | null = null;
 
     if (contentType && contentType.includes("application/json")) {
       result = await response.json();
@@ -70,13 +70,12 @@ export async function bookCalendarMeeting(
       success: response.ok,
       message: response.ok ? "Booking confirmed" : "Booking failed",
     };
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Booking API Error:", error);
+    const message = error instanceof Error ? error.message : "An unexpected error occurred while booking. Please try again.";
     return {
       success: false,
-      message:
-        error?.message ||
-        "An unexpected error occurred while booking. Please try again.",
+      message,
     };
   }
 }

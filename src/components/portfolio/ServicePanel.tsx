@@ -48,12 +48,16 @@ export default function ServicePanel({ service }: { service: Service }) {
       </div>
 
       <div className="mt-12 border-t border-pf-border pt-8">
-        <div className="mb-1.5 text-xl font-bold text-pf-teal">
-          {service.workTitle}
-        </div>
-        <div className="mb-6 text-[13.5px] text-pf-muted">
-          {service.workNote}
-        </div>
+        {service.workType !== "social" && (
+          <>
+            <div className="mb-1.5 text-xl font-bold text-pf-teal">
+              {service.workTitle}
+            </div>
+            <div className="mb-6 text-[13.5px] text-pf-muted">
+              {service.workNote}
+            </div>
+          </>
+        )}
 
         <ServiceWork service={service} />
       </div>
@@ -101,7 +105,7 @@ function ServiceWork({ service }: { service: Service }) {
     case "social": {
       const cards = service.socialCards ?? [];
       return cards.length ? (
-        <SocialCardsGrid cards={cards} />
+        <SocialCardsGrid cards={cards} title={service.workTitle} note={service.workNote} />
       ) : (
         <EmptyNote>{service.emptyNote}</EmptyNote>
       );
@@ -110,7 +114,7 @@ function ServiceWork({ service }: { service: Service }) {
     case "videos": {
       const videos = service.videos ?? [];
       return videos.length ? (
-        <VideoTilesGrid videos={videos} cols={cols} />
+        <VideoTilesGrid videos={videos} cols={cols} disableTabs={service.id === "ai-videos"} />
       ) : (
         <EmptyNote>{service.emptyNote}</EmptyNote>
       );

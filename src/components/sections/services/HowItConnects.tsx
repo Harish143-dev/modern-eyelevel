@@ -13,14 +13,15 @@ import {
   PieChart,
   Star,
   Layout,
-  ArrowRight
+  ArrowRight,
+  LucideIcon,
 } from "lucide-react";
 import WavyUnderline from "@/components/shared/WavyUnderline";
 
 interface ServiceItem {
   num: string;
   name: string;
-  icon: React.ComponentType<any>;
+  icon: LucideIcon;
   angle: number;
   labelPos: "top" | "bottom";
   mobileName: string;

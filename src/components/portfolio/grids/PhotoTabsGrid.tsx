@@ -22,16 +22,13 @@ export default function PhotoTabsGrid({
             role="tab"
             aria-selected={i === active}
             onClick={() => setActive(i)}
-            className={`flex cursor-pointer items-center gap-2 whitespace-nowrap rounded-[30px] border-[1.5px] px-[18px] py-2.5 text-[13.5px] font-semibold transition-all duration-150 ease-in-out max-[560px]:px-3.5 max-[560px]:py-2 max-[560px]:text-[12.5px] ${
+            className={`flex cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-full border-[1.5px] px-[14px] py-[6px] text-[12.5px] font-semibold transition-all duration-150 ease-in-out max-[560px]:px-3 max-[560px]:py-1.5 max-[560px]:text-[11.5px] ${
               i === active
-                ? "border-pf-teal bg-pf-teal text-pf-cream"
+                ? "border-pf-teal bg-pf-teal text-pf-cream shadow-md"
                 : "border-pf-border bg-white text-pf-teal hover:border-pf-gold"
             }`}
           >
             {tab.label}
-            <span className={i === active ? "text-pf-gold" : "text-pf-muted"}>
-              {tab.photos.length}
-            </span>
           </button>
         ))}
       </div>
