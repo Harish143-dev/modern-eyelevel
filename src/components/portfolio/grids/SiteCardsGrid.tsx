@@ -53,27 +53,7 @@ export default function SiteCardsGrid({ cards }: { cards: SiteCard[] }) {
                   {site.description}
                 </div>
 
-                <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-                  {canPreview && (
-                    <button
-                      type="button"
-                      onClick={() => setActive(site)}
-                      className="inline-flex items-center gap-1.5 border-b-[1.5px] border-pf-gold pb-0.5 text-[13.5px] font-semibold text-pf-teal"
-                    >
-                      {site.embeddable ? "Preview live →" : "Preview →"}
-                    </button>
-                  )}
-                  {site.link && site.link !== "#" && (
-                    <a
-                      href={site.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-pf-muted transition-colors hover:text-pf-teal"
-                    >
-                      Visit site ↗
-                    </a>
-                  )}
-                </div>
+
               </div>
             </div>
           );

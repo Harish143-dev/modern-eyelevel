@@ -48,10 +48,12 @@ function useCapturedPoster(
 export default function VideoCard({
   video,
   ratio,
+  showBadge = true,
   onRatio,
 }: {
   video: VideoTile;
   ratio: number;
+  showBadge?: boolean;
   onRatio: (url: string, ratio: number) => void;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -87,22 +89,47 @@ export default function VideoCard({
     return () => el.removeEventListener("loadedmetadata", onMeta);
   }, [onRatio, video.url]);
 
+  // Global event listener to stop other videos when one starts playing
+  useEffect(() => {
+    const handleStopOtherVideos = (e: Event) => {
+      const customEvent = e as CustomEvent;
+      if (customEvent.detail.src !== video.url) {
+        const el = videoRef.current;
+        if (el && !el.paused) {
+          el.pause();
+          setPlaying(false);
+        }
+      }
+    };
+
+    window.addEventListener("stop-other-videos", handleStopOtherVideos);
+    return () => {
+      window.removeEventListener("stop-other-videos", handleStopOtherVideos);
+    };
+  }, [video.url]);
+
   const togglePlay = useCallback(() => {
     const el = videoRef.current;
     if (!el) {
       setStarted(true);
       setPlaying(true);
+      window.dispatchEvent(
+        new CustomEvent("stop-other-videos", { detail: { src: video.url } })
+      );
       return;
     }
     if (el.paused) {
       void el.play();
       setPlaying(true);
       setStarted(true);
+      window.dispatchEvent(
+        new CustomEvent("stop-other-videos", { detail: { src: video.url } })
+      );
     } else {
       el.pause();
       setPlaying(false);
     }
-  }, []);
+  }, [video.url]);
 
   const toggleMute = useCallback((e: React.MouseEvent) => {
     e.stopPropagation();
@@ -133,11 +160,12 @@ export default function VideoCard({
 
   return (
     <div
-      className="relative w-full cursor-pointer select-none overflow-hidden rounded-2xl bg-black"
+      className="group relative w-full cursor-pointer select-none overflow-hidden rounded-2xl bg-black"
       style={{ aspectRatio: ratio }}
       onClick={togglePlay}
       onMouseEnter={() => setShowControls(true)}
       onMouseLeave={() => setShowControls(false)}
+      onTouchStart={() => setShowControls(true)} // Show controls on mobile touch
     >
       {/* Before first play: metadata only, so a page of tiles stays light. */}
       {!started && (
@@ -187,6 +215,25 @@ export default function VideoCard({
             >
               <path d="M8 5v14l11-7z" />
             </svg>
+          </div>
+        </div>
+      )}
+
+      {/* Client Name & Type Badge */}
+      {showBadge && (
+        <div 
+          className={`absolute left-0 right-0 top-0 p-4 transition-opacity duration-300 ${
+            showControls || !playing ? "opacity-100" : "opacity-0"
+          }`}
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, transparent 100%)",
+          }}
+        >
+          <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-white/20 bg-black/40 px-3 py-1.5 backdrop-blur-md">
+            <span className="truncate text-xs font-semibold text-white shadow-black drop-shadow-md">
+              {video.label}
+            </span>
           </div>
         </div>
       )}

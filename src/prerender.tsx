@@ -122,11 +122,11 @@ const ensurePrerenderDom = () => {
       querySelector: () => null,
       addEventListener: () => undefined,
       removeEventListener: () => undefined,
-    } as any;
+    } as unknown as Document;
   }
 
   if (!globalScope.navigator) {
-    globalScope.navigator = { userAgent: "prerender" } as any;
+    globalScope.navigator = { userAgent: "prerender" } as unknown as Navigator;
   }
 
   if (!globalScope.Event) {
@@ -140,11 +140,11 @@ const ensurePrerenderDom = () => {
   }
 
   if (!globalScope.HTMLElement) {
-    globalScope.HTMLElement = Object as any;
+    globalScope.HTMLElement = Object as unknown as typeof HTMLElement;
   }
 
   if (!globalScope.Node) {
-    globalScope.Node = Object as any;
+    globalScope.Node = Object as unknown as typeof Node;
   }
 
   if (!globalScope.requestAnimationFrame) {
