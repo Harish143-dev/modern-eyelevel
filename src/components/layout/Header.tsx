@@ -15,10 +15,6 @@ const navLinks = [
     label: "Industries",
   },
   {
-    href: "/portfolio",
-    label: "Portfolio",
-  },
-  {
     href: "/about",
     label: "About",
   },

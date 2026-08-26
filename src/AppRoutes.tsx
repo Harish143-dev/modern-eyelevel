@@ -16,8 +16,6 @@ import Automotive from "./pages/industries/Automotive";
 import ManufacturingB2B from "./pages/industries/ManufacturingB2B";
 import JobDetails from "./pages/JobDetails";
 import NotFound from "./pages/NotFound";
-import PortfolioIndex from "./pages/PortfolioIndex";
-import PortfolioCategory from "./pages/PortfolioCategory";
 import Privacy from "./pages/Privacy";
 import ServicesPage from "./pages/Services";
 import Terms from "./pages/Terms";
@@ -52,10 +50,11 @@ const AppRoutes = () => (
     <Route path="/services/revenue-attribution-dashboard" element={<RevenueAttributionDashboard />} />
     <Route path="/services/brand-and-identity" element={<BrandAndIdentity />} />
     <Route path="/services/website-design-and-development" element={<WebsiteDesignAndDevelopment />} />
-    <Route path="/works" element={<Navigate to="/portfolio" replace />} />
-    <Route path="/work" element={<Navigate to="/portfolio" replace />} />
-    <Route path="/portfolio" element={<PortfolioIndex />} />
-    <Route path="/portfolio/:categoryId" element={<PortfolioCategory />} />
+    {/* Portfolio now lives on its own standalone site. Send the old routes home. */}
+    <Route path="/works" element={<Navigate to="/" replace />} />
+    <Route path="/work" element={<Navigate to="/" replace />} />
+    <Route path="/portfolio" element={<Navigate to="/" replace />} />
+    <Route path="/portfolio/:categoryId" element={<Navigate to="/" replace />} />
     <Route path="/how-we-work" element={<Navigate to="/about" replace />} />
     <Route path="/industries" element={<Industries />} />
     <Route path="/industries/real-estate" element={<RealEstate />} />

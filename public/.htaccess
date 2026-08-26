@@ -28,7 +28,9 @@
   RewriteRule ^how-we-work/?$ /about [R=301,L]
   RewriteRule ^about-us/?$ /about [R=301,L]
   RewriteRule ^contact-us/?$ /contact [R=301,L]
-  RewriteRule ^works?/?$ /portfolio [R=301,L]
+  # Portfolio moved to its own standalone site — retire the old routes.
+  RewriteRule ^works?/?$ / [R=301,L]
+  RewriteRule ^portfolio(/.*)?$ / [R=301,L]
   RewriteRule ^terms-and-conditions/?$ /terms-and-condition [R=301,L]
   RewriteRule ^terms-conditions/?$ /terms-and-condition [R=301,L]
 
@@ -40,7 +42,7 @@
   # everything (which would make every typo a soft 404 with a 200 status).
   # This list MUST mirror src/AppRoutes.tsx — update both together when adding
   # a page, or the new route will 404 in production while working in dev.
-  RewriteCond %{REQUEST_URI} !^/(?:$|about/?$|portfolio/?$|contact/?$|booking/?$|apply/?$|thank-you/?$|3-websites-free/?$|free-wedding-film/?$|privacy-policy/?$|terms-and-condition/?$|services/?$|services/[^/]+/?$|industries/?$|industries/[^/]+/?$|careers/?$|careers/[^/]+/?$|blog/?$|blog/category/[^/]+/?$|blog/[^/]+/?$) [NC]
+  RewriteCond %{REQUEST_URI} !^/(?:$|about/?$|contact/?$|booking/?$|apply/?$|thank-you/?$|3-websites-free/?$|free-wedding-film/?$|privacy-policy/?$|terms-and-condition/?$|services/?$|services/[^/]+/?$|industries/?$|industries/[^/]+/?$|careers/?$|careers/[^/]+/?$|blog/?$|blog/category/[^/]+/?$|blog/[^/]+/?$) [NC]
   RewriteRule ^ - [R=404,L]
 
   RewriteRule ^ index.html [L]

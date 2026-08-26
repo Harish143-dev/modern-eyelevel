@@ -167,16 +167,6 @@ const Hero = () => {
                 <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
               </Button>
             </Link>
-            <Link to="/portfolio">
-              <Button
-                size="lg"
-                variant="outline"
-                className="group px-8 sm:px-10 py-7 mt-5 text-base md:text-lg w-full sm:w-auto"
-              >
-                See our work
-                <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
-              </Button>
-            </Link>
           </motion.div>
 
           {/* Proof row */}
